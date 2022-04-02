@@ -5,7 +5,7 @@ VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1AFDF7D5-55CB-44C9-8A97-BA2D85143289}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryManagementSystem", "src\LibraryManagementSystem\LibraryManagementSystem.csproj", "{32EF2755-E77B-4D8F-8350-EA94BA53CEC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStoreManagementSystem.App", "src\LibraryManagementSystem.App\BookStoreManagementSystem.App.csproj", "{1C6D5F43-900C-404D-8EAD-EA898EB4A17A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,16 +13,16 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{32EF2755-E77B-4D8F-8350-EA94BA53CEC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{32EF2755-E77B-4D8F-8350-EA94BA53CEC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{32EF2755-E77B-4D8F-8350-EA94BA53CEC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{32EF2755-E77B-4D8F-8350-EA94BA53CEC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C6D5F43-900C-404D-8EAD-EA898EB4A17A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C6D5F43-900C-404D-8EAD-EA898EB4A17A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C6D5F43-900C-404D-8EAD-EA898EB4A17A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C6D5F43-900C-404D-8EAD-EA898EB4A17A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{32EF2755-E77B-4D8F-8350-EA94BA53CEC7} = {1AFDF7D5-55CB-44C9-8A97-BA2D85143289}
+		{1C6D5F43-900C-404D-8EAD-EA898EB4A17A} = {1AFDF7D5-55CB-44C9-8A97-BA2D85143289}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FD50EDC8-02D2-44E8-8387-4CFE797F45E2}

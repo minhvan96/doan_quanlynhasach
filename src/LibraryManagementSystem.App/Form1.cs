@@ -1,4 +1,4 @@
-namespace LibraryManagementSystem
+namespace BookStoreManagementSystem
 {
     public partial class Form1 : Form
     {

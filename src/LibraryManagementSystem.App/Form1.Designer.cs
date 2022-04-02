@@ -1,4 +1,4 @@
-﻿namespace LibraryManagementSystem
+﻿namespace BookStoreManagementSystem
 {
     partial class Form1
     {
