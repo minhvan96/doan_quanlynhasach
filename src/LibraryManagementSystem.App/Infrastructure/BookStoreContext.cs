@@ -1,7 +1,5 @@
 ﻿using BookStoreManagementSystem.App.Domain;
 using BookStoreManagementSystem.App.Domain.Identity;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 
 namespace BookStoreManagementSystem.App.Infrastructure
 {
