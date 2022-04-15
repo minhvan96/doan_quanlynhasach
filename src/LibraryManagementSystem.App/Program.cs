@@ -1,5 +1,8 @@
+using BookStoreManagementSystem.App.Configuration.Database;
 using BookStoreManagementSystem.App.Infrastructure;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
 namespace BookStoreManagementSystem
 {
@@ -14,18 +17,31 @@ namespace BookStoreManagementSystem
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
 
-            var services = new ServiceCollection();
-            ConfigureServices(services);
-            using ServiceProvider serviceProvider = services.BuildServiceProvider();
-            ApplicationConfiguration.Initialize();
-            var form1 = serviceProvider.GetRequiredService<Form1>();
-            Application.Run(form1);
+            Application.SetHighDpiMode(HighDpiMode.SystemAware);
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+
+            var host = CreateHostBuilder().Build();
+            ServiceProvider = host.Services;
+
+            host.MigrateDbContext<BookStoreContext>((context, service) =>
+            {
+            });
+
+            Application.Run(ServiceProvider.GetRequiredService<Form1>());
         }
 
-        private static void ConfigureServices(ServiceCollection services)
+        public static IServiceProvider ServiceProvider { get; private set; }
+
+        private static IHostBuilder CreateHostBuilder()
         {
-            services.AddScoped<Form1>();
-            services.AddDbContext<BookStoreContext>();
+            return Host.CreateDefaultBuilder()
+                .ConfigureServices((context, services) =>
+                {
+                    services.AddMediatR(typeof(Program).Assembly);
+                    services.AddDbContext<BookStoreContext>();
+                    services.AddTransient<Form1>();
+                });
         }
     }
 }
