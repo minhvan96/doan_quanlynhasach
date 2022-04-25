@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.MainNav = new System.Windows.Forms.TabControl();
-            this.importBook = new System.Windows.Forms.TabPage();
+            this.ImportBookTab = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.BookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Available = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Action = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.queryBook = new System.Windows.Forms.TabPage();
+            this.QueryBookTab = new System.Windows.Forms.TabPage();
             this.bookQuery_ListBooks = new System.Windows.Forms.DataGridView();
             this.BookQueryGrib_BookNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookQueryGrib_BookCodeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,20 +50,20 @@
             this.StaffInfoTab = new System.Windows.Forms.TabPage();
             this.HomeTab = new System.Windows.Forms.TabPage();
             this.MainNav.SuspendLayout();
-            this.importBook.SuspendLayout();
+            this.ImportBookTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.queryBook.SuspendLayout();
+            this.QueryBookTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookQuery_ListBooks)).BeginInit();
             this.SuspendLayout();
             // 
             // MainNav
             // 
-            this.MainNav.Controls.Add(this.importBook);
-            this.MainNav.Controls.Add(this.queryBook);
+            this.MainNav.Controls.Add(this.HomeTab);
+            this.MainNav.Controls.Add(this.ImportBookTab);
+            this.MainNav.Controls.Add(this.QueryBookTab);
             this.MainNav.Controls.Add(this.SaleBookTab);
             this.MainNav.Controls.Add(this.CustomerInfoTab);
             this.MainNav.Controls.Add(this.StaffInfoTab);
-            this.MainNav.Controls.Add(this.HomeTab);
             this.MainNav.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainNav.Location = new System.Drawing.Point(0, 0);
             this.MainNav.Name = "MainNav";
@@ -71,16 +71,16 @@
             this.MainNav.Size = new System.Drawing.Size(984, 561);
             this.MainNav.TabIndex = 1;
             // 
-            // importBook
+            // ImportBookTab
             // 
-            this.importBook.Controls.Add(this.dataGridView1);
-            this.importBook.Location = new System.Drawing.Point(4, 24);
-            this.importBook.Name = "importBook";
-            this.importBook.Padding = new System.Windows.Forms.Padding(3);
-            this.importBook.Size = new System.Drawing.Size(976, 533);
-            this.importBook.TabIndex = 0;
-            this.importBook.Text = "Nhập sách";
-            this.importBook.UseVisualStyleBackColor = true;
+            this.ImportBookTab.Controls.Add(this.dataGridView1);
+            this.ImportBookTab.Location = new System.Drawing.Point(4, 24);
+            this.ImportBookTab.Name = "ImportBookTab";
+            this.ImportBookTab.Padding = new System.Windows.Forms.Padding(3);
+            this.ImportBookTab.Size = new System.Drawing.Size(976, 533);
+            this.ImportBookTab.TabIndex = 0;
+            this.ImportBookTab.Text = "Nhập sách";
+            this.ImportBookTab.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -122,18 +122,18 @@
             this.Action.HeaderText = "Thao tác";
             this.Action.Name = "Action";
             // 
-            // queryBook
+            // QueryBookTab
             // 
-            this.queryBook.Controls.Add(this.bookQuery_ListBooks);
-            this.queryBook.Controls.Add(this.searchBoxButton);
-            this.queryBook.Controls.Add(this.searchBookBox);
-            this.queryBook.Location = new System.Drawing.Point(4, 24);
-            this.queryBook.Name = "queryBook";
-            this.queryBook.Padding = new System.Windows.Forms.Padding(3);
-            this.queryBook.Size = new System.Drawing.Size(976, 533);
-            this.queryBook.TabIndex = 1;
-            this.queryBook.Text = "Tra cứu sách";
-            this.queryBook.UseVisualStyleBackColor = true;
+            this.QueryBookTab.Controls.Add(this.bookQuery_ListBooks);
+            this.QueryBookTab.Controls.Add(this.searchBoxButton);
+            this.QueryBookTab.Controls.Add(this.searchBookBox);
+            this.QueryBookTab.Location = new System.Drawing.Point(4, 24);
+            this.QueryBookTab.Name = "QueryBookTab";
+            this.QueryBookTab.Padding = new System.Windows.Forms.Padding(3);
+            this.QueryBookTab.Size = new System.Drawing.Size(976, 533);
+            this.QueryBookTab.TabIndex = 1;
+            this.QueryBookTab.Text = "Tra cứu sách";
+            this.QueryBookTab.UseVisualStyleBackColor = true;
             // 
             // bookQuery_ListBooks
             // 
@@ -241,10 +241,10 @@
             this.Name = "BookStoreUI";
             this.Text = "Form1";
             this.MainNav.ResumeLayout(false);
-            this.importBook.ResumeLayout(false);
+            this.ImportBookTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.queryBook.ResumeLayout(false);
-            this.queryBook.PerformLayout();
+            this.QueryBookTab.ResumeLayout(false);
+            this.QueryBookTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookQuery_ListBooks)).EndInit();
             this.ResumeLayout(false);
 
@@ -253,14 +253,14 @@
         #endregion
 
         private TabControl MainNav;
-        private TabPage importBook;
+        private TabPage ImportBookTab;
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn BookName;
         private DataGridViewTextBoxColumn BookCode;
         private DataGridViewTextBoxColumn BookType;
         private DataGridViewTextBoxColumn Available;
         private DataGridViewTextBoxColumn Action;
-        private TabPage queryBook;
+        private TabPage QueryBookTab;
         private DataGridView bookQuery_ListBooks;
         private DataGridViewTextBoxColumn BookQueryGrib_BookNameColumn;
         private DataGridViewTextBoxColumn BookQueryGrib_BookCodeColumn;
