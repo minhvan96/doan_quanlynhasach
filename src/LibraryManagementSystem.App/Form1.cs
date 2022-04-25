@@ -1,4 +1,4 @@
-using BookStoreManagementSystem.App.Features.BookFeature.Queries;
+﻿using BookStoreManagementSystem.App.Features.BookFeature.Queries;
 using MediatR;
 
 namespace BookStoreManagementSystem
@@ -23,10 +23,10 @@ namespace BookStoreManagementSystem
                 var bookInfo = new DataGridViewRow();
                 bookInfo.CreateCells(bookQuery_ListBooks);
                 bookInfo.Cells[0].Value = book.Name;
-                bookInfo.Cells[1].Value = "";
+                bookInfo.Cells[1].Value = book.Code;
                 bookInfo.Cells[2].Value = book.TypeName;
                 bookInfo.Cells[3].Value = book.AuthorName;
-                bookInfo.Cells[4].Value = "100000";
+                bookInfo.Cells[4].Value = book.Price + " VNĐ";
                 bookQuery_ListBooks.Rows.Add(bookInfo);
             }
         }

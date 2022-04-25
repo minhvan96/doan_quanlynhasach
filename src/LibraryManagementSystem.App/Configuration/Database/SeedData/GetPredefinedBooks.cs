@@ -1,4 +1,5 @@
 ﻿using BookStoreManagementSystem.App.Domain;
+using System.Globalization;
 
 namespace BookStoreManagementSystem.App.Configuration.Database
 {
@@ -18,15 +19,15 @@ namespace BookStoreManagementSystem.App.Configuration.Database
             {
                 var line = reader.ReadLine();
                 var values = line?.Split(',');
-                var bookType = CreateBook(values[0], values[1], values[2]);
+                var bookType = CreateBook(values[0], values[1], values[2], values[3], decimal.Parse(values[4], CultureInfo.InvariantCulture));
                 bookTypes.Add(bookType);
             }
             return bookTypes;
         }
 
-        private static Book CreateBook(string name, string typeId, string authorId)
+        private static Book CreateBook(string name, string barCode, string typeId, string authorId, decimal price)
         {
-            return new Book(name, new Guid(typeId), new Guid(authorId));
+            return new Book(name, barCode, new Guid(typeId), new Guid(authorId), price);
         }
     }
 }
