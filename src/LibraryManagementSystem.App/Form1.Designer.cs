@@ -142,6 +142,7 @@
             this.searchBoxButton.TabIndex = 1;
             this.searchBoxButton.Text = "Tìm kiếm";
             this.searchBoxButton.UseVisualStyleBackColor = true;
+            this.searchBoxButton.Click += new System.EventHandler(this.searchBoxButton_Click);
             // 
             // dataGridView2
             // 

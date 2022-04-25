@@ -39,6 +39,7 @@ namespace BookStoreManagementSystem
             return Host.CreateDefaultBuilder()
                 .ConfigureServices((context, services) =>
                 {
+                    services.AddAutoMapper(typeof(Program).Assembly);
                     services.AddMediatR(typeof(Program).Assembly);
                     services.AddDbContext<BookStoreContext>();
                     services.AddTransient<Form1>();
