@@ -58,17 +58,5 @@ namespace BookStoreManagementSystem
                 StaffInfo_SearchStaff_StaffInfo_GridTable.Rows.Add(staffInfo);
             }
         }
-
-        private void bookQuery_ListBooks_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void searchBookBox_TextChanged(object sender, EventArgs e)
-        {
-        }
     }
 }
