@@ -21,11 +21,13 @@ namespace BookStoreManagementSystem.App.Configuration.Database
                     IEnumerable<Author> authors;
                     authors = GetPredefinedAuthors(executingFolder);
                     context.AddRange(authors);
+                    await context.SaveChangesAsync();
                 }
                 if (!await context.BookTypes.AnyAsync())
                 {
                     IEnumerable<BookType> bookTypes = GetPredefinedBookTypes(executingFolder);
                     context.AddRange(bookTypes);
+                    await context.SaveChangesAsync();
                 }
                 if (!await context.Books.AnyAsync())
                 {

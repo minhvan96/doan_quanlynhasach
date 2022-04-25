@@ -18,15 +18,15 @@ namespace BookStoreManagementSystem.App.Configuration.Database
             {
                 var line = reader.ReadLine();
                 var values = line?.Split(',');
-                var bookType = CreateBook(values[0]);
+                var bookType = CreateBook(values[0], values[1], values[2]);
                 bookTypes.Add(bookType);
             }
             return bookTypes;
         }
 
-        private static Book CreateBook(string name)
+        private static Book CreateBook(string name, string typeId, string authorId)
         {
-            return new Book(name, Guid.Empty, Guid.Empty);
+            return new Book(name, new Guid(typeId), new Guid(authorId));
         }
     }
 }

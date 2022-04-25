@@ -6,7 +6,7 @@ namespace BookStoreManagementSystem.App.Configuration.Database
     {
         private static IEnumerable<BookStore> GetPredefinedBookStores(string contentRootPath)
         {
-            string csvFileBookStores = Path.Combine(contentRootPath, "Setup", "Books.csv");
+            string csvFileBookStores = Path.Combine(contentRootPath, "Setup", "BookStores.csv");
             if (!File.Exists(csvFileBookStores))
             {
                 return null;
