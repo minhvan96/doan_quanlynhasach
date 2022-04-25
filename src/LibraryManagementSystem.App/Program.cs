@@ -29,7 +29,7 @@ namespace BookStoreManagementSystem
                 BookStoreContextSeed.SeedAsync(context).Wait();
             });
 
-            Application.Run(ServiceProvider.GetRequiredService<Form1>());
+            Application.Run(ServiceProvider.GetRequiredService<BookStoreUI>());
         }
 
         public static IServiceProvider ServiceProvider { get; private set; }
@@ -42,7 +42,7 @@ namespace BookStoreManagementSystem
                     services.AddAutoMapper(typeof(Program).Assembly);
                     services.AddMediatR(typeof(Program).Assembly);
                     services.AddDbContext<BookStoreContext>();
-                    services.AddTransient<Form1>();
+                    services.AddTransient<BookStoreUI>();
                 });
         }
     }

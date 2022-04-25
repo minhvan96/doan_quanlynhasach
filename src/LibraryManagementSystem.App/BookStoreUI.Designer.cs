@@ -1,6 +1,6 @@
 ﻿namespace BookStoreManagementSystem
 {
-    partial class Form1
+    partial class BookStoreUI
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.MainNav = new System.Windows.Forms.TabControl();
             this.importBook = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.BookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,23 +45,31 @@
             this.BookQueryGrib_BookPriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.searchBoxButton = new System.Windows.Forms.Button();
             this.searchBookBox = new System.Windows.Forms.TextBox();
-            this.tabControl1.SuspendLayout();
+            this.SaleBookTab = new System.Windows.Forms.TabPage();
+            this.CustomerInfoTab = new System.Windows.Forms.TabPage();
+            this.StaffInfoTab = new System.Windows.Forms.TabPage();
+            this.HomeTab = new System.Windows.Forms.TabPage();
+            this.MainNav.SuspendLayout();
             this.importBook.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.queryBook.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookQuery_ListBooks)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // MainNav
             // 
-            this.tabControl1.Controls.Add(this.importBook);
-            this.tabControl1.Controls.Add(this.queryBook);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(984, 561);
-            this.tabControl1.TabIndex = 1;
+            this.MainNav.Controls.Add(this.importBook);
+            this.MainNav.Controls.Add(this.queryBook);
+            this.MainNav.Controls.Add(this.SaleBookTab);
+            this.MainNav.Controls.Add(this.CustomerInfoTab);
+            this.MainNav.Controls.Add(this.StaffInfoTab);
+            this.MainNav.Controls.Add(this.HomeTab);
+            this.MainNav.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainNav.Location = new System.Drawing.Point(0, 0);
+            this.MainNav.Name = "MainNav";
+            this.MainNav.SelectedIndex = 0;
+            this.MainNav.Size = new System.Drawing.Size(984, 561);
+            this.MainNav.TabIndex = 1;
             // 
             // importBook
             // 
@@ -184,15 +192,55 @@
             this.searchBookBox.Size = new System.Drawing.Size(195, 23);
             this.searchBookBox.TabIndex = 0;
             // 
-            // Form1
+            // SaleBookTab
+            // 
+            this.SaleBookTab.Location = new System.Drawing.Point(4, 24);
+            this.SaleBookTab.Name = "SaleBookTab";
+            this.SaleBookTab.Padding = new System.Windows.Forms.Padding(3);
+            this.SaleBookTab.Size = new System.Drawing.Size(976, 533);
+            this.SaleBookTab.TabIndex = 2;
+            this.SaleBookTab.Text = "Bán sách";
+            this.SaleBookTab.UseVisualStyleBackColor = true;
+            // 
+            // CustomerInfoTab
+            // 
+            this.CustomerInfoTab.Location = new System.Drawing.Point(4, 24);
+            this.CustomerInfoTab.Name = "CustomerInfoTab";
+            this.CustomerInfoTab.Padding = new System.Windows.Forms.Padding(3);
+            this.CustomerInfoTab.Size = new System.Drawing.Size(976, 533);
+            this.CustomerInfoTab.TabIndex = 3;
+            this.CustomerInfoTab.Text = "Khách hàng";
+            this.CustomerInfoTab.UseVisualStyleBackColor = true;
+            // 
+            // StaffInfoTab
+            // 
+            this.StaffInfoTab.Location = new System.Drawing.Point(4, 24);
+            this.StaffInfoTab.Name = "StaffInfoTab";
+            this.StaffInfoTab.Padding = new System.Windows.Forms.Padding(3);
+            this.StaffInfoTab.Size = new System.Drawing.Size(976, 533);
+            this.StaffInfoTab.TabIndex = 4;
+            this.StaffInfoTab.Text = "Nhân viên";
+            this.StaffInfoTab.UseVisualStyleBackColor = true;
+            // 
+            // HomeTab
+            // 
+            this.HomeTab.Location = new System.Drawing.Point(4, 24);
+            this.HomeTab.Name = "HomeTab";
+            this.HomeTab.Padding = new System.Windows.Forms.Padding(3);
+            this.HomeTab.Size = new System.Drawing.Size(976, 533);
+            this.HomeTab.TabIndex = 5;
+            this.HomeTab.Text = "HOME";
+            this.HomeTab.UseVisualStyleBackColor = true;
+            // 
+            // BookStoreUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 561);
-            this.Controls.Add(this.tabControl1);
-            this.Name = "Form1";
+            this.Controls.Add(this.MainNav);
+            this.Name = "BookStoreUI";
             this.Text = "Form1";
-            this.tabControl1.ResumeLayout(false);
+            this.MainNav.ResumeLayout(false);
             this.importBook.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.queryBook.ResumeLayout(false);
@@ -204,7 +252,7 @@
 
         #endregion
 
-        private TabControl tabControl1;
+        private TabControl MainNav;
         private TabPage importBook;
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn BookName;
@@ -221,5 +269,9 @@
         private DataGridViewTextBoxColumn BookQueryGrib_BookPriceColumn;
         private Button searchBoxButton;
         private TextBox searchBookBox;
+        private TabPage SaleBookTab;
+        private TabPage CustomerInfoTab;
+        private TabPage StaffInfoTab;
+        private TabPage HomeTab;
     }
 }

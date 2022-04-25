@@ -3,11 +3,11 @@ using MediatR;
 
 namespace BookStoreManagementSystem
 {
-    public partial class Form1 : Form
+    public partial class BookStoreUI : Form
     {
         private readonly IMediator _mediator;
 
-        public Form1(IMediator mediator)
+        public BookStoreUI(IMediator mediator)
         {
             InitializeComponent();
             _mediator = mediator;
