@@ -9,12 +9,12 @@ namespace BookStoreManagementSystem.App.Domain
         private readonly List<BookStoreStorage> _bookStoreStorages;
         public IReadOnlyCollection<BookStoreStorage> BookStoreStorages => _bookStoreStorages.AsReadOnly();
 
-        public BookStore()
+        protected BookStore()
         {
             _bookStoreStorages = new List<BookStoreStorage>();
         }
 
-        protected BookStore(string name,
+        public BookStore(string name,
             string address = "")
         {
             _bookStoreStorages = new List<BookStoreStorage>();

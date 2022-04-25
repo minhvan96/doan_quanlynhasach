@@ -25,7 +25,21 @@
 
   <ItemGroup>
     <Folder Include="Features\BookFeature\Commands\" />
-    <Folder Include="Setup\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Setup\Authors.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Setup\Books.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Setup\BookStores.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Setup\BookTypes.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

@@ -14,5 +14,11 @@ namespace BookStoreManagementSystem.App.Domain
         {
             Name = name;
         }
+
+        public Author(Guid id, string name)
+        {
+            Id = id;
+            Name = name;
+        }
     }
 }

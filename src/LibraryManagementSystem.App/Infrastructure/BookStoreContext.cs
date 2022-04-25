@@ -31,7 +31,7 @@ namespace BookStoreManagementSystem.App.Infrastructure
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //optionsBuilder.UseSqlite($"Data Source={DbPath}");
-            optionsBuilder.UseSqlServer("Data Source=DESKTOP-KFVKG9B;Initial Catalog=BookStore;Integrated Security=True;TrustServerCertificate=True");
+            optionsBuilder.UseSqlServer("Data Source=VANNGUYEN;Initial Catalog=BookStore;Integrated Security=True;TrustServerCertificate=True");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -26,6 +26,7 @@ namespace BookStoreManagementSystem
 
             host.MigrateDbContext<BookStoreContext>((context, service) =>
             {
+                BookStoreContextSeed.SeedAsync(context).Wait();
             });
 
             Application.Run(ServiceProvider.GetRequiredService<Form1>());
