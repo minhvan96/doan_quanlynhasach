@@ -33,5 +33,20 @@ namespace BookStoreManagementSystem.App.Domain.Identity
             Email = email;
             PhoneNumber = phoneNumber;
         }
+
+        public User(Guid id,
+            string name,
+            string fullName,
+            string password,
+            string email,
+            string phoneNumber)
+        {
+            Id = id;
+            Name = name;
+            FullName = fullName;
+            Password = password;
+            Email = email;
+            PhoneNumber = phoneNumber;
+        }
     }
 }

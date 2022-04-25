@@ -30,5 +30,9 @@ namespace BookStoreManagementSystem
                 bookQuery_ListBooks.Rows.Add(bookInfo);
             }
         }
+
+        private void StaffInfo_SearchStaff_Search_Button_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

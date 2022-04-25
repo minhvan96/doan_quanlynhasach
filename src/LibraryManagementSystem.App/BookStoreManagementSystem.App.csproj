@@ -32,6 +32,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Setup\Users.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Setup\Staffs.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Setup\Authors.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

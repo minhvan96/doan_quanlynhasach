@@ -1,6 +1,6 @@
 ﻿using BookStoreManagementSystem.App.Domain;
+using BookStoreManagementSystem.App.Domain.Identity;
 using BookStoreManagementSystem.App.Infrastructure;
-using System.Reflection;
 
 namespace BookStoreManagementSystem.App.Configuration.Database
 {
@@ -16,6 +16,17 @@ namespace BookStoreManagementSystem.App.Configuration.Database
             await policy.ExecuteAsync(async () =>
             {
                 var executingFolder = Path.GetDirectoryName(Application.ExecutablePath);
+
+                #region Identity
+
+                if (!await context.Users.AnyAsync())
+                {
+                    IEnumerable<User> users = GetPredefineUsers(executingFolder);
+                    context.AddRange(users);
+                }
+
+                #endregion Identity
+
                 if (!await context.Author.AnyAsync())
                 {
                     IEnumerable<Author> authors;
@@ -39,7 +50,11 @@ namespace BookStoreManagementSystem.App.Configuration.Database
                     IEnumerable<BookStore> bookStores = GetPredefinedBookStores(executingFolder);
                     context.AddRange(bookStores);
                 }
-
+                if (!await context.Staffs.AnyAsync())
+                {
+                    IEnumerable<Staff> staffs = GetPredefinedStaffs(executingFolder);
+                    context.AddRange(staffs);
+                }
                 await context.SaveChangesAsync();
             });
         }
