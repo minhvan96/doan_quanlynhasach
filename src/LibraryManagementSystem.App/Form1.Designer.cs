@@ -30,26 +30,26 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.importBook = new System.Windows.Forms.TabPage();
-            this.queryBook = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.BookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Available = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Action = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.searchBookBox = new System.Windows.Forms.TextBox();
-            this.searchBoxButton = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.queryBook = new System.Windows.Forms.TabPage();
+            this.bookQuery_ListBooks = new System.Windows.Forms.DataGridView();
             this.BookQueryGrib_BookNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookQueryGrib_BookCodeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookQueryGrib_BookTypeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookQueryGrib_AuthorNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookQueryGrib_BookPriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.searchBoxButton = new System.Windows.Forms.Button();
+            this.searchBookBox = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.importBook.SuspendLayout();
-            this.queryBook.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.queryBook.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bookQuery_ListBooks)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -73,19 +73,6 @@
             this.importBook.TabIndex = 0;
             this.importBook.Text = "Nhập sách";
             this.importBook.UseVisualStyleBackColor = true;
-            // 
-            // queryBook
-            // 
-            this.queryBook.Controls.Add(this.dataGridView2);
-            this.queryBook.Controls.Add(this.searchBoxButton);
-            this.queryBook.Controls.Add(this.searchBookBox);
-            this.queryBook.Location = new System.Drawing.Point(4, 24);
-            this.queryBook.Name = "queryBook";
-            this.queryBook.Padding = new System.Windows.Forms.Padding(3);
-            this.queryBook.Size = new System.Drawing.Size(976, 533);
-            this.queryBook.TabIndex = 1;
-            this.queryBook.Text = "Tra cứu sách";
-            this.queryBook.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -127,37 +114,33 @@
             this.Action.HeaderText = "Thao tác";
             this.Action.Name = "Action";
             // 
-            // searchBookBox
+            // queryBook
             // 
-            this.searchBookBox.Location = new System.Drawing.Point(104, 48);
-            this.searchBookBox.Name = "searchBookBox";
-            this.searchBookBox.Size = new System.Drawing.Size(195, 23);
-            this.searchBookBox.TabIndex = 0;
+            this.queryBook.Controls.Add(this.bookQuery_ListBooks);
+            this.queryBook.Controls.Add(this.searchBoxButton);
+            this.queryBook.Controls.Add(this.searchBookBox);
+            this.queryBook.Location = new System.Drawing.Point(4, 24);
+            this.queryBook.Name = "queryBook";
+            this.queryBook.Padding = new System.Windows.Forms.Padding(3);
+            this.queryBook.Size = new System.Drawing.Size(976, 533);
+            this.queryBook.TabIndex = 1;
+            this.queryBook.Text = "Tra cứu sách";
+            this.queryBook.UseVisualStyleBackColor = true;
             // 
-            // searchBoxButton
+            // bookQuery_ListBooks
             // 
-            this.searchBoxButton.Location = new System.Drawing.Point(305, 48);
-            this.searchBoxButton.Name = "searchBoxButton";
-            this.searchBoxButton.Size = new System.Drawing.Size(75, 23);
-            this.searchBoxButton.TabIndex = 1;
-            this.searchBoxButton.Text = "Tìm kiếm";
-            this.searchBoxButton.UseVisualStyleBackColor = true;
-            this.searchBoxButton.Click += new System.EventHandler(this.searchBoxButton_Click);
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.bookQuery_ListBooks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.bookQuery_ListBooks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.BookQueryGrib_BookNameColumn,
             this.BookQueryGrib_BookCodeColumn,
             this.BookQueryGrib_BookTypeColumn,
             this.BookQueryGrib_AuthorNameColumn,
             this.BookQueryGrib_BookPriceColumn});
-            this.dataGridView2.Location = new System.Drawing.Point(104, 130);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 25;
-            this.dataGridView2.Size = new System.Drawing.Size(581, 328);
-            this.dataGridView2.TabIndex = 2;
+            this.bookQuery_ListBooks.Location = new System.Drawing.Point(104, 130);
+            this.bookQuery_ListBooks.Name = "bookQuery_ListBooks";
+            this.bookQuery_ListBooks.RowTemplate.Height = 25;
+            this.bookQuery_ListBooks.Size = new System.Drawing.Size(581, 328);
+            this.bookQuery_ListBooks.TabIndex = 2;
             // 
             // BookQueryGrib_BookNameColumn
             // 
@@ -184,6 +167,23 @@
             this.BookQueryGrib_BookPriceColumn.HeaderText = "Giá sách";
             this.BookQueryGrib_BookPriceColumn.Name = "BookQueryGrib_BookPriceColumn";
             // 
+            // searchBoxButton
+            // 
+            this.searchBoxButton.Location = new System.Drawing.Point(305, 48);
+            this.searchBoxButton.Name = "searchBoxButton";
+            this.searchBoxButton.Size = new System.Drawing.Size(75, 23);
+            this.searchBoxButton.TabIndex = 1;
+            this.searchBoxButton.Text = "Tìm kiếm";
+            this.searchBoxButton.UseVisualStyleBackColor = true;
+            this.searchBoxButton.Click += new System.EventHandler(this.searchBoxButton_Click);
+            // 
+            // searchBookBox
+            // 
+            this.searchBookBox.Location = new System.Drawing.Point(104, 48);
+            this.searchBookBox.Name = "searchBookBox";
+            this.searchBookBox.Size = new System.Drawing.Size(195, 23);
+            this.searchBookBox.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -194,10 +194,10 @@
             this.Text = "Form1";
             this.tabControl1.ResumeLayout(false);
             this.importBook.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.queryBook.ResumeLayout(false);
             this.queryBook.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookQuery_ListBooks)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -213,7 +213,7 @@
         private DataGridViewTextBoxColumn Available;
         private DataGridViewTextBoxColumn Action;
         private TabPage queryBook;
-        private DataGridView dataGridView2;
+        private DataGridView bookQuery_ListBooks;
         private DataGridViewTextBoxColumn BookQueryGrib_BookNameColumn;
         private DataGridViewTextBoxColumn BookQueryGrib_BookCodeColumn;
         private DataGridViewTextBoxColumn BookQueryGrib_BookTypeColumn;
