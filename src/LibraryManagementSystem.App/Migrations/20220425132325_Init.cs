@@ -13,13 +13,13 @@ namespace BookStoreManagementSystem.App.Migrations
                 name: "Authors",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CreatedDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
-                    UpdatedDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
-                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
+                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
+                    Name = table.Column<string>(type: "TEXT", nullable: true),
+                    CreatedBy = table.Column<string>(type: "TEXT", nullable: true),
+                    UpdatedBy = table.Column<string>(type: "TEXT", nullable: true),
+                    CreatedDate = table.Column<DateTimeOffset>(type: "TEXT", nullable: false),
+                    UpdatedDate = table.Column<DateTimeOffset>(type: "TEXT", nullable: false),
+                    IsDeleted = table.Column<bool>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -30,14 +30,14 @@ namespace BookStoreManagementSystem.App.Migrations
                 name: "BookStores",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Address = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CreatedDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
-                    UpdatedDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
-                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
+                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
+                    Name = table.Column<string>(type: "TEXT", nullable: true),
+                    Address = table.Column<string>(type: "TEXT", nullable: true),
+                    CreatedBy = table.Column<string>(type: "TEXT", nullable: true),
+                    UpdatedBy = table.Column<string>(type: "TEXT", nullable: true),
+                    CreatedDate = table.Column<DateTimeOffset>(type: "TEXT", nullable: false),
+                    UpdatedDate = table.Column<DateTimeOffset>(type: "TEXT", nullable: false),
+                    IsDeleted = table.Column<bool>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -48,13 +48,13 @@ namespace BookStoreManagementSystem.App.Migrations
                 name: "BookTypes",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CreatedDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
-                    UpdatedDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
-                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
+                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
+                    Name = table.Column<string>(type: "TEXT", nullable: true),
+                    CreatedBy = table.Column<string>(type: "TEXT", nullable: true),
+                    UpdatedBy = table.Column<string>(type: "TEXT", nullable: true),
+                    CreatedDate = table.Column<DateTimeOffset>(type: "TEXT", nullable: false),
+                    UpdatedDate = table.Column<DateTimeOffset>(type: "TEXT", nullable: false),
+                    IsDeleted = table.Column<bool>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -65,18 +65,18 @@ namespace BookStoreManagementSystem.App.Migrations
                 name: "Customers",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    FullName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    BirthDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CreatedDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
-                    UpdatedDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
-                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
+                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
+                    Name = table.Column<string>(type: "TEXT", nullable: false),
+                    FullName = table.Column<string>(type: "TEXT", nullable: false),
+                    BirthDate = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    Address = table.Column<string>(type: "TEXT", nullable: false),
+                    PhoneNumber = table.Column<string>(type: "TEXT", nullable: false),
+                    Email = table.Column<string>(type: "TEXT", nullable: false),
+                    CreatedBy = table.Column<string>(type: "TEXT", nullable: true),
+                    UpdatedBy = table.Column<string>(type: "TEXT", nullable: true),
+                    CreatedDate = table.Column<DateTimeOffset>(type: "TEXT", nullable: false),
+                    UpdatedDate = table.Column<DateTimeOffset>(type: "TEXT", nullable: false),
+                    IsDeleted = table.Column<bool>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -87,13 +87,13 @@ namespace BookStoreManagementSystem.App.Migrations
                 name: "Roles",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CreatedDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
-                    UpdatedDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
-                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
+                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
+                    Name = table.Column<string>(type: "TEXT", nullable: false),
+                    CreatedBy = table.Column<string>(type: "TEXT", nullable: true),
+                    UpdatedBy = table.Column<string>(type: "TEXT", nullable: true),
+                    CreatedDate = table.Column<DateTimeOffset>(type: "TEXT", nullable: false),
+                    UpdatedDate = table.Column<DateTimeOffset>(type: "TEXT", nullable: false),
+                    IsDeleted = table.Column<bool>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -104,17 +104,17 @@ namespace BookStoreManagementSystem.App.Migrations
                 name: "Users",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    FullName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CreatedDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
-                    UpdatedDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
-                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
+                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
+                    Name = table.Column<string>(type: "TEXT", nullable: false),
+                    FullName = table.Column<string>(type: "TEXT", nullable: false),
+                    Password = table.Column<string>(type: "TEXT", nullable: false),
+                    Email = table.Column<string>(type: "TEXT", nullable: false),
+                    PhoneNumber = table.Column<string>(type: "TEXT", nullable: false),
+                    CreatedBy = table.Column<string>(type: "TEXT", nullable: true),
+                    UpdatedBy = table.Column<string>(type: "TEXT", nullable: true),
+                    CreatedDate = table.Column<DateTimeOffset>(type: "TEXT", nullable: false),
+                    UpdatedDate = table.Column<DateTimeOffset>(type: "TEXT", nullable: false),
+                    IsDeleted = table.Column<bool>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -125,15 +125,17 @@ namespace BookStoreManagementSystem.App.Migrations
                 name: "Books",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    TypeId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    AuthorId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CreatedDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
-                    UpdatedDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
-                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
+                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
+                    Code = table.Column<string>(type: "TEXT", nullable: false),
+                    Name = table.Column<string>(type: "TEXT", nullable: true),
+                    TypeId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    AuthorId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    Price = table.Column<decimal>(type: "TEXT", nullable: false),
+                    CreatedBy = table.Column<string>(type: "TEXT", nullable: true),
+                    UpdatedBy = table.Column<string>(type: "TEXT", nullable: true),
+                    CreatedDate = table.Column<DateTimeOffset>(type: "TEXT", nullable: false),
+                    UpdatedDate = table.Column<DateTimeOffset>(type: "TEXT", nullable: false),
+                    IsDeleted = table.Column<bool>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -156,16 +158,16 @@ namespace BookStoreManagementSystem.App.Migrations
                 name: "Receipts",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    CustomerId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    SoldDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
-                    TotalPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CreatedDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
-                    UpdatedDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
-                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
+                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
+                    CustomerId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    Code = table.Column<string>(type: "TEXT", nullable: false),
+                    SoldDate = table.Column<DateTimeOffset>(type: "TEXT", nullable: false),
+                    TotalPrice = table.Column<decimal>(type: "TEXT", nullable: false),
+                    CreatedBy = table.Column<string>(type: "TEXT", nullable: true),
+                    UpdatedBy = table.Column<string>(type: "TEXT", nullable: true),
+                    CreatedDate = table.Column<DateTimeOffset>(type: "TEXT", nullable: false),
+                    UpdatedDate = table.Column<DateTimeOffset>(type: "TEXT", nullable: false),
+                    IsDeleted = table.Column<bool>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -182,8 +184,8 @@ namespace BookStoreManagementSystem.App.Migrations
                 name: "UserRoles",
                 columns: table => new
                 {
-                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    RoleId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    UserId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    RoleId = table.Column<Guid>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -206,11 +208,11 @@ namespace BookStoreManagementSystem.App.Migrations
                 name: "BookStoreStorages",
                 columns: table => new
                 {
-                    BookId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    BookStoreId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    BookId1 = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    Availability = table.Column<int>(type: "int", nullable: false),
-                    BookStoreId1 = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
+                    BookId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    BookStoreId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    BookId1 = table.Column<Guid>(type: "TEXT", nullable: true),
+                    Availability = table.Column<int>(type: "INTEGER", nullable: false),
+                    BookStoreId1 = table.Column<Guid>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -243,16 +245,16 @@ namespace BookStoreManagementSystem.App.Migrations
                 name: "ReceiptDetails",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    BookId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Count = table.Column<int>(type: "int", nullable: false),
-                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    ReceiptId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CreatedDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
-                    UpdatedDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
-                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
+                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
+                    BookId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    Count = table.Column<int>(type: "INTEGER", nullable: false),
+                    Price = table.Column<decimal>(type: "TEXT", nullable: false),
+                    ReceiptId = table.Column<Guid>(type: "TEXT", nullable: true),
+                    CreatedBy = table.Column<string>(type: "TEXT", nullable: true),
+                    UpdatedBy = table.Column<string>(type: "TEXT", nullable: true),
+                    CreatedDate = table.Column<DateTimeOffset>(type: "TEXT", nullable: false),
+                    UpdatedDate = table.Column<DateTimeOffset>(type: "TEXT", nullable: false),
+                    IsDeleted = table.Column<bool>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
