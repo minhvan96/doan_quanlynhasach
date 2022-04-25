@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
+using BookStoreManagementSystem.App.Configuration.Mediator;
 using BookStoreManagementSystem.App.Domain.Seedwork;
 using BookStoreManagementSystem.App.Features.BookFeature.Dtos;
 using BookStoreManagementSystem.App.Infrastructure;
@@ -8,7 +9,7 @@ using MediatR;
 
 namespace BookStoreManagementSystem.App.Features.BookFeature.Queries
 {
-    public class ListBooksQueryHandler : IRequestHandler<ListBooksQuery, IPagedList<BookDto>>
+    public class ListBooksQueryHandler : IListQueryHandler<ListBooksQuery, BookDto>
     {
         private readonly BookStoreContext _context;
         private readonly IMapper _mapper;
