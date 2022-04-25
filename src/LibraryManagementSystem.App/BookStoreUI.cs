@@ -1,4 +1,5 @@
 ﻿using BookStoreManagementSystem.App.Features.BookFeature.Queries;
+using BookStoreManagementSystem.App.Features.StaffFeature.Queries;
 using MediatR;
 
 namespace BookStoreManagementSystem
@@ -31,8 +32,31 @@ namespace BookStoreManagementSystem
             }
         }
 
-        private void StaffInfo_SearchStaff_Search_Button_Click(object sender, EventArgs e)
+        private async void StaffInfo_SearchStaff_Search_Button_Click(object sender, EventArgs e)
         {
+            var listStaffsRequest = new ListStaffsQuery();
+            if (!string.IsNullOrEmpty(StaffInfo_SearchStaff_Name_Textbox.Text))
+            {
+                listStaffsRequest.Name = StaffInfo_SearchStaff_Name_Textbox.Text;
+            }
+            if (!string.IsNullOrEmpty(StaffInfo_SearchStaff_Age_Textbox.Text))
+            {
+                listStaffsRequest.Age = int.Parse(StaffInfo_SearchStaff_Age_Textbox.Text);
+            }
+            var staffs = await _mediator.Send(listStaffsRequest);
+            StaffInfo_SearchStaff_StaffInfo_GridTable.Rows.Clear();
+
+            foreach (var staff in staffs.Items)
+            {
+                var staffInfo = new DataGridViewRow();
+                staffInfo.CreateCells(StaffInfo_SearchStaff_StaffInfo_GridTable);
+                staffInfo.Cells[0].Value = staff.Name;
+                staffInfo.Cells[1].Value = staff.Address;
+                staffInfo.Cells[2].Value = staff.Age;
+                staffInfo.Cells[3].Value = staff.Position;
+                staffInfo.Cells[4].Value = staff.PhoneNumber;
+                StaffInfo_SearchStaff_StaffInfo_GridTable.Rows.Add(staffInfo);
+            }
         }
     }
 }

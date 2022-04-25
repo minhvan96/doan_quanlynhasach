@@ -8,6 +8,7 @@ namespace BookStoreManagementSystem.App.Domain.Identity
         public string FullName { get; private set; }
         public string Password { get; private set; }
         public string Email { get; private set; }
+        public DateTime BirthDate { get; set; }
         public string PhoneNumber { get; set; }
         private readonly List<UserRole> _roles = new();
         public IReadOnlyCollection<UserRole> Roles => _roles.AsReadOnly();
@@ -39,7 +40,8 @@ namespace BookStoreManagementSystem.App.Domain.Identity
             string fullName,
             string password,
             string email,
-            string phoneNumber)
+            string phoneNumber,
+            DateTime birthDate)
         {
             Id = id;
             Name = name;
@@ -47,6 +49,7 @@ namespace BookStoreManagementSystem.App.Domain.Identity
             Password = password;
             Email = email;
             PhoneNumber = phoneNumber;
+            BirthDate = birthDate;
         }
     }
 }
