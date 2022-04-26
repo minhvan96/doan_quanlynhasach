@@ -131,9 +131,9 @@ namespace BookStoreManagementSystem
         private async void CustomerMenu_QueryCustomer_Search_Button_Click(object sender, EventArgs e)
         {
             var listCustomersRequest = new ListCustomersQuery();
-            if (!string.IsNullOrEmpty(StaffInfo_SearchStaff_Name_Textbox.Text))
+            if (!string.IsNullOrEmpty(CustomerMenu_QueryCustomer_FullName_Textbox.Text))
             {
-                listCustomersRequest.FullName = StaffInfo_SearchStaff_Name_Textbox.Text;
+                listCustomersRequest.FullName = CustomerMenu_QueryCustomer_FullName_Textbox.Text;
             }
 
             var customers = await _mediator.Send(listCustomersRequest);
@@ -142,12 +142,12 @@ namespace BookStoreManagementSystem
             foreach (var customer in customers.Items)
             {
                 var customerInfo = new DataGridViewRow();
-                customerInfo.CreateCells(StaffInfo_SearchStaff_StaffInfo_GridTable);
+                customerInfo.CreateCells(CustomerMenu_QueryCustomer_CustomerDataGridView);
                 customerInfo.Cells[0].Value = customer.Id;
                 customerInfo.Cells[1].Value = customer.FullName;
                 customerInfo.Cells[2].Value = customer.Address;
                 customerInfo.Cells[3].Value = customer.PhoneNumber;
-                StaffInfo_SearchStaff_StaffInfo_GridTable.Rows.Add(customerInfo);
+                CustomerMenu_QueryCustomer_CustomerDataGridView.Rows.Add(customerInfo);
             }
         }
     }
