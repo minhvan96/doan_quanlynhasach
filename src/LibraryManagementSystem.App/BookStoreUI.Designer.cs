@@ -572,6 +572,7 @@
             this.Controls.Add(this.MainNav);
             this.Name = "BookStoreUI";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.BookStoreUILoad);
             this.MainNav.ResumeLayout(false);
             this.ImportBookTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

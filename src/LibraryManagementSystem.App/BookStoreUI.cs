@@ -1,6 +1,7 @@
 ﻿using BookStoreManagementSystem.App.Features.BookFeature.Queries;
 using BookStoreManagementSystem.App.Features.StaffFeature.Queries;
 using MediatR;
+using System.Data;
 
 namespace BookStoreManagementSystem
 {
@@ -14,6 +15,31 @@ namespace BookStoreManagementSystem
             _mediator = mediator;
         }
 
+        private async void BookStoreUILoad(object sender, EventArgs e)
+        {
+            #region Load BookTypes
+
+            var listBookTypesQuery = new ListBookTypesQuery();
+            var bookTypes = await _mediator.Send(listBookTypesQuery);
+
+            var bookTypesDataTable = new DataTable();
+            var bookTypeIdColumn = new DataColumn("Id", typeof(Guid));
+            var bookTypeNameColumn = new DataColumn("Name", typeof(string));
+
+            bookTypesDataTable.Columns.Add(bookTypeIdColumn);
+            bookTypesDataTable.Columns.Add(bookTypeNameColumn);
+            bookTypesDataTable.Rows.Add(Guid.Empty, "Tất cả thể loại");
+            foreach (var bookType in bookTypes.Items)
+            {
+                bookTypesDataTable.Rows.Add(bookType.Id, bookType.Name);
+            }
+            QueryBook_BookType_ComboBox.DataSource = bookTypesDataTable;
+            QueryBook_BookType_ComboBox.DisplayMember = "Name";
+            QueryBook_BookType_ComboBox.ValueMember = "Id";
+
+            #endregion Load BookTypes
+        }
+
         private async void SearchBoxButton_Click(object sender, EventArgs e)
         {
             var listBookRequest = new ListBooksQuery();
@@ -25,7 +51,6 @@ namespace BookStoreManagementSystem
             {
                 listBookRequest.AuthorName = QueryBook_AuthorName_TextBox.Text;
             }
-            if()
             var books = await _mediator.Send(listBookRequest);
             bookQuery_ListBooks.Rows.Clear();
             foreach (var book in books.Items)
