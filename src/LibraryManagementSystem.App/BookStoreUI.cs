@@ -32,6 +32,8 @@ namespace BookStoreManagementSystem
             var bookStoreNameColumn = new DataColumn("Name", typeof(string));
             bookStoreDataTable.Columns.Add(bookStoreIdColumn);
             bookStoreDataTable.Columns.Add(bookStoreNameColumn);
+            bookStoreDataTable.Rows.Add(Guid.Empty, "Chọn nhà sách");
+
             foreach (var bookStore in bookStores.Items)
             {
                 bookStoreDataTable.Rows.Add(bookStore.Id, bookStore.Name);
@@ -255,6 +257,41 @@ namespace BookStoreManagementSystem
                 string successfulTitle = "Tạo mới sách thành công";
                 string message = "Thêm sách thành công";
                 MessageBox.Show(message, successfulTitle);
+            }
+        }
+
+        private void ImportBookMenu_QueryBook_SubmitButton_Click(object sender, EventArgs e)
+        {
+        }
+
+        private async void ImportBookMenu_QueryBook_BookStore_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                var bookStoreId = (Guid)ImportBookMenu_QueryBook_BookStore_ComboBox.SelectedValue;
+                ImportBookMenu_BooksDataGridView.Rows.Clear();
+
+                if (bookStoreId != Guid.Empty)
+                {
+                    var getBookStoreStorageQuery = new GetBookStoreStorageQuery
+                    {
+                        BookStoreId = bookStoreId,
+                    };
+                    var bookStoreStorage = await _mediator.Send(getBookStoreStorageQuery);
+                    foreach (var bookStorage in bookStoreStorage.Items)
+                    {
+                        var info = new DataGridViewRow();
+                        info.CreateCells(ImportBookMenu_BooksDataGridView);
+                        info.Cells[0].Value = bookStorage.BookName;
+                        info.Cells[1].Value = bookStorage.BookCode;
+                        info.Cells[2].Value = bookStorage.BookTypeName;
+                        info.Cells[3].Value = bookStorage.Availability;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return;
             }
         }
     }
