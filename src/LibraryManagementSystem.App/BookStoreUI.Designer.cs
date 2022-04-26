@@ -31,8 +31,19 @@
             this.MainNav = new System.Windows.Forms.TabControl();
             this.HomeTab = new System.Windows.Forms.TabPage();
             this.ImportBookTab = new System.Windows.Forms.TabPage();
+            this.ImportBookMenu_MainContainer = new System.Windows.Forms.SplitContainer();
+            this.ImportBookMenu_QueryBook_BookStore_ComboBox = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.ImportBookMenu_BooksDataGridView = new System.Windows.Forms.DataGridView();
+            this.BookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BookCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BookType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Available = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Action = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.QueryBookTab = new System.Windows.Forms.TabPage();
-            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.QueryBookMenu_BookInfo_Tab = new System.Windows.Forms.TabPage();
+            this.QueryBookMenu_QueryBookTab = new System.Windows.Forms.SplitContainer();
             this.QueryBook_BookType_ComboBox = new System.Windows.Forms.ComboBox();
             this.QueryBook_Price_ComboBox = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -44,13 +55,14 @@
             this.QueryBook_AuthorName_TextBox = new System.Windows.Forms.TextBox();
             this.QueryBook_BookCode_TextBox = new System.Windows.Forms.TextBox();
             this.QueryBook_BookName_TextBox = new System.Windows.Forms.TextBox();
-            this.SearchBoxButton = new System.Windows.Forms.Button();
+            this.QueryBookMenu_BookInfo_SearchBook_Button = new System.Windows.Forms.Button();
             this.bookQuery_ListBooks = new System.Windows.Forms.DataGridView();
             this.BookQueryGrib_BookNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookQueryGrib_BookCodeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookQueryGrib_BookTypeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookQueryGrib_AuthorNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookQueryGrib_BookPriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QueryBookMenu_AddBook_Tab = new System.Windows.Forms.TabPage();
             this.SaleBookTab = new System.Windows.Forms.TabPage();
             this.CustomerInfoTab = new System.Windows.Forms.TabPage();
             this.CustomerMenu_MainContainer = new System.Windows.Forms.SplitContainer();
@@ -83,22 +95,21 @@
             this.StaffInfo_SearchStaff_Position_GridTable = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StaffInfo_SearchStaff_PhoneNumber_GridTable = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
-            this.ImportBookMenu_MainContainer = new System.Windows.Forms.SplitContainer();
-            this.ImportBookMenu_BooksDataGridView = new System.Windows.Forms.DataGridView();
-            this.BookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BookCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BookType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Available = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Action = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ImportBookMenu_QueryBook_BookStore_ComboBox = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.ConfigurationMenu = new System.Windows.Forms.TabPage();
             this.MainNav.SuspendLayout();
             this.ImportBookTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ImportBookMenu_MainContainer)).BeginInit();
+            this.ImportBookMenu_MainContainer.Panel1.SuspendLayout();
+            this.ImportBookMenu_MainContainer.Panel2.SuspendLayout();
+            this.ImportBookMenu_MainContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ImportBookMenu_BooksDataGridView)).BeginInit();
             this.QueryBookTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
-            this.splitContainer3.Panel1.SuspendLayout();
-            this.splitContainer3.Panel2.SuspendLayout();
-            this.splitContainer3.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.QueryBookMenu_BookInfo_Tab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QueryBookMenu_QueryBookTab)).BeginInit();
+            this.QueryBookMenu_QueryBookTab.Panel1.SuspendLayout();
+            this.QueryBookMenu_QueryBookTab.Panel2.SuspendLayout();
+            this.QueryBookMenu_QueryBookTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookQuery_ListBooks)).BeginInit();
             this.CustomerInfoTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerMenu_MainContainer)).BeginInit();
@@ -119,11 +130,6 @@
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StaffInfo_SearchStaff_StaffInfo_GridTable)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ImportBookMenu_MainContainer)).BeginInit();
-            this.ImportBookMenu_MainContainer.Panel1.SuspendLayout();
-            this.ImportBookMenu_MainContainer.Panel2.SuspendLayout();
-            this.ImportBookMenu_MainContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ImportBookMenu_BooksDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // MainNav
@@ -134,6 +140,7 @@
             this.MainNav.Controls.Add(this.SaleBookTab);
             this.MainNav.Controls.Add(this.CustomerInfoTab);
             this.MainNav.Controls.Add(this.StaffInfoTab);
+            this.MainNav.Controls.Add(this.ConfigurationMenu);
             this.MainNav.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainNav.Location = new System.Drawing.Point(0, 0);
             this.MainNav.Name = "MainNav";
@@ -162,9 +169,91 @@
             this.ImportBookTab.Text = "Nhập sách";
             this.ImportBookTab.UseVisualStyleBackColor = true;
             // 
+            // ImportBookMenu_MainContainer
+            // 
+            this.ImportBookMenu_MainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ImportBookMenu_MainContainer.Location = new System.Drawing.Point(3, 3);
+            this.ImportBookMenu_MainContainer.Name = "ImportBookMenu_MainContainer";
+            this.ImportBookMenu_MainContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // ImportBookMenu_MainContainer.Panel1
+            // 
+            this.ImportBookMenu_MainContainer.Panel1.Controls.Add(this.ImportBookMenu_QueryBook_BookStore_ComboBox);
+            this.ImportBookMenu_MainContainer.Panel1.Controls.Add(this.label14);
+            // 
+            // ImportBookMenu_MainContainer.Panel2
+            // 
+            this.ImportBookMenu_MainContainer.Panel2.Controls.Add(this.ImportBookMenu_BooksDataGridView);
+            this.ImportBookMenu_MainContainer.Size = new System.Drawing.Size(970, 527);
+            this.ImportBookMenu_MainContainer.SplitterDistance = 100;
+            this.ImportBookMenu_MainContainer.TabIndex = 0;
+            // 
+            // ImportBookMenu_QueryBook_BookStore_ComboBox
+            // 
+            this.ImportBookMenu_QueryBook_BookStore_ComboBox.FormattingEnabled = true;
+            this.ImportBookMenu_QueryBook_BookStore_ComboBox.Location = new System.Drawing.Point(18, 37);
+            this.ImportBookMenu_QueryBook_BookStore_ComboBox.Name = "ImportBookMenu_QueryBook_BookStore_ComboBox";
+            this.ImportBookMenu_QueryBook_BookStore_ComboBox.Size = new System.Drawing.Size(174, 23);
+            this.ImportBookMenu_QueryBook_BookStore_ComboBox.TabIndex = 5;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(18, 19);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(56, 15);
+            this.label14.TabIndex = 4;
+            this.label14.Text = "Nhà sách";
+            // 
+            // ImportBookMenu_BooksDataGridView
+            // 
+            this.ImportBookMenu_BooksDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ImportBookMenu_BooksDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.BookName,
+            this.BookCode,
+            this.BookType,
+            this.Available,
+            this.Action});
+            this.ImportBookMenu_BooksDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ImportBookMenu_BooksDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.ImportBookMenu_BooksDataGridView.Name = "ImportBookMenu_BooksDataGridView";
+            this.ImportBookMenu_BooksDataGridView.RowTemplate.Height = 25;
+            this.ImportBookMenu_BooksDataGridView.Size = new System.Drawing.Size(970, 423);
+            this.ImportBookMenu_BooksDataGridView.TabIndex = 2;
+            // 
+            // BookName
+            // 
+            this.BookName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.BookName.HeaderText = "Tên sách";
+            this.BookName.Name = "BookName";
+            // 
+            // BookCode
+            // 
+            this.BookCode.HeaderText = "Mã sách";
+            this.BookCode.Name = "BookCode";
+            this.BookCode.Width = 150;
+            // 
+            // BookType
+            // 
+            this.BookType.HeaderText = "Loại sách";
+            this.BookType.Name = "BookType";
+            this.BookType.Width = 150;
+            // 
+            // Available
+            // 
+            this.Available.HeaderText = "Số lượng đã nhận";
+            this.Available.Name = "Available";
+            this.Available.Width = 150;
+            // 
+            // Action
+            // 
+            this.Action.HeaderText = "Thao tác";
+            this.Action.Name = "Action";
+            this.Action.Width = 150;
+            // 
             // QueryBookTab
             // 
-            this.QueryBookTab.Controls.Add(this.splitContainer3);
+            this.QueryBookTab.Controls.Add(this.tabControl1);
             this.QueryBookTab.Location = new System.Drawing.Point(4, 24);
             this.QueryBookTab.Name = "QueryBookTab";
             this.QueryBookTab.Padding = new System.Windows.Forms.Padding(3);
@@ -173,34 +262,56 @@
             this.QueryBookTab.Text = "Tra cứu sách";
             this.QueryBookTab.UseVisualStyleBackColor = true;
             // 
-            // splitContainer3
+            // tabControl1
             // 
-            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer3.Location = new System.Drawing.Point(3, 3);
-            this.splitContainer3.Name = "splitContainer3";
-            this.splitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.tabControl1.Controls.Add(this.QueryBookMenu_BookInfo_Tab);
+            this.tabControl1.Controls.Add(this.QueryBookMenu_AddBook_Tab);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(3, 3);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(970, 527);
+            this.tabControl1.TabIndex = 0;
             // 
-            // splitContainer3.Panel1
+            // QueryBookMenu_BookInfo_Tab
             // 
-            this.splitContainer3.Panel1.Controls.Add(this.QueryBook_BookType_ComboBox);
-            this.splitContainer3.Panel1.Controls.Add(this.QueryBook_Price_ComboBox);
-            this.splitContainer3.Panel1.Controls.Add(this.label11);
-            this.splitContainer3.Panel1.Controls.Add(this.label7);
-            this.splitContainer3.Panel1.Controls.Add(this.label9);
-            this.splitContainer3.Panel1.Controls.Add(this.label8);
-            this.splitContainer3.Panel1.Controls.Add(this.label10);
-            this.splitContainer3.Panel1.Controls.Add(this.label2);
-            this.splitContainer3.Panel1.Controls.Add(this.QueryBook_AuthorName_TextBox);
-            this.splitContainer3.Panel1.Controls.Add(this.QueryBook_BookCode_TextBox);
-            this.splitContainer3.Panel1.Controls.Add(this.QueryBook_BookName_TextBox);
-            this.splitContainer3.Panel1.Controls.Add(this.SearchBoxButton);
+            this.QueryBookMenu_BookInfo_Tab.Controls.Add(this.QueryBookMenu_QueryBookTab);
+            this.QueryBookMenu_BookInfo_Tab.Location = new System.Drawing.Point(4, 24);
+            this.QueryBookMenu_BookInfo_Tab.Name = "QueryBookMenu_BookInfo_Tab";
+            this.QueryBookMenu_BookInfo_Tab.Padding = new System.Windows.Forms.Padding(3);
+            this.QueryBookMenu_BookInfo_Tab.Size = new System.Drawing.Size(962, 499);
+            this.QueryBookMenu_BookInfo_Tab.TabIndex = 0;
+            this.QueryBookMenu_BookInfo_Tab.Text = "Thông tin sách";
+            this.QueryBookMenu_BookInfo_Tab.UseVisualStyleBackColor = true;
             // 
-            // splitContainer3.Panel2
+            // QueryBookMenu_QueryBookTab
             // 
-            this.splitContainer3.Panel2.Controls.Add(this.bookQuery_ListBooks);
-            this.splitContainer3.Size = new System.Drawing.Size(970, 527);
-            this.splitContainer3.SplitterDistance = 150;
-            this.splitContainer3.TabIndex = 3;
+            this.QueryBookMenu_QueryBookTab.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QueryBookMenu_QueryBookTab.Location = new System.Drawing.Point(3, 3);
+            this.QueryBookMenu_QueryBookTab.Name = "QueryBookMenu_QueryBookTab";
+            this.QueryBookMenu_QueryBookTab.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // QueryBookMenu_QueryBookTab.Panel1
+            // 
+            this.QueryBookMenu_QueryBookTab.Panel1.Controls.Add(this.QueryBook_BookType_ComboBox);
+            this.QueryBookMenu_QueryBookTab.Panel1.Controls.Add(this.QueryBook_Price_ComboBox);
+            this.QueryBookMenu_QueryBookTab.Panel1.Controls.Add(this.label11);
+            this.QueryBookMenu_QueryBookTab.Panel1.Controls.Add(this.label7);
+            this.QueryBookMenu_QueryBookTab.Panel1.Controls.Add(this.label9);
+            this.QueryBookMenu_QueryBookTab.Panel1.Controls.Add(this.label8);
+            this.QueryBookMenu_QueryBookTab.Panel1.Controls.Add(this.label10);
+            this.QueryBookMenu_QueryBookTab.Panel1.Controls.Add(this.label2);
+            this.QueryBookMenu_QueryBookTab.Panel1.Controls.Add(this.QueryBook_AuthorName_TextBox);
+            this.QueryBookMenu_QueryBookTab.Panel1.Controls.Add(this.QueryBook_BookCode_TextBox);
+            this.QueryBookMenu_QueryBookTab.Panel1.Controls.Add(this.QueryBook_BookName_TextBox);
+            this.QueryBookMenu_QueryBookTab.Panel1.Controls.Add(this.QueryBookMenu_BookInfo_SearchBook_Button);
+            // 
+            // QueryBookMenu_QueryBookTab.Panel2
+            // 
+            this.QueryBookMenu_QueryBookTab.Panel2.Controls.Add(this.bookQuery_ListBooks);
+            this.QueryBookMenu_QueryBookTab.Size = new System.Drawing.Size(956, 493);
+            this.QueryBookMenu_QueryBookTab.SplitterDistance = 140;
+            this.QueryBookMenu_QueryBookTab.TabIndex = 4;
             // 
             // QueryBook_BookType_ComboBox
             // 
@@ -300,15 +411,15 @@
             this.QueryBook_BookName_TextBox.Size = new System.Drawing.Size(195, 23);
             this.QueryBook_BookName_TextBox.TabIndex = 0;
             // 
-            // SearchBoxButton
+            // QueryBookMenu_BookInfo_SearchBook_Button
             // 
-            this.SearchBoxButton.Location = new System.Drawing.Point(413, 94);
-            this.SearchBoxButton.Name = "SearchBoxButton";
-            this.SearchBoxButton.Size = new System.Drawing.Size(75, 23);
-            this.SearchBoxButton.TabIndex = 1;
-            this.SearchBoxButton.Text = "Tìm kiếm";
-            this.SearchBoxButton.UseVisualStyleBackColor = true;
-            this.SearchBoxButton.Click += new System.EventHandler(this.SearchBoxButton_Click);
+            this.QueryBookMenu_BookInfo_SearchBook_Button.Location = new System.Drawing.Point(413, 94);
+            this.QueryBookMenu_BookInfo_SearchBook_Button.Name = "QueryBookMenu_BookInfo_SearchBook_Button";
+            this.QueryBookMenu_BookInfo_SearchBook_Button.Size = new System.Drawing.Size(75, 23);
+            this.QueryBookMenu_BookInfo_SearchBook_Button.TabIndex = 1;
+            this.QueryBookMenu_BookInfo_SearchBook_Button.Text = "Tìm kiếm";
+            this.QueryBookMenu_BookInfo_SearchBook_Button.UseVisualStyleBackColor = true;
+            this.QueryBookMenu_BookInfo_SearchBook_Button.Click += new System.EventHandler(this.QueryBookMenu_BookInfo_SearchBook_Button_Click);
             // 
             // bookQuery_ListBooks
             // 
@@ -323,7 +434,7 @@
             this.bookQuery_ListBooks.Location = new System.Drawing.Point(0, 0);
             this.bookQuery_ListBooks.Name = "bookQuery_ListBooks";
             this.bookQuery_ListBooks.RowTemplate.Height = 25;
-            this.bookQuery_ListBooks.Size = new System.Drawing.Size(970, 373);
+            this.bookQuery_ListBooks.Size = new System.Drawing.Size(956, 349);
             this.bookQuery_ListBooks.TabIndex = 2;
             // 
             // BookQueryGrib_BookNameColumn
@@ -355,6 +466,16 @@
             this.BookQueryGrib_BookPriceColumn.HeaderText = "Giá sách";
             this.BookQueryGrib_BookPriceColumn.Name = "BookQueryGrib_BookPriceColumn";
             this.BookQueryGrib_BookPriceColumn.Width = 150;
+            // 
+            // QueryBookMenu_AddBook_Tab
+            // 
+            this.QueryBookMenu_AddBook_Tab.Location = new System.Drawing.Point(4, 24);
+            this.QueryBookMenu_AddBook_Tab.Name = "QueryBookMenu_AddBook_Tab";
+            this.QueryBookMenu_AddBook_Tab.Padding = new System.Windows.Forms.Padding(3);
+            this.QueryBookMenu_AddBook_Tab.Size = new System.Drawing.Size(962, 499);
+            this.QueryBookMenu_AddBook_Tab.TabIndex = 1;
+            this.QueryBookMenu_AddBook_Tab.Text = "Thêm mới sách";
+            this.QueryBookMenu_AddBook_Tab.UseVisualStyleBackColor = true;
             // 
             // SaleBookTab
             // 
@@ -664,87 +785,15 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Thông tin chi tiết";
             // 
-            // ImportBookMenu_MainContainer
+            // ConfigurationMenu
             // 
-            this.ImportBookMenu_MainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ImportBookMenu_MainContainer.Location = new System.Drawing.Point(3, 3);
-            this.ImportBookMenu_MainContainer.Name = "ImportBookMenu_MainContainer";
-            this.ImportBookMenu_MainContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // ImportBookMenu_MainContainer.Panel1
-            // 
-            this.ImportBookMenu_MainContainer.Panel1.Controls.Add(this.ImportBookMenu_QueryBook_BookStore_ComboBox);
-            this.ImportBookMenu_MainContainer.Panel1.Controls.Add(this.label14);
-            // 
-            // ImportBookMenu_MainContainer.Panel2
-            // 
-            this.ImportBookMenu_MainContainer.Panel2.Controls.Add(this.ImportBookMenu_BooksDataGridView);
-            this.ImportBookMenu_MainContainer.Size = new System.Drawing.Size(970, 527);
-            this.ImportBookMenu_MainContainer.SplitterDistance = 100;
-            this.ImportBookMenu_MainContainer.TabIndex = 0;
-            // 
-            // ImportBookMenu_BooksDataGridView
-            // 
-            this.ImportBookMenu_BooksDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ImportBookMenu_BooksDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.BookName,
-            this.BookCode,
-            this.BookType,
-            this.Available,
-            this.Action});
-            this.ImportBookMenu_BooksDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ImportBookMenu_BooksDataGridView.Location = new System.Drawing.Point(0, 0);
-            this.ImportBookMenu_BooksDataGridView.Name = "ImportBookMenu_BooksDataGridView";
-            this.ImportBookMenu_BooksDataGridView.RowTemplate.Height = 25;
-            this.ImportBookMenu_BooksDataGridView.Size = new System.Drawing.Size(970, 423);
-            this.ImportBookMenu_BooksDataGridView.TabIndex = 2;
-            // 
-            // BookName
-            // 
-            this.BookName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.BookName.HeaderText = "Tên sách";
-            this.BookName.Name = "BookName";
-            // 
-            // BookCode
-            // 
-            this.BookCode.HeaderText = "Mã sách";
-            this.BookCode.Name = "BookCode";
-            this.BookCode.Width = 150;
-            // 
-            // BookType
-            // 
-            this.BookType.HeaderText = "Loại sách";
-            this.BookType.Name = "BookType";
-            this.BookType.Width = 150;
-            // 
-            // Available
-            // 
-            this.Available.HeaderText = "Số lượng đã nhận";
-            this.Available.Name = "Available";
-            this.Available.Width = 150;
-            // 
-            // Action
-            // 
-            this.Action.HeaderText = "Thao tác";
-            this.Action.Name = "Action";
-            this.Action.Width = 150;
-            // 
-            // ImportBookMenu_QueryBook_BookStore_ComboBox
-            // 
-            this.ImportBookMenu_QueryBook_BookStore_ComboBox.FormattingEnabled = true;
-            this.ImportBookMenu_QueryBook_BookStore_ComboBox.Location = new System.Drawing.Point(18, 37);
-            this.ImportBookMenu_QueryBook_BookStore_ComboBox.Name = "ImportBookMenu_QueryBook_BookStore_ComboBox";
-            this.ImportBookMenu_QueryBook_BookStore_ComboBox.Size = new System.Drawing.Size(174, 23);
-            this.ImportBookMenu_QueryBook_BookStore_ComboBox.TabIndex = 5;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(18, 19);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(56, 15);
-            this.label14.TabIndex = 4;
-            this.label14.Text = "Nhà sách";
+            this.ConfigurationMenu.Location = new System.Drawing.Point(4, 24);
+            this.ConfigurationMenu.Name = "ConfigurationMenu";
+            this.ConfigurationMenu.Padding = new System.Windows.Forms.Padding(3);
+            this.ConfigurationMenu.Size = new System.Drawing.Size(976, 533);
+            this.ConfigurationMenu.TabIndex = 6;
+            this.ConfigurationMenu.Text = "Cấu hình";
+            this.ConfigurationMenu.UseVisualStyleBackColor = true;
             // 
             // BookStoreUI
             // 
@@ -757,12 +806,20 @@
             this.Load += new System.EventHandler(this.BookStoreUILoad);
             this.MainNav.ResumeLayout(false);
             this.ImportBookTab.ResumeLayout(false);
+            this.ImportBookMenu_MainContainer.Panel1.ResumeLayout(false);
+            this.ImportBookMenu_MainContainer.Panel1.PerformLayout();
+            this.ImportBookMenu_MainContainer.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ImportBookMenu_MainContainer)).EndInit();
+            this.ImportBookMenu_MainContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ImportBookMenu_BooksDataGridView)).EndInit();
             this.QueryBookTab.ResumeLayout(false);
-            this.splitContainer3.Panel1.ResumeLayout(false);
-            this.splitContainer3.Panel1.PerformLayout();
-            this.splitContainer3.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
-            this.splitContainer3.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            this.QueryBookMenu_BookInfo_Tab.ResumeLayout(false);
+            this.QueryBookMenu_QueryBookTab.Panel1.ResumeLayout(false);
+            this.QueryBookMenu_QueryBookTab.Panel1.PerformLayout();
+            this.QueryBookMenu_QueryBookTab.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.QueryBookMenu_QueryBookTab)).EndInit();
+            this.QueryBookMenu_QueryBookTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bookQuery_ListBooks)).EndInit();
             this.CustomerInfoTab.ResumeLayout(false);
             this.CustomerMenu_MainContainer.Panel1.ResumeLayout(false);
@@ -786,12 +843,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.StaffInfo_SearchStaff_StaffInfo_GridTable)).EndInit();
-            this.ImportBookMenu_MainContainer.Panel1.ResumeLayout(false);
-            this.ImportBookMenu_MainContainer.Panel1.PerformLayout();
-            this.ImportBookMenu_MainContainer.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ImportBookMenu_MainContainer)).EndInit();
-            this.ImportBookMenu_MainContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ImportBookMenu_BooksDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -801,9 +852,6 @@
         private TabControl MainNav;
         private TabPage ImportBookTab;
         private TabPage QueryBookTab;
-        private DataGridView bookQuery_ListBooks;
-        private Button SearchBoxButton;
-        private TextBox QueryBook_BookName_TextBox;
         private TabPage SaleBookTab;
         private TabPage CustomerInfoTab;
         private TabPage StaffInfoTab;
@@ -825,22 +873,6 @@
         private DataGridViewTextBoxColumn StaffInfo_SearchStaff_Age_GridTable;
         private DataGridViewTextBoxColumn StaffInfo_SearchStaff_Position_GridTable;
         private DataGridViewTextBoxColumn StaffInfo_SearchStaff_PhoneNumber_GridTable;
-        private SplitContainer splitContainer3;
-        private DataGridViewTextBoxColumn BookQueryGrib_BookNameColumn;
-        private DataGridViewTextBoxColumn BookQueryGrib_BookCodeColumn;
-        private DataGridViewTextBoxColumn BookQueryGrib_BookTypeColumn;
-        private DataGridViewTextBoxColumn BookQueryGrib_AuthorNameColumn;
-        private DataGridViewTextBoxColumn BookQueryGrib_BookPriceColumn;
-        private Label label2;
-        private Label label7;
-        private Label label8;
-        private TextBox QueryBook_AuthorName_TextBox;
-        private ComboBox QueryBook_Price_ComboBox;
-        private Label label9;
-        private ComboBox QueryBook_BookType_ComboBox;
-        private Label label11;
-        private Label label10;
-        private TextBox QueryBook_BookCode_TextBox;
         private SplitContainer CustomerMenu_MainContainer;
         private SplitContainer CustomerMenu_MainContainer_QueryCustomerSubContainer;
         private Button CustomerMenu_QueryCustomer_Search_Button;
@@ -862,5 +894,28 @@
         private DataGridViewTextBoxColumn BookType;
         private DataGridViewTextBoxColumn Available;
         private DataGridViewTextBoxColumn Action;
+        private TabPage ConfigurationMenu;
+        private TabControl tabControl1;
+        private TabPage QueryBookMenu_BookInfo_Tab;
+        private SplitContainer QueryBookMenu_QueryBookTab;
+        private ComboBox QueryBook_BookType_ComboBox;
+        private ComboBox QueryBook_Price_ComboBox;
+        private Label label11;
+        private Label label7;
+        private Label label9;
+        private Label label8;
+        private Label label10;
+        private Label label2;
+        private TextBox QueryBook_AuthorName_TextBox;
+        private TextBox QueryBook_BookCode_TextBox;
+        private TextBox QueryBook_BookName_TextBox;
+        private Button QueryBookMenu_BookInfo_SearchBook_Button;
+        private DataGridView bookQuery_ListBooks;
+        private DataGridViewTextBoxColumn BookQueryGrib_BookNameColumn;
+        private DataGridViewTextBoxColumn BookQueryGrib_BookCodeColumn;
+        private DataGridViewTextBoxColumn BookQueryGrib_BookTypeColumn;
+        private DataGridViewTextBoxColumn BookQueryGrib_AuthorNameColumn;
+        private DataGridViewTextBoxColumn BookQueryGrib_BookPriceColumn;
+        private TabPage QueryBookMenu_AddBook_Tab;
     }
 }

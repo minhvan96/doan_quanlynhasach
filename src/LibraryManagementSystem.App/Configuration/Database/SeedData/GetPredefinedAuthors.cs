@@ -13,15 +13,15 @@ namespace BookStoreManagementSystem.App.Configuration.Database
             }
 
             using var reader = new StreamReader(csvFileAuthors);
-            var brands = new List<Author>();
+            var authors = new List<Author>();
             while (!reader.EndOfStream)
             {
                 var line = reader.ReadLine();
                 var values = line?.Split(',');
                 var author = CreateNewAuthor(values[0], values[1]);
-                brands.Add(author);
+                authors.Add(author);
             }
-            return brands;
+            return authors;
         }
 
         private static Author CreateNewAuthor(string id, string name)

@@ -88,47 +88,6 @@ namespace BookStoreManagementSystem
             #endregion QUERY BOOK
         }
 
-        private async void SearchBoxButton_Click(object sender, EventArgs e)
-        {
-            var listBookRequest = new ListBooksQuery();
-            if (!string.IsNullOrWhiteSpace(QueryBook_BookName_TextBox.Text))
-            {
-                listBookRequest.BookName = QueryBook_BookName_TextBox.Text;
-            }
-            if (!string.IsNullOrWhiteSpace(QueryBook_AuthorName_TextBox.Text))
-            {
-                listBookRequest.AuthorName = QueryBook_AuthorName_TextBox.Text;
-            }
-            if (!string.IsNullOrWhiteSpace(QueryBook_BookCode_TextBox.Text))
-            {
-                listBookRequest.BookCode = QueryBook_BookCode_TextBox.Text;
-            }
-            var bookTypeId = (Guid)QueryBook_BookType_ComboBox.SelectedValue;
-            if (bookTypeId != Guid.Empty)
-            {
-                listBookRequest.BookType = bookTypeId;
-            }
-            var bookPriceRange = (QueryBookPriceRange)QueryBook_Price_ComboBox.SelectedValue;
-            if (bookPriceRange == QueryBookPriceRange.None || bookPriceRange != QueryBookPriceRange.All)
-            {
-                listBookRequest.Price = bookPriceRange;
-            }
-
-            var books = await _mediator.Send(listBookRequest);
-            bookQuery_ListBooks.Rows.Clear();
-            foreach (var book in books.Items)
-            {
-                var bookInfo = new DataGridViewRow();
-                bookInfo.CreateCells(bookQuery_ListBooks);
-                bookInfo.Cells[0].Value = book.Name;
-                bookInfo.Cells[1].Value = book.Code;
-                bookInfo.Cells[2].Value = book.TypeName;
-                bookInfo.Cells[3].Value = book.AuthorName;
-                bookInfo.Cells[4].Value = book.Price + " VNĐ";
-                bookQuery_ListBooks.Rows.Add(bookInfo);
-            }
-        }
-
         private async void StaffInfo_SearchStaff_Search_Button_Click(object sender, EventArgs e)
         {
             var listStaffsRequest = new ListStaffsQuery();
@@ -176,6 +135,47 @@ namespace BookStoreManagementSystem
                 customerInfo.Cells[2].Value = customer.Address;
                 customerInfo.Cells[3].Value = customer.PhoneNumber;
                 CustomerMenu_QueryCustomer_CustomerDataGridView.Rows.Add(customerInfo);
+            }
+        }
+
+        private async void QueryBookMenu_BookInfo_SearchBook_Button_Click(object sender, EventArgs e)
+        {
+            var listBookRequest = new ListBooksQuery();
+            if (!string.IsNullOrWhiteSpace(QueryBook_BookName_TextBox.Text))
+            {
+                listBookRequest.BookName = QueryBook_BookName_TextBox.Text;
+            }
+            if (!string.IsNullOrWhiteSpace(QueryBook_AuthorName_TextBox.Text))
+            {
+                listBookRequest.AuthorName = QueryBook_AuthorName_TextBox.Text;
+            }
+            if (!string.IsNullOrWhiteSpace(QueryBook_BookCode_TextBox.Text))
+            {
+                listBookRequest.BookCode = QueryBook_BookCode_TextBox.Text;
+            }
+            var bookTypeId = (Guid)QueryBook_BookType_ComboBox.SelectedValue;
+            if (bookTypeId != Guid.Empty)
+            {
+                listBookRequest.BookType = bookTypeId;
+            }
+            var bookPriceRange = (QueryBookPriceRange)QueryBook_Price_ComboBox.SelectedValue;
+            if (bookPriceRange == QueryBookPriceRange.None || bookPriceRange != QueryBookPriceRange.All)
+            {
+                listBookRequest.Price = bookPriceRange;
+            }
+
+            var books = await _mediator.Send(listBookRequest);
+            bookQuery_ListBooks.Rows.Clear();
+            foreach (var book in books.Items)
+            {
+                var bookInfo = new DataGridViewRow();
+                bookInfo.CreateCells(bookQuery_ListBooks);
+                bookInfo.Cells[0].Value = book.Name;
+                bookInfo.Cells[1].Value = book.Code;
+                bookInfo.Cells[2].Value = book.TypeName;
+                bookInfo.Cells[3].Value = book.AuthorName;
+                bookInfo.Cells[4].Value = book.Price + " VNĐ";
+                bookQuery_ListBooks.Rows.Add(bookInfo);
             }
         }
     }

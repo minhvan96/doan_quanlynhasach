@@ -1,10 +1,17 @@
 ﻿using BookStoreManagementSystem.App.Domain;
+using BookStoreManagementSystem.App.Domain.Configuration;
 using BookStoreManagementSystem.App.Domain.Identity;
 
 namespace BookStoreManagementSystem.App.Infrastructure
 {
     public class BookStoreContext : DbContext
     {
+        #region CONFIGURATION
+
+        public DbSet<BookStoreConfiguration> BookStoreConfigurations => Set<BookStoreConfiguration>();
+
+        #endregion CONFIGURATION
+
         public DbSet<Book> Books => Set<Book>();
         public DbSet<BookType> BookTypes => Set<BookType>();
         public DbSet<BookStore> BookStores => Set<BookStore>();

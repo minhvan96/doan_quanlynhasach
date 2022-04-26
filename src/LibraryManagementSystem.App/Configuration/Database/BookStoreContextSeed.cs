@@ -1,4 +1,5 @@
 ﻿using BookStoreManagementSystem.App.Domain;
+using BookStoreManagementSystem.App.Domain.Configuration;
 using BookStoreManagementSystem.App.Domain.Identity;
 using BookStoreManagementSystem.App.Infrastructure;
 
@@ -16,6 +17,16 @@ namespace BookStoreManagementSystem.App.Configuration.Database
             await policy.ExecuteAsync(async () =>
             {
                 var executingFolder = Path.GetDirectoryName(Application.ExecutablePath);
+
+                #region Configuration
+
+                if (!await context.BookStoreConfigurations.AnyAsync())
+                {
+                    IEnumerable<BookStoreConfiguration> configurations = GetPredefinedBookStoreConfigurations(executingFolder);
+                    context.AddRange(configurations);
+                }
+
+                #endregion Configuration
 
                 #region Identity
 
