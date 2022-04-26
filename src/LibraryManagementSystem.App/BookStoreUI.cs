@@ -14,9 +14,18 @@ namespace BookStoreManagementSystem
             _mediator = mediator;
         }
 
-        private async void searchBoxButton_Click(object sender, EventArgs e)
+        private async void SearchBoxButton_Click(object sender, EventArgs e)
         {
             var listBookRequest = new ListBooksQuery();
+            if (!string.IsNullOrWhiteSpace(QueryBook_BookName_TextBox.Text))
+            {
+                listBookRequest.BookName = QueryBook_BookName_TextBox.Text;
+            }
+            if (string.IsNullOrWhiteSpace(QueryBook_AuthorName_TextBox.Text))
+            {
+                listBookRequest.AuthorName = QueryBook_AuthorName_TextBox.Text;
+            }
+            if()
             var books = await _mediator.Send(listBookRequest);
             bookQuery_ListBooks.Rows.Clear();
             foreach (var book in books.Items)
