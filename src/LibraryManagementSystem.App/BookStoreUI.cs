@@ -66,12 +66,16 @@ namespace BookStoreManagementSystem
             {
                 listBookRequest.BookName = QueryBook_BookName_TextBox.Text;
             }
-            if (string.IsNullOrWhiteSpace(QueryBook_AuthorName_TextBox.Text))
+            if (!string.IsNullOrWhiteSpace(QueryBook_AuthorName_TextBox.Text))
             {
                 listBookRequest.AuthorName = QueryBook_AuthorName_TextBox.Text;
             }
+            if (!string.IsNullOrWhiteSpace(QueryBook_BookCode_TextBox.Text))
+            {
+                listBookRequest.BookCode = QueryBook_BookCode_TextBox.Text;
+            }
             var bookTypeId = (Guid)QueryBook_BookType_ComboBox.SelectedValue;
-            if (bookTypeId == Guid.Empty)
+            if (bookTypeId != Guid.Empty)
             {
                 listBookRequest.BookType = bookTypeId;
             }
@@ -80,6 +84,7 @@ namespace BookStoreManagementSystem
             {
                 listBookRequest.Price = bookPriceRange;
             }
+
             var books = await _mediator.Send(listBookRequest);
             bookQuery_ListBooks.Rows.Clear();
             foreach (var book in books.Items)

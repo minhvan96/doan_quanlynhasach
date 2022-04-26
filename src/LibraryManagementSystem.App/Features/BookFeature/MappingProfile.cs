@@ -8,7 +8,8 @@ namespace BookStoreManagementSystem.App.Features.BookFeature
     {
         public MappingProfile()
         {
-            CreateMap<Book, BookDto>();
+            CreateMap<Book, BookDto>()
+                .ForMember(d => d.AuthorName, o => o.MapFrom(s => s.Author.Name));
         }
     }
 }

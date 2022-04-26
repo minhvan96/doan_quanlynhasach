@@ -44,6 +44,10 @@ namespace BookStoreManagementSystem.App.Features.BookFeature.Queries
             {
                 books = books.Where(x => x.Code.Contains(request.BookCode));
             }
+            if (request.BookType != Guid.Empty)
+            {
+                books = books.Where(x => x.TypeId == request.BookType);
+            }
             if (!string.IsNullOrWhiteSpace(request.AuthorName))
             {
                 books = books.Include(x => x.Author)
