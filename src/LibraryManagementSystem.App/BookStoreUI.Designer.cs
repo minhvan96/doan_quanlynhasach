@@ -216,6 +216,7 @@
             // 
             // QueryBook_BookType_ComboBox
             // 
+            this.QueryBook_BookType_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.QueryBook_BookType_ComboBox.FormattingEnabled = true;
             this.QueryBook_BookType_ComboBox.Items.AddRange(new object[] {
             "Dưới 50.000 VNĐ",
@@ -231,12 +232,6 @@
             // QueryBook_Price_ComboBox
             // 
             this.QueryBook_Price_ComboBox.FormattingEnabled = true;
-            this.QueryBook_Price_ComboBox.Items.AddRange(new object[] {
-            "Dưới 50.000 VNĐ",
-            "50.000-100.000 VNĐ",
-            "100.000-500.000 VNĐ",
-            "500.000-1.000.000 VNĐ",
-            "Trên 1.000.000 VNĐ"});
             this.QueryBook_Price_ComboBox.Location = new System.Drawing.Point(413, 39);
             this.QueryBook_Price_ComboBox.Name = "QueryBook_Price_ComboBox";
             this.QueryBook_Price_ComboBox.Size = new System.Drawing.Size(174, 23);

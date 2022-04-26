@@ -38,6 +38,25 @@ namespace BookStoreManagementSystem
             QueryBook_BookType_ComboBox.ValueMember = "Id";
 
             #endregion Load BookTypes
+
+            #region Loadd BookPrice
+
+            var bookPriceRangeDataTable = new DataTable();
+            var bookPriceIdColumn = new DataColumn("Id", typeof(QueryBookPriceRange));
+            var bookPriceTypeNameColumn = new DataColumn("Name", typeof(string));
+            bookPriceRangeDataTable.Columns.Add(bookPriceIdColumn);
+            bookPriceRangeDataTable.Columns.Add(bookPriceTypeNameColumn);
+            bookPriceRangeDataTable.Rows.Add(QueryBookPriceRange.All, "Tất cả giá");
+            bookPriceRangeDataTable.Rows.Add(QueryBookPriceRange.LessThan50K, "Dưới 50.000 VNĐ");
+            bookPriceRangeDataTable.Rows.Add(QueryBookPriceRange.From50kTo100K, "50.000 - 100.000 VNĐ");
+            bookPriceRangeDataTable.Rows.Add(QueryBookPriceRange.From100kTo500K, "100.000 - 500.000 VNĐ");
+            bookPriceRangeDataTable.Rows.Add(QueryBookPriceRange.From500kTo1M, "500.000 - 1.000.000 VNĐ");
+            bookPriceRangeDataTable.Rows.Add(QueryBookPriceRange.GreaterThan1M, "Trên 1.000.000 VNĐ");
+            QueryBook_Price_ComboBox.DataSource = bookPriceRangeDataTable;
+            QueryBook_Price_ComboBox.DisplayMember = "Name";
+            QueryBook_Price_ComboBox.ValueMember = "Id";
+
+            #endregion Loadd BookPrice
         }
 
         private async void SearchBoxButton_Click(object sender, EventArgs e)
@@ -50,6 +69,16 @@ namespace BookStoreManagementSystem
             if (string.IsNullOrWhiteSpace(QueryBook_AuthorName_TextBox.Text))
             {
                 listBookRequest.AuthorName = QueryBook_AuthorName_TextBox.Text;
+            }
+            var bookTypeId = (Guid)QueryBook_BookType_ComboBox.SelectedValue;
+            if (bookTypeId == Guid.Empty)
+            {
+                listBookRequest.BookType = bookTypeId;
+            }
+            var bookPriceRange = (QueryBookPriceRange)QueryBook_Price_ComboBox.SelectedValue;
+            if (bookPriceRange == QueryBookPriceRange.None || bookPriceRange != QueryBookPriceRange.All)
+            {
+                listBookRequest.Price = bookPriceRange;
             }
             var books = await _mediator.Send(listBookRequest);
             bookQuery_ListBooks.Rows.Clear();
