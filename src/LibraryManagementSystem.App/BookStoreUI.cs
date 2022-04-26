@@ -53,17 +53,22 @@ namespace BookStoreManagementSystem
             var bookTypesDataTable = new DataTable();
             var bookTypeIdColumn = new DataColumn("Id", typeof(Guid));
             var bookTypeNameColumn = new DataColumn("Name", typeof(string));
+            var bookTypesDataTableAllTypes = bookTypesDataTable;
 
             bookTypesDataTable.Columns.Add(bookTypeIdColumn);
             bookTypesDataTable.Columns.Add(bookTypeNameColumn);
-            bookTypesDataTable.Rows.Add(Guid.Empty, "Tất cả thể loại");
+            bookTypesDataTableAllTypes.Rows.Add(Guid.Empty, "Tất cả thể loại");
             foreach (var bookType in bookTypes.Items)
             {
                 bookTypesDataTable.Rows.Add(bookType.Id, bookType.Name);
             }
-            QueryBook_BookType_ComboBox.DataSource = bookTypesDataTable;
+            QueryBook_BookType_ComboBox.DataSource = bookTypesDataTableAllTypes;
             QueryBook_BookType_ComboBox.DisplayMember = "Name";
             QueryBook_BookType_ComboBox.ValueMember = "Id";
+
+            QueryBookMenu_AddBookTab_MainContainer_AddBook_BookTypesComboBox.DataSource = bookTypesDataTable;
+            QueryBookMenu_AddBookTab_MainContainer_AddBook_BookTypesComboBox.DisplayMember = "Name";
+            QueryBookMenu_AddBookTab_MainContainer_AddBook_BookTypesComboBox.ValueMember = "Id";
 
             #endregion Load BookTypes
 
