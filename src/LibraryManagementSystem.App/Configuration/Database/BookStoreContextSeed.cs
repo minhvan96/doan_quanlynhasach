@@ -55,6 +55,11 @@ namespace BookStoreManagementSystem.App.Configuration.Database
                     IEnumerable<Staff> staffs = GetPredefinedStaffs(executingFolder);
                     context.AddRange(staffs);
                 }
+                if (!await context.Customers.AnyAsync())
+                {
+                    IEnumerable<Customer> customers = GetPredefinedCustomers(executingFolder);
+                    context.AddRange(customers);
+                }
                 await context.SaveChangesAsync();
             });
         }
