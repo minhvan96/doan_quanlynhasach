@@ -656,6 +656,7 @@
             this.CustomerMenu_QueryCustomer_Search_Button.TabIndex = 4;
             this.CustomerMenu_QueryCustomer_Search_Button.Text = "Tìm kiếm";
             this.CustomerMenu_QueryCustomer_Search_Button.UseVisualStyleBackColor = true;
+            this.CustomerMenu_QueryCustomer_Search_Button.Click += new System.EventHandler(this.CustomerMenu_QueryCustomer_Search_Button_Click);
             // 
             // CustomerMenu_QueryCustomer_CustomerDataGridView
             // 

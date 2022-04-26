@@ -1,4 +1,5 @@
 ﻿using BookStoreManagementSystem.App.Features.BookFeature.Queries;
+using BookStoreManagementSystem.App.Features.CustomerFeature.Queries;
 using BookStoreManagementSystem.App.Features.StaffFeature.Queries;
 using MediatR;
 using System.Data;
@@ -124,6 +125,29 @@ namespace BookStoreManagementSystem
                 staffInfo.Cells[3].Value = staff.Position;
                 staffInfo.Cells[4].Value = staff.PhoneNumber;
                 StaffInfo_SearchStaff_StaffInfo_GridTable.Rows.Add(staffInfo);
+            }
+        }
+
+        private async void CustomerMenu_QueryCustomer_Search_Button_Click(object sender, EventArgs e)
+        {
+            var listCustomersRequest = new ListCustomersQuery();
+            if (!string.IsNullOrEmpty(StaffInfo_SearchStaff_Name_Textbox.Text))
+            {
+                listCustomersRequest.FullName = StaffInfo_SearchStaff_Name_Textbox.Text;
+            }
+
+            var customers = await _mediator.Send(listCustomersRequest);
+            CustomerMenu_QueryCustomer_CustomerDataGridView.Rows.Clear();
+
+            foreach (var customer in customers.Items)
+            {
+                var customerInfo = new DataGridViewRow();
+                customerInfo.CreateCells(StaffInfo_SearchStaff_StaffInfo_GridTable);
+                customerInfo.Cells[0].Value = customer.Id;
+                customerInfo.Cells[1].Value = customer.FullName;
+                customerInfo.Cells[2].Value = customer.Address;
+                customerInfo.Cells[3].Value = customer.PhoneNumber;
+                StaffInfo_SearchStaff_StaffInfo_GridTable.Rows.Add(customerInfo);
             }
         }
     }
