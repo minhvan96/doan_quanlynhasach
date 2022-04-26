@@ -4,11 +4,11 @@ using MediatR;
 
 namespace BookStoreManagementSystem.App.Features.BookFeature.Commands
 {
-    public class AddBookCommandHandler : IRequestHandler<CreateBookCommand, bool>
+    public class CreateBookCommandHandler : IRequestHandler<CreateBookCommand, bool>
     {
         private readonly BookStoreContext _context;
 
-        public AddBookCommandHandler(BookStoreContext context)
+        public CreateBookCommandHandler(BookStoreContext context)
         {
             _context = context;
         }

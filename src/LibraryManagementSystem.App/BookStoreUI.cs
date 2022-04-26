@@ -1,4 +1,5 @@
 ﻿using BookStoreManagementSystem.App.Features.AuthorFeature.Queries;
+using BookStoreManagementSystem.App.Features.BookFeature.Commands;
 using BookStoreManagementSystem.App.Features.BookFeature.Queries;
 using BookStoreManagementSystem.App.Features.BookStoreFeature.Queries;
 using BookStoreManagementSystem.App.Features.CustomerFeature.Queries;
@@ -202,6 +203,58 @@ namespace BookStoreManagementSystem
                 bookInfo.Cells[3].Value = book.AuthorName;
                 bookInfo.Cells[4].Value = book.Price + " VNĐ";
                 bookQuery_ListBooks.Rows.Add(bookInfo);
+            }
+        }
+
+        private async void QueryBookMenu_AddBookTab_MainContainer_AddBook_AddButton_Click(object sender, EventArgs e)
+        {
+            #region Validate
+
+            string errorTitle = "Error";
+            if (string.IsNullOrWhiteSpace(QueryBookMenu_AddBookTab_MainContainer_AddBook_BookNameTextBox.Text))
+            {
+                string message = "Yêu cầu nhập tên sách";
+                MessageBox.Show(message, errorTitle);
+                return;
+            }
+            if ((Guid)QueryBookMenu_AddBookTab_MainContainer_AddBook_BookTypesComboBox.SelectedValue == Guid.Empty)
+            {
+                string message = "Yêu cầu chọn loại sách";
+                MessageBox.Show(message, errorTitle);
+                return;
+            }
+            if ((Guid)QueryBookMenu_AddBookTab_MainContainer_AddBook_AuthorComboBox.SelectedValue == Guid.Empty)
+            {
+                string message = "Yêu cầu chọn tác giả";
+                MessageBox.Show(message, errorTitle);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(QueryBookMenu_AddBookTab_MainContainer_AddBook_BookPriceTexBook.Text))
+            {
+                string message = "Yêu cầu nhập giá";
+                MessageBox.Show(message, errorTitle);
+                return;
+            }
+
+            #endregion Validate
+
+            var createNewBookRequest = new CreateBookRequest
+            {
+                Name = QueryBookMenu_AddBookTab_MainContainer_AddBook_BookNameTextBox.Text,
+                TypeId = (Guid)QueryBookMenu_AddBookTab_MainContainer_AddBook_BookTypesComboBox.SelectedValue,
+                AuthorId = (Guid)QueryBookMenu_AddBookTab_MainContainer_AddBook_AuthorComboBox.SelectedValue,
+                Price = decimal.Parse(QueryBookMenu_AddBookTab_MainContainer_AddBook_BookPriceTexBook.Text)
+            };
+            var createNewBookCommand = new CreateBookCommand
+            {
+                Request = createNewBookRequest
+            };
+            var createNewBookResult = await _mediator.Send(createNewBookCommand);
+            if (createNewBookResult)
+            {
+                string successfulTitle = "Tạo mới sách thành công";
+                string message = "Thêm sách thành công";
+                MessageBox.Show(message, successfulTitle);
             }
         }
     }
