@@ -1,4 +1,5 @@
 ﻿using BookStoreManagementSystem.App.Features.BookFeature.Queries;
+using BookStoreManagementSystem.App.Features.BookStoreFeature.Queries;
 using BookStoreManagementSystem.App.Features.CustomerFeature.Queries;
 using BookStoreManagementSystem.App.Features.StaffFeature.Queries;
 using MediatR;
@@ -18,6 +19,31 @@ namespace BookStoreManagementSystem
 
         private async void BookStoreUILoad(object sender, EventArgs e)
         {
+            #region IMPORT BOOK
+
+            #region Load BookStores
+
+            var listBookStores = new ListBookStoresQuery();
+            var bookStores = await _mediator.Send(listBookStores);
+            var bookStoreDataTable = new DataTable();
+            var bookStoreIdColumn = new DataColumn("Id", typeof(Guid));
+            var bookStoreNameColumn = new DataColumn("Name", typeof(string));
+            bookStoreDataTable.Columns.Add(bookStoreIdColumn);
+            bookStoreDataTable.Columns.Add(bookStoreNameColumn);
+            foreach (var bookStore in bookStores.Items)
+            {
+                bookStoreDataTable.Rows.Add(bookStore.Id, bookStore.Name);
+            }
+            ImportBookMenu_QueryBook_BookStore_ComboBox.DataSource = bookStoreDataTable;
+            ImportBookMenu_QueryBook_BookStore_ComboBox.DisplayMember = "Name";
+            ImportBookMenu_QueryBook_BookStore_ComboBox.ValueMember = "Id";
+
+            #endregion Load BookStores
+
+            #endregion IMPORT BOOK
+
+            #region QUERY BOOK
+
             #region Load BookTypes
 
             var listBookTypesQuery = new ListBookTypesQuery();
@@ -58,6 +84,8 @@ namespace BookStoreManagementSystem
             QueryBook_Price_ComboBox.ValueMember = "Id";
 
             #endregion Loadd BookPrice
+
+            #endregion QUERY BOOK
         }
 
         private async void SearchBoxButton_Click(object sender, EventArgs e)

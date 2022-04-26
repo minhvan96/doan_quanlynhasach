@@ -31,12 +31,6 @@
             this.MainNav = new System.Windows.Forms.TabControl();
             this.HomeTab = new System.Windows.Forms.TabPage();
             this.ImportBookTab = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.BookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BookCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BookType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Available = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Action = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.QueryBookTab = new System.Windows.Forms.TabPage();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.QueryBook_BookType_ComboBox = new System.Windows.Forms.ComboBox();
@@ -59,6 +53,18 @@
             this.BookQueryGrib_BookPriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SaleBookTab = new System.Windows.Forms.TabPage();
             this.CustomerInfoTab = new System.Windows.Forms.TabPage();
+            this.CustomerMenu_MainContainer = new System.Windows.Forms.SplitContainer();
+            this.CustomerMenu_MainContainer_QueryCustomerSubContainer = new System.Windows.Forms.SplitContainer();
+            this.CustomerMenu_QueryCustomer_Search_Button = new System.Windows.Forms.Button();
+            this.CustomerMenu_QueryCustomer_FullName_Textbox = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.CustomerMenu_QueryCustomer_Id_Textbox = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.CustomerMenu_QueryCustomer_CustomerDataGridView = new System.Windows.Forms.DataGridView();
+            this.CustomerMenu_QueryCustomer_CustomerDataGridView_Id_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CustomerMenu_QueryCustomer_CustomerDataGridView_FullName_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CustomerMenu_QueryCustomer_CustomerDataGridView_Address_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CustomerMenu_QueryCustomer_CustomerDataGridView_PhoneNumber_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StaffInfoTab = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
@@ -77,21 +83,17 @@
             this.StaffInfo_SearchStaff_Position_GridTable = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StaffInfo_SearchStaff_PhoneNumber_GridTable = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
-            this.CustomerMenu_MainContainer = new System.Windows.Forms.SplitContainer();
-            this.CustomerMenu_MainContainer_QueryCustomerSubContainer = new System.Windows.Forms.SplitContainer();
-            this.CustomerMenu_QueryCustomer_Id_Textbox = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.CustomerMenu_QueryCustomer_FullName_Textbox = new System.Windows.Forms.TextBox();
-            this.CustomerMenu_QueryCustomer_Search_Button = new System.Windows.Forms.Button();
-            this.CustomerMenu_QueryCustomer_CustomerDataGridView = new System.Windows.Forms.DataGridView();
-            this.CustomerMenu_QueryCustomer_CustomerDataGridView_Id_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CustomerMenu_QueryCustomer_CustomerDataGridView_FullName_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CustomerMenu_QueryCustomer_CustomerDataGridView_Address_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CustomerMenu_QueryCustomer_CustomerDataGridView_PhoneNumber_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ImportBookMenu_MainContainer = new System.Windows.Forms.SplitContainer();
+            this.ImportBookMenu_BooksDataGridView = new System.Windows.Forms.DataGridView();
+            this.BookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BookCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BookType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Available = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Action = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ImportBookMenu_QueryBook_BookStore_ComboBox = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.MainNav.SuspendLayout();
             this.ImportBookTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.QueryBookTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
@@ -99,6 +101,14 @@
             this.splitContainer3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bookQuery_ListBooks)).BeginInit();
             this.CustomerInfoTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CustomerMenu_MainContainer)).BeginInit();
+            this.CustomerMenu_MainContainer.Panel1.SuspendLayout();
+            this.CustomerMenu_MainContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CustomerMenu_MainContainer_QueryCustomerSubContainer)).BeginInit();
+            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.Panel1.SuspendLayout();
+            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.Panel2.SuspendLayout();
+            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CustomerMenu_QueryCustomer_CustomerDataGridView)).BeginInit();
             this.StaffInfoTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -109,14 +119,11 @@
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StaffInfo_SearchStaff_StaffInfo_GridTable)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CustomerMenu_MainContainer)).BeginInit();
-            this.CustomerMenu_MainContainer.Panel1.SuspendLayout();
-            this.CustomerMenu_MainContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CustomerMenu_MainContainer_QueryCustomerSubContainer)).BeginInit();
-            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.Panel1.SuspendLayout();
-            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.Panel2.SuspendLayout();
-            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CustomerMenu_QueryCustomer_CustomerDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImportBookMenu_MainContainer)).BeginInit();
+            this.ImportBookMenu_MainContainer.Panel1.SuspendLayout();
+            this.ImportBookMenu_MainContainer.Panel2.SuspendLayout();
+            this.ImportBookMenu_MainContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ImportBookMenu_BooksDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // MainNav
@@ -146,7 +153,7 @@
             // 
             // ImportBookTab
             // 
-            this.ImportBookTab.Controls.Add(this.dataGridView1);
+            this.ImportBookTab.Controls.Add(this.ImportBookMenu_MainContainer);
             this.ImportBookTab.Location = new System.Drawing.Point(4, 24);
             this.ImportBookTab.Name = "ImportBookTab";
             this.ImportBookTab.Padding = new System.Windows.Forms.Padding(3);
@@ -154,46 +161,6 @@
             this.ImportBookTab.TabIndex = 0;
             this.ImportBookTab.Text = "Nhập sách";
             this.ImportBookTab.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.BookName,
-            this.BookCode,
-            this.BookType,
-            this.Available,
-            this.Action});
-            this.dataGridView1.Location = new System.Drawing.Point(219, 73);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(539, 387);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // BookName
-            // 
-            this.BookName.HeaderText = "Tên sách";
-            this.BookName.Name = "BookName";
-            // 
-            // BookCode
-            // 
-            this.BookCode.HeaderText = "Mã sách";
-            this.BookCode.Name = "BookCode";
-            // 
-            // BookType
-            // 
-            this.BookType.HeaderText = "Loại sách";
-            this.BookType.Name = "BookType";
-            // 
-            // Available
-            // 
-            this.Available.HeaderText = "Số lượng đã nhận";
-            this.Available.Name = "Available";
-            // 
-            // Action
-            // 
-            this.Action.HeaderText = "Thao tác";
-            this.Action.Name = "Action";
             // 
             // QueryBookTab
             // 
@@ -410,6 +377,122 @@
             this.CustomerInfoTab.Text = "Khách hàng";
             this.CustomerInfoTab.UseVisualStyleBackColor = true;
             // 
+            // CustomerMenu_MainContainer
+            // 
+            this.CustomerMenu_MainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CustomerMenu_MainContainer.Location = new System.Drawing.Point(3, 3);
+            this.CustomerMenu_MainContainer.Name = "CustomerMenu_MainContainer";
+            // 
+            // CustomerMenu_MainContainer.Panel1
+            // 
+            this.CustomerMenu_MainContainer.Panel1.Controls.Add(this.CustomerMenu_MainContainer_QueryCustomerSubContainer);
+            this.CustomerMenu_MainContainer.Size = new System.Drawing.Size(970, 527);
+            this.CustomerMenu_MainContainer.SplitterDistance = 600;
+            this.CustomerMenu_MainContainer.TabIndex = 0;
+            // 
+            // CustomerMenu_MainContainer_QueryCustomerSubContainer
+            // 
+            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.Location = new System.Drawing.Point(0, 0);
+            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.Name = "CustomerMenu_MainContainer_QueryCustomerSubContainer";
+            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // CustomerMenu_MainContainer_QueryCustomerSubContainer.Panel1
+            // 
+            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.Panel1.Controls.Add(this.CustomerMenu_QueryCustomer_Search_Button);
+            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.Panel1.Controls.Add(this.CustomerMenu_QueryCustomer_FullName_Textbox);
+            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.Panel1.Controls.Add(this.label13);
+            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.Panel1.Controls.Add(this.CustomerMenu_QueryCustomer_Id_Textbox);
+            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.Panel1.Controls.Add(this.label12);
+            // 
+            // CustomerMenu_MainContainer_QueryCustomerSubContainer.Panel2
+            // 
+            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.Panel2.Controls.Add(this.CustomerMenu_QueryCustomer_CustomerDataGridView);
+            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.Size = new System.Drawing.Size(600, 527);
+            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.SplitterDistance = 100;
+            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.TabIndex = 0;
+            // 
+            // CustomerMenu_QueryCustomer_Search_Button
+            // 
+            this.CustomerMenu_QueryCustomer_Search_Button.Location = new System.Drawing.Point(366, 45);
+            this.CustomerMenu_QueryCustomer_Search_Button.Name = "CustomerMenu_QueryCustomer_Search_Button";
+            this.CustomerMenu_QueryCustomer_Search_Button.Size = new System.Drawing.Size(75, 23);
+            this.CustomerMenu_QueryCustomer_Search_Button.TabIndex = 4;
+            this.CustomerMenu_QueryCustomer_Search_Button.Text = "Tìm kiếm";
+            this.CustomerMenu_QueryCustomer_Search_Button.UseVisualStyleBackColor = true;
+            this.CustomerMenu_QueryCustomer_Search_Button.Click += new System.EventHandler(this.CustomerMenu_QueryCustomer_Search_Button_Click);
+            // 
+            // CustomerMenu_QueryCustomer_FullName_Textbox
+            // 
+            this.CustomerMenu_QueryCustomer_FullName_Textbox.Location = new System.Drawing.Point(199, 45);
+            this.CustomerMenu_QueryCustomer_FullName_Textbox.Name = "CustomerMenu_QueryCustomer_FullName_Textbox";
+            this.CustomerMenu_QueryCustomer_FullName_Textbox.Size = new System.Drawing.Size(161, 23);
+            this.CustomerMenu_QueryCustomer_FullName_Textbox.TabIndex = 2;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(199, 27);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(43, 15);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "Họ tên";
+            // 
+            // CustomerMenu_QueryCustomer_Id_Textbox
+            // 
+            this.CustomerMenu_QueryCustomer_Id_Textbox.Location = new System.Drawing.Point(32, 45);
+            this.CustomerMenu_QueryCustomer_Id_Textbox.Name = "CustomerMenu_QueryCustomer_Id_Textbox";
+            this.CustomerMenu_QueryCustomer_Id_Textbox.Size = new System.Drawing.Size(161, 23);
+            this.CustomerMenu_QueryCustomer_Id_Textbox.TabIndex = 2;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(32, 27);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(17, 15);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "Id";
+            // 
+            // CustomerMenu_QueryCustomer_CustomerDataGridView
+            // 
+            this.CustomerMenu_QueryCustomer_CustomerDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CustomerMenu_QueryCustomer_CustomerDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CustomerMenu_QueryCustomer_CustomerDataGridView_Id_Column,
+            this.CustomerMenu_QueryCustomer_CustomerDataGridView_FullName_Column,
+            this.CustomerMenu_QueryCustomer_CustomerDataGridView_Address_Column,
+            this.CustomerMenu_QueryCustomer_CustomerDataGridView_PhoneNumber_Column});
+            this.CustomerMenu_QueryCustomer_CustomerDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CustomerMenu_QueryCustomer_CustomerDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.CustomerMenu_QueryCustomer_CustomerDataGridView.Name = "CustomerMenu_QueryCustomer_CustomerDataGridView";
+            this.CustomerMenu_QueryCustomer_CustomerDataGridView.RowTemplate.Height = 25;
+            this.CustomerMenu_QueryCustomer_CustomerDataGridView.Size = new System.Drawing.Size(600, 423);
+            this.CustomerMenu_QueryCustomer_CustomerDataGridView.TabIndex = 0;
+            // 
+            // CustomerMenu_QueryCustomer_CustomerDataGridView_Id_Column
+            // 
+            this.CustomerMenu_QueryCustomer_CustomerDataGridView_Id_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CustomerMenu_QueryCustomer_CustomerDataGridView_Id_Column.HeaderText = "Id";
+            this.CustomerMenu_QueryCustomer_CustomerDataGridView_Id_Column.Name = "CustomerMenu_QueryCustomer_CustomerDataGridView_Id_Column";
+            // 
+            // CustomerMenu_QueryCustomer_CustomerDataGridView_FullName_Column
+            // 
+            this.CustomerMenu_QueryCustomer_CustomerDataGridView_FullName_Column.HeaderText = "Họ tên";
+            this.CustomerMenu_QueryCustomer_CustomerDataGridView_FullName_Column.Name = "CustomerMenu_QueryCustomer_CustomerDataGridView_FullName_Column";
+            this.CustomerMenu_QueryCustomer_CustomerDataGridView_FullName_Column.Width = 150;
+            // 
+            // CustomerMenu_QueryCustomer_CustomerDataGridView_Address_Column
+            // 
+            this.CustomerMenu_QueryCustomer_CustomerDataGridView_Address_Column.HeaderText = "Địa chỉ";
+            this.CustomerMenu_QueryCustomer_CustomerDataGridView_Address_Column.Name = "CustomerMenu_QueryCustomer_CustomerDataGridView_Address_Column";
+            this.CustomerMenu_QueryCustomer_CustomerDataGridView_Address_Column.Width = 150;
+            // 
+            // CustomerMenu_QueryCustomer_CustomerDataGridView_PhoneNumber_Column
+            // 
+            this.CustomerMenu_QueryCustomer_CustomerDataGridView_PhoneNumber_Column.HeaderText = "Số điện thoại";
+            this.CustomerMenu_QueryCustomer_CustomerDataGridView_PhoneNumber_Column.Name = "CustomerMenu_QueryCustomer_CustomerDataGridView_PhoneNumber_Column";
+            this.CustomerMenu_QueryCustomer_CustomerDataGridView_PhoneNumber_Column.Width = 150;
+            // 
             // StaffInfoTab
             // 
             this.StaffInfoTab.Controls.Add(this.splitContainer1);
@@ -581,121 +664,87 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Thông tin chi tiết";
             // 
-            // CustomerMenu_MainContainer
+            // ImportBookMenu_MainContainer
             // 
-            this.CustomerMenu_MainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CustomerMenu_MainContainer.Location = new System.Drawing.Point(3, 3);
-            this.CustomerMenu_MainContainer.Name = "CustomerMenu_MainContainer";
+            this.ImportBookMenu_MainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ImportBookMenu_MainContainer.Location = new System.Drawing.Point(3, 3);
+            this.ImportBookMenu_MainContainer.Name = "ImportBookMenu_MainContainer";
+            this.ImportBookMenu_MainContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
-            // CustomerMenu_MainContainer.Panel1
+            // ImportBookMenu_MainContainer.Panel1
             // 
-            this.CustomerMenu_MainContainer.Panel1.Controls.Add(this.CustomerMenu_MainContainer_QueryCustomerSubContainer);
-            this.CustomerMenu_MainContainer.Size = new System.Drawing.Size(970, 527);
-            this.CustomerMenu_MainContainer.SplitterDistance = 600;
-            this.CustomerMenu_MainContainer.TabIndex = 0;
+            this.ImportBookMenu_MainContainer.Panel1.Controls.Add(this.ImportBookMenu_QueryBook_BookStore_ComboBox);
+            this.ImportBookMenu_MainContainer.Panel1.Controls.Add(this.label14);
             // 
-            // CustomerMenu_MainContainer_QueryCustomerSubContainer
+            // ImportBookMenu_MainContainer.Panel2
             // 
-            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.Location = new System.Drawing.Point(0, 0);
-            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.Name = "CustomerMenu_MainContainer_QueryCustomerSubContainer";
-            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.ImportBookMenu_MainContainer.Panel2.Controls.Add(this.ImportBookMenu_BooksDataGridView);
+            this.ImportBookMenu_MainContainer.Size = new System.Drawing.Size(970, 527);
+            this.ImportBookMenu_MainContainer.SplitterDistance = 100;
+            this.ImportBookMenu_MainContainer.TabIndex = 0;
             // 
-            // CustomerMenu_MainContainer_QueryCustomerSubContainer.Panel1
+            // ImportBookMenu_BooksDataGridView
             // 
-            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.Panel1.Controls.Add(this.CustomerMenu_QueryCustomer_Search_Button);
-            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.Panel1.Controls.Add(this.CustomerMenu_QueryCustomer_FullName_Textbox);
-            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.Panel1.Controls.Add(this.label13);
-            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.Panel1.Controls.Add(this.CustomerMenu_QueryCustomer_Id_Textbox);
-            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.Panel1.Controls.Add(this.label12);
+            this.ImportBookMenu_BooksDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ImportBookMenu_BooksDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.BookName,
+            this.BookCode,
+            this.BookType,
+            this.Available,
+            this.Action});
+            this.ImportBookMenu_BooksDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ImportBookMenu_BooksDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.ImportBookMenu_BooksDataGridView.Name = "ImportBookMenu_BooksDataGridView";
+            this.ImportBookMenu_BooksDataGridView.RowTemplate.Height = 25;
+            this.ImportBookMenu_BooksDataGridView.Size = new System.Drawing.Size(970, 423);
+            this.ImportBookMenu_BooksDataGridView.TabIndex = 2;
             // 
-            // CustomerMenu_MainContainer_QueryCustomerSubContainer.Panel2
+            // BookName
             // 
-            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.Panel2.Controls.Add(this.CustomerMenu_QueryCustomer_CustomerDataGridView);
-            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.Size = new System.Drawing.Size(600, 527);
-            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.SplitterDistance = 100;
-            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.TabIndex = 0;
+            this.BookName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.BookName.HeaderText = "Tên sách";
+            this.BookName.Name = "BookName";
             // 
-            // CustomerMenu_QueryCustomer_Id_Textbox
+            // BookCode
             // 
-            this.CustomerMenu_QueryCustomer_Id_Textbox.Location = new System.Drawing.Point(32, 45);
-            this.CustomerMenu_QueryCustomer_Id_Textbox.Name = "CustomerMenu_QueryCustomer_Id_Textbox";
-            this.CustomerMenu_QueryCustomer_Id_Textbox.Size = new System.Drawing.Size(161, 23);
-            this.CustomerMenu_QueryCustomer_Id_Textbox.TabIndex = 2;
+            this.BookCode.HeaderText = "Mã sách";
+            this.BookCode.Name = "BookCode";
+            this.BookCode.Width = 150;
             // 
-            // label12
+            // BookType
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(32, 27);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(17, 15);
-            this.label12.TabIndex = 3;
-            this.label12.Text = "Id";
+            this.BookType.HeaderText = "Loại sách";
+            this.BookType.Name = "BookType";
+            this.BookType.Width = 150;
             // 
-            // label13
+            // Available
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(199, 27);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(43, 15);
-            this.label13.TabIndex = 3;
-            this.label13.Text = "Họ tên";
+            this.Available.HeaderText = "Số lượng đã nhận";
+            this.Available.Name = "Available";
+            this.Available.Width = 150;
             // 
-            // CustomerMenu_QueryCustomer_FullName_Textbox
+            // Action
             // 
-            this.CustomerMenu_QueryCustomer_FullName_Textbox.Location = new System.Drawing.Point(199, 45);
-            this.CustomerMenu_QueryCustomer_FullName_Textbox.Name = "CustomerMenu_QueryCustomer_FullName_Textbox";
-            this.CustomerMenu_QueryCustomer_FullName_Textbox.Size = new System.Drawing.Size(161, 23);
-            this.CustomerMenu_QueryCustomer_FullName_Textbox.TabIndex = 2;
+            this.Action.HeaderText = "Thao tác";
+            this.Action.Name = "Action";
+            this.Action.Width = 150;
             // 
-            // CustomerMenu_QueryCustomer_Search_Button
+            // ImportBookMenu_QueryBook_BookStore_ComboBox
             // 
-            this.CustomerMenu_QueryCustomer_Search_Button.Location = new System.Drawing.Point(366, 45);
-            this.CustomerMenu_QueryCustomer_Search_Button.Name = "CustomerMenu_QueryCustomer_Search_Button";
-            this.CustomerMenu_QueryCustomer_Search_Button.Size = new System.Drawing.Size(75, 23);
-            this.CustomerMenu_QueryCustomer_Search_Button.TabIndex = 4;
-            this.CustomerMenu_QueryCustomer_Search_Button.Text = "Tìm kiếm";
-            this.CustomerMenu_QueryCustomer_Search_Button.UseVisualStyleBackColor = true;
-            this.CustomerMenu_QueryCustomer_Search_Button.Click += new System.EventHandler(this.CustomerMenu_QueryCustomer_Search_Button_Click);
+            this.ImportBookMenu_QueryBook_BookStore_ComboBox.FormattingEnabled = true;
+            this.ImportBookMenu_QueryBook_BookStore_ComboBox.Location = new System.Drawing.Point(18, 37);
+            this.ImportBookMenu_QueryBook_BookStore_ComboBox.Name = "ImportBookMenu_QueryBook_BookStore_ComboBox";
+            this.ImportBookMenu_QueryBook_BookStore_ComboBox.Size = new System.Drawing.Size(174, 23);
+            this.ImportBookMenu_QueryBook_BookStore_ComboBox.TabIndex = 5;
             // 
-            // CustomerMenu_QueryCustomer_CustomerDataGridView
+            // label14
             // 
-            this.CustomerMenu_QueryCustomer_CustomerDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CustomerMenu_QueryCustomer_CustomerDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CustomerMenu_QueryCustomer_CustomerDataGridView_Id_Column,
-            this.CustomerMenu_QueryCustomer_CustomerDataGridView_FullName_Column,
-            this.CustomerMenu_QueryCustomer_CustomerDataGridView_Address_Column,
-            this.CustomerMenu_QueryCustomer_CustomerDataGridView_PhoneNumber_Column});
-            this.CustomerMenu_QueryCustomer_CustomerDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CustomerMenu_QueryCustomer_CustomerDataGridView.Location = new System.Drawing.Point(0, 0);
-            this.CustomerMenu_QueryCustomer_CustomerDataGridView.Name = "CustomerMenu_QueryCustomer_CustomerDataGridView";
-            this.CustomerMenu_QueryCustomer_CustomerDataGridView.RowTemplate.Height = 25;
-            this.CustomerMenu_QueryCustomer_CustomerDataGridView.Size = new System.Drawing.Size(600, 423);
-            this.CustomerMenu_QueryCustomer_CustomerDataGridView.TabIndex = 0;
-            // 
-            // CustomerMenu_QueryCustomer_CustomerDataGridView_Id_Column
-            // 
-            this.CustomerMenu_QueryCustomer_CustomerDataGridView_Id_Column.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.CustomerMenu_QueryCustomer_CustomerDataGridView_Id_Column.HeaderText = "Id";
-            this.CustomerMenu_QueryCustomer_CustomerDataGridView_Id_Column.Name = "CustomerMenu_QueryCustomer_CustomerDataGridView_Id_Column";
-            // 
-            // CustomerMenu_QueryCustomer_CustomerDataGridView_FullName_Column
-            // 
-            this.CustomerMenu_QueryCustomer_CustomerDataGridView_FullName_Column.HeaderText = "Họ tên";
-            this.CustomerMenu_QueryCustomer_CustomerDataGridView_FullName_Column.Name = "CustomerMenu_QueryCustomer_CustomerDataGridView_FullName_Column";
-            this.CustomerMenu_QueryCustomer_CustomerDataGridView_FullName_Column.Width = 150;
-            // 
-            // CustomerMenu_QueryCustomer_CustomerDataGridView_Address_Column
-            // 
-            this.CustomerMenu_QueryCustomer_CustomerDataGridView_Address_Column.HeaderText = "Địa chỉ";
-            this.CustomerMenu_QueryCustomer_CustomerDataGridView_Address_Column.Name = "CustomerMenu_QueryCustomer_CustomerDataGridView_Address_Column";
-            this.CustomerMenu_QueryCustomer_CustomerDataGridView_Address_Column.Width = 150;
-            // 
-            // CustomerMenu_QueryCustomer_CustomerDataGridView_PhoneNumber_Column
-            // 
-            this.CustomerMenu_QueryCustomer_CustomerDataGridView_PhoneNumber_Column.HeaderText = "Số điện thoại";
-            this.CustomerMenu_QueryCustomer_CustomerDataGridView_PhoneNumber_Column.Name = "CustomerMenu_QueryCustomer_CustomerDataGridView_PhoneNumber_Column";
-            this.CustomerMenu_QueryCustomer_CustomerDataGridView_PhoneNumber_Column.Width = 150;
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(18, 19);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(56, 15);
+            this.label14.TabIndex = 4;
+            this.label14.Text = "Nhà sách";
             // 
             // BookStoreUI
             // 
@@ -708,7 +757,6 @@
             this.Load += new System.EventHandler(this.BookStoreUILoad);
             this.MainNav.ResumeLayout(false);
             this.ImportBookTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.QueryBookTab.ResumeLayout(false);
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel1.PerformLayout();
@@ -717,6 +765,15 @@
             this.splitContainer3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bookQuery_ListBooks)).EndInit();
             this.CustomerInfoTab.ResumeLayout(false);
+            this.CustomerMenu_MainContainer.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.CustomerMenu_MainContainer)).EndInit();
+            this.CustomerMenu_MainContainer.ResumeLayout(false);
+            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.Panel1.ResumeLayout(false);
+            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.Panel1.PerformLayout();
+            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.CustomerMenu_MainContainer_QueryCustomerSubContainer)).EndInit();
+            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.CustomerMenu_QueryCustomer_CustomerDataGridView)).EndInit();
             this.StaffInfoTab.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -729,15 +786,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.StaffInfo_SearchStaff_StaffInfo_GridTable)).EndInit();
-            this.CustomerMenu_MainContainer.Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.CustomerMenu_MainContainer)).EndInit();
-            this.CustomerMenu_MainContainer.ResumeLayout(false);
-            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.Panel1.ResumeLayout(false);
-            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.Panel1.PerformLayout();
-            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.CustomerMenu_MainContainer_QueryCustomerSubContainer)).EndInit();
-            this.CustomerMenu_MainContainer_QueryCustomerSubContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.CustomerMenu_QueryCustomer_CustomerDataGridView)).EndInit();
+            this.ImportBookMenu_MainContainer.Panel1.ResumeLayout(false);
+            this.ImportBookMenu_MainContainer.Panel1.PerformLayout();
+            this.ImportBookMenu_MainContainer.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ImportBookMenu_MainContainer)).EndInit();
+            this.ImportBookMenu_MainContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ImportBookMenu_BooksDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -746,12 +800,6 @@
 
         private TabControl MainNav;
         private TabPage ImportBookTab;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn BookName;
-        private DataGridViewTextBoxColumn BookCode;
-        private DataGridViewTextBoxColumn BookType;
-        private DataGridViewTextBoxColumn Available;
-        private DataGridViewTextBoxColumn Action;
         private TabPage QueryBookTab;
         private DataGridView bookQuery_ListBooks;
         private Button SearchBoxButton;
@@ -805,5 +853,14 @@
         private DataGridViewTextBoxColumn CustomerMenu_QueryCustomer_CustomerDataGridView_FullName_Column;
         private DataGridViewTextBoxColumn CustomerMenu_QueryCustomer_CustomerDataGridView_Address_Column;
         private DataGridViewTextBoxColumn CustomerMenu_QueryCustomer_CustomerDataGridView_PhoneNumber_Column;
+        private SplitContainer ImportBookMenu_MainContainer;
+        private ComboBox ImportBookMenu_QueryBook_BookStore_ComboBox;
+        private Label label14;
+        private DataGridView ImportBookMenu_BooksDataGridView;
+        private DataGridViewTextBoxColumn BookName;
+        private DataGridViewTextBoxColumn BookCode;
+        private DataGridViewTextBoxColumn BookType;
+        private DataGridViewTextBoxColumn Available;
+        private DataGridViewTextBoxColumn Action;
     }
 }
