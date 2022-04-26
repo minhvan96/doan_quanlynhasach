@@ -1,4 +1,5 @@
-﻿using BookStoreManagementSystem.App.Features.BookFeature.Queries;
+﻿using BookStoreManagementSystem.App.Features.AuthorFeature.Queries;
+using BookStoreManagementSystem.App.Features.BookFeature.Queries;
 using BookStoreManagementSystem.App.Features.BookStoreFeature.Queries;
 using BookStoreManagementSystem.App.Features.CustomerFeature.Queries;
 using BookStoreManagementSystem.App.Features.StaffFeature.Queries;
@@ -66,7 +67,7 @@ namespace BookStoreManagementSystem
 
             #endregion Load BookTypes
 
-            #region Loadd BookPrice
+            #region Load BookPrice
 
             var bookPriceRangeDataTable = new DataTable();
             var bookPriceIdColumn = new DataColumn("Id", typeof(QueryBookPriceRange));
@@ -83,7 +84,27 @@ namespace BookStoreManagementSystem
             QueryBook_Price_ComboBox.DisplayMember = "Name";
             QueryBook_Price_ComboBox.ValueMember = "Id";
 
-            #endregion Loadd BookPrice
+            #endregion Load BookPrice
+
+            #region Load Author
+
+            var authorsDataTale = new DataTable();
+            var authorIdColumn = new DataColumn("Id", typeof(Guid));
+            var authorNameColumn = new DataColumn("Name", typeof(string));
+            authorsDataTale.Columns.Add(authorIdColumn);
+            authorsDataTale.Columns.Add(authorNameColumn);
+
+            var listAuthorsQuery = new ListAuthorsQuery();
+            var authors = await _mediator.Send(listAuthorsQuery);
+            foreach (var author in authors.Items)
+            {
+                authorsDataTale.Rows.Add(author.Id, author.Name);
+            }
+            QueryBookMenu_AddBookTab_MainContainer_AddBook_AuthorComboBox.DataSource = authorsDataTale;
+            QueryBookMenu_AddBookTab_MainContainer_AddBook_AuthorComboBox.DisplayMember = "Name";
+            QueryBookMenu_AddBookTab_MainContainer_AddBook_AuthorComboBox.ValueMember = "Id";
+
+            #endregion Load Author
 
             #endregion QUERY BOOK
         }

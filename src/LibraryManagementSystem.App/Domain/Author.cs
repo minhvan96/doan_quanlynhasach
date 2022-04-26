@@ -4,10 +4,11 @@ namespace BookStoreManagementSystem.App.Domain
 {
     public class Author : Entity
     {
-        public string? Name { get; private set; }
+        public string Name { get; private set; }
 
         protected Author()
         {
+            Name = string.Empty;
         }
 
         public Author(string name)

@@ -38,7 +38,7 @@ namespace BookStoreManagementSystem.App.Configuration.Database
 
                 #endregion Identity
 
-                if (!await context.Author.AnyAsync())
+                if (!await context.Authors.AnyAsync())
                 {
                     IEnumerable<Author> authors;
                     authors = GetPredefinedAuthors(executingFolder);
