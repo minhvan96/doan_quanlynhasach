@@ -17,10 +17,6 @@ namespace BookStoreManagementSystem.App.Infrastructure.EntityTypeConfiguration
                 .WithMany()
                 .HasForeignKey(x => x.AuthorId)
                 .OnDelete(DeleteBehavior.Cascade);
-
-            builder.HasMany(x => x.BookStoreStorages)
-                .WithOne()
-                .HasForeignKey(x => x.BookId);
         }
     }
 }

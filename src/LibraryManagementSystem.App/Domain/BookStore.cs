@@ -21,5 +21,15 @@ namespace BookStoreManagementSystem.App.Domain
             Name = name;
             Address = address;
         }
+
+        public BookStore(Guid id,
+            string name,
+            string address = "")
+        {
+            Id = id;
+            _bookStoreStorages = new List<BookStoreStorage>();
+            Name = name;
+            Address = address;
+        }
     }
 }

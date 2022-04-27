@@ -55,11 +55,18 @@ namespace BookStoreManagementSystem.App.Configuration.Database
                 {
                     IEnumerable<Book> books = GetPredefinedBooks(executingFolder);
                     context.AddRange(books);
+                    await context.SaveChangesAsync();
                 }
                 if (!await context.BookStores.AnyAsync())
                 {
                     IEnumerable<BookStore> bookStores = GetPredefinedBookStores(executingFolder);
                     context.AddRange(bookStores);
+                    await context.SaveChangesAsync();
+                }
+                if (!await context.BookStoresStorage.AnyAsync())
+                {
+                    IEnumerable<BookStoreStorage> bookStoreStorages = GetPredefinedBookStoreStorages(executingFolder);
+                    context.AddRange(bookStoreStorages);
                 }
                 if (!await context.Staffs.AnyAsync())
                 {

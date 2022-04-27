@@ -286,6 +286,7 @@ namespace BookStoreManagementSystem
                         info.Cells[1].Value = bookStorage.BookCode;
                         info.Cells[2].Value = bookStorage.BookTypeName;
                         info.Cells[3].Value = bookStorage.Availability;
+                        ImportBookMenu_BooksDataGridView.Rows.Add(info);
                     }
                 }
             }

@@ -19,15 +19,15 @@ namespace BookStoreManagementSystem.App.Configuration.Database
             {
                 var line = reader.ReadLine();
                 var values = line?.Split(',');
-                var bookType = CreateBook(values[0], values[1], values[2], values[3], decimal.Parse(values[4], CultureInfo.InvariantCulture));
+                var bookType = CreateBook(values[0], values[1], values[2], values[3], values[4], decimal.Parse(values[5], CultureInfo.InvariantCulture));
                 bookTypes.Add(bookType);
             }
             return bookTypes;
         }
 
-        private static Book CreateBook(string name, string barCode, string typeId, string authorId, decimal price)
+        private static Book CreateBook(string id, string name, string barCode, string typeId, string authorId, decimal price)
         {
-            return new Book(name, barCode, new Guid(typeId), new Guid(authorId), price);
+            return new Book(new Guid(id), name, barCode, new Guid(typeId), new Guid(authorId), price);
         }
     }
 }

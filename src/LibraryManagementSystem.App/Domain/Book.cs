@@ -34,5 +34,21 @@ namespace BookStoreManagementSystem.App.Domain
             AuthorId = authorId;
             Price = price;
         }
+
+        public Book(Guid id,
+            string name,
+            string code,
+            Guid typeId,
+            Guid authorId,
+            decimal price)
+        {
+            Id = id;
+            _bookStoreStorages = new List<BookStoreStorage>();
+            Code = code;
+            TypeId = typeId;
+            Name = name;
+            AuthorId = authorId;
+            Price = price;
+        }
     }
 }

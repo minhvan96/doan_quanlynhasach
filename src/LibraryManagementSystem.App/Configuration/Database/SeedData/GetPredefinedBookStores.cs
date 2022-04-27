@@ -18,15 +18,15 @@ namespace BookStoreManagementSystem.App.Configuration.Database
             {
                 var line = reader.ReadLine();
                 var values = line?.Split(',');
-                var bookStore = CreateBookStore(values[0], values[1]);
+                var bookStore = CreateBookStore(values[0], values[1], values[2]);
                 bookStores.Add(bookStore);
             }
             return bookStores;
         }
 
-        private static BookStore CreateBookStore(string name, string address)
+        private static BookStore CreateBookStore(string id, string name, string address)
         {
-            return new BookStore(name, address);
+            return new BookStore(new Guid(id), name, address);
         }
     }
 }

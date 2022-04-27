@@ -14,7 +14,7 @@ namespace BookStoreManagementSystem.App.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "TEXT", nullable: false),
-                    Name = table.Column<string>(type: "TEXT", nullable: true),
+                    Name = table.Column<string>(type: "TEXT", nullable: false),
                     CreatedBy = table.Column<string>(type: "TEXT", nullable: true),
                     UpdatedBy = table.Column<string>(type: "TEXT", nullable: true),
                     CreatedDate = table.Column<DateTimeOffset>(type: "TEXT", nullable: false),
@@ -24,6 +24,25 @@ namespace BookStoreManagementSystem.App.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Authors", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "BookStoreConfigurations",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
+                    Name = table.Column<string>(type: "TEXT", nullable: false),
+                    MaximumStock = table.Column<int>(type: "INTEGER", nullable: false),
+                    MinimumBookImport = table.Column<int>(type: "INTEGER", nullable: false),
+                    CreatedBy = table.Column<string>(type: "TEXT", nullable: true),
+                    UpdatedBy = table.Column<string>(type: "TEXT", nullable: true),
+                    CreatedDate = table.Column<DateTimeOffset>(type: "TEXT", nullable: false),
+                    UpdatedDate = table.Column<DateTimeOffset>(type: "TEXT", nullable: false),
+                    IsDeleted = table.Column<bool>(type: "INTEGER", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_BookStoreConfigurations", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -101,6 +120,24 @@ namespace BookStoreManagementSystem.App.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Staffs",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
+                    UserId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    Position = table.Column<string>(type: "TEXT", nullable: false),
+                    CreatedBy = table.Column<string>(type: "TEXT", nullable: true),
+                    UpdatedBy = table.Column<string>(type: "TEXT", nullable: true),
+                    CreatedDate = table.Column<DateTimeOffset>(type: "TEXT", nullable: false),
+                    UpdatedDate = table.Column<DateTimeOffset>(type: "TEXT", nullable: false),
+                    IsDeleted = table.Column<bool>(type: "INTEGER", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Staffs", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Users",
                 columns: table => new
                 {
@@ -109,6 +146,7 @@ namespace BookStoreManagementSystem.App.Migrations
                     FullName = table.Column<string>(type: "TEXT", nullable: false),
                     Password = table.Column<string>(type: "TEXT", nullable: false),
                     Email = table.Column<string>(type: "TEXT", nullable: false),
+                    BirthDate = table.Column<DateTime>(type: "TEXT", nullable: false),
                     PhoneNumber = table.Column<string>(type: "TEXT", nullable: false),
                     CreatedBy = table.Column<string>(type: "TEXT", nullable: true),
                     UpdatedBy = table.Column<string>(type: "TEXT", nullable: true),
@@ -127,7 +165,7 @@ namespace BookStoreManagementSystem.App.Migrations
                 {
                     Id = table.Column<Guid>(type: "TEXT", nullable: false),
                     Code = table.Column<string>(type: "TEXT", nullable: false),
-                    Name = table.Column<string>(type: "TEXT", nullable: true),
+                    Name = table.Column<string>(type: "TEXT", nullable: false),
                     TypeId = table.Column<Guid>(type: "TEXT", nullable: false),
                     AuthorId = table.Column<Guid>(type: "TEXT", nullable: false),
                     Price = table.Column<decimal>(type: "TEXT", nullable: false),
@@ -210,9 +248,7 @@ namespace BookStoreManagementSystem.App.Migrations
                 {
                     BookId = table.Column<Guid>(type: "TEXT", nullable: false),
                     BookStoreId = table.Column<Guid>(type: "TEXT", nullable: false),
-                    BookId1 = table.Column<Guid>(type: "TEXT", nullable: true),
-                    Availability = table.Column<int>(type: "INTEGER", nullable: false),
-                    BookStoreId1 = table.Column<Guid>(type: "TEXT", nullable: true)
+                    Availability = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -224,21 +260,11 @@ namespace BookStoreManagementSystem.App.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_BookStoreStorages_Books_BookId1",
-                        column: x => x.BookId1,
-                        principalTable: "Books",
-                        principalColumn: "Id");
-                    table.ForeignKey(
                         name: "FK_BookStoreStorages_BookStores_BookStoreId",
                         column: x => x.BookStoreId,
                         principalTable: "BookStores",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_BookStoreStorages_BookStores_BookStoreId1",
-                        column: x => x.BookStoreId1,
-                        principalTable: "BookStores",
-                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -277,19 +303,9 @@ namespace BookStoreManagementSystem.App.Migrations
                 column: "TypeId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_BookStoreStorages_BookId1",
-                table: "BookStoreStorages",
-                column: "BookId1");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_BookStoreStorages_BookStoreId",
                 table: "BookStoreStorages",
                 column: "BookStoreId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_BookStoreStorages_BookStoreId1",
-                table: "BookStoreStorages",
-                column: "BookStoreId1");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ReceiptDetails_ReceiptId",
@@ -310,10 +326,16 @@ namespace BookStoreManagementSystem.App.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "BookStoreConfigurations");
+
+            migrationBuilder.DropTable(
                 name: "BookStoreStorages");
 
             migrationBuilder.DropTable(
                 name: "ReceiptDetails");
+
+            migrationBuilder.DropTable(
+                name: "Staffs");
 
             migrationBuilder.DropTable(
                 name: "UserRoles");

@@ -33,6 +33,7 @@ namespace BookStoreManagementSystem.App.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("UpdatedBy")
@@ -136,19 +137,9 @@ namespace BookStoreManagementSystem.App.Migrations
                     b.Property<int>("Availability")
                         .HasColumnType("INTEGER");
 
-                    b.Property<Guid?>("BookId1")
-                        .HasColumnType("TEXT");
-
-                    b.Property<Guid?>("BookStoreId1")
-                        .HasColumnType("TEXT");
-
                     b.HasKey("BookId", "BookStoreId");
 
-                    b.HasIndex("BookId1");
-
                     b.HasIndex("BookStoreId");
-
-                    b.HasIndex("BookStoreId1");
 
                     b.ToTable("BookStoreStorages", (string)null);
                 });
@@ -496,27 +487,21 @@ namespace BookStoreManagementSystem.App.Migrations
 
             modelBuilder.Entity("BookStoreManagementSystem.App.Domain.BookStoreStorage", b =>
                 {
-                    b.HasOne("BookStoreManagementSystem.App.Domain.Book", null)
+                    b.HasOne("BookStoreManagementSystem.App.Domain.Book", "Book")
                         .WithMany("BookStoreStorages")
                         .HasForeignKey("BookId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("BookStoreManagementSystem.App.Domain.Book", "Book")
-                        .WithMany()
-                        .HasForeignKey("BookId1");
-
-                    b.HasOne("BookStoreManagementSystem.App.Domain.BookStore", null)
-                        .WithMany()
+                    b.HasOne("BookStoreManagementSystem.App.Domain.BookStore", "BookStore")
+                        .WithMany("BookStoreStorages")
                         .HasForeignKey("BookStoreId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("BookStoreManagementSystem.App.Domain.BookStore", null)
-                        .WithMany("BookStoreStorages")
-                        .HasForeignKey("BookStoreId1");
-
                     b.Navigation("Book");
+
+                    b.Navigation("BookStore");
                 });
 
             modelBuilder.Entity("BookStoreManagementSystem.App.Domain.Identity.UserRole", b =>

@@ -7,10 +7,6 @@ namespace BookStoreManagementSystem.App.Infrastructure.EntityTypeConfiguration
         public void Configure(EntityTypeBuilder<BookStore> builder)
         {
             builder.ToTable("BookStores");
-
-            builder.HasMany<BookStoreStorage>()
-                .WithOne()
-                .HasForeignKey(x => x.BookStoreId);
         }
     }
 }
