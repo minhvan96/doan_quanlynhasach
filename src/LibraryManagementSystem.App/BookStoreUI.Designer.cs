@@ -194,6 +194,7 @@
             this.ImportBookTab.TabIndex = 0;
             this.ImportBookTab.Text = "Nhập sách";
             this.ImportBookTab.UseVisualStyleBackColor = true;
+            this.ImportBookTab.Enter += new System.EventHandler(this.ImportBookTab_Enter);
             // 
             // ImportBookMenu_MainContainer
             // 

@@ -21,31 +21,6 @@ namespace BookStoreManagementSystem
 
         private async void BookStoreUILoad(object sender, EventArgs e)
         {
-            #region IMPORT BOOK
-
-            #region Load BookStores
-
-            var listBookStores = new ListBookStoresQuery();
-            var bookStores = await _mediator.Send(listBookStores);
-            var bookStoreDataTable = new DataTable();
-            var bookStoreIdColumn = new DataColumn("Id", typeof(Guid));
-            var bookStoreNameColumn = new DataColumn("Name", typeof(string));
-            bookStoreDataTable.Columns.Add(bookStoreIdColumn);
-            bookStoreDataTable.Columns.Add(bookStoreNameColumn);
-            bookStoreDataTable.Rows.Add(Guid.Empty, "Chọn nhà sách");
-
-            foreach (var bookStore in bookStores.Items)
-            {
-                bookStoreDataTable.Rows.Add(bookStore.Id, bookStore.Name);
-            }
-            ImportBookMenu_QueryBook_BookStore_ComboBox.DataSource = bookStoreDataTable;
-            ImportBookMenu_QueryBook_BookStore_ComboBox.DisplayMember = "Name";
-            ImportBookMenu_QueryBook_BookStore_ComboBox.ValueMember = "Id";
-
-            #endregion Load BookStores
-
-            #endregion IMPORT BOOK
-
             #region QUERY BOOK
 
             #region Load BookTypes
@@ -294,6 +269,55 @@ namespace BookStoreManagementSystem
             {
                 return;
             }
+        }
+
+        private async void ImportBookTab_Enter(object sender, EventArgs e)
+        {
+            #region IMPORT BOOK
+
+            #region Load BookStores
+
+            var listBookStores = new ListBookStoresQuery();
+            var bookStores = await _mediator.Send(listBookStores);
+            var bookStoreDataTable = new DataTable();
+            var bookStoreIdColumn = new DataColumn("Id", typeof(Guid));
+            var bookStoreNameColumn = new DataColumn("Name", typeof(string));
+            bookStoreDataTable.Columns.Add(bookStoreIdColumn);
+            bookStoreDataTable.Columns.Add(bookStoreNameColumn);
+            bookStoreDataTable.Rows.Add(Guid.Empty, "Chọn nhà sách");
+
+            foreach (var bookStore in bookStores.Items)
+            {
+                bookStoreDataTable.Rows.Add(bookStore.Id, bookStore.Name);
+            }
+            ImportBookMenu_QueryBook_BookStore_ComboBox.DataSource = bookStoreDataTable;
+            ImportBookMenu_QueryBook_BookStore_ComboBox.DisplayMember = "Name";
+            ImportBookMenu_QueryBook_BookStore_ComboBox.ValueMember = "Id";
+
+            #endregion Load BookStores
+
+            #region Load Books
+
+            var listBooksQuery = new ListBooksQuery();
+            var books = await _mediator.Send(listBooksQuery);
+            var booksDataTable = new DataTable();
+            var bookIdColumn = new DataColumn("Id", typeof(Guid));
+            var bookNameColumn = new DataColumn("Name", typeof(string));
+            booksDataTable.Columns.Add(bookIdColumn);
+            booksDataTable.Columns.Add(bookNameColumn);
+            booksDataTable.Rows.Add(Guid.Empty, "Chọn sách");
+            foreach (var book in books.Items)
+            {
+                booksDataTable.Rows.Add(book.Id, book.Name);
+            }
+
+            ImportBookMenu_QueryBook_BookNameComboBox.DataSource = booksDataTable;
+            ImportBookMenu_QueryBook_BookNameComboBox.DisplayMember = "Name";
+            ImportBookMenu_QueryBook_BookNameComboBox.ValueMember = "Id";
+
+            #endregion Load Books
+
+            #endregion IMPORT BOOK
         }
     }
 }
