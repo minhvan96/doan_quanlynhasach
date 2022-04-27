@@ -1,6 +1,7 @@
 ﻿using BookStoreManagementSystem.App.Features.AuthorFeature.Queries;
 using BookStoreManagementSystem.App.Features.BookFeature.Commands;
 using BookStoreManagementSystem.App.Features.BookFeature.Queries;
+using BookStoreManagementSystem.App.Features.BookStoreFeature.Commands;
 using BookStoreManagementSystem.App.Features.BookStoreFeature.Queries;
 using BookStoreManagementSystem.App.Features.CustomerFeature.Queries;
 using BookStoreManagementSystem.App.Features.StaffFeature.Queries;
@@ -235,11 +236,33 @@ namespace BookStoreManagementSystem
             }
         }
 
-        private void ImportBookMenu_QueryBook_SubmitButton_Click(object sender, EventArgs e)
+        private async void ImportBookMenu_QueryBook_SubmitButton_Click(object sender, EventArgs e)
         {
+            var bookId = (Guid)ImportBookMenu_QueryBook_BookNameComboBox.SelectedValue;
+            var bookStoreId = (Guid)ImportBookMenu_QueryBook_BookStore_ComboBox.SelectedValue;
+            var importQuantity = (int)ImportBookMenu_QueryBook_ImportQuantityNum.Value;
+            var importBookCommand = new ImportBookCommand
+            {
+                BookStoreId = bookStoreId,
+                Request = new ImportBookRequest
+                {
+                    BookId = bookId,
+                    Quantity = importQuantity
+                }
+            };
+            var importBookResult = await _mediator.Send(importBookCommand);
+            if (importBookResult)
+            {
+                await ImportBookMenuBookStoreUpdateBooksDataGridView();
+            }
         }
 
         private async void ImportBookMenu_QueryBook_BookStore_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            await ImportBookMenuBookStoreUpdateBooksDataGridView();
+        }
+
+        private async Task ImportBookMenuBookStoreUpdateBooksDataGridView()
         {
             try
             {

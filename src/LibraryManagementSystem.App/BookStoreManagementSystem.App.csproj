@@ -27,7 +27,6 @@
 
   <ItemGroup>
     <Folder Include="Features\AuthorFeature\Commands\" />
-    <Folder Include="Features\BookStoreFeature\Commands\" />
     <Folder Include="Features\StaffFeature\Commands\" />
   </ItemGroup>
 
