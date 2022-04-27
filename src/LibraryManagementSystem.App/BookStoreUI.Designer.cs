@@ -208,6 +208,9 @@
             this.HomeTab_MainContainer.Panel1.Controls.Add(this.HomeTab_LoginContainer_PasswordTextBook);
             this.HomeTab_MainContainer.Panel1.Controls.Add(this.label21);
             this.HomeTab_MainContainer.Panel1.Controls.Add(this.HomeTab_LoginContainer_UserNameTextBox);
+            // 
+            // HomeTab_MainContainer.Panel2
+            // 
             this.HomeTab_MainContainer.Size = new System.Drawing.Size(970, 527);
             this.HomeTab_MainContainer.SplitterDistance = 323;
             this.HomeTab_MainContainer.TabIndex = 0;

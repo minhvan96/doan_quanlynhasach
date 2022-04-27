@@ -6,6 +6,7 @@ using BookStoreManagementSystem.App.Features.BookStoreFeature.Queries;
 using BookStoreManagementSystem.App.Features.CustomerFeature.Queries;
 using BookStoreManagementSystem.App.Features.IdentityFeature.Commands;
 using BookStoreManagementSystem.App.Features.StaffFeature.Queries;
+using BookStoreManagementSystem.App.Infrastructure.Authorization;
 using MediatR;
 using System.Data;
 
@@ -14,11 +15,61 @@ namespace BookStoreManagementSystem
     public partial class BookStoreUI : Form
     {
         private readonly IMediator _mediator;
+        private readonly IPermission _userPermission;
+        private readonly List<TabPage> _managerLevelTab;
 
-        public BookStoreUI(IMediator mediator)
+        public BookStoreUI(IMediator mediator, IPermission userPermission)
         {
             InitializeComponent();
             _mediator = mediator;
+            _userPermission = userPermission;
+            _managerLevelTab = new List<TabPage>();
+            InitAuthorizedTab();
+            DisableUnauthorizedTabs();
+        }
+
+        private void InitAuthorizedTab()
+        {
+            switch (MainNav.TabIndex)
+            {
+                case 0:
+                    break;
+
+                case 1:
+                    _managerLevelTab.Add(MainNav.TabPages[1]);
+                    break;
+
+                case 2:
+                    _managerLevelTab.Add(MainNav.TabPages[2]);
+                    break;
+
+                case 3:
+                    _managerLevelTab.Add(MainNav.TabPages[3]);
+                    break;
+
+                case 4:
+                    _managerLevelTab.Add(MainNav.TabPages[4]);
+                    break;
+
+                case 5:
+                    _managerLevelTab.Add(MainNav.TabPages[5]);
+                    break;
+            }
+        }
+
+        private void DisableUnauthorizedTabs()
+        {
+            foreach (TabPage tab in _managerLevelTab)
+            {
+                if (!_userPermission.UserRoles.Contains("manager"))
+                {
+                    tab.Enabled = false;
+                }
+                else
+                {
+                    tab.Enabled = true;
+                }
+            }
         }
 
         private async void BookStoreUILoad(object sender, EventArgs e)
@@ -377,6 +428,9 @@ namespace BookStoreManagementSystem
                 MessageBox.Show(message, errorTitle);
                 return;
             }
+            _userPermission.UserRoles.Clear();
+            _userPermission.UserRoles.AddRange(user.Roles);
+            DisableUnauthorizedTabs();
         }
     }
 }

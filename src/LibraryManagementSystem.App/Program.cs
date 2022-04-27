@@ -1,5 +1,6 @@
 using BookStoreManagementSystem.App.Configuration.Database;
 using BookStoreManagementSystem.App.Infrastructure;
+using BookStoreManagementSystem.App.Infrastructure.Authorization;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -39,6 +40,7 @@ namespace BookStoreManagementSystem
             return Host.CreateDefaultBuilder()
                 .ConfigureServices((context, services) =>
                 {
+                    services.AddSingleton<IPermission, UserPermission>();
                     services.AddAutoMapper(typeof(Program).Assembly);
                     services.AddMediatR(typeof(Program).Assembly);
                     services.AddDbContext<BookStoreContext>();
