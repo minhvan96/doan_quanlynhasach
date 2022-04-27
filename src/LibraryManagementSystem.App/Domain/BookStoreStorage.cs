@@ -13,10 +13,12 @@
         }
 
         public BookStoreStorage(Guid bookId,
-            Guid bookStoreId)
+            Guid bookStoreId,
+            int availability = 0)
         {
             BookId = bookId;
             BookStoreId = bookStoreId;
+            Availability = availability;
         }
 
         public void Import(int number)
