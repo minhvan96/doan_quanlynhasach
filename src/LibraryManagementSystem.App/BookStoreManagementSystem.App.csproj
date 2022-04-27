@@ -41,6 +41,12 @@
     <None Update="Setup\Customers.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Setup\Roles.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Setup\UserRoles.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Setup\Users.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

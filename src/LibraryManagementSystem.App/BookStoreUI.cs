@@ -371,8 +371,11 @@ namespace BookStoreManagementSystem
             };
             var user = await _mediator.Send(loginCommand);
 
-            if (user != null)
+            if (user == null)
             {
+                string message = "Tên đăng nhập hoặc tài khoản không đúng";
+                MessageBox.Show(message, errorTitle);
+                return;
             }
         }
     }

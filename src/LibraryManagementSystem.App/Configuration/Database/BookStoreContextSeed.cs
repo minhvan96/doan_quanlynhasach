@@ -32,8 +32,21 @@ namespace BookStoreManagementSystem.App.Configuration.Database
 
                 if (!await context.Users.AnyAsync())
                 {
-                    IEnumerable<User> users = GetPredefineUsers(executingFolder);
+                    IEnumerable<User> users = GetPredefinedUsers(executingFolder);
                     context.AddRange(users);
+                    await context.SaveChangesAsync();
+                }
+                if (!await context.Roles.AnyAsync())
+                {
+                    IEnumerable<Role> roles = GetPredefinedRoles(executingFolder);
+                    context.AddRange(roles);
+                    await context.SaveChangesAsync();
+                }
+                if (!await context.UsersRoles.AnyAsync())
+                {
+                    IEnumerable<UserRole> userRoles = GetPredefinedUserRoles(executingFolder);
+                    context.AddRange(userRoles);
+                    await context.SaveChangesAsync();
                 }
 
                 #endregion Identity

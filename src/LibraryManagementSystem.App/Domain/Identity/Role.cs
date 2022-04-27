@@ -17,5 +17,12 @@ namespace BookStoreManagementSystem.App.Domain.Identity
         {
             Name = name;
         }
+
+        public Role(Guid id,
+            string name)
+        {
+            Id = id;
+            Name = name;
+        }
     }
 }

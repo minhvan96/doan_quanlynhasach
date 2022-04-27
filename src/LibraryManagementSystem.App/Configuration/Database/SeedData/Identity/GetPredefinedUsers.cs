@@ -4,7 +4,7 @@ namespace BookStoreManagementSystem.App.Configuration.Database
 {
     public partial class BookStoreContextSeed : DbContextSeed
     {
-        private static IEnumerable<User> GetPredefineUsers(string contentRootPath)
+        private static IEnumerable<User> GetPredefinedUsers(string contentRootPath)
         {
             string csvFileUsers = Path.Combine(contentRootPath, "Setup", "Users.csv");
             if (!File.Exists(csvFileUsers))
