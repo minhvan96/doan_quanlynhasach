@@ -4,6 +4,7 @@ using BookStoreManagementSystem.App.Features.BookFeature.Queries;
 using BookStoreManagementSystem.App.Features.BookStoreFeature.Commands;
 using BookStoreManagementSystem.App.Features.BookStoreFeature.Queries;
 using BookStoreManagementSystem.App.Features.CustomerFeature.Queries;
+using BookStoreManagementSystem.App.Features.IdentityFeature.Commands;
 using BookStoreManagementSystem.App.Features.StaffFeature.Queries;
 using MediatR;
 using System.Data;
@@ -341,6 +342,38 @@ namespace BookStoreManagementSystem
             #endregion Load Books
 
             #endregion IMPORT BOOK
+        }
+
+        private async void HomeTab_LoginContainer_LoginButton_Click(object sender, EventArgs e)
+        {
+            var userName = HomeTab_LoginContainer_UserNameTextBox.Text;
+            var userPassword = HomeTab_LoginContainer_PasswordTextBook.Text;
+            var errorTitle = "Lỗi đăng nhập";
+            if (string.IsNullOrWhiteSpace(userName))
+            {
+                string message = "Yêu cầu nhập tên đăng nhập";
+                MessageBox.Show(message, errorTitle);
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(userPassword))
+            {
+                string message = "Yêu cầu nhập mật khẩu";
+                MessageBox.Show(message, errorTitle);
+                return;
+            }
+            var loginCommand = new LoginCommand
+            {
+                Request = new LoginRequest
+                {
+                    UserName = userName,
+                    Password = userPassword
+                }
+            };
+            var user = await _mediator.Send(loginCommand);
+
+            if (user != null)
+            {
+            }
         }
     }
 }

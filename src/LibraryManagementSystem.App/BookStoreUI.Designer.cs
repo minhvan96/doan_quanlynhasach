@@ -30,6 +30,12 @@
         {
             this.MainNav = new System.Windows.Forms.TabControl();
             this.HomeTab = new System.Windows.Forms.TabPage();
+            this.HomeTab_MainContainer = new System.Windows.Forms.SplitContainer();
+            this.HomeTab_LoginContainer_LoginButton = new System.Windows.Forms.Button();
+            this.label22 = new System.Windows.Forms.Label();
+            this.HomeTab_LoginContainer_PasswordTextBook = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.HomeTab_LoginContainer_UserNameTextBox = new System.Windows.Forms.TextBox();
             this.ImportBookTab = new System.Windows.Forms.TabPage();
             this.ImportBookMenu_MainContainer = new System.Windows.Forms.SplitContainer();
             this.ImportBookMenu_QueryBook_SubmitButton = new System.Windows.Forms.Button();
@@ -116,6 +122,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.ConfigurationMenu = new System.Windows.Forms.TabPage();
             this.MainNav.SuspendLayout();
+            this.HomeTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HomeTab_MainContainer)).BeginInit();
+            this.HomeTab_MainContainer.Panel1.SuspendLayout();
+            this.HomeTab_MainContainer.SuspendLayout();
             this.ImportBookTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImportBookMenu_MainContainer)).BeginInit();
             this.ImportBookMenu_MainContainer.Panel1.SuspendLayout();
@@ -176,6 +186,7 @@
             // 
             // HomeTab
             // 
+            this.HomeTab.Controls.Add(this.HomeTab_MainContainer);
             this.HomeTab.Location = new System.Drawing.Point(4, 24);
             this.HomeTab.Name = "HomeTab";
             this.HomeTab.Padding = new System.Windows.Forms.Padding(3);
@@ -183,6 +194,65 @@
             this.HomeTab.TabIndex = 5;
             this.HomeTab.Text = "HOME";
             this.HomeTab.UseVisualStyleBackColor = true;
+            // 
+            // HomeTab_MainContainer
+            // 
+            this.HomeTab_MainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.HomeTab_MainContainer.Location = new System.Drawing.Point(3, 3);
+            this.HomeTab_MainContainer.Name = "HomeTab_MainContainer";
+            // 
+            // HomeTab_MainContainer.Panel1
+            // 
+            this.HomeTab_MainContainer.Panel1.Controls.Add(this.HomeTab_LoginContainer_LoginButton);
+            this.HomeTab_MainContainer.Panel1.Controls.Add(this.label22);
+            this.HomeTab_MainContainer.Panel1.Controls.Add(this.HomeTab_LoginContainer_PasswordTextBook);
+            this.HomeTab_MainContainer.Panel1.Controls.Add(this.label21);
+            this.HomeTab_MainContainer.Panel1.Controls.Add(this.HomeTab_LoginContainer_UserNameTextBox);
+            this.HomeTab_MainContainer.Size = new System.Drawing.Size(970, 527);
+            this.HomeTab_MainContainer.SplitterDistance = 323;
+            this.HomeTab_MainContainer.TabIndex = 0;
+            // 
+            // HomeTab_LoginContainer_LoginButton
+            // 
+            this.HomeTab_LoginContainer_LoginButton.Location = new System.Drawing.Point(22, 170);
+            this.HomeTab_LoginContainer_LoginButton.Name = "HomeTab_LoginContainer_LoginButton";
+            this.HomeTab_LoginContainer_LoginButton.Size = new System.Drawing.Size(75, 23);
+            this.HomeTab_LoginContainer_LoginButton.TabIndex = 7;
+            this.HomeTab_LoginContainer_LoginButton.Text = "Đăng nhập";
+            this.HomeTab_LoginContainer_LoginButton.UseVisualStyleBackColor = true;
+            this.HomeTab_LoginContainer_LoginButton.Click += new System.EventHandler(this.HomeTab_LoginContainer_LoginButton_Click);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(22, 102);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(57, 15);
+            this.label22.TabIndex = 6;
+            this.label22.Text = "Mật khẩu";
+            // 
+            // HomeTab_LoginContainer_PasswordTextBook
+            // 
+            this.HomeTab_LoginContainer_PasswordTextBook.Location = new System.Drawing.Point(22, 120);
+            this.HomeTab_LoginContainer_PasswordTextBook.Name = "HomeTab_LoginContainer_PasswordTextBook";
+            this.HomeTab_LoginContainer_PasswordTextBook.Size = new System.Drawing.Size(195, 23);
+            this.HomeTab_LoginContainer_PasswordTextBook.TabIndex = 5;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(22, 43);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(85, 15);
+            this.label21.TabIndex = 4;
+            this.label21.Text = "Tên đăng nhập";
+            // 
+            // HomeTab_LoginContainer_UserNameTextBox
+            // 
+            this.HomeTab_LoginContainer_UserNameTextBox.Location = new System.Drawing.Point(22, 61);
+            this.HomeTab_LoginContainer_UserNameTextBox.Name = "HomeTab_LoginContainer_UserNameTextBox";
+            this.HomeTab_LoginContainer_UserNameTextBox.Size = new System.Drawing.Size(195, 23);
+            this.HomeTab_LoginContainer_UserNameTextBox.TabIndex = 3;
             // 
             // ImportBookTab
             // 
@@ -1025,6 +1095,11 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.BookStoreUILoad);
             this.MainNav.ResumeLayout(false);
+            this.HomeTab.ResumeLayout(false);
+            this.HomeTab_MainContainer.Panel1.ResumeLayout(false);
+            this.HomeTab_MainContainer.Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HomeTab_MainContainer)).EndInit();
+            this.HomeTab_MainContainer.ResumeLayout(false);
             this.ImportBookTab.ResumeLayout(false);
             this.ImportBookMenu_MainContainer.Panel1.ResumeLayout(false);
             this.ImportBookMenu_MainContainer.Panel1.PerformLayout();
@@ -1164,5 +1239,11 @@
         private Button ImportBookMenu_QueryBook_SubmitButton;
         private Label label20;
         private NumericUpDown ImportBookMenu_QueryBook_ImportQuantityNum;
+        private SplitContainer HomeTab_MainContainer;
+        private Label label22;
+        private TextBox HomeTab_LoginContainer_PasswordTextBook;
+        private Label label21;
+        private TextBox HomeTab_LoginContainer_UserNameTextBox;
+        private Button HomeTab_LoginContainer_LoginButton;
     }
 }
