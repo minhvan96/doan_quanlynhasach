@@ -27,7 +27,6 @@
 
   <ItemGroup>
     <Folder Include="Features\AuthorFeature\Commands\" />
-    <Folder Include="Features\Configuration\CustomerConfigurationFeature\Commands\" />
     <Folder Include="Features\IdentityFeature\Queries\" />
     <Folder Include="Features\StaffFeature\Commands\" />
   </ItemGroup>

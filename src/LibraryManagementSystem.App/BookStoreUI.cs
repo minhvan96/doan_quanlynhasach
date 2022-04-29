@@ -542,5 +542,16 @@ namespace BookStoreManagementSystem
                 ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.Rows.Add(configurationInfo);
             }
         }
+
+        private void ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var selectedRowIndex = ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.SelectedCells[0].RowIndex;
+            var configurationId = ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.Rows[selectedRowIndex].Cells[0].Value;
+            var configurationName = ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.Rows[selectedRowIndex].Cells[1].Value;
+            var maximumDebt = ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.Rows[selectedRowIndex].Cells[2].Value;
+            ConfigurationTab_CustomerConfigurationTab_ConfigurationIdTextBox.Text = configurationId.ToString();
+            ConfigurationTab_CustomerConfigurationTab_ConfigurationNameTextBox.Text = configurationName.ToString();
+            ConfigurationTab_CustomerConfigurationTab_MaximumDebtNumericUpDown.Value = (decimal)maximumDebt;
+        }
     }
 }

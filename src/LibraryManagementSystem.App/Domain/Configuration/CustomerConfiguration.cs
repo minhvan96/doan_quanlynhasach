@@ -25,5 +25,12 @@ namespace BookStoreManagementSystem.App.Domain.Configuration
         {
             IsDefault = true;
         }
+
+        public void Update(string name,
+            decimal maximumDebt)
+        {
+            Name = name;
+            maximumDebt = maximumDebt;
+        }
     }
 }

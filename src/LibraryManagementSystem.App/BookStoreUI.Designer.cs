@@ -1406,6 +1406,11 @@
             // ConfigurationTab_CustomerConfigurationTab_MaximumDebtNumericUpDown
             // 
             this.ConfigurationTab_CustomerConfigurationTab_MaximumDebtNumericUpDown.Location = new System.Drawing.Point(25, 169);
+            this.ConfigurationTab_CustomerConfigurationTab_MaximumDebtNumericUpDown.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
             this.ConfigurationTab_CustomerConfigurationTab_MaximumDebtNumericUpDown.Name = "ConfigurationTab_CustomerConfigurationTab_MaximumDebtNumericUpDown";
             this.ConfigurationTab_CustomerConfigurationTab_MaximumDebtNumericUpDown.Size = new System.Drawing.Size(229, 23);
             this.ConfigurationTab_CustomerConfigurationTab_MaximumDebtNumericUpDown.TabIndex = 15;
@@ -1475,6 +1480,7 @@
             this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.RowTemplate.Height = 25;
             this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.Size = new System.Drawing.Size(634, 493);
             this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.TabIndex = 0;
+            this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_CellContentClick);
             // 
             // ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_IdColumn
             // 
