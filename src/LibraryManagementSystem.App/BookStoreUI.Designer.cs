@@ -124,8 +124,17 @@
             this.ConfigurationTab = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.ConfigurationTab_BookStoreConfigurationTab = new System.Windows.Forms.TabPage();
-            this.ConfigurationTab_CustomerConfigurationTab = new System.Windows.Forms.TabPage();
             this.ConfigurationTab_BookStoreConfigurationTab_MainContainer = new System.Windows.Forms.SplitContainer();
+            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView = new System.Windows.Forms.DataGridView();
             this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -133,16 +142,7 @@
             this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MaximumStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumBookImport = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.ConfigurationTab_CustomerConfigurationTab = new System.Windows.Forms.TabPage();
             this.MainNav.SuspendLayout();
             this.HomeTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomeTab_MainContainer)).BeginInit();
@@ -198,10 +198,10 @@
             this.ConfigurationTab_BookStoreConfigurationTab_MainContainer.Panel1.SuspendLayout();
             this.ConfigurationTab_BookStoreConfigurationTab_MainContainer.Panel2.SuspendLayout();
             this.ConfigurationTab_BookStoreConfigurationTab_MainContainer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // MainNav
@@ -1136,6 +1136,7 @@
             this.ConfigurationTab.TabIndex = 6;
             this.ConfigurationTab.Text = "Cấu hình";
             this.ConfigurationTab.UseVisualStyleBackColor = true;
+            this.ConfigurationTab.Enter += new System.EventHandler(this.ConfigurationTab_Enter);
             // 
             // tabControl2
             // 
@@ -1158,16 +1159,6 @@
             this.ConfigurationTab_BookStoreConfigurationTab.TabIndex = 0;
             this.ConfigurationTab_BookStoreConfigurationTab.Text = "Cấu hình nhà sách";
             this.ConfigurationTab_BookStoreConfigurationTab.UseVisualStyleBackColor = true;
-            // 
-            // ConfigurationTab_CustomerConfigurationTab
-            // 
-            this.ConfigurationTab_CustomerConfigurationTab.Location = new System.Drawing.Point(4, 24);
-            this.ConfigurationTab_CustomerConfigurationTab.Name = "ConfigurationTab_CustomerConfigurationTab";
-            this.ConfigurationTab_CustomerConfigurationTab.Padding = new System.Windows.Forms.Padding(3);
-            this.ConfigurationTab_CustomerConfigurationTab.Size = new System.Drawing.Size(962, 499);
-            this.ConfigurationTab_CustomerConfigurationTab.TabIndex = 1;
-            this.ConfigurationTab_CustomerConfigurationTab.Text = "Cấu hình khách hàng";
-            this.ConfigurationTab_CustomerConfigurationTab.UseVisualStyleBackColor = true;
             // 
             // ConfigurationTab_BookStoreConfigurationTab_MainContainer
             // 
@@ -1195,6 +1186,86 @@
             this.ConfigurationTab_BookStoreConfigurationTab_MainContainer.Size = new System.Drawing.Size(956, 493);
             this.ConfigurationTab_BookStoreConfigurationTab_MainContainer.SplitterDistance = 318;
             this.ConfigurationTab_BookStoreConfigurationTab_MainContainer.TabIndex = 0;
+            // 
+            // numericUpDown4
+            // 
+            this.numericUpDown4.Location = new System.Drawing.Point(25, 302);
+            this.numericUpDown4.Name = "numericUpDown4";
+            this.numericUpDown4.Size = new System.Drawing.Size(229, 23);
+            this.numericUpDown4.TabIndex = 15;
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.Location = new System.Drawing.Point(25, 241);
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(229, 23);
+            this.numericUpDown3.TabIndex = 15;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(25, 169);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(229, 23);
+            this.numericUpDown2.TabIndex = 15;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(25, 50);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(229, 23);
+            this.textBox5.TabIndex = 14;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(25, 32);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(17, 15);
+            this.label27.TabIndex = 13;
+            this.label27.Text = "Id";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(25, 351);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Cập nhật";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(25, 283);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(158, 15);
+            this.label25.TabIndex = 10;
+            this.label25.Text = "Số lượng sách nhập tối thiểu";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(25, 222);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(145, 15);
+            this.label26.TabIndex = 8;
+            this.label26.Text = "Số lượng tồn kho tối thiểu";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(25, 150);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(131, 15);
+            this.label24.TabIndex = 6;
+            this.label24.Text = "Số lượng tồn kho tối đa";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(25, 107);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(229, 23);
+            this.textBox1.TabIndex = 5;
             // 
             // label23
             // 
@@ -1255,85 +1326,15 @@
     "BookImport";
             this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumBookImport.Width = 80;
             // 
-            // label24
+            // ConfigurationTab_CustomerConfigurationTab
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(25, 150);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(131, 15);
-            this.label24.TabIndex = 6;
-            this.label24.Text = "Số lượng tồn kho tối đa";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(25, 283);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(158, 15);
-            this.label25.TabIndex = 10;
-            this.label25.Text = "Số lượng sách nhập tối thiểu";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(25, 222);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(145, 15);
-            this.label26.TabIndex = 8;
-            this.label26.Text = "Số lượng tồn kho tối thiểu";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(25, 351);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Cập nhật";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(25, 50);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(229, 23);
-            this.textBox5.TabIndex = 14;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(25, 32);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(17, 15);
-            this.label27.TabIndex = 13;
-            this.label27.Text = "Id";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(25, 107);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(229, 23);
-            this.textBox1.TabIndex = 5;
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Location = new System.Drawing.Point(25, 169);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(229, 23);
-            this.numericUpDown2.TabIndex = 15;
-            // 
-            // numericUpDown3
-            // 
-            this.numericUpDown3.Location = new System.Drawing.Point(25, 241);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(229, 23);
-            this.numericUpDown3.TabIndex = 15;
-            // 
-            // numericUpDown4
-            // 
-            this.numericUpDown4.Location = new System.Drawing.Point(25, 302);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(229, 23);
-            this.numericUpDown4.TabIndex = 15;
+            this.ConfigurationTab_CustomerConfigurationTab.Location = new System.Drawing.Point(4, 24);
+            this.ConfigurationTab_CustomerConfigurationTab.Name = "ConfigurationTab_CustomerConfigurationTab";
+            this.ConfigurationTab_CustomerConfigurationTab.Padding = new System.Windows.Forms.Padding(3);
+            this.ConfigurationTab_CustomerConfigurationTab.Size = new System.Drawing.Size(962, 499);
+            this.ConfigurationTab_CustomerConfigurationTab.TabIndex = 1;
+            this.ConfigurationTab_CustomerConfigurationTab.Text = "Cấu hình khách hàng";
+            this.ConfigurationTab_CustomerConfigurationTab.UseVisualStyleBackColor = true;
             // 
             // BookStoreUI
             // 
@@ -1407,10 +1408,10 @@
             this.ConfigurationTab_BookStoreConfigurationTab_MainContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ConfigurationTab_BookStoreConfigurationTab_MainContainer)).EndInit();
             this.ConfigurationTab_BookStoreConfigurationTab_MainContainer.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }

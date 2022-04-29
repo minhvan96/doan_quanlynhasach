@@ -3,6 +3,7 @@ using BookStoreManagementSystem.App.Features.BookFeature.Commands;
 using BookStoreManagementSystem.App.Features.BookFeature.Queries;
 using BookStoreManagementSystem.App.Features.BookStoreFeature.Commands;
 using BookStoreManagementSystem.App.Features.BookStoreFeature.Queries;
+using BookStoreManagementSystem.App.Features.Configuration.BookStoreConfigurationFeature.Queries;
 using BookStoreManagementSystem.App.Features.CustomerFeature.Queries;
 using BookStoreManagementSystem.App.Features.IdentityFeature.Commands;
 using BookStoreManagementSystem.App.Features.StaffFeature.Queries;
@@ -454,8 +455,26 @@ namespace BookStoreManagementSystem
             DisableUnauthorizedTabs();
         }
 
-        private void ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private async void ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+        }
+
+        private async void ConfigurationTab_Enter(object sender, EventArgs e)
+        {
+            var listBookStoreConfigurationsQuery = new ListBookStoreConfigurationsQuery();
+            var bookStoreConfigurations = await _mediator.Send(listBookStoreConfigurationsQuery);
+            ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView.Rows.Clear();
+            foreach (var configuration in bookStoreConfigurations.Items)
+            {
+                var staffInfo = new DataGridViewRow();
+                staffInfo.CreateCells(StaffInfo_SearchStaff_StaffInfo_GridTable);
+                staffInfo.Cells[0].Value = configuration.Id;
+                staffInfo.Cells[1].Value = configuration.Name;
+                staffInfo.Cells[2].Value = configuration.MaximumStock;
+                staffInfo.Cells[3].Value = configuration.MinimumStock;
+                staffInfo.Cells[4].Value = configuration.MinimumBookImport;
+                ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView.Rows.Add(staffInfo);
+            }
         }
     }
 }
