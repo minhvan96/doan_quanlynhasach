@@ -30,7 +30,7 @@ namespace BookStoreManagementSystem.App.Domain.Configuration
             decimal maximumDebt)
         {
             Name = name;
-            maximumDebt = maximumDebt;
+            MaximumDebt = maximumDebt;
         }
     }
 }

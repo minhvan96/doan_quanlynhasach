@@ -1440,6 +1440,7 @@
             this.ConfigurationTab_CustomerConfigurationTab_SubmitButton.TabIndex = 12;
             this.ConfigurationTab_CustomerConfigurationTab_SubmitButton.Text = "Cập nhật";
             this.ConfigurationTab_CustomerConfigurationTab_SubmitButton.UseVisualStyleBackColor = true;
+            this.ConfigurationTab_CustomerConfigurationTab_SubmitButton.Click += new System.EventHandler(this.ConfigurationTab_CustomerConfigurationTab_SubmitButton_Click);
             // 
             // label31
             // 

@@ -5,6 +5,7 @@ using BookStoreManagementSystem.App.Features.BookStoreFeature.Commands;
 using BookStoreManagementSystem.App.Features.BookStoreFeature.Queries;
 using BookStoreManagementSystem.App.Features.Configuration.BookStoreConfigurationFeature.Commands;
 using BookStoreManagementSystem.App.Features.Configuration.BookStoreConfigurationFeature.Queries;
+using BookStoreManagementSystem.App.Features.Configuration.CustomerConfigurationFeature.Commands;
 using BookStoreManagementSystem.App.Features.Configuration.CustomerConfigurationFeature.Queries;
 using BookStoreManagementSystem.App.Features.CustomerFeature.Queries;
 using BookStoreManagementSystem.App.Features.IdentityFeature.Commands;
@@ -552,6 +553,27 @@ namespace BookStoreManagementSystem
             ConfigurationTab_CustomerConfigurationTab_ConfigurationIdTextBox.Text = configurationId.ToString();
             ConfigurationTab_CustomerConfigurationTab_ConfigurationNameTextBox.Text = configurationName.ToString();
             ConfigurationTab_CustomerConfigurationTab_MaximumDebtNumericUpDown.Value = (decimal)maximumDebt;
+        }
+
+        private async void ConfigurationTab_CustomerConfigurationTab_SubmitButton_Click(object sender, EventArgs e)
+        {
+            var configurationId = new Guid(ConfigurationTab_CustomerConfigurationTab_ConfigurationIdTextBox.Text);
+            var configurationName = ConfigurationTab_CustomerConfigurationTab_ConfigurationNameTextBox.Text;
+            var maximumDebt = ConfigurationTab_CustomerConfigurationTab_MaximumDebtNumericUpDown.Value;
+            var updateBookStoreConfigurationCommand = new UpdateCustomerConfigurationCommand
+            {
+                Id = configurationId,
+                Name = configurationName,
+                MaximumDebt = maximumDebt
+            };
+            var result = await _mediator.Send(updateBookStoreConfigurationCommand);
+            if (result == UpdateCustomerConfigurationCommandStatus.Success)
+            {
+                MessageBox.Show("Cập nhật cấu hình thành công", "Cập nhật cấu hình");
+                await LoadConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView();
+                return;
+            }
+            MessageBox.Show("Không tìm thấy thông tin cấu hình, vui lòng kiểm tra lại", "Lỗi cập nhật cấu hình");
         }
     }
 }
