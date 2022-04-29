@@ -89,6 +89,7 @@
             this.QueryBookMenu_AddBookTab_MainContainer_BooksDataGridView_NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.QueryBookMenu_AddBookTab_MainContainer_BooksDataGridView_AuthorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SaleBookTab = new System.Windows.Forms.TabPage();
+            this.SellBookTab_MainContainer = new System.Windows.Forms.SplitContainer();
             this.CustomerInfoTab = new System.Windows.Forms.TabPage();
             this.CustomerMenu_MainContainer = new System.Windows.Forms.SplitContainer();
             this.CustomerMenu_MainContainer_QueryCustomerSubContainer = new System.Windows.Forms.SplitContainer();
@@ -120,8 +121,10 @@
             this.StaffInfo_SearchStaff_Position_GridTable = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StaffInfo_SearchStaff_PhoneNumber_GridTable = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
-            this.ConfigurationMenu = new System.Windows.Forms.TabPage();
-            this.SellBookTab_MainContainer = new System.Windows.Forms.SplitContainer();
+            this.ConfigurationTab = new System.Windows.Forms.TabPage();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.ConfigurationTab_BookStoreConfigurationTab = new System.Windows.Forms.TabPage();
+            this.ConfigurationTab_CustomerConfigurationTab = new System.Windows.Forms.TabPage();
             this.MainNav.SuspendLayout();
             this.HomeTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomeTab_MainContainer)).BeginInit();
@@ -149,6 +152,8 @@
             this.QueryBookMenu_AddBookTab_MainContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QueryBookMenu_AddBookTab_MainContainer_BooksDataGridView)).BeginInit();
             this.SaleBookTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SellBookTab_MainContainer)).BeginInit();
+            this.SellBookTab_MainContainer.SuspendLayout();
             this.CustomerInfoTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerMenu_MainContainer)).BeginInit();
             this.CustomerMenu_MainContainer.Panel1.SuspendLayout();
@@ -168,8 +173,8 @@
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StaffInfo_SearchStaff_StaffInfo_GridTable)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SellBookTab_MainContainer)).BeginInit();
-            this.SellBookTab_MainContainer.SuspendLayout();
+            this.ConfigurationTab.SuspendLayout();
+            this.tabControl2.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainNav
@@ -180,7 +185,7 @@
             this.MainNav.Controls.Add(this.SaleBookTab);
             this.MainNav.Controls.Add(this.CustomerInfoTab);
             this.MainNav.Controls.Add(this.StaffInfoTab);
-            this.MainNav.Controls.Add(this.ConfigurationMenu);
+            this.MainNav.Controls.Add(this.ConfigurationTab);
             this.MainNav.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainNav.Location = new System.Drawing.Point(0, 0);
             this.MainNav.Name = "MainNav";
@@ -787,6 +792,15 @@
             this.SaleBookTab.Text = "Bán sách";
             this.SaleBookTab.UseVisualStyleBackColor = true;
             // 
+            // SellBookTab_MainContainer
+            // 
+            this.SellBookTab_MainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SellBookTab_MainContainer.Location = new System.Drawing.Point(3, 3);
+            this.SellBookTab_MainContainer.Name = "SellBookTab_MainContainer";
+            this.SellBookTab_MainContainer.Size = new System.Drawing.Size(970, 527);
+            this.SellBookTab_MainContainer.SplitterDistance = 323;
+            this.SellBookTab_MainContainer.TabIndex = 0;
+            // 
             // CustomerInfoTab
             // 
             this.CustomerInfoTab.Controls.Add(this.CustomerMenu_MainContainer);
@@ -1085,24 +1099,47 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Thông tin chi tiết";
             // 
-            // ConfigurationMenu
+            // ConfigurationTab
             // 
-            this.ConfigurationMenu.Location = new System.Drawing.Point(4, 24);
-            this.ConfigurationMenu.Name = "ConfigurationMenu";
-            this.ConfigurationMenu.Padding = new System.Windows.Forms.Padding(3);
-            this.ConfigurationMenu.Size = new System.Drawing.Size(976, 533);
-            this.ConfigurationMenu.TabIndex = 6;
-            this.ConfigurationMenu.Text = "Cấu hình";
-            this.ConfigurationMenu.UseVisualStyleBackColor = true;
+            this.ConfigurationTab.Controls.Add(this.tabControl2);
+            this.ConfigurationTab.Location = new System.Drawing.Point(4, 24);
+            this.ConfigurationTab.Name = "ConfigurationTab";
+            this.ConfigurationTab.Padding = new System.Windows.Forms.Padding(3);
+            this.ConfigurationTab.Size = new System.Drawing.Size(976, 533);
+            this.ConfigurationTab.TabIndex = 6;
+            this.ConfigurationTab.Text = "Cấu hình";
+            this.ConfigurationTab.UseVisualStyleBackColor = true;
             // 
-            // SellBookTab_MainContainer
+            // tabControl2
             // 
-            this.SellBookTab_MainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SellBookTab_MainContainer.Location = new System.Drawing.Point(3, 3);
-            this.SellBookTab_MainContainer.Name = "SellBookTab_MainContainer";
-            this.SellBookTab_MainContainer.Size = new System.Drawing.Size(970, 527);
-            this.SellBookTab_MainContainer.SplitterDistance = 323;
-            this.SellBookTab_MainContainer.TabIndex = 0;
+            this.tabControl2.Controls.Add(this.ConfigurationTab_BookStoreConfigurationTab);
+            this.tabControl2.Controls.Add(this.ConfigurationTab_CustomerConfigurationTab);
+            this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl2.Location = new System.Drawing.Point(3, 3);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(970, 527);
+            this.tabControl2.TabIndex = 0;
+            // 
+            // ConfigurationTab_BookStoreConfigurationTab
+            // 
+            this.ConfigurationTab_BookStoreConfigurationTab.Location = new System.Drawing.Point(4, 24);
+            this.ConfigurationTab_BookStoreConfigurationTab.Name = "ConfigurationTab_BookStoreConfigurationTab";
+            this.ConfigurationTab_BookStoreConfigurationTab.Padding = new System.Windows.Forms.Padding(3);
+            this.ConfigurationTab_BookStoreConfigurationTab.Size = new System.Drawing.Size(962, 499);
+            this.ConfigurationTab_BookStoreConfigurationTab.TabIndex = 0;
+            this.ConfigurationTab_BookStoreConfigurationTab.Text = "Cấu hình nhà sách";
+            this.ConfigurationTab_BookStoreConfigurationTab.UseVisualStyleBackColor = true;
+            // 
+            // ConfigurationTab_CustomerConfigurationTab
+            // 
+            this.ConfigurationTab_CustomerConfigurationTab.Location = new System.Drawing.Point(4, 24);
+            this.ConfigurationTab_CustomerConfigurationTab.Name = "ConfigurationTab_CustomerConfigurationTab";
+            this.ConfigurationTab_CustomerConfigurationTab.Padding = new System.Windows.Forms.Padding(3);
+            this.ConfigurationTab_CustomerConfigurationTab.Size = new System.Drawing.Size(962, 499);
+            this.ConfigurationTab_CustomerConfigurationTab.TabIndex = 1;
+            this.ConfigurationTab_CustomerConfigurationTab.Text = "Cấu hình khách hàng";
+            this.ConfigurationTab_CustomerConfigurationTab.UseVisualStyleBackColor = true;
             // 
             // BookStoreUI
             // 
@@ -1144,6 +1181,8 @@
             this.QueryBookMenu_AddBookTab_MainContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.QueryBookMenu_AddBookTab_MainContainer_BooksDataGridView)).EndInit();
             this.SaleBookTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SellBookTab_MainContainer)).EndInit();
+            this.SellBookTab_MainContainer.ResumeLayout(false);
             this.CustomerInfoTab.ResumeLayout(false);
             this.CustomerMenu_MainContainer.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CustomerMenu_MainContainer)).EndInit();
@@ -1166,8 +1205,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.StaffInfo_SearchStaff_StaffInfo_GridTable)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SellBookTab_MainContainer)).EndInit();
-            this.SellBookTab_MainContainer.ResumeLayout(false);
+            this.ConfigurationTab.ResumeLayout(false);
+            this.tabControl2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1219,7 +1258,7 @@
         private DataGridViewTextBoxColumn BookType;
         private DataGridViewTextBoxColumn Available;
         private DataGridViewTextBoxColumn Action;
-        private TabPage ConfigurationMenu;
+        private TabPage ConfigurationTab;
         private TabControl tabControl1;
         private TabPage QueryBookMenu_BookInfo_Tab;
         private SplitContainer QueryBookMenu_QueryBookTab;
@@ -1268,5 +1307,8 @@
         private TextBox HomeTab_LoginContainer_UserNameTextBox;
         private Button HomeTab_LoginContainer_LoginButton;
         private SplitContainer SellBookTab_MainContainer;
+        private TabControl tabControl2;
+        private TabPage ConfigurationTab_BookStoreConfigurationTab;
+        private TabPage ConfigurationTab_CustomerConfigurationTab;
     }
 }
