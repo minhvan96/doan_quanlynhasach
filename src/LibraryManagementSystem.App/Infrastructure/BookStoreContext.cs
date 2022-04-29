@@ -19,6 +19,7 @@ namespace BookStoreManagementSystem.App.Infrastructure
         public DbSet<Author> Authors => Set<Author>();
 
         public DbSet<Customer> Customers => Set<Customer>();
+        public DbSet<CustomerDebt> CustomerDebts => Set<CustomerDebt>();
         public DbSet<Receipt> Receipts => Set<Receipt>();
         public DbSet<ReceiptDetail> ReceiptDetails => Set<ReceiptDetail>();
         public DbSet<Staff> Staffs => Set<Staff>();

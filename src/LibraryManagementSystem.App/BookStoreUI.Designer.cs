@@ -121,6 +121,7 @@
             this.StaffInfo_SearchStaff_PhoneNumber_GridTable = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.ConfigurationMenu = new System.Windows.Forms.TabPage();
+            this.SellBookTab_MainContainer = new System.Windows.Forms.SplitContainer();
             this.MainNav.SuspendLayout();
             this.HomeTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomeTab_MainContainer)).BeginInit();
@@ -147,6 +148,7 @@
             this.QueryBookMenu_AddBookTab_MainContainer.Panel2.SuspendLayout();
             this.QueryBookMenu_AddBookTab_MainContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QueryBookMenu_AddBookTab_MainContainer_BooksDataGridView)).BeginInit();
+            this.SaleBookTab.SuspendLayout();
             this.CustomerInfoTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerMenu_MainContainer)).BeginInit();
             this.CustomerMenu_MainContainer.Panel1.SuspendLayout();
@@ -166,6 +168,8 @@
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StaffInfo_SearchStaff_StaffInfo_GridTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SellBookTab_MainContainer)).BeginInit();
+            this.SellBookTab_MainContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainNav
@@ -774,6 +778,7 @@
             // 
             // SaleBookTab
             // 
+            this.SaleBookTab.Controls.Add(this.SellBookTab_MainContainer);
             this.SaleBookTab.Location = new System.Drawing.Point(4, 24);
             this.SaleBookTab.Name = "SaleBookTab";
             this.SaleBookTab.Padding = new System.Windows.Forms.Padding(3);
@@ -1090,6 +1095,15 @@
             this.ConfigurationMenu.Text = "Cấu hình";
             this.ConfigurationMenu.UseVisualStyleBackColor = true;
             // 
+            // SellBookTab_MainContainer
+            // 
+            this.SellBookTab_MainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SellBookTab_MainContainer.Location = new System.Drawing.Point(3, 3);
+            this.SellBookTab_MainContainer.Name = "SellBookTab_MainContainer";
+            this.SellBookTab_MainContainer.Size = new System.Drawing.Size(970, 527);
+            this.SellBookTab_MainContainer.SplitterDistance = 323;
+            this.SellBookTab_MainContainer.TabIndex = 0;
+            // 
             // BookStoreUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1129,6 +1143,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.QueryBookMenu_AddBookTab_MainContainer)).EndInit();
             this.QueryBookMenu_AddBookTab_MainContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.QueryBookMenu_AddBookTab_MainContainer_BooksDataGridView)).EndInit();
+            this.SaleBookTab.ResumeLayout(false);
             this.CustomerInfoTab.ResumeLayout(false);
             this.CustomerMenu_MainContainer.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CustomerMenu_MainContainer)).EndInit();
@@ -1151,6 +1166,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.StaffInfo_SearchStaff_StaffInfo_GridTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SellBookTab_MainContainer)).EndInit();
+            this.SellBookTab_MainContainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1250,5 +1267,6 @@
         private Label label21;
         private TextBox HomeTab_LoginContainer_UserNameTextBox;
         private Button HomeTab_LoginContainer_LoginButton;
+        private SplitContainer SellBookTab_MainContainer;
     }
 }

@@ -3,6 +3,7 @@ using System;
 using BookStoreManagementSystem.App.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookStoreManagementSystem.App.Migrations
 {
     [DbContext(typeof(BookStoreContext))]
-    partial class BookStoreContextModelSnapshot : ModelSnapshot
+    [Migration("20220429075125_Init")]
+    partial class Init
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.3");
@@ -258,40 +260,6 @@ namespace BookStoreManagementSystem.App.Migrations
                     b.ToTable("Customers", (string)null);
                 });
 
-            modelBuilder.Entity("BookStoreManagementSystem.App.Domain.CustomerDebt", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("CreatedBy")
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTimeOffset>("CreatedDate")
-                        .HasColumnType("TEXT");
-
-                    b.Property<Guid>("CustomerId")
-                        .HasColumnType("TEXT");
-
-                    b.Property<decimal>("Debt")
-                        .HasColumnType("TEXT");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("UpdatedBy")
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTimeOffset>("UpdatedDate")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CustomerId");
-
-                    b.ToTable("CustomerDebts", (string)null);
-                });
-
             modelBuilder.Entity("BookStoreManagementSystem.App.Domain.Identity.Role", b =>
                 {
                     b.Property<Guid>("Id")
@@ -392,9 +360,6 @@ namespace BookStoreManagementSystem.App.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
-                    b.Property<decimal>("AmountOfReceivedMoney")
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("Code")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -414,9 +379,6 @@ namespace BookStoreManagementSystem.App.Migrations
                     b.Property<DateTimeOffset>("SoldDate")
                         .HasColumnType("TEXT");
 
-                    b.Property<Guid>("StaffId")
-                        .HasColumnType("TEXT");
-
                     b.Property<decimal>("TotalPrice")
                         .HasColumnType("TEXT");
 
@@ -429,8 +391,6 @@ namespace BookStoreManagementSystem.App.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CustomerId");
-
-                    b.HasIndex("StaffId");
 
                     b.ToTable("Receipts", (string)null);
                 });
@@ -546,17 +506,6 @@ namespace BookStoreManagementSystem.App.Migrations
                     b.Navigation("BookStore");
                 });
 
-            modelBuilder.Entity("BookStoreManagementSystem.App.Domain.CustomerDebt", b =>
-                {
-                    b.HasOne("BookStoreManagementSystem.App.Domain.Customer", "Customer")
-                        .WithMany("Debt")
-                        .HasForeignKey("CustomerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Customer");
-                });
-
             modelBuilder.Entity("BookStoreManagementSystem.App.Domain.Identity.UserRole", b =>
                 {
                     b.HasOne("BookStoreManagementSystem.App.Domain.Identity.Role", "Role")
@@ -583,14 +532,6 @@ namespace BookStoreManagementSystem.App.Migrations
                         .HasForeignKey("CustomerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.HasOne("BookStoreManagementSystem.App.Domain.Staff", "Staff")
-                        .WithMany()
-                        .HasForeignKey("StaffId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Staff");
                 });
 
             modelBuilder.Entity("BookStoreManagementSystem.App.Domain.ReceiptDetail", b =>
@@ -608,11 +549,6 @@ namespace BookStoreManagementSystem.App.Migrations
             modelBuilder.Entity("BookStoreManagementSystem.App.Domain.BookStore", b =>
                 {
                     b.Navigation("BookStoreStorages");
-                });
-
-            modelBuilder.Entity("BookStoreManagementSystem.App.Domain.Customer", b =>
-                {
-                    b.Navigation("Debt");
                 });
 
             modelBuilder.Entity("BookStoreManagementSystem.App.Domain.Identity.Role", b =>

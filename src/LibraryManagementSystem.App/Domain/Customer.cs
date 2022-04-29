@@ -10,9 +10,12 @@ namespace BookStoreManagementSystem.App.Domain
         public string Address { get; set; }
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
+        private readonly List<CustomerDebt> _debt;
+        public IReadOnlyCollection<CustomerDebt> Debt => _debt.AsReadOnly();
 
         protected Customer()
         {
+            _debt = new List<CustomerDebt>();
             Name = string.Empty;
             FullName = string.Empty;
             Address = string.Empty;
@@ -27,6 +30,7 @@ namespace BookStoreManagementSystem.App.Domain
             string phoneNumber,
             string email)
         {
+            _debt = new List<CustomerDebt>();
             Name = name;
             FullName = fullName;
             BirthDate = birthDate;
