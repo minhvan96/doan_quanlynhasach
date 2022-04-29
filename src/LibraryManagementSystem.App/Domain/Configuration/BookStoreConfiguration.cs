@@ -4,6 +4,7 @@ namespace BookStoreManagementSystem.App.Domain.Configuration
 {
     public class BookStoreConfiguration : Entity
     {
+        public bool IsDefault { get; private set; }
         public string Name { get; set; }
 
         /// <summary>
@@ -43,6 +44,11 @@ namespace BookStoreManagementSystem.App.Domain.Configuration
             MaximumStock = maximumStock;
             MinimumStock = minimumStock;
             MinimumBookImport = minimumBookImport;
+        }
+
+        public void SetAsDefault()
+        {
+            IsDefault = true;
         }
     }
 }

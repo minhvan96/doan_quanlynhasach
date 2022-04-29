@@ -19,6 +19,7 @@ namespace BookStoreManagementSystem.App.Configuration.Database
                 var line = reader.ReadLine();
                 var values = line?.Split(',');
                 var newCustomerConfiguration = CreateNewBookStoreConfiguration(values[0], int.Parse(values[1]));
+                newCustomerConfiguration.SetAsDefault();
                 configurations.Add(newCustomerConfiguration);
             }
             return configurations;

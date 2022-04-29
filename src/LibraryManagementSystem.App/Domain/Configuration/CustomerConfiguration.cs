@@ -4,6 +4,8 @@ namespace BookStoreManagementSystem.App.Domain.Configuration
 {
     public class CustomerConfiguration : Entity
     {
+        public bool IsDefault { get; private set; }
+
         public string Name { get; set; }
         public decimal MaximumDebt { get; set; }
 
@@ -17,6 +19,11 @@ namespace BookStoreManagementSystem.App.Domain.Configuration
         {
             Name = name;
             MaximumDebt = maximumDebt;
+        }
+
+        public void SetAsDefault()
+        {
+            IsDefault = true;
         }
     }
 }

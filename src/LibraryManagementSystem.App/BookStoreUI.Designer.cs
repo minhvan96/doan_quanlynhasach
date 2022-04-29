@@ -1324,6 +1324,7 @@
             this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView.Location = new System.Drawing.Point(0, 0);
             this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView.Name = "ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView";
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView.ReadOnly = true;
             this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView.RowTemplate.Height = 25;
             this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView.Size = new System.Drawing.Size(634, 493);
             this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView.TabIndex = 0;
@@ -1334,11 +1335,13 @@
             this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Id.HeaderText = "Id";
             this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Id.Name = "ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Id";
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Id.ReadOnly = true;
             // 
             // ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Name
             // 
             this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Name.HeaderText = "Tên cấu hình";
             this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Name.Name = "ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Name";
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Name.ReadOnly = true;
             this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Name.Width = 80;
             // 
             // ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MaximumStock
@@ -1347,12 +1350,14 @@
             this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MaximumStock.HeaderText = "Số lượng tồn kho tối đa";
             this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MaximumStock.Name = "ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Maximum" +
     "Stock";
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MaximumStock.ReadOnly = true;
             // 
             // ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumStock
             // 
             this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumStock.HeaderText = "Số lượng tồn kho tối thiểu";
             this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumStock.Name = "ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Minimum" +
     "Stock";
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumStock.ReadOnly = true;
             this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumStock.Width = 80;
             // 
             // ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumBookImport
@@ -1360,6 +1365,7 @@
             this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumBookImport.HeaderText = "Số lượng sách nhập tối thiểu";
             this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumBookImport.Name = "ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Minimum" +
     "BookImport";
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumBookImport.ReadOnly = true;
             this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumBookImport.Width = 80;
             // 
             // ConfigurationTab_CustomerConfigurationTab
@@ -1372,6 +1378,7 @@
             this.ConfigurationTab_CustomerConfigurationTab.TabIndex = 1;
             this.ConfigurationTab_CustomerConfigurationTab.Text = "Cấu hình khách hàng";
             this.ConfigurationTab_CustomerConfigurationTab.UseVisualStyleBackColor = true;
+            this.ConfigurationTab_CustomerConfigurationTab.Enter += new System.EventHandler(this.ConfigurationTab_CustomerConfigurationTab_Enter);
             // 
             // splitContainer3
             // 
@@ -1464,6 +1471,7 @@
             this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.Location = new System.Drawing.Point(0, 0);
             this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.Name = "ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView";
+            this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.ReadOnly = true;
             this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.RowTemplate.Height = 25;
             this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.Size = new System.Drawing.Size(634, 493);
             this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.TabIndex = 0;
@@ -1474,12 +1482,14 @@
             this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_IdColumn.HeaderText = "Id";
             this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_IdColumn.Name = "ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_IdCol" +
     "umn";
+            this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_IdColumn.ReadOnly = true;
             // 
             // ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_ConfigurationNameColumn
             // 
             this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_ConfigurationNameColumn.HeaderText = "Tên cấu hình";
             this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_ConfigurationNameColumn.Name = "ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_Confi" +
     "gurationNameColumn";
+            this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_ConfigurationNameColumn.ReadOnly = true;
             this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_ConfigurationNameColumn.Width = 80;
             // 
             // ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_MaximumDebtColumn
@@ -1488,6 +1498,7 @@
             this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_MaximumDebtColumn.HeaderText = "Số nợ tối đa";
             this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_MaximumDebtColumn.Name = "ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_Maxim" +
     "umDebtColumn";
+            this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_MaximumDebtColumn.ReadOnly = true;
             // 
             // BookStoreUI
             // 

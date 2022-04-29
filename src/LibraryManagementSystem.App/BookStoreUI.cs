@@ -5,6 +5,7 @@ using BookStoreManagementSystem.App.Features.BookStoreFeature.Commands;
 using BookStoreManagementSystem.App.Features.BookStoreFeature.Queries;
 using BookStoreManagementSystem.App.Features.Configuration.BookStoreConfigurationFeature.Commands;
 using BookStoreManagementSystem.App.Features.Configuration.BookStoreConfigurationFeature.Queries;
+using BookStoreManagementSystem.App.Features.Configuration.CustomerConfigurationFeature.Queries;
 using BookStoreManagementSystem.App.Features.CustomerFeature.Queries;
 using BookStoreManagementSystem.App.Features.IdentityFeature.Commands;
 using BookStoreManagementSystem.App.Features.StaffFeature.Queries;
@@ -484,14 +485,14 @@ namespace BookStoreManagementSystem
             ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView.Rows.Clear();
             foreach (var configuration in bookStoreConfigurations.Items)
             {
-                var staffInfo = new DataGridViewRow();
-                staffInfo.CreateCells(StaffInfo_SearchStaff_StaffInfo_GridTable);
-                staffInfo.Cells[0].Value = configuration.Id;
-                staffInfo.Cells[1].Value = configuration.Name;
-                staffInfo.Cells[2].Value = configuration.MaximumStock;
-                staffInfo.Cells[3].Value = configuration.MinimumStock;
-                staffInfo.Cells[4].Value = configuration.MinimumBookImport;
-                ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView.Rows.Add(staffInfo);
+                var configurationInfo = new DataGridViewRow();
+                configurationInfo.CreateCells(ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView);
+                configurationInfo.Cells[0].Value = configuration.Id;
+                configurationInfo.Cells[1].Value = configuration.Name;
+                configurationInfo.Cells[2].Value = configuration.MaximumStock;
+                configurationInfo.Cells[3].Value = configuration.MinimumStock;
+                configurationInfo.Cells[4].Value = configuration.MinimumBookImport;
+                ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView.Rows.Add(configurationInfo);
             }
         }
 
@@ -518,6 +519,28 @@ namespace BookStoreManagementSystem
                 return;
             }
             MessageBox.Show("Không tìm thấy thông tin cấu hình, vui lòng kiểm tra lại", "Lỗi cập nhật cấu hình");
+        }
+
+        private async void ConfigurationTab_CustomerConfigurationTab_Enter(object sender, EventArgs e)
+        {
+            await LoadConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView();
+        }
+
+        private async Task LoadConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView()
+        {
+            var listCustomerConfigurationsQuery = new ListCustomerConfigurationsQuery();
+            var customerConfigurations = await _mediator.Send(listCustomerConfigurationsQuery);
+            ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.Rows.Clear();
+            foreach (var configuration in customerConfigurations.Items)
+            {
+                var configurationInfo = new DataGridViewRow();
+                configurationInfo.CreateCells(ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView);
+                configurationInfo.Cells[0].Value = configuration.Id;
+                configurationInfo.Cells[1].Value = configuration.Name;
+                configurationInfo.Cells[2].Value = configuration.MaximumDebt;
+
+                ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.Rows.Add(configurationInfo);
+            }
         }
     }
 }
