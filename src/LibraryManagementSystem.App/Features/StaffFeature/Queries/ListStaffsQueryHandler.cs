@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using BookStoreManagementSystem.App.Configuration.Mediator;
+﻿using BookStoreManagementSystem.App.Configuration.Mediator;
 using BookStoreManagementSystem.App.Domain.Seedwork;
 using BookStoreManagementSystem.App.Features.StaffFeature.Dtos;
 using BookStoreManagementSystem.App.Infrastructure;
@@ -10,13 +9,10 @@ namespace BookStoreManagementSystem.App.Features.StaffFeature.Queries
     public class ListStaffsQueryHandler : IListQueryHandler<ListStaffsQuery, StaffDto>
     {
         private readonly BookStoreContext _context;
-        private readonly IMapper _mapper;
 
-        public ListStaffsQueryHandler(BookStoreContext context,
-            IMapper mapper)
+        public ListStaffsQueryHandler(BookStoreContext context)
         {
             _context = context;
-            _mapper = mapper;
         }
 
         public async Task<IPagedList<StaffDto>> Handle(ListStaffsQuery request, CancellationToken cancellationToken)
