@@ -1209,6 +1209,11 @@
             // ConfigurationTab_BookStoreConfigurationTab_MinimumImportBookNumericUpDown
             // 
             this.ConfigurationTab_BookStoreConfigurationTab_MinimumImportBookNumericUpDown.Location = new System.Drawing.Point(25, 302);
+            this.ConfigurationTab_BookStoreConfigurationTab_MinimumImportBookNumericUpDown.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             this.ConfigurationTab_BookStoreConfigurationTab_MinimumImportBookNumericUpDown.Name = "ConfigurationTab_BookStoreConfigurationTab_MinimumImportBookNumericUpDown";
             this.ConfigurationTab_BookStoreConfigurationTab_MinimumImportBookNumericUpDown.Size = new System.Drawing.Size(229, 23);
             this.ConfigurationTab_BookStoreConfigurationTab_MinimumImportBookNumericUpDown.TabIndex = 15;
@@ -1216,6 +1221,11 @@
             // ConfigurationTab_BookStoreConfigurationTab_MinimumStockNumericUpDown
             // 
             this.ConfigurationTab_BookStoreConfigurationTab_MinimumStockNumericUpDown.Location = new System.Drawing.Point(25, 241);
+            this.ConfigurationTab_BookStoreConfigurationTab_MinimumStockNumericUpDown.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             this.ConfigurationTab_BookStoreConfigurationTab_MinimumStockNumericUpDown.Name = "ConfigurationTab_BookStoreConfigurationTab_MinimumStockNumericUpDown";
             this.ConfigurationTab_BookStoreConfigurationTab_MinimumStockNumericUpDown.Size = new System.Drawing.Size(229, 23);
             this.ConfigurationTab_BookStoreConfigurationTab_MinimumStockNumericUpDown.TabIndex = 15;
@@ -1223,6 +1233,11 @@
             // ConfigurationTab_BookStoreConfigurationTab_MaximumStockNumericUpDown
             // 
             this.ConfigurationTab_BookStoreConfigurationTab_MaximumStockNumericUpDown.Location = new System.Drawing.Point(25, 169);
+            this.ConfigurationTab_BookStoreConfigurationTab_MaximumStockNumericUpDown.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             this.ConfigurationTab_BookStoreConfigurationTab_MaximumStockNumericUpDown.Name = "ConfigurationTab_BookStoreConfigurationTab_MaximumStockNumericUpDown";
             this.ConfigurationTab_BookStoreConfigurationTab_MaximumStockNumericUpDown.Size = new System.Drawing.Size(229, 23);
             this.ConfigurationTab_BookStoreConfigurationTab_MaximumStockNumericUpDown.TabIndex = 15;

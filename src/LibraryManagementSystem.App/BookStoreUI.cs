@@ -455,8 +455,19 @@ namespace BookStoreManagementSystem
             DisableUnauthorizedTabs();
         }
 
-        private async void ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            var selectedRowIndex = ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView.SelectedCells[0].RowIndex;
+            var configurationId = ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView.Rows[selectedRowIndex].Cells[0].Value;
+            var configurationName = ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView.Rows[selectedRowIndex].Cells[1].Value;
+            var maximumStock = ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView.Rows[selectedRowIndex].Cells[2].Value;
+            var minimumStock = ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView.Rows[selectedRowIndex].Cells[3].Value;
+            var minimumImportBook = ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView.Rows[selectedRowIndex].Cells[4].Value;
+            ConfigurationTab_BookStoreConfigurationTab_ConfigurationIdTextBox.Text = configurationId.ToString();
+            ConfigurationTab_BookStoreConfigurationTab_ConfigurationNameTextBox.Text = configurationName.ToString();
+            ConfigurationTab_BookStoreConfigurationTab_MaximumStockNumericUpDown.Value = (int)maximumStock;
+            ConfigurationTab_BookStoreConfigurationTab_MinimumStockNumericUpDown.Value = (int)minimumStock;
+            ConfigurationTab_BookStoreConfigurationTab_MinimumImportBookNumericUpDown.Value = (int)minimumImportBook;
         }
 
         private async void ConfigurationTab_Enter(object sender, EventArgs e)
