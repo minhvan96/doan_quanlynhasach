@@ -125,6 +125,24 @@
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.ConfigurationTab_BookStoreConfigurationTab = new System.Windows.Forms.TabPage();
             this.ConfigurationTab_CustomerConfigurationTab = new System.Windows.Forms.TabPage();
+            this.ConfigurationTab_BookStoreConfigurationTab_MainContainer = new System.Windows.Forms.SplitContainer();
+            this.label23 = new System.Windows.Forms.Label();
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView = new System.Windows.Forms.DataGridView();
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MaximumStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumBookImport = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
             this.MainNav.SuspendLayout();
             this.HomeTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomeTab_MainContainer)).BeginInit();
@@ -175,6 +193,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.StaffInfo_SearchStaff_StaffInfo_GridTable)).BeginInit();
             this.ConfigurationTab.SuspendLayout();
             this.tabControl2.SuspendLayout();
+            this.ConfigurationTab_BookStoreConfigurationTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ConfigurationTab_BookStoreConfigurationTab_MainContainer)).BeginInit();
+            this.ConfigurationTab_BookStoreConfigurationTab_MainContainer.Panel1.SuspendLayout();
+            this.ConfigurationTab_BookStoreConfigurationTab_MainContainer.Panel2.SuspendLayout();
+            this.ConfigurationTab_BookStoreConfigurationTab_MainContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             this.SuspendLayout();
             // 
             // MainNav
@@ -1123,6 +1150,7 @@
             // 
             // ConfigurationTab_BookStoreConfigurationTab
             // 
+            this.ConfigurationTab_BookStoreConfigurationTab.Controls.Add(this.ConfigurationTab_BookStoreConfigurationTab_MainContainer);
             this.ConfigurationTab_BookStoreConfigurationTab.Location = new System.Drawing.Point(4, 24);
             this.ConfigurationTab_BookStoreConfigurationTab.Name = "ConfigurationTab_BookStoreConfigurationTab";
             this.ConfigurationTab_BookStoreConfigurationTab.Padding = new System.Windows.Forms.Padding(3);
@@ -1140,6 +1168,172 @@
             this.ConfigurationTab_CustomerConfigurationTab.TabIndex = 1;
             this.ConfigurationTab_CustomerConfigurationTab.Text = "Cấu hình khách hàng";
             this.ConfigurationTab_CustomerConfigurationTab.UseVisualStyleBackColor = true;
+            // 
+            // ConfigurationTab_BookStoreConfigurationTab_MainContainer
+            // 
+            this.ConfigurationTab_BookStoreConfigurationTab_MainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ConfigurationTab_BookStoreConfigurationTab_MainContainer.Location = new System.Drawing.Point(3, 3);
+            this.ConfigurationTab_BookStoreConfigurationTab_MainContainer.Name = "ConfigurationTab_BookStoreConfigurationTab_MainContainer";
+            // 
+            // ConfigurationTab_BookStoreConfigurationTab_MainContainer.Panel1
+            // 
+            this.ConfigurationTab_BookStoreConfigurationTab_MainContainer.Panel1.Controls.Add(this.numericUpDown4);
+            this.ConfigurationTab_BookStoreConfigurationTab_MainContainer.Panel1.Controls.Add(this.numericUpDown3);
+            this.ConfigurationTab_BookStoreConfigurationTab_MainContainer.Panel1.Controls.Add(this.numericUpDown2);
+            this.ConfigurationTab_BookStoreConfigurationTab_MainContainer.Panel1.Controls.Add(this.textBox5);
+            this.ConfigurationTab_BookStoreConfigurationTab_MainContainer.Panel1.Controls.Add(this.label27);
+            this.ConfigurationTab_BookStoreConfigurationTab_MainContainer.Panel1.Controls.Add(this.button1);
+            this.ConfigurationTab_BookStoreConfigurationTab_MainContainer.Panel1.Controls.Add(this.label25);
+            this.ConfigurationTab_BookStoreConfigurationTab_MainContainer.Panel1.Controls.Add(this.label26);
+            this.ConfigurationTab_BookStoreConfigurationTab_MainContainer.Panel1.Controls.Add(this.label24);
+            this.ConfigurationTab_BookStoreConfigurationTab_MainContainer.Panel1.Controls.Add(this.textBox1);
+            this.ConfigurationTab_BookStoreConfigurationTab_MainContainer.Panel1.Controls.Add(this.label23);
+            // 
+            // ConfigurationTab_BookStoreConfigurationTab_MainContainer.Panel2
+            // 
+            this.ConfigurationTab_BookStoreConfigurationTab_MainContainer.Panel2.Controls.Add(this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView);
+            this.ConfigurationTab_BookStoreConfigurationTab_MainContainer.Size = new System.Drawing.Size(956, 493);
+            this.ConfigurationTab_BookStoreConfigurationTab_MainContainer.SplitterDistance = 318;
+            this.ConfigurationTab_BookStoreConfigurationTab_MainContainer.TabIndex = 0;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(25, 89);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(74, 15);
+            this.label23.TabIndex = 4;
+            this.label23.Text = "Tên cấu hình";
+            // 
+            // ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView
+            // 
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Id,
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Name,
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MaximumStock,
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumStock,
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumBookImport});
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView.Name = "ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView";
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView.RowTemplate.Height = 25;
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView.Size = new System.Drawing.Size(634, 493);
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView.TabIndex = 0;
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_CellContentClick);
+            // 
+            // ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Id
+            // 
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Id.HeaderText = "Id";
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Id.Name = "ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Id";
+            // 
+            // ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Name
+            // 
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Name.HeaderText = "Tên cấu hình";
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Name.Name = "ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Name";
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Name.Width = 80;
+            // 
+            // ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MaximumStock
+            // 
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MaximumStock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MaximumStock.HeaderText = "Số lượng tồn kho tối đa";
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MaximumStock.Name = "ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Maximum" +
+    "Stock";
+            // 
+            // ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumStock
+            // 
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumStock.HeaderText = "Số lượng tồn kho tối thiểu";
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumStock.Name = "ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Minimum" +
+    "Stock";
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumStock.Width = 80;
+            // 
+            // ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumBookImport
+            // 
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumBookImport.HeaderText = "Số lượng sách nhập tối thiểu";
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumBookImport.Name = "ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Minimum" +
+    "BookImport";
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumBookImport.Width = 80;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(25, 150);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(131, 15);
+            this.label24.TabIndex = 6;
+            this.label24.Text = "Số lượng tồn kho tối đa";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(25, 283);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(158, 15);
+            this.label25.TabIndex = 10;
+            this.label25.Text = "Số lượng sách nhập tối thiểu";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(25, 222);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(145, 15);
+            this.label26.TabIndex = 8;
+            this.label26.Text = "Số lượng tồn kho tối thiểu";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(25, 351);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Cập nhật";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(25, 50);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(229, 23);
+            this.textBox5.TabIndex = 14;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(25, 32);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(17, 15);
+            this.label27.TabIndex = 13;
+            this.label27.Text = "Id";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(25, 107);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(229, 23);
+            this.textBox1.TabIndex = 5;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(25, 169);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(229, 23);
+            this.numericUpDown2.TabIndex = 15;
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.Location = new System.Drawing.Point(25, 241);
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(229, 23);
+            this.numericUpDown3.TabIndex = 15;
+            // 
+            // numericUpDown4
+            // 
+            this.numericUpDown4.Location = new System.Drawing.Point(25, 302);
+            this.numericUpDown4.Name = "numericUpDown4";
+            this.numericUpDown4.Size = new System.Drawing.Size(229, 23);
+            this.numericUpDown4.TabIndex = 15;
             // 
             // BookStoreUI
             // 
@@ -1207,6 +1401,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.StaffInfo_SearchStaff_StaffInfo_GridTable)).EndInit();
             this.ConfigurationTab.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
+            this.ConfigurationTab_BookStoreConfigurationTab.ResumeLayout(false);
+            this.ConfigurationTab_BookStoreConfigurationTab_MainContainer.Panel1.ResumeLayout(false);
+            this.ConfigurationTab_BookStoreConfigurationTab_MainContainer.Panel1.PerformLayout();
+            this.ConfigurationTab_BookStoreConfigurationTab_MainContainer.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ConfigurationTab_BookStoreConfigurationTab_MainContainer)).EndInit();
+            this.ConfigurationTab_BookStoreConfigurationTab_MainContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1310,5 +1514,23 @@
         private TabControl tabControl2;
         private TabPage ConfigurationTab_BookStoreConfigurationTab;
         private TabPage ConfigurationTab_CustomerConfigurationTab;
+        private SplitContainer ConfigurationTab_BookStoreConfigurationTab_MainContainer;
+        private Label label23;
+        private DataGridView ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView;
+        private NumericUpDown numericUpDown4;
+        private NumericUpDown numericUpDown3;
+        private NumericUpDown numericUpDown2;
+        private TextBox textBox5;
+        private Label label27;
+        private Button button1;
+        private Label label25;
+        private Label label26;
+        private Label label24;
+        private TextBox textBox1;
+        private DataGridViewTextBoxColumn ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Id;
+        private DataGridViewTextBoxColumn ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Name;
+        private DataGridViewTextBoxColumn ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MaximumStock;
+        private DataGridViewTextBoxColumn ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumStock;
+        private DataGridViewTextBoxColumn ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumBookImport;
     }
 }

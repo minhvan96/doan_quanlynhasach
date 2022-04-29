@@ -453,5 +453,9 @@ namespace BookStoreManagementSystem
             _userPermission.UserRoles.AddRange(user.Roles);
             DisableUnauthorizedTabs();
         }
+
+        private void ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
     }
 }
