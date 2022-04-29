@@ -3,6 +3,7 @@ using BookStoreManagementSystem.App.Features.BookFeature.Commands;
 using BookStoreManagementSystem.App.Features.BookFeature.Queries;
 using BookStoreManagementSystem.App.Features.BookStoreFeature.Commands;
 using BookStoreManagementSystem.App.Features.BookStoreFeature.Queries;
+using BookStoreManagementSystem.App.Features.Configuration.BookStoreConfigurationFeature.Commands;
 using BookStoreManagementSystem.App.Features.Configuration.BookStoreConfigurationFeature.Queries;
 using BookStoreManagementSystem.App.Features.CustomerFeature.Queries;
 using BookStoreManagementSystem.App.Features.IdentityFeature.Commands;
@@ -10,6 +11,7 @@ using BookStoreManagementSystem.App.Features.StaffFeature.Queries;
 using BookStoreManagementSystem.App.Infrastructure.Authorization;
 using MediatR;
 using System.Data;
+using System.Windows.Forms;
 
 namespace BookStoreManagementSystem
 {
@@ -472,6 +474,11 @@ namespace BookStoreManagementSystem
 
         private async void ConfigurationTab_Enter(object sender, EventArgs e)
         {
+            await LoadConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView();
+        }
+
+        private async Task LoadConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView()
+        {
             var listBookStoreConfigurationsQuery = new ListBookStoreConfigurationsQuery();
             var bookStoreConfigurations = await _mediator.Send(listBookStoreConfigurationsQuery);
             ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView.Rows.Clear();
@@ -486,6 +493,31 @@ namespace BookStoreManagementSystem
                 staffInfo.Cells[4].Value = configuration.MinimumBookImport;
                 ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView.Rows.Add(staffInfo);
             }
+        }
+
+        private async void ConfigurationTab_BookStoreConfigurationTab_Submit_Button_Click(object sender, EventArgs e)
+        {
+            var configurationId = new Guid(ConfigurationTab_BookStoreConfigurationTab_ConfigurationIdTextBox.Text);
+            var configurationName = ConfigurationTab_BookStoreConfigurationTab_ConfigurationNameTextBox.Text;
+            var maximumStock = (int)ConfigurationTab_BookStoreConfigurationTab_MaximumStockNumericUpDown.Value;
+            var minimumStock = (int)ConfigurationTab_BookStoreConfigurationTab_MinimumStockNumericUpDown.Value;
+            var minimumImportBook = (int)ConfigurationTab_BookStoreConfigurationTab_MinimumImportBookNumericUpDown.Value;
+            var updateBookStoreConfigurationCommand = new UpdateBookStoreConfigurationCommand
+            {
+                Id = configurationId,
+                Name = configurationName,
+                MaximumStock = maximumStock,
+                MinimumStock = minimumStock,
+                MinimumImportBook = minimumImportBook,
+            };
+            var result = await _mediator.Send(updateBookStoreConfigurationCommand);
+            if (result == UpdateBookStoreConfigurationCommandStatus.Success)
+            {
+                MessageBox.Show("Cập nhật cấu hình thành công", "Cập nhật cấu hình");
+                await LoadConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView();
+                return;
+            }
+            MessageBox.Show("Không tìm thấy thông tin cấu hình, vui lòng kiểm tra lại", "Lỗi cập nhật cấu hình");
         }
     }
 }

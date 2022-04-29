@@ -33,5 +33,16 @@ namespace BookStoreManagementSystem.App.Domain.Configuration
             MinimumStock = minimumStock;
             MinimumBookImport = minimumBookImport;
         }
+
+        public void Update(string name,
+            int maximumStock,
+            int minimumStock,
+            int minimumBookImport)
+        {
+            Name = name;
+            MaximumStock = maximumStock;
+            MinimumStock = minimumStock;
+            MinimumBookImport = minimumBookImport;
+        }
     }
 }

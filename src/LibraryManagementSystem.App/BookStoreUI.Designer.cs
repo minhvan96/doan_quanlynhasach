@@ -1267,6 +1267,7 @@
             this.ConfigurationTab_BookStoreConfigurationTab_Submit_Button.TabIndex = 12;
             this.ConfigurationTab_BookStoreConfigurationTab_Submit_Button.Text = "Cập nhật";
             this.ConfigurationTab_BookStoreConfigurationTab_Submit_Button.UseVisualStyleBackColor = true;
+            this.ConfigurationTab_BookStoreConfigurationTab_Submit_Button.Click += new System.EventHandler(this.ConfigurationTab_BookStoreConfigurationTab_Submit_Button_Click);
             // 
             // label25
             // 
