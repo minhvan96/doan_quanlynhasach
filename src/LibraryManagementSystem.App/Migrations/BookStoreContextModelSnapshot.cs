@@ -131,7 +131,7 @@ namespace BookStoreManagementSystem.App.Migrations
                     b.Property<Guid>("BookId")
                         .HasColumnType("TEXT");
 
-                    b.Property<Guid?>("BookStoreId")
+                    b.Property<Guid>("BookStoreId")
                         .HasColumnType("TEXT");
 
                     b.Property<int>("Availability")
@@ -507,13 +507,13 @@ namespace BookStoreManagementSystem.App.Migrations
             modelBuilder.Entity("BookStoreManagementSystem.App.Domain.Identity.UserRole", b =>
                 {
                     b.HasOne("BookStoreManagementSystem.App.Domain.Identity.Role", "Role")
-                        .WithMany("Users")
+                        .WithMany("UserRoles")
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("BookStoreManagementSystem.App.Domain.Identity.User", "User")
-                        .WithMany("Roles")
+                        .WithMany("UserRoles")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -551,12 +551,12 @@ namespace BookStoreManagementSystem.App.Migrations
 
             modelBuilder.Entity("BookStoreManagementSystem.App.Domain.Identity.Role", b =>
                 {
-                    b.Navigation("Users");
+                    b.Navigation("UserRoles");
                 });
 
             modelBuilder.Entity("BookStoreManagementSystem.App.Domain.Identity.User", b =>
                 {
-                    b.Navigation("Roles");
+                    b.Navigation("UserRoles");
                 });
 
             modelBuilder.Entity("BookStoreManagementSystem.App.Domain.Receipt", b =>

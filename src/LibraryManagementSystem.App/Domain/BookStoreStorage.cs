@@ -5,7 +5,7 @@
         public Book? Book { get; private set; }
         public Guid BookId { get; private set; }
         public BookStore? BookStore { get; private set; }
-        public Guid? BookStoreId { get; private set; }
+        public Guid BookStoreId { get; private set; }
         public int Availability { get; private set; }
 
         protected BookStoreStorage()

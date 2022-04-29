@@ -8,13 +8,14 @@ namespace BookStoreManagementSystem.App.Domain.Identity
         public string FullName { get; private set; }
         public string Password { get; private set; }
         public string Email { get; private set; }
-        public DateTime BirthDate { get; set; }
-        public string PhoneNumber { get; set; }
-        private readonly List<UserRole> _roles = new();
-        public IReadOnlyCollection<UserRole> Roles => _roles.AsReadOnly();
+        public DateTime BirthDate { get; private set; }
+        public string PhoneNumber { get; private set; }
+        private readonly List<UserRole> _userRoles;
+        public IReadOnlyCollection<UserRole> UserRoles => _userRoles.AsReadOnly();
 
         protected User()
         {
+            _userRoles = new List<UserRole>();
             Name = string.Empty;
             FullName = string.Empty;
             Password = string.Empty;
@@ -28,6 +29,7 @@ namespace BookStoreManagementSystem.App.Domain.Identity
             string email,
             string phoneNumber)
         {
+            _userRoles = new List<UserRole>();
             Name = name;
             FullName = fullName;
             Password = password;
@@ -43,6 +45,7 @@ namespace BookStoreManagementSystem.App.Domain.Identity
             string phoneNumber,
             DateTime birthDate)
         {
+            _userRoles = new List<UserRole>();
             Id = id;
             Name = name;
             FullName = fullName;

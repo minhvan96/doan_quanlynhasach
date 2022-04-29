@@ -293,6 +293,21 @@ namespace BookStoreManagementSystem
             var bookId = (Guid)ImportBookMenu_QueryBook_BookNameComboBox.SelectedValue;
             var bookStoreId = (Guid)ImportBookMenu_QueryBook_BookStore_ComboBox.SelectedValue;
             var importQuantity = (int)ImportBookMenu_QueryBook_ImportQuantityNum.Value;
+            if (bookId == Guid.Empty)
+            {
+                MessageBox.Show("Vui lòng chọn sách", "Lỗi nhập sách");
+                return;
+            }
+            if (bookStoreId == Guid.Empty)
+            {
+                MessageBox.Show("Vui lòng chọn nhà sách", "Lỗi nhập sách");
+                return;
+            }
+            if (importQuantity == 0)
+            {
+                MessageBox.Show("Vui lòng nhập số lượng nhập sách", "Lỗi nhập sách");
+                return;
+            }
             var importBookCommand = new ImportBookCommand
             {
                 BookStoreId = bookStoreId,
@@ -303,9 +318,15 @@ namespace BookStoreManagementSystem
                 }
             };
             var importBookResult = await _mediator.Send(importBookCommand);
-            if (importBookResult)
+
+            if (importBookResult.Status == ImportBookStatus.Success)
             {
+                MessageBox.Show(importBookResult.Message, "Nhập sách thành công");
                 await ImportBookMenuBookStoreUpdateBooksDataGridView();
+            }
+            else
+            {
+                MessageBox.Show(importBookResult.Message, "Lỗi nhập sách");
             }
         }
 

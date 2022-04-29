@@ -17,13 +17,13 @@ namespace BookStoreManagementSystem.App.Features.IdentityFeature.Commands
         {
             var user = await _context.Users
                 .AsNoTracking()
-                .Include(x => x.Roles)
+                .Include(x => x.UserRoles)
                 .Where(x => x.Name == request.Request.UserName && x.Password == request.Request.Password)
                 .Select(x => new UserDto
                 {
                     Id = x.Id,
                     Name = x.Name,
-                    Roles = x.Roles.Select(x => x.Role.Name).ToList()
+                    Roles = x.UserRoles.Select(x => x.Role.Name).ToList()
                 })
                 .FirstOrDefaultAsync(cancellationToken);
 

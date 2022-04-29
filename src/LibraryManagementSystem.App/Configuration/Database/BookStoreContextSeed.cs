@@ -34,13 +34,11 @@ namespace BookStoreManagementSystem.App.Configuration.Database
                 {
                     IEnumerable<User> users = GetPredefinedUsers(executingFolder);
                     context.AddRange(users);
-                    await context.SaveChangesAsync();
                 }
                 if (!await context.Roles.AnyAsync())
                 {
                     IEnumerable<Role> roles = GetPredefinedRoles(executingFolder);
                     context.AddRange(roles);
-                    await context.SaveChangesAsync();
                 }
                 if (!await context.UsersRoles.AnyAsync())
                 {

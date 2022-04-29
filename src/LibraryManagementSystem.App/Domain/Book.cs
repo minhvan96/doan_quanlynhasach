@@ -18,6 +18,7 @@ namespace BookStoreManagementSystem.App.Domain
         protected Book()
         {
             _bookStoreStorages = new List<BookStoreStorage>();
+            Name = string.Empty;
             Code = string.Empty;
         }
 

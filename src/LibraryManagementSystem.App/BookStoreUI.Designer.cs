@@ -208,9 +208,6 @@
             this.HomeTab_MainContainer.Panel1.Controls.Add(this.HomeTab_LoginContainer_PasswordTextBook);
             this.HomeTab_MainContainer.Panel1.Controls.Add(this.label21);
             this.HomeTab_MainContainer.Panel1.Controls.Add(this.HomeTab_LoginContainer_UserNameTextBox);
-            // 
-            // HomeTab_MainContainer.Panel2
-            // 
             this.HomeTab_MainContainer.Size = new System.Drawing.Size(970, 527);
             this.HomeTab_MainContainer.SplitterDistance = 323;
             this.HomeTab_MainContainer.TabIndex = 0;
@@ -320,6 +317,11 @@
             0,
             0});
             this.ImportBookMenu_QueryBook_ImportQuantityNum.Location = new System.Drawing.Point(249, 96);
+            this.ImportBookMenu_QueryBook_ImportQuantityNum.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.ImportBookMenu_QueryBook_ImportQuantityNum.Name = "ImportBookMenu_QueryBook_ImportQuantityNum";
             this.ImportBookMenu_QueryBook_ImportQuantityNum.Size = new System.Drawing.Size(120, 23);
             this.ImportBookMenu_QueryBook_ImportQuantityNum.TabIndex = 9;
