@@ -9,12 +9,14 @@ namespace BookStoreManagementSystem.App.Domain.Configuration
         /// <summary>
         /// Số lượng tồn kho tối đa của mỗi nhà sách
         /// </summary>
-        public int MaximumStock { get; set; }
+        public int MaximumStock { get; private set; }
+
+        public int MinimumStock { get; private set; }
 
         /// <summary>
         /// Số lượng nhập sách tối thiểu
         /// </summary>
-        public int MinimumBookImport { get; set; }
+        public int MinimumBookImport { get; private set; }
 
         protected BookStoreConfiguration()
         {
@@ -23,10 +25,12 @@ namespace BookStoreManagementSystem.App.Domain.Configuration
 
         public BookStoreConfiguration(string name,
             int maximumStock,
+            int minimumStock,
             int minimumBookImport)
         {
             Name = name;
             MaximumStock = maximumStock;
+            MinimumStock = minimumStock;
             MinimumBookImport = minimumBookImport;
         }
     }

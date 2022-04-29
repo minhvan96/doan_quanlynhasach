@@ -32,6 +32,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Setup\CustomerConfigurations.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Setup\BookStoreStorages.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

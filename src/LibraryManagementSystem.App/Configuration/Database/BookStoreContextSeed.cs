@@ -25,6 +25,11 @@ namespace BookStoreManagementSystem.App.Configuration.Database
                     IEnumerable<BookStoreConfiguration> configurations = GetPredefinedBookStoreConfigurations(executingFolder);
                     context.AddRange(configurations);
                 }
+                if (!await context.CustomerConfigurations.AnyAsync())
+                {
+                    IEnumerable<CustomerConfiguration> configurations = GetPredefinedCustomerConfigurations(executingFolder);
+                    context.AddRange(configurations);
+                }
 
                 #endregion Configuration
 

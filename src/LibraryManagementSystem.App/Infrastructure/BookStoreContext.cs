@@ -9,6 +9,7 @@ namespace BookStoreManagementSystem.App.Infrastructure
         #region CONFIGURATION
 
         public DbSet<BookStoreConfiguration> BookStoreConfigurations => Set<BookStoreConfiguration>();
+        public DbSet<CustomerConfiguration> CustomerConfigurations => Set<CustomerConfiguration>();
 
         #endregion CONFIGURATION
 

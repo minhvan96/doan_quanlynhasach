@@ -1,5 +1,4 @@
-﻿using BookStoreManagementSystem.App.Domain;
-using BookStoreManagementSystem.App.Domain.Configuration;
+﻿using BookStoreManagementSystem.App.Domain.Configuration;
 
 namespace BookStoreManagementSystem.App.Configuration.Database
 {
@@ -19,15 +18,15 @@ namespace BookStoreManagementSystem.App.Configuration.Database
             {
                 var line = reader.ReadLine();
                 var values = line?.Split(',');
-                var author = CreateNewBookStoreConfiguration(values[0], int.Parse(values[1]), int.Parse(values[2]));
-                configurations.Add(author);
+                var newBookStoreConfiguration = CreateNewBookStoreConfiguration(values[0], int.Parse(values[1]), int.Parse(values[2]), int.Parse(values[3]));
+                configurations.Add(newBookStoreConfiguration);
             }
             return configurations;
         }
 
-        private static BookStoreConfiguration CreateNewBookStoreConfiguration(string name, int maximumStock, int minimumImportBook)
+        private static BookStoreConfiguration CreateNewBookStoreConfiguration(string name, int maximumStock, int minimumStock, int minimumImportBook)
         {
-            return new BookStoreConfiguration(name, maximumStock, minimumImportBook);
+            return new BookStoreConfiguration(name, maximumStock, minimumStock, minimumImportBook);
         }
     }
 }
