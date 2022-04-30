@@ -617,5 +617,13 @@ namespace BookStoreManagementSystem
             SaleBookTab_Pages_AddCustomerPage_SelectedCustomerAddressTextbox.Text = customerAddress;
             SaleBookTab_Pages_AddCustomerPage_SelectedCustomerDebtTextbox.Text = customerDebt;
         }
+
+        private void SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+        private void SaleBookTab_Pages_AddBooksPage_Enter(object sender, EventArgs e)
+        {
+        }
     }
 }

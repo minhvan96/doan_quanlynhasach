@@ -99,6 +99,12 @@
             this.SaleBookTab_Pages_AddCustomerPage_CustomerIdSearchTextbox = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView = new System.Windows.Forms.DataGridView();
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerPhoneNumberColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerEmailColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerAddressColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerDebtColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomer_AddBooksButton = new System.Windows.Forms.Button();
             this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerIdTextbox = new System.Windows.Forms.TextBox();
             this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerDebtTextbox = new System.Windows.Forms.TextBox();
@@ -178,12 +184,40 @@
             this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_IdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_ConfigurationNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_MaximumDebtColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerPhoneNumberColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerEmailColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerAddressColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerDebtColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer = new System.Windows.Forms.SplitContainer();
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer = new System.Windows.Forms.SplitContainer();
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer = new System.Windows.Forms.SplitContainer();
+            this.label39 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView = new System.Windows.Forms.DataGridView();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView = new System.Windows.Forms.DataGridView();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label48 = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label46 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_BookIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_BookNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_BookPriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_AddBookButtonColumn = new System.Windows.Forms.DataGridViewButtonColumn();
             this.MainNav.SuspendLayout();
             this.HomeTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomeTab_MainContainer)).BeginInit();
@@ -222,6 +256,7 @@
             this.splitContainer5.Panel2.SuspendLayout();
             this.splitContainer5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView)).BeginInit();
+            this.SaleBookTab_Pages_AddBooksPage.SuspendLayout();
             this.CustomerInfoTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerMenu_MainContainer)).BeginInit();
             this.CustomerMenu_MainContainer.Panel1.SuspendLayout();
@@ -259,6 +294,23 @@
             this.splitContainer3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ConfigurationTab_CustomerConfigurationTab_MaximumDebtNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SaleBookTab_Pages_AddBooksPage_MainContainer)).BeginInit();
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer.Panel1.SuspendLayout();
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer.Panel2.SuspendLayout();
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer)).BeginInit();
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer.Panel1.SuspendLayout();
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer.Panel2.SuspendLayout();
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer)).BeginInit();
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.Panel1.SuspendLayout();
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.Panel2.SuspendLayout();
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainNav
@@ -1009,6 +1061,43 @@
             this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView.TabIndex = 0;
             this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CellContentClick);
             // 
+            // SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerIdColumn
+            // 
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerIdColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerIdColumn.HeaderText = "Id";
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerIdColumn.Name = "SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerIdColumn";
+            // 
+            // SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerNameColumn
+            // 
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerNameColumn.HeaderText = "Họ tên";
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerNameColumn.Name = "SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerNameColumn";
+            // 
+            // SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerPhoneNumberColumn
+            // 
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerPhoneNumberColumn.HeaderText = "Số điện thoại";
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerPhoneNumberColumn.Name = "SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerPhoneNumberColumn" +
+    "";
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerPhoneNumberColumn.Visible = false;
+            // 
+            // SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerEmailColumn
+            // 
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerEmailColumn.HeaderText = "Email";
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerEmailColumn.Name = "SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerEmailColumn";
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerEmailColumn.Visible = false;
+            // 
+            // SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerAddressColumn
+            // 
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerAddressColumn.HeaderText = "Địa chỉ";
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerAddressColumn.Name = "SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerAddressColumn";
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerAddressColumn.Visible = false;
+            // 
+            // SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerDebtColumn
+            // 
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerDebtColumn.HeaderText = "Tổng nợ";
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerDebtColumn.Name = "SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerDebtColumn";
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerDebtColumn.Visible = false;
+            // 
             // SaleBookTab_Pages_AddCustomerPage_SelectedCustomer_AddBooksButton
             // 
             this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomer_AddBooksButton.Location = new System.Drawing.Point(39, 378);
@@ -1122,6 +1211,7 @@
             // 
             // SaleBookTab_Pages_AddBooksPage
             // 
+            this.SaleBookTab_Pages_AddBooksPage.Controls.Add(this.SaleBookTab_Pages_AddBooksPage_MainContainer);
             this.SaleBookTab_Pages_AddBooksPage.Location = new System.Drawing.Point(4, 24);
             this.SaleBookTab_Pages_AddBooksPage.Name = "SaleBookTab_Pages_AddBooksPage";
             this.SaleBookTab_Pages_AddBooksPage.Padding = new System.Windows.Forms.Padding(3);
@@ -1129,6 +1219,7 @@
             this.SaleBookTab_Pages_AddBooksPage.TabIndex = 1;
             this.SaleBookTab_Pages_AddBooksPage.Text = "Thêm sách";
             this.SaleBookTab_Pages_AddBooksPage.UseVisualStyleBackColor = true;
+            this.SaleBookTab_Pages_AddBooksPage.Enter += new System.EventHandler(this.SaleBookTab_Pages_AddBooksPage_Enter);
             // 
             // CustomerInfoTab
             // 
@@ -1790,42 +1881,347 @@
     "umDebtColumn";
             this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_MaximumDebtColumn.ReadOnly = true;
             // 
-            // SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerIdColumn
+            // SaleBookTab_Pages_AddBooksPage_MainContainer
             // 
-            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerIdColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerIdColumn.HeaderText = "Id";
-            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerIdColumn.Name = "SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerIdColumn";
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer.Location = new System.Drawing.Point(3, 3);
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer.Name = "SaleBookTab_Pages_AddBooksPage_MainContainer";
             // 
-            // SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerNameColumn
+            // SaleBookTab_Pages_AddBooksPage_MainContainer.Panel1
             // 
-            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerNameColumn.HeaderText = "Họ tên";
-            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerNameColumn.Name = "SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerNameColumn";
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer.Panel1.Controls.Add(this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer);
             // 
-            // SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerPhoneNumberColumn
+            // SaleBookTab_Pages_AddBooksPage_MainContainer.Panel2
             // 
-            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerPhoneNumberColumn.HeaderText = "Số điện thoại";
-            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerPhoneNumberColumn.Name = "SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerPhoneNumberColumn" +
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer.Panel2.Controls.Add(this.groupBox3);
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer.Size = new System.Drawing.Size(956, 493);
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer.SplitterDistance = 700;
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer.TabIndex = 0;
+            // 
+            // SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer
+            // 
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer.Location = new System.Drawing.Point(0, 0);
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer.Name = "SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer";
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer.Panel1
+            // 
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer.Panel1.Controls.Add(this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer);
+            // 
+            // SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer.Panel2
+            // 
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer.Panel2.Controls.Add(this.groupBox2);
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer.Size = new System.Drawing.Size(700, 493);
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer.SplitterDistance = 250;
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer.TabIndex = 0;
+            // 
+            // SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer
+            // 
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.Location = new System.Drawing.Point(0, 0);
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.Name = "SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer" +
     "";
-            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerPhoneNumberColumn.Visible = false;
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
-            // SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerEmailColumn
+            // SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.Panel1
             // 
-            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerEmailColumn.HeaderText = "Email";
-            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerEmailColumn.Name = "SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerEmailColumn";
-            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerEmailColumn.Visible = false;
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.Panel1.Controls.Add(this.button1);
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.Panel1.Controls.Add(this.label40);
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.Panel1.Controls.Add(this.label39);
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.Panel1.Controls.Add(this.textBox2);
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.Panel1.Controls.Add(this.textBox1);
             // 
-            // SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerAddressColumn
+            // SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.Panel2
             // 
-            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerAddressColumn.HeaderText = "Địa chỉ";
-            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerAddressColumn.Name = "SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerAddressColumn";
-            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerAddressColumn.Visible = false;
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.Panel2.Controls.Add(this.groupBox1);
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.Size = new System.Drawing.Size(700, 250);
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.TabIndex = 0;
             // 
-            // SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerDebtColumn
+            // label39
             // 
-            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerDebtColumn.HeaderText = "Tổng nợ";
-            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerDebtColumn.Name = "SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerDebtColumn";
-            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerDebtColumn.Visible = false;
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(3, 6);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(51, 15);
+            this.label39.TabIndex = 11;
+            this.label39.Text = "Mã sách";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(3, 24);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(195, 23);
+            this.textBox1.TabIndex = 10;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(700, 196);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Chọn sách";
+            // 
+            // SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView
+            // 
+            this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_BookIdColumn,
+            this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_BookNameColumn,
+            this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_BookPriceColumn,
+            this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_AddBookButtonColumn});
+            this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.Location = new System.Drawing.Point(3, 19);
+            this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.Name = "SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView";
+            this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.RowTemplate.Height = 25;
+            this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.Size = new System.Drawing.Size(694, 174);
+            this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.TabIndex = 0;
+            this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_CellContentClick);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(204, 24);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(195, 23);
+            this.textBox2.TabIndex = 10;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(204, 6);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(52, 15);
+            this.label40.TabIndex = 11;
+            this.label40.Text = "Tên sách";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(405, 23);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Tìm kiếm";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Location = new System.Drawing.Point(0, 0);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(700, 239);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Danh sách sách đã chọn";
+            // 
+            // SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView
+            // 
+            this.SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView.Location = new System.Drawing.Point(3, 19);
+            this.SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView.Name = "SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView";
+            this.SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView.RowTemplate.Height = 25;
+            this.SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView.Size = new System.Drawing.Size(694, 217);
+            this.SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView.TabIndex = 0;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.button2);
+            this.groupBox3.Controls.Add(this.textBox3);
+            this.groupBox3.Controls.Add(this.label46);
+            this.groupBox3.Controls.Add(this.textBox10);
+            this.groupBox3.Controls.Add(this.label48);
+            this.groupBox3.Controls.Add(this.textBox9);
+            this.groupBox3.Controls.Add(this.label47);
+            this.groupBox3.Controls.Add(this.textBox4);
+            this.groupBox3.Controls.Add(this.label41);
+            this.groupBox3.Controls.Add(this.textBox5);
+            this.groupBox3.Controls.Add(this.label42);
+            this.groupBox3.Controls.Add(this.textBox6);
+            this.groupBox3.Controls.Add(this.label43);
+            this.groupBox3.Controls.Add(this.textBox7);
+            this.groupBox3.Controls.Add(this.label44);
+            this.groupBox3.Controls.Add(this.textBox8);
+            this.groupBox3.Controls.Add(this.label45);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox3.Location = new System.Drawing.Point(0, 0);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(252, 493);
+            this.groupBox3.TabIndex = 0;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Xuất hoá đơn";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(17, 447);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 16;
+            this.button2.Text = "Thêm sách";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(6, 258);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(161, 23);
+            this.textBox4.TabIndex = 6;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(6, 240);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(51, 15);
+            this.label41.TabIndex = 11;
+            this.label41.Text = "Tổng nợ";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(6, 212);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
+            this.textBox5.Size = new System.Drawing.Size(161, 23);
+            this.textBox5.TabIndex = 7;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(6, 194);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(43, 15);
+            this.label42.TabIndex = 12;
+            this.label42.Text = "Địa chỉ";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(6, 152);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
+            this.textBox6.Size = new System.Drawing.Size(161, 23);
+            this.textBox6.TabIndex = 8;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(6, 134);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(36, 15);
+            this.label43.TabIndex = 13;
+            this.label43.Text = "Email";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(6, 94);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.ReadOnly = true;
+            this.textBox7.Size = new System.Drawing.Size(161, 23);
+            this.textBox7.TabIndex = 9;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(6, 76);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(76, 15);
+            this.label44.TabIndex = 14;
+            this.label44.Text = "Số điện thoại";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(6, 36);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.ReadOnly = true;
+            this.textBox8.Size = new System.Drawing.Size(161, 23);
+            this.textBox8.TabIndex = 10;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(6, 18);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(43, 15);
+            this.label45.TabIndex = 15;
+            this.label45.Text = "Họ tên";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(6, 291);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(51, 15);
+            this.label47.TabIndex = 11;
+            this.label47.Text = "Tổng nợ";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(6, 309);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.ReadOnly = true;
+            this.textBox9.Size = new System.Drawing.Size(161, 23);
+            this.textBox9.TabIndex = 6;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(6, 340);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(91, 15);
+            this.label48.TabIndex = 11;
+            this.label48.Text = "Tổng thành tiền";
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(6, 358);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.ReadOnly = true;
+            this.textBox10.Size = new System.Drawing.Size(161, 23);
+            this.textBox10.TabIndex = 6;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(6, 386);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(89, 15);
+            this.label46.TabIndex = 11;
+            this.label46.Text = "Số tiền đã nhận";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(6, 404);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(161, 23);
+            this.textBox3.TabIndex = 6;
+            // 
+            // SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_BookIdColumn
+            // 
+            this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_BookIdColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_BookIdColumn.HeaderText = "Id";
+            this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_BookIdColumn.Name = "SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_BookIdColumn";
+            // 
+            // SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_BookNameColumn
+            // 
+            this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_BookNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_BookNameColumn.HeaderText = "Tên sách";
+            this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_BookNameColumn.Name = "SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_BookNameColumn";
+            // 
+            // SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_BookPriceColumn
+            // 
+            this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_BookPriceColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_BookPriceColumn.HeaderText = "Giá";
+            this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_BookPriceColumn.Name = "SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_BookPriceColumn";
+            // 
+            // SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_AddBookButtonColumn
+            // 
+            this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_AddBookButtonColumn.HeaderText = "Thêm";
+            this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_AddBookButtonColumn.Name = "SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_AddBookButtonColumn";
+            this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_AddBookButtonColumn.Width = 50;
             // 
             // BookStoreUI
             // 
@@ -1880,6 +2276,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
             this.splitContainer5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView)).EndInit();
+            this.SaleBookTab_Pages_AddBooksPage.ResumeLayout(false);
             this.CustomerInfoTab.ResumeLayout(false);
             this.CustomerMenu_MainContainer.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CustomerMenu_MainContainer)).EndInit();
@@ -1922,6 +2319,25 @@
             this.splitContainer3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ConfigurationTab_CustomerConfigurationTab_MaximumDebtNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView)).EndInit();
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer.Panel1.ResumeLayout(false);
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SaleBookTab_Pages_AddBooksPage_MainContainer)).EndInit();
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer.ResumeLayout(false);
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer.Panel1.ResumeLayout(false);
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer)).EndInit();
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer.ResumeLayout(false);
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.Panel1.ResumeLayout(false);
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.Panel1.PerformLayout();
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer)).EndInit();
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2084,5 +2500,39 @@
         private DataGridViewTextBoxColumn SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerEmailColumn;
         private DataGridViewTextBoxColumn SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerAddressColumn;
         private DataGridViewTextBoxColumn SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerDebtColumn;
+        private SplitContainer SaleBookTab_Pages_AddBooksPage_MainContainer;
+        private SplitContainer SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer;
+        private SplitContainer SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer;
+        private Button button1;
+        private Label label40;
+        private Label label39;
+        private TextBox textBox2;
+        private TextBox textBox1;
+        private GroupBox groupBox1;
+        private DataGridView SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView;
+        private DataGridViewTextBoxColumn SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_BookIdColumn;
+        private DataGridViewTextBoxColumn SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_BookNameColumn;
+        private DataGridViewTextBoxColumn SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_BookPriceColumn;
+        private DataGridViewButtonColumn SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_AddBookButtonColumn;
+        private GroupBox groupBox2;
+        private DataGridView SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView;
+        private GroupBox groupBox3;
+        private Button button2;
+        private TextBox textBox3;
+        private Label label46;
+        private TextBox textBox10;
+        private Label label48;
+        private TextBox textBox9;
+        private Label label47;
+        private TextBox textBox4;
+        private Label label41;
+        private TextBox textBox5;
+        private Label label42;
+        private TextBox textBox6;
+        private Label label43;
+        private TextBox textBox7;
+        private Label label44;
+        private TextBox textBox8;
+        private Label label45;
     }
 }
