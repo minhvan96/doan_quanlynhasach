@@ -1276,6 +1276,7 @@
             // 
             this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.Panel2.Controls.Add(this.groupBox1);
             this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.Size = new System.Drawing.Size(700, 250);
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.SplitterDistance = 60;
             this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.TabIndex = 0;
             // 
             // button1
@@ -1325,7 +1326,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(700, 196);
+            this.groupBox1.Size = new System.Drawing.Size(700, 186);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chọn sách";
@@ -1342,7 +1343,7 @@
             this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.Location = new System.Drawing.Point(3, 19);
             this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.Name = "SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView";
             this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.RowTemplate.Height = 25;
-            this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.Size = new System.Drawing.Size(694, 174);
+            this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.Size = new System.Drawing.Size(694, 164);
             this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.TabIndex = 0;
             this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_CellContentClick);
             // 
