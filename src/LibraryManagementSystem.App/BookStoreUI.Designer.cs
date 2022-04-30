@@ -138,6 +138,7 @@
             this.SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView_IdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView_NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView_PriceColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView_NumberOfBooksColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView_RemoveButtonColumn = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.SaleBookTab_Pages_AddBooksPage_ExportReceiptButton = new System.Windows.Forms.Button();
@@ -1280,7 +1281,7 @@
             // 
             this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.Panel2.Controls.Add(this.groupBox1);
             this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.Size = new System.Drawing.Size(700, 250);
-            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.SplitterDistance = 58;
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.SplitterDistance = 56;
             this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.TabIndex = 0;
             // 
             // button1
@@ -1330,7 +1331,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(700, 188);
+            this.groupBox1.Size = new System.Drawing.Size(700, 190);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chọn sách";
@@ -1347,7 +1348,7 @@
             this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.Location = new System.Drawing.Point(3, 19);
             this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.Name = "SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView";
             this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.RowTemplate.Height = 25;
-            this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.Size = new System.Drawing.Size(694, 166);
+            this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.Size = new System.Drawing.Size(694, 168);
             this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.TabIndex = 0;
             this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_CellContentClick);
             // 
@@ -1393,6 +1394,7 @@
             this.SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView_IdColumn,
             this.SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView_NameColumn,
             this.SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView_PriceColumn,
+            this.SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView_NumberOfBooksColumn,
             this.SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView_RemoveButtonColumn});
             this.SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView.Location = new System.Drawing.Point(3, 19);
@@ -1400,6 +1402,7 @@
             this.SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView.RowTemplate.Height = 25;
             this.SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView.Size = new System.Drawing.Size(694, 217);
             this.SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView.TabIndex = 0;
+            this.SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView_CellContentClick);
             // 
             // SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView_IdColumn
             // 
@@ -1416,8 +1419,14 @@
             // SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView_PriceColumn
             // 
             this.SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView_PriceColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView_PriceColumn.HeaderText = "Giá";
+            this.SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView_PriceColumn.HeaderText = "Tổng giá";
             this.SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView_PriceColumn.Name = "SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView_PriceColumn";
+            // 
+            // SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView_NumberOfBooksColumn
+            // 
+            this.SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView_NumberOfBooksColumn.HeaderText = "Số lượng";
+            this.SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView_NumberOfBooksColumn.Name = "SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView_NumberOfBooksColumn";
+            this.SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView_NumberOfBooksColumn.Width = 85;
             // 
             // SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView_RemoveButtonColumn
             // 
@@ -1465,7 +1474,6 @@
             // 
             this.SaleBookTab_Pages_AddBooksPage_SelectedCustomerReceivedMoneyTextbox.Location = new System.Drawing.Point(6, 404);
             this.SaleBookTab_Pages_AddBooksPage_SelectedCustomerReceivedMoneyTextbox.Name = "SaleBookTab_Pages_AddBooksPage_SelectedCustomerReceivedMoneyTextbox";
-            this.SaleBookTab_Pages_AddBooksPage_SelectedCustomerReceivedMoneyTextbox.ReadOnly = true;
             this.SaleBookTab_Pages_AddBooksPage_SelectedCustomerReceivedMoneyTextbox.Size = new System.Drawing.Size(161, 23);
             this.SaleBookTab_Pages_AddBooksPage_SelectedCustomerReceivedMoneyTextbox.TabIndex = 6;
             // 
@@ -1485,6 +1493,7 @@
             this.SaleBookTab_Pages_AddBooksPage_SelectedCustomerTotalPriceTextbox.ReadOnly = true;
             this.SaleBookTab_Pages_AddBooksPage_SelectedCustomerTotalPriceTextbox.Size = new System.Drawing.Size(161, 23);
             this.SaleBookTab_Pages_AddBooksPage_SelectedCustomerTotalPriceTextbox.TabIndex = 6;
+            this.SaleBookTab_Pages_AddBooksPage_SelectedCustomerTotalPriceTextbox.Text = "0";
             // 
             // label48
             // 
@@ -2571,6 +2580,7 @@
         private DataGridViewTextBoxColumn SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView_IdColumn;
         private DataGridViewTextBoxColumn SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView_NameColumn;
         private DataGridViewTextBoxColumn SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView_PriceColumn;
+        private DataGridViewTextBoxColumn SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView_NumberOfBooksColumn;
         private DataGridViewButtonColumn SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView_RemoveButtonColumn;
     }
 }

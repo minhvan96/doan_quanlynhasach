@@ -13,6 +13,7 @@ using BookStoreManagementSystem.App.Features.CustomerFeature.Queries;
 using BookStoreManagementSystem.App.Features.IdentityFeature.Commands;
 using BookStoreManagementSystem.App.Features.StaffFeature.Queries;
 using BookStoreManagementSystem.App.Infrastructure.Authorization;
+using BookStoreManagementSystem.App.Shared.Helpers;
 using MediatR;
 using System.Data;
 
@@ -632,11 +633,15 @@ namespace BookStoreManagementSystem
                 var bookPrice = SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.Rows[selectedRowIndex].Cells[2].Value.ToString() ?? string.Empty;
 
                 var bookInfo = new DataGridViewRow();
+
                 bookInfo.CreateCells(SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView);
                 bookInfo.Cells[0].Value = bookId;
                 bookInfo.Cells[1].Value = bookName;
                 bookInfo.Cells[2].Value = bookPrice;
                 SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView.Rows.Add(bookInfo);
+
+                var currentTotalPrice = decimal.Parse(SaleBookTab_Pages_AddBooksPage_SelectedCustomerTotalPriceTextbox.Text) + decimal.Parse(bookPrice);
+                SaleBookTab_Pages_AddBooksPage_SelectedCustomerTotalPriceTextbox.Text = currentTotalPrice.ToString();
             }
         }
 
@@ -659,9 +664,29 @@ namespace BookStoreManagementSystem
             SaleBookTab_Pages_AddBooksPage_SelectedCustomerPhoneNumberTextbox.Text = SaleBookTab_Pages_AddCustomerPage_SelectedCustomerPhoneNumerberTextbox.Text;
             SaleBookTab_Pages_AddBooksPage_SelectedCustomerEmailTextbox.Text = SaleBookTab_Pages_AddCustomerPage_SelectedCustomerEmailTextbox.Text;
             SaleBookTab_Pages_AddBooksPage_SelectedCustomerAddressTextbox.Text = SaleBookTab_Pages_AddCustomerPage_SelectedCustomerAddressTextbox.Text;
-            SaleBookTab_Pages_AddBooksPage_SelectedCustomerTotalPriceTextbox.Text = "";
             SaleBookTab_Pages_AddBooksPage_SelectedCustomerTotalDebtTextbox.Text = SaleBookTab_Pages_AddCustomerPage_SelectedCustomerDebtTextbox.Text;
             SaleBookTab_Pages_AddBooksPage_SelectedCustomerReceivedMoneyTextbox.Text = "";
+        }
+
+        private void SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrid = (DataGridView)sender;
+
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0 && SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView.Rows.Count > 1)
+            {
+                var selectedRow = SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView.Rows[e.RowIndex];
+                var isCellEmpty = selectedRow.Cells[0].Value;
+                if (isCellEmpty == null)
+                {
+                    return;
+                }
+                var bookPrice = SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView.Rows[e.RowIndex].Cells[2].Value.ToString() ?? string.Empty;
+
+                var currentTotalPrice = decimal.Parse(SaleBookTab_Pages_AddBooksPage_SelectedCustomerTotalPriceTextbox.Text) - decimal.Parse(bookPrice);
+                SaleBookTab_Pages_AddBooksPage_SelectedCustomerTotalPriceTextbox.Text = currentTotalPrice.ToString();
+                SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView.Rows.RemoveAt(e.RowIndex);
+            }
         }
     }
 }
