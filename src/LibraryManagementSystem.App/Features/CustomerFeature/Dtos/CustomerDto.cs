@@ -9,5 +9,11 @@
         public DateTime BirthDate { get; set; }
         public string? PhoneNumber { get; set; }
         public string? Email { get; set; }
+        public IReadOnlyCollection<CustomerDebtDto> Debts { get; set; } = new List<CustomerDebtDto>();
+    }
+
+    public class CustomerDebtDto
+    {
+        public decimal Debt { get; set; }
     }
 }

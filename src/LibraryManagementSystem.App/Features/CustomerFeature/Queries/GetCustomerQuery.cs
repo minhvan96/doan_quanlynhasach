@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BookStoreManagementSystem.App.Features.CustomerFeature.Dtos;
+using MediatR;
 
 namespace BookStoreManagementSystem.App.Features.CustomerFeature.Queries
 {
-    internal class GetCustomerQuery
+    public class GetCustomerQuery : IRequest<CustomerDto?>
     {
+        public Guid Id { get; set; }
     }
 }

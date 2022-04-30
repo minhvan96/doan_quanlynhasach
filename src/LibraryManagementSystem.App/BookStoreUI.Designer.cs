@@ -89,7 +89,30 @@
             this.QueryBookMenu_AddBookTab_MainContainer_BooksDataGridView_NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.QueryBookMenu_AddBookTab_MainContainer_BooksDataGridView_AuthorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SaleBookTab = new System.Windows.Forms.TabPage();
-            this.SellBookTab_MainContainer = new System.Windows.Forms.SplitContainer();
+            this.SaleBookTab_Pages = new System.Windows.Forms.TabControl();
+            this.SaleBookTab_Pages_AddCustomerPage = new System.Windows.Forms.TabPage();
+            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
+            this.splitContainer5 = new System.Windows.Forms.SplitContainer();
+            this.SaleBookTab_Pages_AddCustomerPage_SearchCustomerButton = new System.Windows.Forms.Button();
+            this.SaleBookTab_Pages_AddCustomerPage_CustomerNameSearchTextbox = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.SaleBookTab_Pages_AddCustomerPage_CustomerIdSearchTextbox = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView = new System.Windows.Forms.DataGridView();
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomer_AddBooksButton = new System.Windows.Forms.Button();
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerIdTextbox = new System.Windows.Forms.TextBox();
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerDebtTextbox = new System.Windows.Forms.TextBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerAddressTextbox = new System.Windows.Forms.TextBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerEmailTextbox = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerPhoneNumerberTextbox = new System.Windows.Forms.TextBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerNameTextbox = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.SaleBookTab_Pages_AddBooksPage = new System.Windows.Forms.TabPage();
             this.CustomerInfoTab = new System.Windows.Forms.TabPage();
             this.CustomerMenu_MainContainer = new System.Windows.Forms.SplitContainer();
             this.CustomerMenu_MainContainer_QueryCustomerSubContainer = new System.Windows.Forms.SplitContainer();
@@ -155,6 +178,12 @@
             this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_IdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_ConfigurationNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_MaximumDebtColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerPhoneNumberColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerEmailColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerAddressColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerDebtColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MainNav.SuspendLayout();
             this.HomeTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomeTab_MainContainer)).BeginInit();
@@ -182,8 +211,17 @@
             this.QueryBookMenu_AddBookTab_MainContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QueryBookMenu_AddBookTab_MainContainer_BooksDataGridView)).BeginInit();
             this.SaleBookTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SellBookTab_MainContainer)).BeginInit();
-            this.SellBookTab_MainContainer.SuspendLayout();
+            this.SaleBookTab_Pages.SuspendLayout();
+            this.SaleBookTab_Pages_AddCustomerPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
+            this.splitContainer4.Panel1.SuspendLayout();
+            this.splitContainer4.Panel2.SuspendLayout();
+            this.splitContainer4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
+            this.splitContainer5.Panel1.SuspendLayout();
+            this.splitContainer5.Panel2.SuspendLayout();
+            this.splitContainer5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView)).BeginInit();
             this.CustomerInfoTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerMenu_MainContainer)).BeginInit();
             this.CustomerMenu_MainContainer.Panel1.SuspendLayout();
@@ -829,7 +867,7 @@
             // 
             // SaleBookTab
             // 
-            this.SaleBookTab.Controls.Add(this.SellBookTab_MainContainer);
+            this.SaleBookTab.Controls.Add(this.SaleBookTab_Pages);
             this.SaleBookTab.Location = new System.Drawing.Point(4, 24);
             this.SaleBookTab.Name = "SaleBookTab";
             this.SaleBookTab.Padding = new System.Windows.Forms.Padding(3);
@@ -837,15 +875,260 @@
             this.SaleBookTab.TabIndex = 2;
             this.SaleBookTab.Text = "Bán sách";
             this.SaleBookTab.UseVisualStyleBackColor = true;
+            this.SaleBookTab.Enter += new System.EventHandler(this.SaleBookTab_Enter);
             // 
-            // SellBookTab_MainContainer
+            // SaleBookTab_Pages
             // 
-            this.SellBookTab_MainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SellBookTab_MainContainer.Location = new System.Drawing.Point(3, 3);
-            this.SellBookTab_MainContainer.Name = "SellBookTab_MainContainer";
-            this.SellBookTab_MainContainer.Size = new System.Drawing.Size(970, 527);
-            this.SellBookTab_MainContainer.SplitterDistance = 323;
-            this.SellBookTab_MainContainer.TabIndex = 0;
+            this.SaleBookTab_Pages.Controls.Add(this.SaleBookTab_Pages_AddCustomerPage);
+            this.SaleBookTab_Pages.Controls.Add(this.SaleBookTab_Pages_AddBooksPage);
+            this.SaleBookTab_Pages.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SaleBookTab_Pages.Location = new System.Drawing.Point(3, 3);
+            this.SaleBookTab_Pages.Name = "SaleBookTab_Pages";
+            this.SaleBookTab_Pages.SelectedIndex = 0;
+            this.SaleBookTab_Pages.Size = new System.Drawing.Size(970, 527);
+            this.SaleBookTab_Pages.TabIndex = 0;
+            // 
+            // SaleBookTab_Pages_AddCustomerPage
+            // 
+            this.SaleBookTab_Pages_AddCustomerPage.Controls.Add(this.splitContainer4);
+            this.SaleBookTab_Pages_AddCustomerPage.Location = new System.Drawing.Point(4, 24);
+            this.SaleBookTab_Pages_AddCustomerPage.Name = "SaleBookTab_Pages_AddCustomerPage";
+            this.SaleBookTab_Pages_AddCustomerPage.Padding = new System.Windows.Forms.Padding(3);
+            this.SaleBookTab_Pages_AddCustomerPage.Size = new System.Drawing.Size(962, 499);
+            this.SaleBookTab_Pages_AddCustomerPage.TabIndex = 0;
+            this.SaleBookTab_Pages_AddCustomerPage.Text = "Thông tin khách hàng";
+            this.SaleBookTab_Pages_AddCustomerPage.UseVisualStyleBackColor = true;
+            // 
+            // splitContainer4
+            // 
+            this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer4.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer4.Name = "splitContainer4";
+            // 
+            // splitContainer4.Panel1
+            // 
+            this.splitContainer4.Panel1.Controls.Add(this.splitContainer5);
+            // 
+            // splitContainer4.Panel2
+            // 
+            this.splitContainer4.Panel2.Controls.Add(this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomer_AddBooksButton);
+            this.splitContainer4.Panel2.Controls.Add(this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerIdTextbox);
+            this.splitContainer4.Panel2.Controls.Add(this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerDebtTextbox);
+            this.splitContainer4.Panel2.Controls.Add(this.label38);
+            this.splitContainer4.Panel2.Controls.Add(this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerAddressTextbox);
+            this.splitContainer4.Panel2.Controls.Add(this.label37);
+            this.splitContainer4.Panel2.Controls.Add(this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerEmailTextbox);
+            this.splitContainer4.Panel2.Controls.Add(this.label36);
+            this.splitContainer4.Panel2.Controls.Add(this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerPhoneNumerberTextbox);
+            this.splitContainer4.Panel2.Controls.Add(this.label35);
+            this.splitContainer4.Panel2.Controls.Add(this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerNameTextbox);
+            this.splitContainer4.Panel2.Controls.Add(this.label34);
+            this.splitContainer4.Panel2.Controls.Add(this.label33);
+            this.splitContainer4.Size = new System.Drawing.Size(956, 493);
+            this.splitContainer4.SplitterDistance = 591;
+            this.splitContainer4.TabIndex = 1;
+            // 
+            // splitContainer5
+            // 
+            this.splitContainer5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer5.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer5.Name = "splitContainer5";
+            this.splitContainer5.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer5.Panel1
+            // 
+            this.splitContainer5.Panel1.Controls.Add(this.SaleBookTab_Pages_AddCustomerPage_SearchCustomerButton);
+            this.splitContainer5.Panel1.Controls.Add(this.SaleBookTab_Pages_AddCustomerPage_CustomerNameSearchTextbox);
+            this.splitContainer5.Panel1.Controls.Add(this.label29);
+            this.splitContainer5.Panel1.Controls.Add(this.SaleBookTab_Pages_AddCustomerPage_CustomerIdSearchTextbox);
+            this.splitContainer5.Panel1.Controls.Add(this.label30);
+            // 
+            // splitContainer5.Panel2
+            // 
+            this.splitContainer5.Panel2.Controls.Add(this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView);
+            this.splitContainer5.Size = new System.Drawing.Size(591, 493);
+            this.splitContainer5.SplitterDistance = 93;
+            this.splitContainer5.TabIndex = 0;
+            // 
+            // SaleBookTab_Pages_AddCustomerPage_SearchCustomerButton
+            // 
+            this.SaleBookTab_Pages_AddCustomerPage_SearchCustomerButton.Location = new System.Drawing.Point(366, 45);
+            this.SaleBookTab_Pages_AddCustomerPage_SearchCustomerButton.Name = "SaleBookTab_Pages_AddCustomerPage_SearchCustomerButton";
+            this.SaleBookTab_Pages_AddCustomerPage_SearchCustomerButton.Size = new System.Drawing.Size(75, 23);
+            this.SaleBookTab_Pages_AddCustomerPage_SearchCustomerButton.TabIndex = 4;
+            this.SaleBookTab_Pages_AddCustomerPage_SearchCustomerButton.Text = "Tìm kiếm";
+            this.SaleBookTab_Pages_AddCustomerPage_SearchCustomerButton.UseVisualStyleBackColor = true;
+            // 
+            // SaleBookTab_Pages_AddCustomerPage_CustomerNameSearchTextbox
+            // 
+            this.SaleBookTab_Pages_AddCustomerPage_CustomerNameSearchTextbox.Location = new System.Drawing.Point(199, 45);
+            this.SaleBookTab_Pages_AddCustomerPage_CustomerNameSearchTextbox.Name = "SaleBookTab_Pages_AddCustomerPage_CustomerNameSearchTextbox";
+            this.SaleBookTab_Pages_AddCustomerPage_CustomerNameSearchTextbox.Size = new System.Drawing.Size(161, 23);
+            this.SaleBookTab_Pages_AddCustomerPage_CustomerNameSearchTextbox.TabIndex = 2;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(199, 27);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(43, 15);
+            this.label29.TabIndex = 3;
+            this.label29.Text = "Họ tên";
+            // 
+            // SaleBookTab_Pages_AddCustomerPage_CustomerIdSearchTextbox
+            // 
+            this.SaleBookTab_Pages_AddCustomerPage_CustomerIdSearchTextbox.Location = new System.Drawing.Point(32, 45);
+            this.SaleBookTab_Pages_AddCustomerPage_CustomerIdSearchTextbox.Name = "SaleBookTab_Pages_AddCustomerPage_CustomerIdSearchTextbox";
+            this.SaleBookTab_Pages_AddCustomerPage_CustomerIdSearchTextbox.Size = new System.Drawing.Size(161, 23);
+            this.SaleBookTab_Pages_AddCustomerPage_CustomerIdSearchTextbox.TabIndex = 2;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(32, 27);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(17, 15);
+            this.label30.TabIndex = 3;
+            this.label30.Text = "Id";
+            // 
+            // SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView
+            // 
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerIdColumn,
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerNameColumn,
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerPhoneNumberColumn,
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerEmailColumn,
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerAddressColumn,
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerDebtColumn});
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView.Location = new System.Drawing.Point(0, 0);
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView.Name = "SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView";
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView.RowTemplate.Height = 25;
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView.Size = new System.Drawing.Size(591, 396);
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView.TabIndex = 0;
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CellContentClick);
+            // 
+            // SaleBookTab_Pages_AddCustomerPage_SelectedCustomer_AddBooksButton
+            // 
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomer_AddBooksButton.Location = new System.Drawing.Point(39, 378);
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomer_AddBooksButton.Name = "SaleBookTab_Pages_AddCustomerPage_SelectedCustomer_AddBooksButton";
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomer_AddBooksButton.Size = new System.Drawing.Size(75, 23);
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomer_AddBooksButton.TabIndex = 4;
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomer_AddBooksButton.Text = "Thêm sách";
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomer_AddBooksButton.UseVisualStyleBackColor = true;
+            // 
+            // SaleBookTab_Pages_AddCustomerPage_SelectedCustomerIdTextbox
+            // 
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerIdTextbox.Location = new System.Drawing.Point(39, 46);
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerIdTextbox.Name = "SaleBookTab_Pages_AddCustomerPage_SelectedCustomerIdTextbox";
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerIdTextbox.ReadOnly = true;
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerIdTextbox.Size = new System.Drawing.Size(161, 23);
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerIdTextbox.TabIndex = 4;
+            // 
+            // SaleBookTab_Pages_AddCustomerPage_SelectedCustomerDebtTextbox
+            // 
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerDebtTextbox.Location = new System.Drawing.Point(39, 334);
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerDebtTextbox.Name = "SaleBookTab_Pages_AddCustomerPage_SelectedCustomerDebtTextbox";
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerDebtTextbox.ReadOnly = true;
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerDebtTextbox.Size = new System.Drawing.Size(161, 23);
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerDebtTextbox.TabIndex = 2;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(39, 316);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(51, 15);
+            this.label38.TabIndex = 3;
+            this.label38.Text = "Tổng nợ";
+            // 
+            // SaleBookTab_Pages_AddCustomerPage_SelectedCustomerAddressTextbox
+            // 
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerAddressTextbox.Location = new System.Drawing.Point(39, 270);
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerAddressTextbox.Name = "SaleBookTab_Pages_AddCustomerPage_SelectedCustomerAddressTextbox";
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerAddressTextbox.ReadOnly = true;
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerAddressTextbox.Size = new System.Drawing.Size(161, 23);
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerAddressTextbox.TabIndex = 2;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(39, 252);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(43, 15);
+            this.label37.TabIndex = 3;
+            this.label37.Text = "Địa chỉ";
+            // 
+            // SaleBookTab_Pages_AddCustomerPage_SelectedCustomerEmailTextbox
+            // 
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerEmailTextbox.Location = new System.Drawing.Point(39, 213);
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerEmailTextbox.Name = "SaleBookTab_Pages_AddCustomerPage_SelectedCustomerEmailTextbox";
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerEmailTextbox.ReadOnly = true;
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerEmailTextbox.Size = new System.Drawing.Size(161, 23);
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerEmailTextbox.TabIndex = 2;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(39, 195);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(36, 15);
+            this.label36.TabIndex = 3;
+            this.label36.Text = "Email";
+            // 
+            // SaleBookTab_Pages_AddCustomerPage_SelectedCustomerPhoneNumerberTextbox
+            // 
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerPhoneNumerberTextbox.Location = new System.Drawing.Point(39, 155);
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerPhoneNumerberTextbox.Name = "SaleBookTab_Pages_AddCustomerPage_SelectedCustomerPhoneNumerberTextbox";
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerPhoneNumerberTextbox.ReadOnly = true;
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerPhoneNumerberTextbox.Size = new System.Drawing.Size(161, 23);
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerPhoneNumerberTextbox.TabIndex = 2;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(39, 137);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(76, 15);
+            this.label35.TabIndex = 3;
+            this.label35.Text = "Số điện thoại";
+            // 
+            // SaleBookTab_Pages_AddCustomerPage_SelectedCustomerNameTextbox
+            // 
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerNameTextbox.Location = new System.Drawing.Point(39, 97);
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerNameTextbox.Name = "SaleBookTab_Pages_AddCustomerPage_SelectedCustomerNameTextbox";
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerNameTextbox.ReadOnly = true;
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerNameTextbox.Size = new System.Drawing.Size(161, 23);
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerNameTextbox.TabIndex = 2;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(39, 79);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(43, 15);
+            this.label34.TabIndex = 3;
+            this.label34.Text = "Họ tên";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(39, 28);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(17, 15);
+            this.label33.TabIndex = 5;
+            this.label33.Text = "Id";
+            // 
+            // SaleBookTab_Pages_AddBooksPage
+            // 
+            this.SaleBookTab_Pages_AddBooksPage.Location = new System.Drawing.Point(4, 24);
+            this.SaleBookTab_Pages_AddBooksPage.Name = "SaleBookTab_Pages_AddBooksPage";
+            this.SaleBookTab_Pages_AddBooksPage.Padding = new System.Windows.Forms.Padding(3);
+            this.SaleBookTab_Pages_AddBooksPage.Size = new System.Drawing.Size(962, 499);
+            this.SaleBookTab_Pages_AddBooksPage.TabIndex = 1;
+            this.SaleBookTab_Pages_AddBooksPage.Text = "Thêm sách";
+            this.SaleBookTab_Pages_AddBooksPage.UseVisualStyleBackColor = true;
             // 
             // CustomerInfoTab
             // 
@@ -1507,6 +1790,43 @@
     "umDebtColumn";
             this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_MaximumDebtColumn.ReadOnly = true;
             // 
+            // SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerIdColumn
+            // 
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerIdColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerIdColumn.HeaderText = "Id";
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerIdColumn.Name = "SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerIdColumn";
+            // 
+            // SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerNameColumn
+            // 
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerNameColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerNameColumn.HeaderText = "Họ tên";
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerNameColumn.Name = "SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerNameColumn";
+            // 
+            // SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerPhoneNumberColumn
+            // 
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerPhoneNumberColumn.HeaderText = "Số điện thoại";
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerPhoneNumberColumn.Name = "SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerPhoneNumberColumn" +
+    "";
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerPhoneNumberColumn.Visible = false;
+            // 
+            // SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerEmailColumn
+            // 
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerEmailColumn.HeaderText = "Email";
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerEmailColumn.Name = "SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerEmailColumn";
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerEmailColumn.Visible = false;
+            // 
+            // SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerAddressColumn
+            // 
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerAddressColumn.HeaderText = "Địa chỉ";
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerAddressColumn.Name = "SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerAddressColumn";
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerAddressColumn.Visible = false;
+            // 
+            // SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerDebtColumn
+            // 
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerDebtColumn.HeaderText = "Tổng nợ";
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerDebtColumn.Name = "SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerDebtColumn";
+            this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerDebtColumn.Visible = false;
+            // 
             // BookStoreUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1547,8 +1867,19 @@
             this.QueryBookMenu_AddBookTab_MainContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.QueryBookMenu_AddBookTab_MainContainer_BooksDataGridView)).EndInit();
             this.SaleBookTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.SellBookTab_MainContainer)).EndInit();
-            this.SellBookTab_MainContainer.ResumeLayout(false);
+            this.SaleBookTab_Pages.ResumeLayout(false);
+            this.SaleBookTab_Pages_AddCustomerPage.ResumeLayout(false);
+            this.splitContainer4.Panel1.ResumeLayout(false);
+            this.splitContainer4.Panel2.ResumeLayout(false);
+            this.splitContainer4.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
+            this.splitContainer4.ResumeLayout(false);
+            this.splitContainer5.Panel1.ResumeLayout(false);
+            this.splitContainer5.Panel1.PerformLayout();
+            this.splitContainer5.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
+            this.splitContainer5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView)).EndInit();
             this.CustomerInfoTab.ResumeLayout(false);
             this.CustomerMenu_MainContainer.Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CustomerMenu_MainContainer)).EndInit();
@@ -1621,18 +1952,6 @@
         private DataGridViewTextBoxColumn StaffInfo_SearchStaff_Age_GridTable;
         private DataGridViewTextBoxColumn StaffInfo_SearchStaff_Position_GridTable;
         private DataGridViewTextBoxColumn StaffInfo_SearchStaff_PhoneNumber_GridTable;
-        private SplitContainer CustomerMenu_MainContainer;
-        private SplitContainer CustomerMenu_MainContainer_QueryCustomerSubContainer;
-        private Button CustomerMenu_QueryCustomer_Search_Button;
-        private TextBox CustomerMenu_QueryCustomer_FullName_Textbox;
-        private Label label13;
-        private TextBox CustomerMenu_QueryCustomer_Id_Textbox;
-        private Label label12;
-        private DataGridView CustomerMenu_QueryCustomer_CustomerDataGridView;
-        private DataGridViewTextBoxColumn CustomerMenu_QueryCustomer_CustomerDataGridView_Id_Column;
-        private DataGridViewTextBoxColumn CustomerMenu_QueryCustomer_CustomerDataGridView_FullName_Column;
-        private DataGridViewTextBoxColumn CustomerMenu_QueryCustomer_CustomerDataGridView_Address_Column;
-        private DataGridViewTextBoxColumn CustomerMenu_QueryCustomer_CustomerDataGridView_PhoneNumber_Column;
         private SplitContainer ImportBookMenu_MainContainer;
         private ComboBox ImportBookMenu_QueryBook_BookStore_ComboBox;
         private Label label14;
@@ -1690,7 +2009,6 @@
         private Label label21;
         private TextBox HomeTab_LoginContainer_UserNameTextBox;
         private Button HomeTab_LoginContainer_LoginButton;
-        private SplitContainer SellBookTab_MainContainer;
         private TabControl tabControl2;
         private TabPage ConfigurationTab_BookStoreConfigurationTab;
         private TabPage ConfigurationTab_CustomerConfigurationTab;
@@ -1724,5 +2042,47 @@
         private DataGridViewTextBoxColumn ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_IdColumn;
         private DataGridViewTextBoxColumn ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_ConfigurationNameColumn;
         private DataGridViewTextBoxColumn ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_MaximumDebtColumn;
+        private TabControl SaleBookTab_Pages;
+        private TabPage SaleBookTab_Pages_AddCustomerPage;
+        private SplitContainer splitContainer4;
+        private SplitContainer splitContainer5;
+        private Button SaleBookTab_Pages_AddCustomerPage_SearchCustomerButton;
+        private TextBox SaleBookTab_Pages_AddCustomerPage_CustomerNameSearchTextbox;
+        private Label label29;
+        private TextBox SaleBookTab_Pages_AddCustomerPage_CustomerIdSearchTextbox;
+        private Label label30;
+        private DataGridView SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView;
+        private Button SaleBookTab_Pages_AddCustomerPage_SelectedCustomer_AddBooksButton;
+        private TextBox SaleBookTab_Pages_AddCustomerPage_SelectedCustomerIdTextbox;
+        private TextBox SaleBookTab_Pages_AddCustomerPage_SelectedCustomerDebtTextbox;
+        private Label label38;
+        private TextBox SaleBookTab_Pages_AddCustomerPage_SelectedCustomerAddressTextbox;
+        private Label label37;
+        private TextBox SaleBookTab_Pages_AddCustomerPage_SelectedCustomerEmailTextbox;
+        private Label label36;
+        private TextBox SaleBookTab_Pages_AddCustomerPage_SelectedCustomerPhoneNumerberTextbox;
+        private Label label35;
+        private TextBox SaleBookTab_Pages_AddCustomerPage_SelectedCustomerNameTextbox;
+        private Label label34;
+        private Label label33;
+        private TabPage SaleBookTab_Pages_AddBooksPage;
+        private SplitContainer CustomerMenu_MainContainer;
+        private SplitContainer CustomerMenu_MainContainer_QueryCustomerSubContainer;
+        private Button CustomerMenu_QueryCustomer_Search_Button;
+        private TextBox CustomerMenu_QueryCustomer_FullName_Textbox;
+        private Label label13;
+        private TextBox CustomerMenu_QueryCustomer_Id_Textbox;
+        private Label label12;
+        private DataGridView CustomerMenu_QueryCustomer_CustomerDataGridView;
+        private DataGridViewTextBoxColumn CustomerMenu_QueryCustomer_CustomerDataGridView_Id_Column;
+        private DataGridViewTextBoxColumn CustomerMenu_QueryCustomer_CustomerDataGridView_FullName_Column;
+        private DataGridViewTextBoxColumn CustomerMenu_QueryCustomer_CustomerDataGridView_Address_Column;
+        private DataGridViewTextBoxColumn CustomerMenu_QueryCustomer_CustomerDataGridView_PhoneNumber_Column;
+        private DataGridViewTextBoxColumn SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerIdColumn;
+        private DataGridViewTextBoxColumn SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerNameColumn;
+        private DataGridViewTextBoxColumn SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerPhoneNumberColumn;
+        private DataGridViewTextBoxColumn SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerEmailColumn;
+        private DataGridViewTextBoxColumn SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerAddressColumn;
+        private DataGridViewTextBoxColumn SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CustomerDebtColumn;
     }
 }

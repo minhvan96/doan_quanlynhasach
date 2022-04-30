@@ -1,4 +1,5 @@
-﻿using BookStoreManagementSystem.App.Features.AuthorFeature.Queries;
+﻿using BookStoreManagementSystem.App.Domain.Configuration;
+using BookStoreManagementSystem.App.Features.AuthorFeature.Queries;
 using BookStoreManagementSystem.App.Features.BookFeature.Commands;
 using BookStoreManagementSystem.App.Features.BookFeature.Queries;
 using BookStoreManagementSystem.App.Features.BookStoreFeature.Commands;
@@ -573,6 +574,48 @@ namespace BookStoreManagementSystem
                 return;
             }
             MessageBox.Show("Không tìm thấy thông tin cấu hình, vui lòng kiểm tra lại", "Lỗi cập nhật cấu hình");
+        }
+
+        private async void SaleBookTab_Enter(object sender, EventArgs e)
+        {
+            await LoadSaleBookTab_Pages_AddCustomerPage_CustomersDataGridView();
+        }
+
+        private async Task LoadSaleBookTab_Pages_AddCustomerPage_CustomersDataGridView()
+        {
+            var listCustomersQuery = new ListCustomersQuery();
+            var customers = await _mediator.Send(listCustomersQuery);
+            SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView.Rows.Clear();
+            foreach (var customer in customers.Items)
+            {
+                var configurationInfo = new DataGridViewRow();
+                configurationInfo.CreateCells(SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView);
+                configurationInfo.Cells[0].Value = customer.Id;
+                configurationInfo.Cells[1].Value = customer.Name;
+                configurationInfo.Cells[2].Value = customer.PhoneNumber;
+                configurationInfo.Cells[3].Value = customer.Email;
+                configurationInfo.Cells[4].Value = customer.Address;
+                configurationInfo.Cells[5].Value = customer.Debts.Select(x => x.Debt).Sum();
+                SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView.Rows.Add(configurationInfo);
+            }
+        }
+
+        private void SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var selectedRowIndex = SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView.SelectedCells[0].RowIndex;
+            var customerId = SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView.Rows[selectedRowIndex].Cells[0].Value.ToString() ?? string.Empty;
+            var customerName = SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView.Rows[selectedRowIndex].Cells[1].Value.ToString() ?? string.Empty;
+            var customerPhoneNumber = SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView.Rows[selectedRowIndex].Cells[2].Value.ToString() ?? string.Empty;
+            var customerEmail = SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView.Rows[selectedRowIndex].Cells[3].Value.ToString() ?? string.Empty;
+            var customerAddress = SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView.Rows[selectedRowIndex].Cells[4].Value.ToString() ?? string.Empty;
+            var customerDebt = SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView.Rows[selectedRowIndex].Cells[5].Value.ToString() ?? string.Empty;
+
+            SaleBookTab_Pages_AddCustomerPage_SelectedCustomerIdTextbox.Text = customerId;
+            SaleBookTab_Pages_AddCustomerPage_SelectedCustomerNameTextbox.Text = customerName;
+            SaleBookTab_Pages_AddCustomerPage_SelectedCustomerPhoneNumerberTextbox.Text = customerPhoneNumber;
+            SaleBookTab_Pages_AddCustomerPage_SelectedCustomerEmailTextbox.Text = customerEmail;
+            SaleBookTab_Pages_AddCustomerPage_SelectedCustomerAddressTextbox.Text = customerAddress;
+            SaleBookTab_Pages_AddCustomerPage_SelectedCustomerDebtTextbox.Text = customerDebt;
         }
     }
 }
