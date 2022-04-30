@@ -982,6 +982,7 @@
             this.splitContainer4.Panel2.Controls.Add(this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomerNameTextbox);
             this.splitContainer4.Panel2.Controls.Add(this.label34);
             this.splitContainer4.Panel2.Controls.Add(this.label33);
+            this.splitContainer4.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer4_Panel2_Paint);
             this.splitContainer4.Size = new System.Drawing.Size(956, 493);
             this.splitContainer4.SplitterDistance = 591;
             this.splitContainer4.TabIndex = 1;
@@ -1466,12 +1467,13 @@
             // 
             // SaleBookTab_Pages_AddBooksPage_ExportReceiptButton
             // 
-            this.SaleBookTab_Pages_AddBooksPage_ExportReceiptButton.Location = new System.Drawing.Point(17, 447);
+            this.SaleBookTab_Pages_AddBooksPage_ExportReceiptButton.Location = new System.Drawing.Point(6, 447);
             this.SaleBookTab_Pages_AddBooksPage_ExportReceiptButton.Name = "SaleBookTab_Pages_AddBooksPage_ExportReceiptButton";
-            this.SaleBookTab_Pages_AddBooksPage_ExportReceiptButton.Size = new System.Drawing.Size(75, 23);
+            this.SaleBookTab_Pages_AddBooksPage_ExportReceiptButton.Size = new System.Drawing.Size(105, 23);
             this.SaleBookTab_Pages_AddBooksPage_ExportReceiptButton.TabIndex = 16;
             this.SaleBookTab_Pages_AddBooksPage_ExportReceiptButton.Text = "Xuất hoá đơn";
             this.SaleBookTab_Pages_AddBooksPage_ExportReceiptButton.UseVisualStyleBackColor = true;
+            this.SaleBookTab_Pages_AddBooksPage_ExportReceiptButton.Click += new System.EventHandler(this.SaleBookTab_Pages_AddBooksPage_ExportReceiptButton_Click);
             // 
             // SaleBookTab_Pages_AddBooksPage_SelectedCustomerReceivedMoneyTextbox
             // 

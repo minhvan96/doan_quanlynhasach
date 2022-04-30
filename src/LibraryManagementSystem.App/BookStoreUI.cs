@@ -12,6 +12,7 @@ using BookStoreManagementSystem.App.Features.Configuration.CustomerConfiguration
 using BookStoreManagementSystem.App.Features.Configuration.CustomerConfigurationFeature.Queries;
 using BookStoreManagementSystem.App.Features.CustomerFeature.Queries;
 using BookStoreManagementSystem.App.Features.IdentityFeature.Commands;
+using BookStoreManagementSystem.App.Features.ReceiptFeature.Commands;
 using BookStoreManagementSystem.App.Features.StaffFeature.Queries;
 using BookStoreManagementSystem.App.Infrastructure.Authorization;
 using BookStoreManagementSystem.App.Shared.Helpers;
@@ -722,6 +723,64 @@ namespace BookStoreManagementSystem
                 bookInfo.Cells[2].Value = book.Price;
                 SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.Rows.Add(bookInfo);
             }
+        }
+
+        private async void SaleBookTab_Pages_AddBooksPage_ExportReceiptButton_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(SaleBookTab_Pages_AddBooksPage_SelectedCustomerReceivedMoneyTextbox.Text))
+            {
+                MessageBox.Show("Vui lòng nhập số tiền đã nhận", "Lỗi nhập liệu");
+                return;
+            }
+            var createReceiptCommand = new CreateReceiptCommand
+            {
+                Request = new CreateReceiptRequest
+                {
+                    CustomerId = new Guid(SaleBookTab_Pages_AddCustomerPage_SelectedCustomerIdTextbox.Text),
+                    CustomerName = SaleBookTab_Pages_AddBooksPage_SelectedCustomerNameTextbox.Text,
+                    CustomerPhoneNumber = SaleBookTab_Pages_AddBooksPage_SelectedCustomerPhoneNumberTextbox.Text,
+                    CustomerEmail = SaleBookTab_Pages_AddBooksPage_SelectedCustomerEmailTextbox.Text,
+                    CustomerAddress = SaleBookTab_Pages_AddBooksPage_SelectedCustomerAddressTextbox.Text,
+                    TotalPrice = decimal.Parse(SaleBookTab_Pages_AddBooksPage_SelectedCustomerTotalPriceTextbox.Text),
+                    ReceivedMoney = decimal.Parse(SaleBookTab_Pages_AddBooksPage_SelectedCustomerReceivedMoneyTextbox.Text),
+                    Debt = decimal.Parse(SaleBookTab_Pages_AddBooksPage_SelectedCustomerTotalDebtTextbox.Text)
+                }
+            };
+            var result = await _mediator.Send(createReceiptCommand);
+            if (result == CreateReceiptStatus.Success)
+            {
+                ResetSaleBookTab();
+            }
+        }
+
+        private void ResetSaleBookTab()
+        {
+            SaleBookTab_Pages_AddBooksPage_BookCodeTextbox.Text = string.Empty;
+            SaleBookTab_Pages_AddBooksPage_BookNameTextbox.Text = string.Empty;
+            SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.Rows.Clear();
+            SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView.Rows.Clear();
+            SaleBookTab_Pages_AddCustomerPage_SelectedCustomerIdTextbox.Text = string.Empty;
+            SaleBookTab_Pages_AddBooksPage_SelectedCustomerNameTextbox.Text = string.Empty;
+            SaleBookTab_Pages_AddBooksPage_SelectedCustomerPhoneNumberTextbox.Text = string.Empty;
+            SaleBookTab_Pages_AddBooksPage_SelectedCustomerEmailTextbox.Text = string.Empty;
+            SaleBookTab_Pages_AddBooksPage_SelectedCustomerAddressTextbox.Text = string.Empty;
+            SaleBookTab_Pages_AddBooksPage_SelectedCustomerTotalPriceTextbox.Text = string.Empty;
+            SaleBookTab_Pages_AddBooksPage_SelectedCustomerReceivedMoneyTextbox.Text = string.Empty;
+            SaleBookTab_Pages_AddBooksPage_SelectedCustomerTotalDebtTextbox.Text = string.Empty;
+
+            SaleBookTab_Pages_AddCustomerPage_CustomerIdSearchTextbox.Text = string.Empty;
+            SaleBookTab_Pages_AddCustomerPage_CustomerNameSearchTextbox.Text = string.Empty;
+            SaleBookTab_Pages_AddCustomerPage_SelectedCustomerIdTextbox.Text = string.Empty;
+            SaleBookTab_Pages_AddCustomerPage_SelectedCustomerNameTextbox.Text = string.Empty;
+            SaleBookTab_Pages_AddCustomerPage_SelectedCustomerPhoneNumerberTextbox.Text = string.Empty;
+            SaleBookTab_Pages_AddCustomerPage_SelectedCustomerEmailTextbox.Text = string.Empty;
+            SaleBookTab_Pages_AddCustomerPage_SelectedCustomerAddressTextbox.Text = string.Empty;
+            SaleBookTab_Pages_AddCustomerPage_SelectedCustomerDebtTextbox.Text = string.Empty;
+            SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView.Rows.Clear();
+        }
+
+        private void splitContainer4_Panel2_Paint(object sender, PaintEventArgs e)
+        {
         }
     }
 }
