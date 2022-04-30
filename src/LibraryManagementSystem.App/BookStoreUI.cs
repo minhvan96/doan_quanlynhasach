@@ -1,4 +1,5 @@
-﻿using BookStoreManagementSystem.App.Domain.Configuration;
+﻿using BookStoreManagementSystem.App.Domain;
+using BookStoreManagementSystem.App.Domain.Configuration;
 using BookStoreManagementSystem.App.Features.AuthorFeature.Queries;
 using BookStoreManagementSystem.App.Features.BookFeature.Commands;
 using BookStoreManagementSystem.App.Features.BookFeature.Queries;
@@ -622,8 +623,20 @@ namespace BookStoreManagementSystem
         {
         }
 
-        private void SaleBookTab_Pages_AddBooksPage_Enter(object sender, EventArgs e)
+        private async void SaleBookTab_Pages_AddBooksPage_Enter(object sender, EventArgs e)
         {
+            var listBooksQuery = new ListBooksQuery();
+            var books = await _mediator.Send(listBooksQuery);
+            SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.Rows.Clear();
+            foreach (var book in books.Items)
+            {
+                var bookInfo = new DataGridViewRow();
+                bookInfo.CreateCells(SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView);
+                bookInfo.Cells[0].Value = book.Id;
+                bookInfo.Cells[1].Value = book.Name;
+                bookInfo.Cells[2].Value = book.Price;
+                SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.Rows.Add(bookInfo);
+            }
         }
     }
 }
