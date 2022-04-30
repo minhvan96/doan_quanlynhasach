@@ -603,6 +603,22 @@ namespace BookStoreManagementSystem
             }
         }
 
+        private void SaleBookTab_Pages_AddCustomerPage_SelectedCustomer_AddBooksButton_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(SaleBookTab_Pages_AddCustomerPage_SelectedCustomerIdTextbox.Text))
+            {
+                MessageBox.Show("Vui lòng chọn khách hàng", "Lỗi chọn khách hàng");
+                return;
+            }
+            SaleBookTab_Pages.SelectedIndex = 1;
+            SaleBookTab_Pages_AddBooksPage.Enabled = true;
+        }
+
+        private void SaleBookTab_Pages_AddCustomerPage_Enter(object sender, EventArgs e)
+        {
+            SaleBookTab_Pages_AddBooksPage.Enabled = false;
+        }
+
         private void SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             var selectedRowIndex = SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView.SelectedCells[0].RowIndex;

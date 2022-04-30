@@ -955,6 +955,7 @@
             this.SaleBookTab_Pages_AddCustomerPage.TabIndex = 0;
             this.SaleBookTab_Pages_AddCustomerPage.Text = "Thông tin khách hàng";
             this.SaleBookTab_Pages_AddCustomerPage.UseVisualStyleBackColor = true;
+            this.SaleBookTab_Pages_AddCustomerPage.Enter += new System.EventHandler(this.SaleBookTab_Pages_AddCustomerPage_Enter);
             // 
             // splitContainer4
             // 
@@ -1111,6 +1112,7 @@
             this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomer_AddBooksButton.TabIndex = 4;
             this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomer_AddBooksButton.Text = "Thêm sách";
             this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomer_AddBooksButton.UseVisualStyleBackColor = true;
+            this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomer_AddBooksButton.Click += new System.EventHandler(this.SaleBookTab_Pages_AddCustomerPage_SelectedCustomer_AddBooksButton_Click);
             // 
             // SaleBookTab_Pages_AddCustomerPage_SelectedCustomerIdTextbox
             // 
