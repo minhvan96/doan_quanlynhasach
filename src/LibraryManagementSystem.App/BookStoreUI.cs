@@ -621,6 +621,23 @@ namespace BookStoreManagementSystem
 
         private void SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            var senderGrid = (DataGridView)sender;
+
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0)
+            {
+                var selectedRowIndex = SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.SelectedCells[0].RowIndex;
+                var bookId = SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.Rows[selectedRowIndex].Cells[0].Value.ToString() ?? string.Empty;
+                var bookName = SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.Rows[selectedRowIndex].Cells[1].Value.ToString() ?? string.Empty;
+                var bookPrice = SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.Rows[selectedRowIndex].Cells[2].Value.ToString() ?? string.Empty;
+
+                var bookInfo = new DataGridViewRow();
+                bookInfo.CreateCells(SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView);
+                bookInfo.Cells[0].Value = bookId;
+                bookInfo.Cells[1].Value = bookName;
+                bookInfo.Cells[2].Value = bookPrice;
+                SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView.Rows.Add(bookInfo);
+            }
         }
 
         private async void SaleBookTab_Pages_AddBooksPage_Enter(object sender, EventArgs e)
