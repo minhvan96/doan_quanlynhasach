@@ -654,6 +654,14 @@ namespace BookStoreManagementSystem
                 bookInfo.Cells[2].Value = book.Price;
                 SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.Rows.Add(bookInfo);
             }
+
+            SaleBookTab_Pages_AddBooksPage_SelectedCustomerNameTextbox.Text = SaleBookTab_Pages_AddCustomerPage_SelectedCustomerNameTextbox.Text;
+            SaleBookTab_Pages_AddBooksPage_SelectedCustomerPhoneNumberTextbox.Text = SaleBookTab_Pages_AddCustomerPage_SelectedCustomerPhoneNumerberTextbox.Text;
+            SaleBookTab_Pages_AddBooksPage_SelectedCustomerEmailTextbox.Text = SaleBookTab_Pages_AddCustomerPage_SelectedCustomerEmailTextbox.Text;
+            SaleBookTab_Pages_AddBooksPage_SelectedCustomerAddressTextbox.Text = SaleBookTab_Pages_AddCustomerPage_SelectedCustomerAddressTextbox.Text;
+            SaleBookTab_Pages_AddBooksPage_SelectedCustomerTotalPriceTextbox.Text = "";
+            SaleBookTab_Pages_AddBooksPage_SelectedCustomerTotalDebtTextbox.Text = SaleBookTab_Pages_AddCustomerPage_SelectedCustomerDebtTextbox.Text;
+            SaleBookTab_Pages_AddBooksPage_SelectedCustomerReceivedMoneyTextbox.Text = "";
         }
     }
 }
