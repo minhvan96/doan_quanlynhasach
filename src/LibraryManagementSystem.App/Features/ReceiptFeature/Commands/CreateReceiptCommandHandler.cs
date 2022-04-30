@@ -15,7 +15,9 @@ namespace BookStoreManagementSystem.App.Features.ReceiptFeature.Commands
 
         public async Task<CreateReceiptStatus> Handle(CreateReceiptCommand request, CancellationToken cancellationToken)
         {
-            var newReceipt = new Receipt(request.Request.CustomerId,
+            var staff = await _context.Staffs.FirstOrDefaultAsync(x => x.UserId == request.Request.StaffId, cancellationToken);
+            var newReceipt = new Receipt(staff.Id,
+                request.Request.CustomerId,
                 request.Request.CustomerName,
                 request.Request.CustomerPhoneNumber,
                 request.Request.CustomerEmail,

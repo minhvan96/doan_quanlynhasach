@@ -29,8 +29,13 @@ namespace BookStoreManagementSystem
             {
                 BookStoreContextSeed.SeedAsync(context).Wait();
             });
-
-            Application.Run(ServiceProvider.GetRequiredService<BookStoreUI>());
+            try
+            {
+                Application.Run(ServiceProvider.GetRequiredService<BookStoreUI>());
+            }
+            catch (Exception ex)
+            {
+            }
         }
 
         public static IServiceProvider ServiceProvider { get; private set; }

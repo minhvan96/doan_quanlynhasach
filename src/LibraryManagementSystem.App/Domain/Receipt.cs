@@ -28,7 +28,8 @@ namespace BookStoreManagementSystem.App.Domain
             Code = string.Empty;
         }
 
-        public Receipt(Guid customerId,
+        public Receipt(Guid staffId,
+            Guid customerId,
             string customerName,
             string customerPhoneNumber,
             string customerEmail,
@@ -38,6 +39,7 @@ namespace BookStoreManagementSystem.App.Domain
             decimal receivedMoney,
             decimal debt)
         {
+            StaffId = staffId;
             CustomerId = customerId;
             CustomerName = customerName;
             CustomerPhoneNumber = customerPhoneNumber;

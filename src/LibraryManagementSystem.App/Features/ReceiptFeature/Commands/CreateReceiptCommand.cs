@@ -9,6 +9,7 @@ namespace BookStoreManagementSystem.App.Features.ReceiptFeature.Commands
 
     public class CreateReceiptRequest
     {
+        public Guid StaffId { get; set; }
         public Guid CustomerId { get; set; }
         public string CustomerName { get; set; } = string.Empty;
         public string CustomerPhoneNumber { get; set; } = string.Empty;

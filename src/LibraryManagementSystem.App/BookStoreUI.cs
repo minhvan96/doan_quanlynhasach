@@ -459,6 +459,7 @@ namespace BookStoreManagementSystem
                 return;
             }
             _userPermission.UserRoles.Clear();
+            _userPermission.UserId = user.Id;
             _userPermission.UserRoles.AddRange(user.Roles);
             DisableUnauthorizedTabs();
         }
@@ -736,6 +737,7 @@ namespace BookStoreManagementSystem
             {
                 Request = new CreateReceiptRequest
                 {
+                    StaffId = _userPermission.UserId,
                     CustomerId = new Guid(SaleBookTab_Pages_AddCustomerPage_SelectedCustomerIdTextbox.Text),
                     CustomerName = SaleBookTab_Pages_AddBooksPage_SelectedCustomerNameTextbox.Text,
                     CustomerPhoneNumber = SaleBookTab_Pages_AddBooksPage_SelectedCustomerPhoneNumberTextbox.Text,
@@ -746,10 +748,17 @@ namespace BookStoreManagementSystem
                     Debt = decimal.Parse(SaleBookTab_Pages_AddBooksPage_SelectedCustomerTotalDebtTextbox.Text)
                 }
             };
-            var result = await _mediator.Send(createReceiptCommand);
-            if (result == CreateReceiptStatus.Success)
+            try
             {
-                ResetSaleBookTab();
+                var result = await _mediator.Send(createReceiptCommand);
+                if (result == CreateReceiptStatus.Success)
+                {
+                    ResetSaleBookTab();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Errors");
             }
         }
 

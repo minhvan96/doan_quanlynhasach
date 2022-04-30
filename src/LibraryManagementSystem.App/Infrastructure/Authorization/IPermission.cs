@@ -2,6 +2,7 @@
 {
     public interface IPermission
     {
+        Guid UserId { get; set; }
         List<string> UserRoles { get; }
     }
 }
