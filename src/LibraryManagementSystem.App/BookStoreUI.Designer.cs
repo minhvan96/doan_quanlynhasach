@@ -122,11 +122,11 @@
             this.SaleBookTab_Pages_AddBooksPage_MainContainer = new System.Windows.Forms.SplitContainer();
             this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer = new System.Windows.Forms.SplitContainer();
             this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer = new System.Windows.Forms.SplitContainer();
-            this.button1 = new System.Windows.Forms.Button();
+            this.SaleBookTab_Pages_AddBooksPage_SearchButton = new System.Windows.Forms.Button();
             this.label40 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.SaleBookTab_Pages_AddBooksPage_BookNameTextbox = new System.Windows.Forms.TextBox();
+            this.SaleBookTab_Pages_AddBooksPage_BookCodeTextbox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView = new System.Windows.Forms.DataGridView();
             this.SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_BookIdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -1271,11 +1271,11 @@
             // 
             // SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.Panel1
             // 
-            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.Panel1.Controls.Add(this.button1);
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.Panel1.Controls.Add(this.SaleBookTab_Pages_AddBooksPage_SearchButton);
             this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.Panel1.Controls.Add(this.label40);
             this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.Panel1.Controls.Add(this.label39);
-            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.Panel1.Controls.Add(this.textBox2);
-            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.Panel1.Controls.Add(this.textBox1);
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.Panel1.Controls.Add(this.SaleBookTab_Pages_AddBooksPage_BookNameTextbox);
+            this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.Panel1.Controls.Add(this.SaleBookTab_Pages_AddBooksPage_BookCodeTextbox);
             // 
             // SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.Panel2
             // 
@@ -1284,14 +1284,15 @@
             this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.SplitterDistance = 56;
             this.SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer.TabIndex = 0;
             // 
-            // button1
+            // SaleBookTab_Pages_AddBooksPage_SearchButton
             // 
-            this.button1.Location = new System.Drawing.Point(405, 23);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Tìm kiếm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.SaleBookTab_Pages_AddBooksPage_SearchButton.Location = new System.Drawing.Point(405, 23);
+            this.SaleBookTab_Pages_AddBooksPage_SearchButton.Name = "SaleBookTab_Pages_AddBooksPage_SearchButton";
+            this.SaleBookTab_Pages_AddBooksPage_SearchButton.Size = new System.Drawing.Size(75, 23);
+            this.SaleBookTab_Pages_AddBooksPage_SearchButton.TabIndex = 12;
+            this.SaleBookTab_Pages_AddBooksPage_SearchButton.Text = "Tìm kiếm";
+            this.SaleBookTab_Pages_AddBooksPage_SearchButton.UseVisualStyleBackColor = true;
+            this.SaleBookTab_Pages_AddBooksPage_SearchButton.Click += new System.EventHandler(this.SaleBookTab_Pages_AddBooksPage_SearchButton_Click);
             // 
             // label40
             // 
@@ -1311,19 +1312,19 @@
             this.label39.TabIndex = 11;
             this.label39.Text = "Mã sách";
             // 
-            // textBox2
+            // SaleBookTab_Pages_AddBooksPage_BookNameTextbox
             // 
-            this.textBox2.Location = new System.Drawing.Point(204, 24);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(195, 23);
-            this.textBox2.TabIndex = 10;
+            this.SaleBookTab_Pages_AddBooksPage_BookNameTextbox.Location = new System.Drawing.Point(204, 24);
+            this.SaleBookTab_Pages_AddBooksPage_BookNameTextbox.Name = "SaleBookTab_Pages_AddBooksPage_BookNameTextbox";
+            this.SaleBookTab_Pages_AddBooksPage_BookNameTextbox.Size = new System.Drawing.Size(195, 23);
+            this.SaleBookTab_Pages_AddBooksPage_BookNameTextbox.TabIndex = 10;
             // 
-            // textBox1
+            // SaleBookTab_Pages_AddBooksPage_BookCodeTextbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(3, 24);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(195, 23);
-            this.textBox1.TabIndex = 10;
+            this.SaleBookTab_Pages_AddBooksPage_BookCodeTextbox.Location = new System.Drawing.Point(3, 24);
+            this.SaleBookTab_Pages_AddBooksPage_BookCodeTextbox.Name = "SaleBookTab_Pages_AddBooksPage_BookCodeTextbox";
+            this.SaleBookTab_Pages_AddBooksPage_BookCodeTextbox.Size = new System.Drawing.Size(195, 23);
+            this.SaleBookTab_Pages_AddBooksPage_BookCodeTextbox.TabIndex = 10;
             // 
             // groupBox1
             // 
@@ -2546,11 +2547,11 @@
         private SplitContainer SaleBookTab_Pages_AddBooksPage_MainContainer;
         private SplitContainer SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer;
         private SplitContainer SaleBookTab_Pages_AddBooksPage_MainContainer_AddBookContainer_SearchBookContainer;
-        private Button button1;
+        private Button SaleBookTab_Pages_AddBooksPage_SearchButton;
         private Label label40;
         private Label label39;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox SaleBookTab_Pages_AddBooksPage_BookNameTextbox;
+        private TextBox SaleBookTab_Pages_AddBooksPage_BookCodeTextbox;
         private GroupBox groupBox1;
         private DataGridView SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView;
         private DataGridViewTextBoxColumn SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView_BookIdColumn;

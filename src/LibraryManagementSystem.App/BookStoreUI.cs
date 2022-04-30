@@ -2,6 +2,7 @@
 using BookStoreManagementSystem.App.Domain.Configuration;
 using BookStoreManagementSystem.App.Features.AuthorFeature.Queries;
 using BookStoreManagementSystem.App.Features.BookFeature.Commands;
+using BookStoreManagementSystem.App.Features.BookFeature.Dtos;
 using BookStoreManagementSystem.App.Features.BookFeature.Queries;
 using BookStoreManagementSystem.App.Features.BookStoreFeature.Commands;
 using BookStoreManagementSystem.App.Features.BookStoreFeature.Queries;
@@ -649,16 +650,7 @@ namespace BookStoreManagementSystem
         {
             var listBooksQuery = new ListBooksQuery();
             var books = await _mediator.Send(listBooksQuery);
-            SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.Rows.Clear();
-            foreach (var book in books.Items)
-            {
-                var bookInfo = new DataGridViewRow();
-                bookInfo.CreateCells(SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView);
-                bookInfo.Cells[0].Value = book.Id;
-                bookInfo.Cells[1].Value = book.Name;
-                bookInfo.Cells[2].Value = book.Price;
-                SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.Rows.Add(bookInfo);
-            }
+            SetSaleBookTab_Pages_AddBooksPage_SelectBookDataGridView(books.Items);
 
             SaleBookTab_Pages_AddBooksPage_SelectedCustomerNameTextbox.Text = SaleBookTab_Pages_AddCustomerPage_SelectedCustomerNameTextbox.Text;
             SaleBookTab_Pages_AddBooksPage_SelectedCustomerPhoneNumberTextbox.Text = SaleBookTab_Pages_AddCustomerPage_SelectedCustomerPhoneNumerberTextbox.Text;
@@ -686,6 +678,33 @@ namespace BookStoreManagementSystem
                 var currentTotalPrice = decimal.Parse(SaleBookTab_Pages_AddBooksPage_SelectedCustomerTotalPriceTextbox.Text) - decimal.Parse(bookPrice);
                 SaleBookTab_Pages_AddBooksPage_SelectedCustomerTotalPriceTextbox.Text = currentTotalPrice.ToString();
                 SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView.Rows.RemoveAt(e.RowIndex);
+            }
+        }
+
+        private async void SaleBookTab_Pages_AddBooksPage_SearchButton_Click(object sender, EventArgs e)
+        {
+            var bookCode = SaleBookTab_Pages_AddBooksPage_BookCodeTextbox.Text;
+            var bookName = SaleBookTab_Pages_AddBooksPage_BookNameTextbox.Text;
+            var listBooksQuery = new ListBooksQuery
+            {
+                BookCode = bookCode,
+                BookName = bookName,
+            };
+            var books = await _mediator.Send(listBooksQuery);
+            SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.Rows.Clear();
+            SetSaleBookTab_Pages_AddBooksPage_SelectBookDataGridView(books.Items);
+        }
+
+        private void SetSaleBookTab_Pages_AddBooksPage_SelectBookDataGridView(IList<BookDto> books)
+        {
+            foreach (var book in books)
+            {
+                var bookInfo = new DataGridViewRow();
+                bookInfo.CreateCells(SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView);
+                bookInfo.Cells[0].Value = book.Id;
+                bookInfo.Cells[1].Value = book.Name;
+                bookInfo.Cells[2].Value = book.Price;
+                SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.Rows.Add(bookInfo);
             }
         }
     }
