@@ -787,9 +787,5 @@ namespace BookStoreManagementSystem
             SaleBookTab_Pages_AddCustomerPage_SelectedCustomerDebtTextbox.Text = string.Empty;
             SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView.Rows.Clear();
         }
-
-        private void splitContainer4_Panel2_Paint(object sender, PaintEventArgs e)
-        {
-        }
     }
 }

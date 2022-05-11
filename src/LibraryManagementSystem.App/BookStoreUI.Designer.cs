@@ -38,13 +38,15 @@
             this.HomeTab_LoginContainer_UserNameTextBox = new System.Windows.Forms.TextBox();
             this.ImportBookTab = new System.Windows.Forms.TabPage();
             this.ImportBookMenu_MainContainer = new System.Windows.Forms.SplitContainer();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.ImportBookMenu_QueryBook_SubmitButton = new System.Windows.Forms.Button();
-            this.label20 = new System.Windows.Forms.Label();
             this.ImportBookMenu_QueryBook_ImportQuantityNum = new System.Windows.Forms.NumericUpDown();
-            this.ImportBookMenu_QueryBook_BookNameComboBox = new System.Windows.Forms.ComboBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.ImportBookMenu_QueryBook_BookStore_ComboBox = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.ImportBookMenu_QueryBook_BookNameComboBox = new System.Windows.Forms.ComboBox();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.ImportBookMenu_BooksDataGridView = new System.Windows.Forms.DataGridView();
             this.BookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -165,11 +167,13 @@
             this.CustomerInfoTab = new System.Windows.Forms.TabPage();
             this.CustomerMenu_MainContainer = new System.Windows.Forms.SplitContainer();
             this.CustomerMenu_MainContainer_QueryCustomerSubContainer = new System.Windows.Forms.SplitContainer();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.CustomerMenu_QueryCustomer_Search_Button = new System.Windows.Forms.Button();
+            this.CustomerMenu_QueryCustomer_Id_Textbox = new System.Windows.Forms.TextBox();
             this.CustomerMenu_QueryCustomer_FullName_Textbox = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.CustomerMenu_QueryCustomer_Id_Textbox = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.CustomerMenu_QueryCustomer_CustomerDataGridView = new System.Windows.Forms.DataGridView();
             this.CustomerMenu_QueryCustomer_CustomerDataGridView_Id_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerMenu_QueryCustomer_CustomerDataGridView_FullName_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -178,13 +182,15 @@
             this.StaffInfoTab = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.StaffInfo_SearchStaff_Search_Button = new System.Windows.Forms.Button();
-            this.StaffInfo_SearchStaff_Position_Textbox = new System.Windows.Forms.TextBox();
-            this.StaffInfo_SearchStaff_Age_Textbox = new System.Windows.Forms.TextBox();
             this.StaffInfo_SearchStaff_Name_Textbox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.StaffInfo_SearchStaff_Position_Textbox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.StaffInfo_SearchStaff_Age_Textbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.StaffInfo_SearchStaff_StaffInfo_GridTable = new System.Windows.Forms.DataGridView();
             this.StaffInfo_SearchStaff_Name_GridTable = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StaffInfo_SearchStaff_Address_GridTable = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -197,20 +203,20 @@
             this.ReportPages_MainPages_InventoryReportPage_MainContainer = new System.Windows.Forms.SplitContainer();
             this.ReportPages_MainPages_DebtReportPage = new System.Windows.Forms.TabPage();
             this.splitContainer6 = new System.Windows.Forms.SplitContainer();
-            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup = new System.Windows.Forms.GroupBox();
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_SearchButton = new System.Windows.Forms.Button();
             this.label50 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_EndDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_StartDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label51 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup = new System.Windows.Forms.GroupBox();
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.ConfigurationTab = new System.Windows.Forms.TabPage();
@@ -228,7 +234,14 @@
             this.label24 = new System.Windows.Forms.Label();
             this.ConfigurationTab_BookStoreConfigurationTab_ConfigurationNameTextBox = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.groupBox16 = new System.Windows.Forms.GroupBox();
             this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView = new System.Windows.Forms.DataGridView();
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MaximumStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumBookImport = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ConfigurationTab_CustomerConfigurationTab = new System.Windows.Forms.TabPage();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.ConfigurationTab_CustomerConfigurationTab_MaximumDebtNumericUpDown = new System.Windows.Forms.NumericUpDown();
@@ -238,25 +251,20 @@
             this.label31 = new System.Windows.Forms.Label();
             this.ConfigurationTab_CustomerConfigurationTab_ConfigurationNameTextBox = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
-            this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView = new System.Windows.Forms.DataGridView();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MaximumStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumBookImport = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox16 = new System.Windows.Forms.GroupBox();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
             this.groupBox18 = new System.Windows.Forms.GroupBox();
+            this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView = new System.Windows.Forms.DataGridView();
             this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_IdColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_ConfigurationNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_MaximumDebtColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup = new System.Windows.Forms.GroupBox();
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_SearchButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_EndDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_StartDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup = new System.Windows.Forms.GroupBox();
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView = new System.Windows.Forms.DataGridView();
             this.MainNav.SuspendLayout();
             this.HomeTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomeTab_MainContainer)).BeginInit();
@@ -267,7 +275,9 @@
             this.ImportBookMenu_MainContainer.Panel1.SuspendLayout();
             this.ImportBookMenu_MainContainer.Panel2.SuspendLayout();
             this.ImportBookMenu_MainContainer.SuspendLayout();
+            this.groupBox13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImportBookMenu_QueryBook_ImportQuantityNum)).BeginInit();
+            this.groupBox14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImportBookMenu_BooksDataGridView)).BeginInit();
             this.QueryBookTab.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -324,6 +334,8 @@
             this.CustomerMenu_MainContainer_QueryCustomerSubContainer.Panel1.SuspendLayout();
             this.CustomerMenu_MainContainer_QueryCustomerSubContainer.Panel2.SuspendLayout();
             this.CustomerMenu_MainContainer_QueryCustomerSubContainer.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.groupBox10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CustomerMenu_QueryCustomer_CustomerDataGridView)).BeginInit();
             this.StaffInfoTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -333,21 +345,25 @@
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
+            this.groupBox11.SuspendLayout();
+            this.groupBox12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StaffInfo_SearchStaff_StaffInfo_GridTable)).BeginInit();
             this.ReportTab.SuspendLayout();
             this.ReportPages_MainPages.SuspendLayout();
             this.ReportPages_MainPages_InventoryReportPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ReportPages_MainPages_InventoryReportPage_MainContainer)).BeginInit();
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer.Panel1.SuspendLayout();
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer.Panel2.SuspendLayout();
             this.ReportPages_MainPages_InventoryReportPage_MainContainer.SuspendLayout();
             this.ReportPages_MainPages_DebtReportPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
             this.splitContainer6.Panel1.SuspendLayout();
             this.splitContainer6.Panel2.SuspendLayout();
             this.splitContainer6.SuspendLayout();
-            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup.SuspendLayout();
-            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView)).BeginInit();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.ConfigurationTab.SuspendLayout();
@@ -360,6 +376,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ConfigurationTab_BookStoreConfigurationTab_MinimumImportBookNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConfigurationTab_BookStoreConfigurationTab_MinimumStockNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConfigurationTab_BookStoreConfigurationTab_MaximumStockNumericUpDown)).BeginInit();
+            this.groupBox16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView)).BeginInit();
             this.ConfigurationTab_CustomerConfigurationTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
@@ -367,15 +384,11 @@
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ConfigurationTab_CustomerConfigurationTab_MaximumDebtNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView)).BeginInit();
-            this.groupBox9.SuspendLayout();
-            this.groupBox10.SuspendLayout();
-            this.groupBox11.SuspendLayout();
-            this.groupBox12.SuspendLayout();
-            this.groupBox13.SuspendLayout();
-            this.groupBox14.SuspendLayout();
-            this.groupBox16.SuspendLayout();
             this.groupBox18.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView)).BeginInit();
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup.SuspendLayout();
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // MainNav
@@ -495,6 +508,23 @@
             this.ImportBookMenu_MainContainer.SplitterDistance = 75;
             this.ImportBookMenu_MainContainer.TabIndex = 0;
             // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.ImportBookMenu_QueryBook_SubmitButton);
+            this.groupBox13.Controls.Add(this.ImportBookMenu_QueryBook_ImportQuantityNum);
+            this.groupBox13.Controls.Add(this.label20);
+            this.groupBox13.Controls.Add(this.label19);
+            this.groupBox13.Controls.Add(this.ImportBookMenu_QueryBook_BookStore_ComboBox);
+            this.groupBox13.Controls.Add(this.label14);
+            this.groupBox13.Controls.Add(this.ImportBookMenu_QueryBook_BookNameComboBox);
+            this.groupBox13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox13.Location = new System.Drawing.Point(0, 0);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(970, 75);
+            this.groupBox13.TabIndex = 0;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Bảng nhập thông tin";
+            // 
             // ImportBookMenu_QueryBook_SubmitButton
             // 
             this.ImportBookMenu_QueryBook_SubmitButton.Location = new System.Drawing.Point(493, 42);
@@ -504,15 +534,6 @@
             this.ImportBookMenu_QueryBook_SubmitButton.Text = "Xác nhận";
             this.ImportBookMenu_QueryBook_SubmitButton.UseVisualStyleBackColor = true;
             this.ImportBookMenu_QueryBook_SubmitButton.Click += new System.EventHandler(this.ImportBookMenu_QueryBook_SubmitButton_Click);
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(367, 24);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(54, 15);
-            this.label20.TabIndex = 10;
-            this.label20.Text = "Số lượng";
             // 
             // ImportBookMenu_QueryBook_ImportQuantityNum
             // 
@@ -536,13 +557,14 @@
             0,
             0});
             // 
-            // ImportBookMenu_QueryBook_BookNameComboBox
+            // label20
             // 
-            this.ImportBookMenu_QueryBook_BookNameComboBox.FormattingEnabled = true;
-            this.ImportBookMenu_QueryBook_BookNameComboBox.Location = new System.Drawing.Point(187, 41);
-            this.ImportBookMenu_QueryBook_BookNameComboBox.Name = "ImportBookMenu_QueryBook_BookNameComboBox";
-            this.ImportBookMenu_QueryBook_BookNameComboBox.Size = new System.Drawing.Size(174, 23);
-            this.ImportBookMenu_QueryBook_BookNameComboBox.TabIndex = 7;
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(367, 24);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(54, 15);
+            this.label20.TabIndex = 10;
+            this.label20.Text = "Số lượng";
             // 
             // label19
             // 
@@ -570,6 +592,25 @@
             this.label14.Size = new System.Drawing.Size(56, 15);
             this.label14.TabIndex = 4;
             this.label14.Text = "Nhà sách";
+            // 
+            // ImportBookMenu_QueryBook_BookNameComboBox
+            // 
+            this.ImportBookMenu_QueryBook_BookNameComboBox.FormattingEnabled = true;
+            this.ImportBookMenu_QueryBook_BookNameComboBox.Location = new System.Drawing.Point(187, 41);
+            this.ImportBookMenu_QueryBook_BookNameComboBox.Name = "ImportBookMenu_QueryBook_BookNameComboBox";
+            this.ImportBookMenu_QueryBook_BookNameComboBox.Size = new System.Drawing.Size(174, 23);
+            this.ImportBookMenu_QueryBook_BookNameComboBox.TabIndex = 7;
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.ImportBookMenu_BooksDataGridView);
+            this.groupBox14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox14.Location = new System.Drawing.Point(0, 0);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(970, 448);
+            this.groupBox14.TabIndex = 3;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "Thông tin kho sách";
             // 
             // ImportBookMenu_BooksDataGridView
             // 
@@ -1049,7 +1090,6 @@
             this.splitContainer4.Panel2.Controls.Add(this.label34);
             this.splitContainer4.Panel2.Controls.Add(this.label33);
             this.splitContainer4.Panel2.Controls.Add(this.groupBox8);
-            this.splitContainer4.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer4_Panel2_Paint);
             this.splitContainer4.Size = new System.Drawing.Size(956, 493);
             this.splitContainer4.SplitterDistance = 591;
             this.splitContainer4.TabIndex = 1;
@@ -1752,6 +1792,21 @@
             this.CustomerMenu_MainContainer_QueryCustomerSubContainer.SplitterDistance = 75;
             this.CustomerMenu_MainContainer_QueryCustomerSubContainer.TabIndex = 0;
             // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.CustomerMenu_QueryCustomer_Search_Button);
+            this.groupBox9.Controls.Add(this.CustomerMenu_QueryCustomer_Id_Textbox);
+            this.groupBox9.Controls.Add(this.CustomerMenu_QueryCustomer_FullName_Textbox);
+            this.groupBox9.Controls.Add(this.label13);
+            this.groupBox9.Controls.Add(this.label12);
+            this.groupBox9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox9.Location = new System.Drawing.Point(0, 0);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(600, 75);
+            this.groupBox9.TabIndex = 0;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Thông tin truy vấn";
+            // 
             // CustomerMenu_QueryCustomer_Search_Button
             // 
             this.CustomerMenu_QueryCustomer_Search_Button.Location = new System.Drawing.Point(340, 42);
@@ -1761,6 +1816,13 @@
             this.CustomerMenu_QueryCustomer_Search_Button.Text = "Tìm kiếm";
             this.CustomerMenu_QueryCustomer_Search_Button.UseVisualStyleBackColor = true;
             this.CustomerMenu_QueryCustomer_Search_Button.Click += new System.EventHandler(this.CustomerMenu_QueryCustomer_Search_Button_Click);
+            // 
+            // CustomerMenu_QueryCustomer_Id_Textbox
+            // 
+            this.CustomerMenu_QueryCustomer_Id_Textbox.Location = new System.Drawing.Point(6, 42);
+            this.CustomerMenu_QueryCustomer_Id_Textbox.Name = "CustomerMenu_QueryCustomer_Id_Textbox";
+            this.CustomerMenu_QueryCustomer_Id_Textbox.Size = new System.Drawing.Size(161, 23);
+            this.CustomerMenu_QueryCustomer_Id_Textbox.TabIndex = 2;
             // 
             // CustomerMenu_QueryCustomer_FullName_Textbox
             // 
@@ -1778,13 +1840,6 @@
             this.label13.TabIndex = 3;
             this.label13.Text = "Họ tên";
             // 
-            // CustomerMenu_QueryCustomer_Id_Textbox
-            // 
-            this.CustomerMenu_QueryCustomer_Id_Textbox.Location = new System.Drawing.Point(6, 42);
-            this.CustomerMenu_QueryCustomer_Id_Textbox.Name = "CustomerMenu_QueryCustomer_Id_Textbox";
-            this.CustomerMenu_QueryCustomer_Id_Textbox.Size = new System.Drawing.Size(161, 23);
-            this.CustomerMenu_QueryCustomer_Id_Textbox.TabIndex = 2;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -1793,6 +1848,17 @@
             this.label12.Size = new System.Drawing.Size(17, 15);
             this.label12.TabIndex = 3;
             this.label12.Text = "Id";
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.CustomerMenu_QueryCustomer_CustomerDataGridView);
+            this.groupBox10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox10.Location = new System.Drawing.Point(0, 0);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(600, 448);
+            this.groupBox10.TabIndex = 1;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Thông tin khách hàng";
             // 
             // CustomerMenu_QueryCustomer_CustomerDataGridView
             // 
@@ -1875,6 +1941,23 @@
             this.splitContainer2.SplitterDistance = 75;
             this.splitContainer2.TabIndex = 0;
             // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.StaffInfo_SearchStaff_Search_Button);
+            this.groupBox11.Controls.Add(this.StaffInfo_SearchStaff_Name_Textbox);
+            this.groupBox11.Controls.Add(this.label6);
+            this.groupBox11.Controls.Add(this.StaffInfo_SearchStaff_Position_Textbox);
+            this.groupBox11.Controls.Add(this.label5);
+            this.groupBox11.Controls.Add(this.StaffInfo_SearchStaff_Age_Textbox);
+            this.groupBox11.Controls.Add(this.label4);
+            this.groupBox11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox11.Location = new System.Drawing.Point(0, 0);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(600, 75);
+            this.groupBox11.TabIndex = 0;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Thông tin truy vấn";
+            // 
             // StaffInfo_SearchStaff_Search_Button
             // 
             this.StaffInfo_SearchStaff_Search_Button.Location = new System.Drawing.Point(324, 41);
@@ -1884,20 +1967,6 @@
             this.StaffInfo_SearchStaff_Search_Button.Text = "Tìm kiếm";
             this.StaffInfo_SearchStaff_Search_Button.UseVisualStyleBackColor = true;
             this.StaffInfo_SearchStaff_Search_Button.Click += new System.EventHandler(this.StaffInfo_SearchStaff_Search_Button_Click);
-            // 
-            // StaffInfo_SearchStaff_Position_Textbox
-            // 
-            this.StaffInfo_SearchStaff_Position_Textbox.Location = new System.Drawing.Point(218, 41);
-            this.StaffInfo_SearchStaff_Position_Textbox.Name = "StaffInfo_SearchStaff_Position_Textbox";
-            this.StaffInfo_SearchStaff_Position_Textbox.Size = new System.Drawing.Size(100, 23);
-            this.StaffInfo_SearchStaff_Position_Textbox.TabIndex = 1;
-            // 
-            // StaffInfo_SearchStaff_Age_Textbox
-            // 
-            this.StaffInfo_SearchStaff_Age_Textbox.Location = new System.Drawing.Point(112, 41);
-            this.StaffInfo_SearchStaff_Age_Textbox.Name = "StaffInfo_SearchStaff_Age_Textbox";
-            this.StaffInfo_SearchStaff_Age_Textbox.Size = new System.Drawing.Size(100, 23);
-            this.StaffInfo_SearchStaff_Age_Textbox.TabIndex = 1;
             // 
             // StaffInfo_SearchStaff_Name_Textbox
             // 
@@ -1915,6 +1984,13 @@
             this.label6.TabIndex = 1;
             this.label6.Text = "Chức vụ";
             // 
+            // StaffInfo_SearchStaff_Position_Textbox
+            // 
+            this.StaffInfo_SearchStaff_Position_Textbox.Location = new System.Drawing.Point(218, 41);
+            this.StaffInfo_SearchStaff_Position_Textbox.Name = "StaffInfo_SearchStaff_Position_Textbox";
+            this.StaffInfo_SearchStaff_Position_Textbox.Size = new System.Drawing.Size(100, 23);
+            this.StaffInfo_SearchStaff_Position_Textbox.TabIndex = 1;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -1924,6 +2000,13 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "Tuổi";
             // 
+            // StaffInfo_SearchStaff_Age_Textbox
+            // 
+            this.StaffInfo_SearchStaff_Age_Textbox.Location = new System.Drawing.Point(112, 41);
+            this.StaffInfo_SearchStaff_Age_Textbox.Name = "StaffInfo_SearchStaff_Age_Textbox";
+            this.StaffInfo_SearchStaff_Age_Textbox.Size = new System.Drawing.Size(100, 23);
+            this.StaffInfo_SearchStaff_Age_Textbox.TabIndex = 1;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -1932,6 +2015,17 @@
             this.label4.Size = new System.Drawing.Size(25, 15);
             this.label4.TabIndex = 1;
             this.label4.Text = "Tên";
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.StaffInfo_SearchStaff_StaffInfo_GridTable);
+            this.groupBox12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox12.Location = new System.Drawing.Point(0, 0);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(600, 448);
+            this.groupBox12.TabIndex = 2;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Thông tin nhân viên";
             // 
             // StaffInfo_SearchStaff_StaffInfo_GridTable
             // 
@@ -2014,6 +2108,14 @@
             this.ReportPages_MainPages_InventoryReportPage_MainContainer.Location = new System.Drawing.Point(3, 3);
             this.ReportPages_MainPages_InventoryReportPage_MainContainer.Name = "ReportPages_MainPages_InventoryReportPage_MainContainer";
             this.ReportPages_MainPages_InventoryReportPage_MainContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // ReportPages_MainPages_InventoryReportPage_MainContainer.Panel1
+            // 
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer.Panel1.Controls.Add(this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup);
+            // 
+            // ReportPages_MainPages_InventoryReportPage_MainContainer.Panel2
+            // 
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer.Panel2.Controls.Add(this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup);
             this.ReportPages_MainPages_InventoryReportPage_MainContainer.Size = new System.Drawing.Size(956, 493);
             this.ReportPages_MainPages_InventoryReportPage_MainContainer.SplitterDistance = 75;
             this.ReportPages_MainPages_InventoryReportPage_MainContainer.TabIndex = 0;
@@ -2038,40 +2140,40 @@
             // 
             // splitContainer6.Panel1
             // 
-            this.splitContainer6.Panel1.Controls.Add(this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup);
+            this.splitContainer6.Panel1.Controls.Add(this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup);
             this.splitContainer6.Panel1.Controls.Add(this.groupBox4);
             // 
             // splitContainer6.Panel2
             // 
-            this.splitContainer6.Panel2.Controls.Add(this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup);
+            this.splitContainer6.Panel2.Controls.Add(this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup);
             this.splitContainer6.Panel2.Controls.Add(this.groupBox5);
             this.splitContainer6.Size = new System.Drawing.Size(956, 493);
             this.splitContainer6.SplitterDistance = 75;
             this.splitContainer6.TabIndex = 1;
             // 
-            // ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup
+            // ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup
             // 
-            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup.Controls.Add(this.button1);
-            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup.Controls.Add(this.label50);
-            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup.Controls.Add(this.label49);
-            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup.Controls.Add(this.dateTimePicker2);
-            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup.Controls.Add(this.dateTimePicker1);
-            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup.Location = new System.Drawing.Point(0, 0);
-            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup.Name = "ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup";
-            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup.Size = new System.Drawing.Size(956, 75);
-            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup.TabIndex = 0;
-            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup.TabStop = false;
-            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup.Text = "Truy vấn";
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup.Controls.Add(this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_SearchButton);
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup.Controls.Add(this.label50);
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup.Controls.Add(this.label49);
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup.Controls.Add(this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_EndDateDateTimePicker);
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup.Controls.Add(this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_StartDateDateTimePicker);
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup.Location = new System.Drawing.Point(0, 0);
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup.Name = "ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup";
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup.Size = new System.Drawing.Size(956, 75);
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup.TabIndex = 0;
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup.TabStop = false;
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup.Text = "Truy vấn";
             // 
-            // button1
+            // ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_SearchButton
             // 
-            this.button1.Location = new System.Drawing.Point(418, 46);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Kết quả báo cáo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_SearchButton.Location = new System.Drawing.Point(418, 46);
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_SearchButton.Name = "ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_SearchButton";
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_SearchButton.Size = new System.Drawing.Size(117, 23);
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_SearchButton.TabIndex = 2;
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_SearchButton.Text = "Kết quả báo cáo";
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_SearchButton.UseVisualStyleBackColor = true;
             // 
             // label50
             // 
@@ -2091,39 +2193,21 @@
             this.label49.TabIndex = 1;
             this.label49.Text = "Ngày bắt đầu";
             // 
-            // dateTimePicker2
+            // ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_EndDateDateTimePicker
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(212, 46);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker2.TabIndex = 0;
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_EndDateDateTimePicker.Location = new System.Drawing.Point(212, 46);
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_EndDateDateTimePicker.Name = "ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_EndDateDateTimePick" +
+    "er";
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_EndDateDateTimePicker.Size = new System.Drawing.Size(200, 23);
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_EndDateDateTimePicker.TabIndex = 0;
             // 
-            // dateTimePicker1
+            // ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_StartDateDateTimePicker
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(6, 46);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
-            this.dateTimePicker1.TabIndex = 0;
-            // 
-            // ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup
-            // 
-            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup.Controls.Add(this.dataGridView1);
-            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup.Location = new System.Drawing.Point(0, 0);
-            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup.Name = "ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup";
-            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup.Size = new System.Drawing.Size(956, 414);
-            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup.TabIndex = 0;
-            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup.TabStop = false;
-            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup.Text = "Kết quả báo cáo";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 19);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(950, 392);
-            this.dataGridView1.TabIndex = 0;
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_StartDateDateTimePicker.Location = new System.Drawing.Point(6, 46);
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_StartDateDateTimePicker.Name = "ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_StartDateDateTimePi" +
+    "cker";
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_StartDateDateTimePicker.Size = new System.Drawing.Size(200, 23);
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_StartDateDateTimePicker.TabIndex = 0;
             // 
             // groupBox4
             // 
@@ -2180,6 +2264,27 @@
             this.dateTimePicker4.Name = "dateTimePicker4";
             this.dateTimePicker4.Size = new System.Drawing.Size(200, 23);
             this.dateTimePicker4.TabIndex = 0;
+            // 
+            // ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup
+            // 
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup.Controls.Add(this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView);
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup.Location = new System.Drawing.Point(0, 0);
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup.Name = "ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup";
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup.Size = new System.Drawing.Size(956, 414);
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup.TabIndex = 0;
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup.TabStop = false;
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup.Text = "Kết quả báo cáo";
+            // 
+            // ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView
+            // 
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView.Location = new System.Drawing.Point(3, 19);
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView.Name = "ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView" +
+    "";
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView.Size = new System.Drawing.Size(950, 392);
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView.TabIndex = 0;
             // 
             // groupBox5
             // 
@@ -2369,6 +2474,27 @@
             this.label23.TabIndex = 4;
             this.label23.Text = "Tên cấu hình";
             // 
+            // groupBox15
+            // 
+            this.groupBox15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox15.Location = new System.Drawing.Point(0, 0);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(318, 493);
+            this.groupBox15.TabIndex = 16;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = "Cập nhật cấu hình";
+            // 
+            // groupBox16
+            // 
+            this.groupBox16.Controls.Add(this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView);
+            this.groupBox16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox16.Location = new System.Drawing.Point(0, 0);
+            this.groupBox16.Name = "groupBox16";
+            this.groupBox16.Size = new System.Drawing.Size(634, 493);
+            this.groupBox16.TabIndex = 1;
+            this.groupBox16.TabStop = false;
+            this.groupBox16.Text = "Danh sách cấu hình";
+            // 
             // ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView
             // 
             this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -2386,6 +2512,44 @@
             this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView.Size = new System.Drawing.Size(628, 471);
             this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView.TabIndex = 0;
             this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_CellContentClick);
+            // 
+            // ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Id
+            // 
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Id.HeaderText = "Id";
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Id.Name = "ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Id";
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Id.ReadOnly = true;
+            // 
+            // ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Name
+            // 
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Name.HeaderText = "Tên cấu hình";
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Name.Name = "ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Name";
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Name.ReadOnly = true;
+            // 
+            // ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MaximumStock
+            // 
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MaximumStock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MaximumStock.HeaderText = "Số lượng tồn kho tối đa";
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MaximumStock.Name = "ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Maximum" +
+    "Stock";
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MaximumStock.ReadOnly = true;
+            // 
+            // ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumStock
+            // 
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumStock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumStock.HeaderText = "Số lượng tồn kho tối thiểu";
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumStock.Name = "ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Minimum" +
+    "Stock";
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumStock.ReadOnly = true;
+            // 
+            // ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumBookImport
+            // 
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumBookImport.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumBookImport.HeaderText = "Số lượng sách nhập tối thiểu";
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumBookImport.Name = "ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Minimum" +
+    "BookImport";
+            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumBookImport.ReadOnly = true;
             // 
             // ConfigurationTab_CustomerConfigurationTab
             // 
@@ -2487,163 +2651,6 @@
             this.label32.TabIndex = 4;
             this.label32.Text = "Tên cấu hình";
             // 
-            // ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView
-            // 
-            this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_IdColumn,
-            this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_ConfigurationNameColumn,
-            this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_MaximumDebtColumn});
-            this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.Location = new System.Drawing.Point(3, 19);
-            this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.Name = "ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView";
-            this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.ReadOnly = true;
-            this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.RowTemplate.Height = 25;
-            this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.Size = new System.Drawing.Size(628, 471);
-            this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.TabIndex = 0;
-            this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_CellContentClick);
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.Controls.Add(this.CustomerMenu_QueryCustomer_Search_Button);
-            this.groupBox9.Controls.Add(this.CustomerMenu_QueryCustomer_Id_Textbox);
-            this.groupBox9.Controls.Add(this.CustomerMenu_QueryCustomer_FullName_Textbox);
-            this.groupBox9.Controls.Add(this.label13);
-            this.groupBox9.Controls.Add(this.label12);
-            this.groupBox9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox9.Location = new System.Drawing.Point(0, 0);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(600, 75);
-            this.groupBox9.TabIndex = 0;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Thông tin truy vấn";
-            // 
-            // groupBox10
-            // 
-            this.groupBox10.Controls.Add(this.CustomerMenu_QueryCustomer_CustomerDataGridView);
-            this.groupBox10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox10.Location = new System.Drawing.Point(0, 0);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(600, 448);
-            this.groupBox10.TabIndex = 1;
-            this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "Thông tin khách hàng";
-            // 
-            // groupBox11
-            // 
-            this.groupBox11.Controls.Add(this.StaffInfo_SearchStaff_Search_Button);
-            this.groupBox11.Controls.Add(this.StaffInfo_SearchStaff_Name_Textbox);
-            this.groupBox11.Controls.Add(this.label6);
-            this.groupBox11.Controls.Add(this.StaffInfo_SearchStaff_Position_Textbox);
-            this.groupBox11.Controls.Add(this.label5);
-            this.groupBox11.Controls.Add(this.StaffInfo_SearchStaff_Age_Textbox);
-            this.groupBox11.Controls.Add(this.label4);
-            this.groupBox11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox11.Location = new System.Drawing.Point(0, 0);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(600, 75);
-            this.groupBox11.TabIndex = 0;
-            this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "Thông tin truy vấn";
-            // 
-            // groupBox12
-            // 
-            this.groupBox12.Controls.Add(this.StaffInfo_SearchStaff_StaffInfo_GridTable);
-            this.groupBox12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox12.Location = new System.Drawing.Point(0, 0);
-            this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(600, 448);
-            this.groupBox12.TabIndex = 2;
-            this.groupBox12.TabStop = false;
-            this.groupBox12.Text = "Thông tin nhân viên";
-            // 
-            // groupBox13
-            // 
-            this.groupBox13.Controls.Add(this.ImportBookMenu_QueryBook_SubmitButton);
-            this.groupBox13.Controls.Add(this.ImportBookMenu_QueryBook_ImportQuantityNum);
-            this.groupBox13.Controls.Add(this.label20);
-            this.groupBox13.Controls.Add(this.label19);
-            this.groupBox13.Controls.Add(this.ImportBookMenu_QueryBook_BookStore_ComboBox);
-            this.groupBox13.Controls.Add(this.label14);
-            this.groupBox13.Controls.Add(this.ImportBookMenu_QueryBook_BookNameComboBox);
-            this.groupBox13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox13.Location = new System.Drawing.Point(0, 0);
-            this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(970, 75);
-            this.groupBox13.TabIndex = 0;
-            this.groupBox13.TabStop = false;
-            this.groupBox13.Text = "Bảng nhập thông tin";
-            // 
-            // groupBox14
-            // 
-            this.groupBox14.Controls.Add(this.ImportBookMenu_BooksDataGridView);
-            this.groupBox14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox14.Location = new System.Drawing.Point(0, 0);
-            this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(970, 448);
-            this.groupBox14.TabIndex = 3;
-            this.groupBox14.TabStop = false;
-            this.groupBox14.Text = "Thông tin kho sách";
-            // 
-            // groupBox15
-            // 
-            this.groupBox15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox15.Location = new System.Drawing.Point(0, 0);
-            this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(318, 493);
-            this.groupBox15.TabIndex = 16;
-            this.groupBox15.TabStop = false;
-            this.groupBox15.Text = "Cập nhật cấu hình";
-            // 
-            // ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Id
-            // 
-            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Id.HeaderText = "Id";
-            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Id.Name = "ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Id";
-            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Id.ReadOnly = true;
-            // 
-            // ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Name
-            // 
-            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Name.HeaderText = "Tên cấu hình";
-            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Name.Name = "ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Name";
-            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Name.ReadOnly = true;
-            // 
-            // ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MaximumStock
-            // 
-            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MaximumStock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MaximumStock.HeaderText = "Số lượng tồn kho tối đa";
-            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MaximumStock.Name = "ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Maximum" +
-    "Stock";
-            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MaximumStock.ReadOnly = true;
-            // 
-            // ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumStock
-            // 
-            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumStock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumStock.HeaderText = "Số lượng tồn kho tối thiểu";
-            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumStock.Name = "ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Minimum" +
-    "Stock";
-            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumStock.ReadOnly = true;
-            // 
-            // ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumBookImport
-            // 
-            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumBookImport.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumBookImport.HeaderText = "Số lượng sách nhập tối thiểu";
-            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumBookImport.Name = "ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Minimum" +
-    "BookImport";
-            this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_MinimumBookImport.ReadOnly = true;
-            // 
-            // groupBox16
-            // 
-            this.groupBox16.Controls.Add(this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView);
-            this.groupBox16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox16.Location = new System.Drawing.Point(0, 0);
-            this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Size = new System.Drawing.Size(634, 493);
-            this.groupBox16.TabIndex = 1;
-            this.groupBox16.TabStop = false;
-            this.groupBox16.Text = "Danh sách cấu hình";
-            // 
             // groupBox17
             // 
             this.groupBox17.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -2664,6 +2671,22 @@
             this.groupBox18.TabIndex = 1;
             this.groupBox18.TabStop = false;
             this.groupBox18.Text = "Danh sách cấu hình";
+            // 
+            // ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView
+            // 
+            this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_IdColumn,
+            this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_ConfigurationNameColumn,
+            this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_MaximumDebtColumn});
+            this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.Location = new System.Drawing.Point(3, 19);
+            this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.Name = "ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView";
+            this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.ReadOnly = true;
+            this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.RowTemplate.Height = 25;
+            this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.Size = new System.Drawing.Size(628, 471);
+            this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.TabIndex = 0;
+            this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_CellContentClick);
             // 
             // ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_IdColumn
             // 
@@ -2689,6 +2712,85 @@
     "umDebtColumn";
             this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_MaximumDebtColumn.ReadOnly = true;
             // 
+            // ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup
+            // 
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup.Controls.Add(this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_SearchButton);
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup.Controls.Add(this.label1);
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup.Controls.Add(this.label3);
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup.Controls.Add(this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_EndDateDateTimePicker);
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup.Controls.Add(this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_StartDateDateTimePicker);
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup.Location = new System.Drawing.Point(0, 0);
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup.Name = "ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup";
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup.Size = new System.Drawing.Size(956, 75);
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup.TabIndex = 1;
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup.TabStop = false;
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup.Text = "Truy vấn";
+            // 
+            // ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_SearchButton
+            // 
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_SearchButton.Location = new System.Drawing.Point(418, 46);
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_SearchButton.Name = "ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_SearchButton";
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_SearchButton.Size = new System.Drawing.Size(117, 23);
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_SearchButton.TabIndex = 2;
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_SearchButton.Text = "Kết quả báo cáo";
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_SearchButton.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(212, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 15);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Ngày kết thúc";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 28);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(78, 15);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Ngày bắt đầu";
+            // 
+            // ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_EndDateDateTimePicker
+            // 
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_EndDateDateTimePicker.Location = new System.Drawing.Point(212, 46);
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_EndDateDateTimePicker.Name = "ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_EndDateDateTim" +
+    "ePicker";
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_EndDateDateTimePicker.Size = new System.Drawing.Size(200, 23);
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_EndDateDateTimePicker.TabIndex = 0;
+            // 
+            // ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_StartDateDateTimePicker
+            // 
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_StartDateDateTimePicker.Location = new System.Drawing.Point(6, 46);
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_StartDateDateTimePicker.Name = "ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_StartDateDateT" +
+    "imePicker";
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_StartDateDateTimePicker.Size = new System.Drawing.Size(200, 23);
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_StartDateDateTimePicker.TabIndex = 0;
+            // 
+            // ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup
+            // 
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup.Controls.Add(this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView);
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup.Location = new System.Drawing.Point(0, 0);
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup.Name = "ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup";
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup.Size = new System.Drawing.Size(956, 414);
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup.TabIndex = 1;
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup.TabStop = false;
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup.Text = "Kết quả báo cáo";
+            // 
+            // ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView
+            // 
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView.Location = new System.Drawing.Point(3, 19);
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView.Name = "ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGri" +
+    "dView";
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView.Size = new System.Drawing.Size(950, 392);
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView.TabIndex = 0;
+            // 
             // BookStoreUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -2709,7 +2811,10 @@
             this.ImportBookMenu_MainContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ImportBookMenu_MainContainer)).EndInit();
             this.ImportBookMenu_MainContainer.ResumeLayout(false);
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox13.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImportBookMenu_QueryBook_ImportQuantityNum)).EndInit();
+            this.groupBox14.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ImportBookMenu_BooksDataGridView)).EndInit();
             this.QueryBookTab.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
@@ -2772,6 +2877,9 @@
             this.CustomerMenu_MainContainer_QueryCustomerSubContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CustomerMenu_MainContainer_QueryCustomerSubContainer)).EndInit();
             this.CustomerMenu_MainContainer_QueryCustomerSubContainer.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            this.groupBox10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.CustomerMenu_QueryCustomer_CustomerDataGridView)).EndInit();
             this.StaffInfoTab.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -2781,10 +2889,15 @@
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
+            this.groupBox12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.StaffInfo_SearchStaff_StaffInfo_GridTable)).EndInit();
             this.ReportTab.ResumeLayout(false);
             this.ReportPages_MainPages.ResumeLayout(false);
             this.ReportPages_MainPages_InventoryReportPage.ResumeLayout(false);
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer.Panel1.ResumeLayout(false);
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ReportPages_MainPages_InventoryReportPage_MainContainer)).EndInit();
             this.ReportPages_MainPages_InventoryReportPage_MainContainer.ResumeLayout(false);
             this.ReportPages_MainPages_DebtReportPage.ResumeLayout(false);
@@ -2792,12 +2905,12 @@
             this.splitContainer6.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
             this.splitContainer6.ResumeLayout(false);
-            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup.ResumeLayout(false);
-            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup.PerformLayout();
-            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup.ResumeLayout(false);
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView)).EndInit();
             this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ConfigurationTab.ResumeLayout(false);
@@ -2811,6 +2924,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ConfigurationTab_BookStoreConfigurationTab_MinimumImportBookNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConfigurationTab_BookStoreConfigurationTab_MinimumStockNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConfigurationTab_BookStoreConfigurationTab_MaximumStockNumericUpDown)).EndInit();
+            this.groupBox16.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView)).EndInit();
             this.ConfigurationTab_CustomerConfigurationTab.ResumeLayout(false);
             this.splitContainer3.Panel1.ResumeLayout(false);
@@ -2819,18 +2933,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ConfigurationTab_CustomerConfigurationTab_MaximumDebtNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView)).EndInit();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
-            this.groupBox10.ResumeLayout(false);
-            this.groupBox11.ResumeLayout(false);
-            this.groupBox11.PerformLayout();
-            this.groupBox12.ResumeLayout(false);
-            this.groupBox13.ResumeLayout(false);
-            this.groupBox13.PerformLayout();
-            this.groupBox14.ResumeLayout(false);
-            this.groupBox16.ResumeLayout(false);
             this.groupBox18.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView)).EndInit();
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup.ResumeLayout(false);
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup.PerformLayout();
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3039,14 +3147,14 @@
         private DateTimePicker dateTimePicker4;
         private GroupBox groupBox5;
         private DataGridView dataGridView2;
-        private GroupBox ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup;
-        private Button button1;
+        private GroupBox ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup;
+        private Button ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_SearchButton;
         private Label label50;
         private Label label49;
-        private DateTimePicker dateTimePicker2;
-        private DateTimePicker dateTimePicker1;
-        private GroupBox ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup;
-        private DataGridView dataGridView1;
+        private DateTimePicker ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_EndDateDateTimePicker;
+        private DateTimePicker ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_StartDateDateTimePicker;
+        private GroupBox ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup;
+        private DataGridView ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView;
         private TabPage ReportPages_MainPages_DebtReportPage;
         private GroupBox groupBox13;
         private GroupBox groupBox14;
@@ -3066,5 +3174,13 @@
         private DataGridViewTextBoxColumn ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_IdColumn;
         private DataGridViewTextBoxColumn ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_ConfigurationNameColumn;
         private DataGridViewTextBoxColumn ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_MaximumDebtColumn;
+        private GroupBox ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup;
+        private Button ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_SearchButton;
+        private Label label1;
+        private Label label3;
+        private DateTimePicker ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_EndDateDateTimePicker;
+        private DateTimePicker ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_StartDateDateTimePicker;
+        private GroupBox ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup;
+        private DataGridView ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView;
     }
 }
