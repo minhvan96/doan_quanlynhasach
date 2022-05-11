@@ -267,8 +267,8 @@
             this.ConfigurationTab_CustomerConfigurationTab_CustomerConfigurationDataGridView_MaximumDebtColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.WorkingSessionTab = new System.Windows.Forms.TabPage();
             this.WorkingSessionTab_MainTab = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.WorkingSessionTab_MainTab_InventoryTab = new System.Windows.Forms.TabPage();
+            this.WorkingSessionTab_MainTab_DebtTab = new System.Windows.Forms.TabPage();
             this.MainNav.SuspendLayout();
             this.HomeTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomeTab_MainContainer)).BeginInit();
@@ -2811,8 +2811,8 @@
             // 
             // WorkingSessionTab_MainTab
             // 
-            this.WorkingSessionTab_MainTab.Controls.Add(this.tabPage1);
-            this.WorkingSessionTab_MainTab.Controls.Add(this.tabPage2);
+            this.WorkingSessionTab_MainTab.Controls.Add(this.WorkingSessionTab_MainTab_InventoryTab);
+            this.WorkingSessionTab_MainTab.Controls.Add(this.WorkingSessionTab_MainTab_DebtTab);
             this.WorkingSessionTab_MainTab.Dock = System.Windows.Forms.DockStyle.Fill;
             this.WorkingSessionTab_MainTab.Location = new System.Drawing.Point(3, 3);
             this.WorkingSessionTab_MainTab.Name = "WorkingSessionTab_MainTab";
@@ -2820,25 +2820,25 @@
             this.WorkingSessionTab_MainTab.Size = new System.Drawing.Size(970, 527);
             this.WorkingSessionTab_MainTab.TabIndex = 0;
             // 
-            // tabPage1
+            // WorkingSessionTab_MainTab_InventoryTab
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 24);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(962, 499);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.WorkingSessionTab_MainTab_InventoryTab.Location = new System.Drawing.Point(4, 24);
+            this.WorkingSessionTab_MainTab_InventoryTab.Name = "WorkingSessionTab_MainTab_InventoryTab";
+            this.WorkingSessionTab_MainTab_InventoryTab.Padding = new System.Windows.Forms.Padding(3);
+            this.WorkingSessionTab_MainTab_InventoryTab.Size = new System.Drawing.Size(962, 499);
+            this.WorkingSessionTab_MainTab_InventoryTab.TabIndex = 0;
+            this.WorkingSessionTab_MainTab_InventoryTab.Text = "Thống kê bán sách trong ngày";
+            this.WorkingSessionTab_MainTab_InventoryTab.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // WorkingSessionTab_MainTab_DebtTab
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(192, 72);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.WorkingSessionTab_MainTab_DebtTab.Location = new System.Drawing.Point(4, 24);
+            this.WorkingSessionTab_MainTab_DebtTab.Name = "WorkingSessionTab_MainTab_DebtTab";
+            this.WorkingSessionTab_MainTab_DebtTab.Padding = new System.Windows.Forms.Padding(3);
+            this.WorkingSessionTab_MainTab_DebtTab.Size = new System.Drawing.Size(962, 499);
+            this.WorkingSessionTab_MainTab_DebtTab.TabIndex = 1;
+            this.WorkingSessionTab_MainTab_DebtTab.Text = "Thống kê nợ trong ngày";
+            this.WorkingSessionTab_MainTab_DebtTab.UseVisualStyleBackColor = true;
             // 
             // BookStoreUI
             // 
@@ -3235,7 +3235,7 @@
         private DataGridView ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView;
         private TabPage WorkingSessionTab;
         private TabControl WorkingSessionTab_MainTab;
-        private TabPage tabPage1;
-        private TabPage tabPage2;
+        private TabPage WorkingSessionTab_MainTab_InventoryTab;
+        private TabPage WorkingSessionTab_MainTab_DebtTab;
     }
 }
