@@ -277,6 +277,14 @@
             this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup_SearchButton = new System.Windows.Forms.Button();
             this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup_SubmitButton = new System.Windows.Forms.Button();
             this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_ResultGroup_ResultDataGridView = new System.Windows.Forms.DataGridView();
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer = new System.Windows.Forms.SplitContainer();
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup = new System.Windows.Forms.GroupBox();
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup_SubmitButton = new System.Windows.Forms.Button();
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup_SearchButton = new System.Windows.Forms.Button();
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup_CustomerNameTextbox = new System.Windows.Forms.TextBox();
+            this.label54 = new System.Windows.Forms.Label();
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup = new System.Windows.Forms.GroupBox();
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup_ResultDataGridView = new System.Windows.Forms.DataGridView();
             this.MainNav.SuspendLayout();
             this.HomeTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomeTab_MainContainer)).BeginInit();
@@ -404,6 +412,7 @@
             this.WorkingSessionTab.SuspendLayout();
             this.WorkingSessionTab_MainTab.SuspendLayout();
             this.WorkingSessionTab_MainTab_InventoryTab.SuspendLayout();
+            this.WorkingSessionTab_MainTab_DebtTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.WorkingSessionTab_MainTab_InventoryTab_MainContainer)).BeginInit();
             this.WorkingSessionTab_MainTab_InventoryTab_MainContainer.Panel1.SuspendLayout();
             this.WorkingSessionTab_MainTab_InventoryTab_MainContainer.Panel2.SuspendLayout();
@@ -411,6 +420,13 @@
             this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup.SuspendLayout();
             this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_ResultGroup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_ResultGroup_ResultDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WorkingSessionTab_MainTab_DebtTab_MainContainer)).BeginInit();
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer.Panel1.SuspendLayout();
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer.Panel2.SuspendLayout();
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer.SuspendLayout();
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup.SuspendLayout();
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup_ResultDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // MainNav
@@ -2849,6 +2865,7 @@
             // 
             // WorkingSessionTab_MainTab_DebtTab
             // 
+            this.WorkingSessionTab_MainTab_DebtTab.Controls.Add(this.WorkingSessionTab_MainTab_DebtTab_MainContainer);
             this.WorkingSessionTab_MainTab_DebtTab.Location = new System.Drawing.Point(4, 24);
             this.WorkingSessionTab_MainTab_DebtTab.Name = "WorkingSessionTab_MainTab_DebtTab";
             this.WorkingSessionTab_MainTab_DebtTab.Padding = new System.Windows.Forms.Padding(3);
@@ -2944,6 +2961,93 @@
             this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_ResultGroup_ResultDataGridView.RowTemplate.Height = 25;
             this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_ResultGroup_ResultDataGridView.Size = new System.Drawing.Size(950, 392);
             this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_ResultGroup_ResultDataGridView.TabIndex = 0;
+            // 
+            // WorkingSessionTab_MainTab_DebtTab_MainContainer
+            // 
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer.Location = new System.Drawing.Point(3, 3);
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer.Name = "WorkingSessionTab_MainTab_DebtTab_MainContainer";
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // WorkingSessionTab_MainTab_DebtTab_MainContainer.Panel1
+            // 
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer.Panel1.Controls.Add(this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup);
+            // 
+            // WorkingSessionTab_MainTab_DebtTab_MainContainer.Panel2
+            // 
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer.Panel2.Controls.Add(this.WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup);
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer.Size = new System.Drawing.Size(956, 493);
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer.SplitterDistance = 75;
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer.TabIndex = 1;
+            // 
+            // WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup
+            // 
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup.Controls.Add(this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup_SubmitButton);
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup.Controls.Add(this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup_SearchButton);
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup.Controls.Add(this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup_CustomerNameTextbox);
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup.Controls.Add(this.label54);
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup.Location = new System.Drawing.Point(0, 0);
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup.Name = "WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup";
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup.Size = new System.Drawing.Size(956, 75);
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup.TabIndex = 0;
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup.TabStop = false;
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup.Text = "Tìm kiếm";
+            // 
+            // WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup_SubmitButton
+            // 
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup_SubmitButton.Location = new System.Drawing.Point(415, 45);
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup_SubmitButton.Name = "WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup_SubmitButton";
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup_SubmitButton.Size = new System.Drawing.Size(75, 23);
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup_SubmitButton.TabIndex = 8;
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup_SubmitButton.Text = "Chốt phiên";
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup_SubmitButton.UseVisualStyleBackColor = true;
+            // 
+            // WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup_SearchButton
+            // 
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup_SearchButton.Location = new System.Drawing.Point(297, 46);
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup_SearchButton.Name = "WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup_SearchButton";
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup_SearchButton.Size = new System.Drawing.Size(75, 23);
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup_SearchButton.TabIndex = 8;
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup_SearchButton.Text = "Tìm kiếm";
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup_SearchButton.UseVisualStyleBackColor = true;
+            // 
+            // WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup_CustomerNameTextbox
+            // 
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup_CustomerNameTextbox.Location = new System.Drawing.Point(6, 46);
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup_CustomerNameTextbox.Name = "WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup_CustomerNameTextbox";
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup_CustomerNameTextbox.Size = new System.Drawing.Size(229, 23);
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup_CustomerNameTextbox.TabIndex = 7;
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(6, 28);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(90, 15);
+            this.label54.TabIndex = 6;
+            this.label54.Text = "Tên khách hàng";
+            // 
+            // WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup
+            // 
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup.Controls.Add(this.WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup_ResultDataGridView);
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup.Location = new System.Drawing.Point(0, 0);
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup.Name = "WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup";
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup.Size = new System.Drawing.Size(956, 414);
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup.TabIndex = 0;
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup.TabStop = false;
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup.Text = "Kết quả";
+            // 
+            // WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup_ResultDataGridView
+            // 
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup_ResultDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup_ResultDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup_ResultDataGridView.Location = new System.Drawing.Point(3, 19);
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup_ResultDataGridView.Name = "WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup_ResultDataGridView";
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup_ResultDataGridView.RowTemplate.Height = 25;
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup_ResultDataGridView.Size = new System.Drawing.Size(950, 392);
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup_ResultDataGridView.TabIndex = 0;
             // 
             // BookStoreUI
             // 
@@ -3096,6 +3200,7 @@
             this.WorkingSessionTab.ResumeLayout(false);
             this.WorkingSessionTab_MainTab.ResumeLayout(false);
             this.WorkingSessionTab_MainTab_InventoryTab.ResumeLayout(false);
+            this.WorkingSessionTab_MainTab_DebtTab.ResumeLayout(false);
             this.WorkingSessionTab_MainTab_InventoryTab_MainContainer.Panel1.ResumeLayout(false);
             this.WorkingSessionTab_MainTab_InventoryTab_MainContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.WorkingSessionTab_MainTab_InventoryTab_MainContainer)).EndInit();
@@ -3104,6 +3209,14 @@
             this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup.PerformLayout();
             this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_ResultGroup.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_ResultGroup_ResultDataGridView)).EndInit();
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer.Panel1.ResumeLayout(false);
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.WorkingSessionTab_MainTab_DebtTab_MainContainer)).EndInit();
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer.ResumeLayout(false);
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup.ResumeLayout(false);
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup.PerformLayout();
+            this.WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup_ResultDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3359,5 +3472,13 @@
         private TextBox WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup_BookNameTextbox;
         private Label label53;
         private DataGridView WorkingSessionTab_MainTab_InventoryTab_MainContainer_ResultGroup_ResultDataGridView;
+        private SplitContainer WorkingSessionTab_MainTab_DebtTab_MainContainer;
+        private GroupBox WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup;
+        private Button WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup_SubmitButton;
+        private Button WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup_SearchButton;
+        private TextBox WorkingSessionTab_MainTab_DebtTab_MainContainer_SearchGroup_CustomerNameTextbox;
+        private Label label54;
+        private GroupBox WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup;
+        private DataGridView WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup_ResultDataGridView;
     }
 }
