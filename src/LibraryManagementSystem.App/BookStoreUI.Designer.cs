@@ -272,6 +272,11 @@
             this.WorkingSessionTab_MainTab_InventoryTab_MainContainer = new System.Windows.Forms.SplitContainer();
             this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup = new System.Windows.Forms.GroupBox();
             this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_ResultGroup = new System.Windows.Forms.GroupBox();
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup_BookNameTextbox = new System.Windows.Forms.TextBox();
+            this.label53 = new System.Windows.Forms.Label();
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup_SearchButton = new System.Windows.Forms.Button();
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup_SubmitButton = new System.Windows.Forms.Button();
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_ResultGroup_ResultDataGridView = new System.Windows.Forms.DataGridView();
             this.MainNav.SuspendLayout();
             this.HomeTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomeTab_MainContainer)).BeginInit();
@@ -403,6 +408,9 @@
             this.WorkingSessionTab_MainTab_InventoryTab_MainContainer.Panel1.SuspendLayout();
             this.WorkingSessionTab_MainTab_InventoryTab_MainContainer.Panel2.SuspendLayout();
             this.WorkingSessionTab_MainTab_InventoryTab_MainContainer.SuspendLayout();
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup.SuspendLayout();
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_ResultGroup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_ResultGroup_ResultDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // MainNav
@@ -2869,6 +2877,10 @@
             // 
             // WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup
             // 
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup.Controls.Add(this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup_SubmitButton);
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup.Controls.Add(this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup_SearchButton);
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup.Controls.Add(this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup_BookNameTextbox);
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup.Controls.Add(this.label53);
             this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup.Dock = System.Windows.Forms.DockStyle.Fill;
             this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup.Location = new System.Drawing.Point(0, 0);
             this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup.Name = "WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup";
@@ -2879,6 +2891,7 @@
             // 
             // WorkingSessionTab_MainTab_InventoryTab_MainContainer_ResultGroup
             // 
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_ResultGroup.Controls.Add(this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_ResultGroup_ResultDataGridView);
             this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_ResultGroup.Dock = System.Windows.Forms.DockStyle.Fill;
             this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_ResultGroup.Location = new System.Drawing.Point(0, 0);
             this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_ResultGroup.Name = "WorkingSessionTab_MainTab_InventoryTab_MainContainer_ResultGroup";
@@ -2886,6 +2899,51 @@
             this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_ResultGroup.TabIndex = 0;
             this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_ResultGroup.TabStop = false;
             this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_ResultGroup.Text = "Kết quả";
+            // 
+            // WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup_BookNameTextbox
+            // 
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup_BookNameTextbox.Location = new System.Drawing.Point(6, 46);
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup_BookNameTextbox.Name = "WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup_BookNameTextbox";
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup_BookNameTextbox.Size = new System.Drawing.Size(229, 23);
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup_BookNameTextbox.TabIndex = 7;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Location = new System.Drawing.Point(6, 28);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(52, 15);
+            this.label53.TabIndex = 6;
+            this.label53.Text = "Tên sách";
+            // 
+            // WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup_SearchButton
+            // 
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup_SearchButton.Location = new System.Drawing.Point(297, 46);
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup_SearchButton.Name = "WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup_SearchButton";
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup_SearchButton.Size = new System.Drawing.Size(75, 23);
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup_SearchButton.TabIndex = 8;
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup_SearchButton.Text = "Tìm kiếm";
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup_SearchButton.UseVisualStyleBackColor = true;
+            // 
+            // WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup_SubmitButton
+            // 
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup_SubmitButton.Location = new System.Drawing.Point(415, 45);
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup_SubmitButton.Name = "WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup_SubmitButton";
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup_SubmitButton.Size = new System.Drawing.Size(75, 23);
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup_SubmitButton.TabIndex = 8;
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup_SubmitButton.Text = "Chốt phiên";
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup_SubmitButton.UseVisualStyleBackColor = true;
+            // 
+            // WorkingSessionTab_MainTab_InventoryTab_MainContainer_ResultGroup_ResultDataGridView
+            // 
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_ResultGroup_ResultDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_ResultGroup_ResultDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_ResultGroup_ResultDataGridView.Location = new System.Drawing.Point(3, 19);
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_ResultGroup_ResultDataGridView.Name = "WorkingSessionTab_MainTab_InventoryTab_MainContainer_ResultGroup_ResultDataGridVi" +
+    "ew";
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_ResultGroup_ResultDataGridView.RowTemplate.Height = 25;
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_ResultGroup_ResultDataGridView.Size = new System.Drawing.Size(950, 392);
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_ResultGroup_ResultDataGridView.TabIndex = 0;
             // 
             // BookStoreUI
             // 
@@ -3042,6 +3100,10 @@
             this.WorkingSessionTab_MainTab_InventoryTab_MainContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.WorkingSessionTab_MainTab_InventoryTab_MainContainer)).EndInit();
             this.WorkingSessionTab_MainTab_InventoryTab_MainContainer.ResumeLayout(false);
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup.ResumeLayout(false);
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup.PerformLayout();
+            this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_ResultGroup.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.WorkingSessionTab_MainTab_InventoryTab_MainContainer_ResultGroup_ResultDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3292,5 +3354,10 @@
         private SplitContainer WorkingSessionTab_MainTab_InventoryTab_MainContainer;
         private GroupBox WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup;
         private GroupBox WorkingSessionTab_MainTab_InventoryTab_MainContainer_ResultGroup;
+        private Button WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup_SubmitButton;
+        private Button WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup_SearchButton;
+        private TextBox WorkingSessionTab_MainTab_InventoryTab_MainContainer_SearchGroup_BookNameTextbox;
+        private Label label53;
+        private DataGridView WorkingSessionTab_MainTab_InventoryTab_MainContainer_ResultGroup_ResultDataGridView;
     }
 }
