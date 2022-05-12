@@ -168,6 +168,21 @@
   <metadata name="StaffInfo_SearchStaff_PhoneNumber_GridTable.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_IndexColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_BookNameColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_OpeningStocksColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_GrowColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_EndingStocksColumn.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_Id.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

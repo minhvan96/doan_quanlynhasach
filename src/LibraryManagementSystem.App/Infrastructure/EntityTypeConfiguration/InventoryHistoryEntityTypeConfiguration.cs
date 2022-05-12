@@ -7,6 +7,11 @@ namespace BookStoreManagementSystem.App.Infrastructure.EntityTypeConfiguration
         public void Configure(EntityTypeBuilder<InventoryHistory> builder)
         {
             builder.ToTable("InventoryHistories");
+
+            builder.HasOne(x => x.Staff)
+                .WithMany()
+                .HasForeignKey(x => x.StaffId)
+                .OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

@@ -285,6 +285,11 @@
             this.label54 = new System.Windows.Forms.Label();
             this.WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup = new System.Windows.Forms.GroupBox();
             this.WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup_ResultDataGridView = new System.Windows.Forms.DataGridView();
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_IndexColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_BookNameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_OpeningStocksColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_GrowColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_EndingStocksColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MainNav.SuspendLayout();
             this.HomeTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomeTab_MainContainer)).BeginInit();
@@ -2232,6 +2237,12 @@
             // ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView
             // 
             this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_IndexColumn,
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_BookNameColumn,
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_OpeningStocksColumn,
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_GrowColumn,
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_EndingStocksColumn});
             this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView.Location = new System.Drawing.Point(3, 19);
             this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView.Name = "ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGri" +
@@ -3050,6 +3061,45 @@
             this.WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup_ResultDataGridView.Size = new System.Drawing.Size(950, 392);
             this.WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup_ResultDataGridView.TabIndex = 0;
             // 
+            // ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_IndexColumn
+            // 
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_IndexColumn.HeaderText = "STT";
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_IndexColumn.Name = "ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGri" +
+    "dView_IndexColumn";
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_IndexColumn.Width = 50;
+            // 
+            // ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_BookNameColumn
+            // 
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_BookNameColumn.FillWeight = 359.1837F;
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_BookNameColumn.HeaderText = "Tên sách";
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_BookNameColumn.Name = "ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGri" +
+    "dView_BookNameColumn";
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_BookNameColumn.Width = 250;
+            // 
+            // ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_OpeningStocksColumn
+            // 
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_OpeningStocksColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_OpeningStocksColumn.FillWeight = 13.60544F;
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_OpeningStocksColumn.HeaderText = "Tồn đầu";
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_OpeningStocksColumn.Name = "ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGri" +
+    "dView_OpeningStocksColumn";
+            // 
+            // ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_GrowColumn
+            // 
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_GrowColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_GrowColumn.FillWeight = 13.60544F;
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_GrowColumn.HeaderText = "Phát sinh";
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_GrowColumn.Name = "ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGri" +
+    "dView_GrowColumn";
+            // 
+            // ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_EndingStocksColumn
+            // 
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_EndingStocksColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_EndingStocksColumn.FillWeight = 13.60544F;
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_EndingStocksColumn.HeaderText = "Tồn cuối";
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_EndingStocksColumn.Name = "ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGri" +
+    "dView_EndingStocksColumn";
+            // 
             // BookStoreUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -3481,5 +3531,10 @@
         private Label label54;
         private GroupBox WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup;
         private DataGridView WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup_ResultDataGridView;
+        private DataGridViewTextBoxColumn ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_IndexColumn;
+        private DataGridViewTextBoxColumn ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_BookNameColumn;
+        private DataGridViewTextBoxColumn ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_OpeningStocksColumn;
+        private DataGridViewTextBoxColumn ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_GrowColumn;
+        private DataGridViewTextBoxColumn ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView_EndingStocksColumn;
     }
 }

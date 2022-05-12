@@ -14,6 +14,7 @@ using BookStoreManagementSystem.App.Features.ReceiptFeature.Commands;
 using BookStoreManagementSystem.App.Features.ReportFeature.Queries;
 using BookStoreManagementSystem.App.Features.StaffFeature.Queries;
 using BookStoreManagementSystem.App.Infrastructure.Authorization;
+using BookStoreManagementSystem.App.Infrastructure.Extensions;
 using MediatR;
 using System.Data;
 
@@ -815,6 +816,20 @@ namespace BookStoreManagementSystem
             };
 
             var result = await _mediator.Send(inventoryReportQuery);
+            ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView.Rows.Clear();
+            int reportIndex = 1;
+            foreach (var report in result.Items.OrEmptyIfNull())
+            {
+                var reportInfo = new DataGridViewRow();
+                reportInfo.CreateCells(ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView);
+                reportInfo.Cells[0].Value = reportIndex;
+                reportInfo.Cells[1].Value = report.BookName;
+                reportInfo.Cells[2].Value = report.OpeningStocks;
+                reportInfo.Cells[3].Value = report.EndingStocks - report.OpeningStocks;
+                reportInfo.Cells[4].Value = report.EndingStocks;
+                ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView.Rows.Add(reportInfo);
+                reportIndex++;
+            }
         }
     }
 }
