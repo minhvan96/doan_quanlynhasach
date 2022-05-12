@@ -25,7 +25,6 @@ namespace BookStoreManagementSystem.App.Features.ReceiptFeature.Commands
     {
         public Guid Id { get; set; }
         public string Name { get; set; } = string.Empty;
-        public int SoldNumber { get; set; }
     }
 
     public enum CreateReceiptStatus

@@ -17,6 +17,7 @@ namespace BookStoreManagementSystem.App.Infrastructure
         public DbSet<BookType> BookTypes => Set<BookType>();
         public DbSet<BookStore> BookStores => Set<BookStore>();
         public DbSet<BookStoreStorage> BookStoresStorage => Set<BookStoreStorage>();
+        public DbSet<BookSellHistory> BookSellHistories => Set<BookSellHistory>();
         public DbSet<Author> Authors => Set<Author>();
 
         public DbSet<Customer> Customers => Set<Customer>();

@@ -29,10 +29,18 @@ namespace BookStoreManagementSystem.App.Features.ReceiptFeature.Commands
 
             _context.Add(newReceipt);
 
+            var bookSolds = new List<BookSellHistory>();
             foreach (var book in request.Request.Books)
             {
-                var bookSold = new BookSellHistory(DateTime.Today, staff.Id, book.Id, staff.BookStoreId, book.SoldNumber);
+                if (!bookSolds.Any(x => x.BookId == book.Id))
+                {
+                    var soldNumber = request.Request.Books.Where(x => x.Id == book.Id).Count();
+                    var bookSold = new BookSellHistory(DateTime.Today, staff.Id, book.Id, staff.BookStoreId, soldNumber);
+                    bookSolds.Add(bookSold);
+                }
             }
+
+            _context.AddRange(bookSolds);
             await _context.SaveChangesAsync(cancellationToken);
             return CreateReceiptStatus.Success;
         }
