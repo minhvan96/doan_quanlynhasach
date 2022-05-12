@@ -2,7 +2,7 @@
 
 namespace BookStoreManagementSystem.App.Domain
 {
-    public class BookSellHistory : Entity
+    public class InventoryHistory : Entity
     {
         public DateTime Date { get; private set; }
         public Staff? Staff { get; private set; }
@@ -11,13 +11,13 @@ namespace BookStoreManagementSystem.App.Domain
         public Guid BookId { get; private set; }
         public BookStore? BookStore { get; private set; }
         public Guid BookStoreId { get; private set; }
-        public int SoldNumber { get; private set; }
+        public int ChangeNumber { get; private set; }
 
-        protected BookSellHistory()
+        protected InventoryHistory()
         {
         }
 
-        public BookSellHistory(DateTime date,
+        public InventoryHistory(DateTime date,
             Guid staffId,
             Guid bookId,
             Guid bookStoreId,
@@ -27,7 +27,7 @@ namespace BookStoreManagementSystem.App.Domain
             StaffId = staffId;
             BookId = bookId;
             BookStoreId = bookStoreId;
-            SoldNumber = soldNumber;
+            ChangeNumber = soldNumber;
         }
     }
 }

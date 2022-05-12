@@ -1,5 +1,6 @@
 ﻿using BookStoreManagementSystem.App.Domain;
 using BookStoreManagementSystem.App.Infrastructure;
+using BookStoreManagementSystem.App.Infrastructure.Authorization;
 using MediatR;
 
 namespace BookStoreManagementSystem.App.Features.BookStoreFeature.Commands
@@ -7,14 +8,18 @@ namespace BookStoreManagementSystem.App.Features.BookStoreFeature.Commands
     public class ImportBookCommandHandler : IRequestHandler<ImportBookCommand, ImportBookResult>
     {
         private readonly BookStoreContext _context;
+        private readonly IPermission _permission;
 
-        public ImportBookCommandHandler(BookStoreContext context)
+        public ImportBookCommandHandler(BookStoreContext context, IPermission permission)
         {
             _context = context;
+            _permission = permission;
         }
 
         public async Task<ImportBookResult> Handle(ImportBookCommand request, CancellationToken cancellationToken)
         {
+            var staff = await _context.Staffs.FirstOrDefaultAsync(x => x.UserId == _permission.UserId, cancellationToken);
+            var staffId = staff?.Id ?? Guid.Empty;
             var bookStore = await _context.BookStores.AnyAsync(x => x.Id == request.BookStoreId && !x.IsDeleted, cancellationToken);
             if (!bookStore)
             {
@@ -43,6 +48,7 @@ namespace BookStoreManagementSystem.App.Features.BookStoreFeature.Commands
                 .Where(x => x.BookId == request.Request.BookId && x.BookStoreId == request.BookStoreId)
                 .FirstOrDefaultAsync(cancellationToken);
 
+            var newInventoryHistory = new InventoryHistory(DateTime.Now.Date, staffId, request.Request.BookId, request.BookStoreId, request.Request.Quantity);
             if (bookStoreStorage == null)
             {
                 var newBookStoreStorage = new BookStoreStorage(request.Request.BookId, request.BookStoreId, request.Request.Quantity);
@@ -53,6 +59,7 @@ namespace BookStoreManagementSystem.App.Features.BookStoreFeature.Commands
                         Status = ImportBookStatus.ExceedMaximumStock
                     };
                 _context.Add(newBookStoreStorage);
+                _context.Add(newInventoryHistory);
                 await _context.SaveChangesAsync(cancellationToken);
                 return new ImportBookResult
                 {
@@ -68,6 +75,7 @@ namespace BookStoreManagementSystem.App.Features.BookStoreFeature.Commands
                     Status = ImportBookStatus.ExceedMaximumStock
                 };
             bookStoreStorage.Import(request.Request.Quantity);
+            _context.Add(newInventoryHistory);
             await _context.SaveChangesAsync(cancellationToken);
             return new ImportBookResult
             {

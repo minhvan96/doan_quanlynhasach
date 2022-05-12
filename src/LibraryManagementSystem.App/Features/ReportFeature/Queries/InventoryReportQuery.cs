@@ -1,11 +1,11 @@
 ﻿using BookStoreManagementSystem.App.Configuration.Mediator;
-using BookStoreManagementSystem.App.Features.BookStoreFeature.Dtos;
-using MediatR;
+using BookStoreManagementSystem.App.Features.ReportFeature.Dtos;
 
-namespace BookStoreManagementSystem.App.Features.BookStoreFeature.Queries
+namespace BookStoreManagementSystem.App.Features.ReportFeature.Queries
 {
     public class InventoryReportQuery : ListQuery<InventoryReportDto>
     {
+        public Guid BookStoreId { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
     }

@@ -11,6 +11,7 @@ using BookStoreManagementSystem.App.Features.Configuration.CustomerConfiguration
 using BookStoreManagementSystem.App.Features.CustomerFeature.Queries;
 using BookStoreManagementSystem.App.Features.IdentityFeature.Commands;
 using BookStoreManagementSystem.App.Features.ReceiptFeature.Commands;
+using BookStoreManagementSystem.App.Features.ReportFeature.Queries;
 using BookStoreManagementSystem.App.Features.StaffFeature.Queries;
 using BookStoreManagementSystem.App.Infrastructure.Authorization;
 using MediatR;
@@ -803,6 +804,17 @@ namespace BookStoreManagementSystem
             SaleBookTab_Pages_AddCustomerPage_SelectedCustomerAddressTextbox.Text = string.Empty;
             SaleBookTab_Pages_AddCustomerPage_SelectedCustomerDebtTextbox.Text = string.Empty;
             SaleBookTab_Pages_AddCustomerPage_CustomersDataGridView.Rows.Clear();
+        }
+
+        private async void ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_SearchButton_Click(object sender, EventArgs e)
+        {
+            var inventoryReportQuery = new InventoryReportQuery
+            {
+                StartDate = ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_StartDateDateTimePicker.Value,
+                EndDate = ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_EndDateDateTimePicker.Value
+            };
+
+            var result = await _mediator.Send(inventoryReportQuery);
         }
     }
 }

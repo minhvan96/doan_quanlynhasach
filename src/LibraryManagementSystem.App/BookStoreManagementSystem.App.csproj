@@ -30,6 +30,7 @@
     <Folder Include="Features\IdentityFeature\Queries\" />
     <Folder Include="Features\ReceiptFeature\Dtos\" />
     <Folder Include="Features\ReceiptFeature\Queries\" />
+    <Folder Include="Features\ReportFeature\Commands\" />
     <Folder Include="Features\StaffFeature\Commands\" />
   </ItemGroup>
 

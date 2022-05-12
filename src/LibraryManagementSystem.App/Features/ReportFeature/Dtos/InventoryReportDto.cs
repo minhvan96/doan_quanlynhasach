@@ -1,4 +1,4 @@
-﻿namespace BookStoreManagementSystem.App.Features.BookStoreFeature.Dtos
+﻿namespace BookStoreManagementSystem.App.Features.ReportFeature.Dtos
 {
     public class InventoryReportDto
     {

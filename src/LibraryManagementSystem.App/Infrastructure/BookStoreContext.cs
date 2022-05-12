@@ -17,7 +17,7 @@ namespace BookStoreManagementSystem.App.Infrastructure
         public DbSet<BookType> BookTypes => Set<BookType>();
         public DbSet<BookStore> BookStores => Set<BookStore>();
         public DbSet<BookStoreStorage> BookStoresStorage => Set<BookStoreStorage>();
-        public DbSet<BookSellHistory> BookSellHistories => Set<BookSellHistory>();
+        public DbSet<InventoryHistory> InventoryHistory => Set<InventoryHistory>();
         public DbSet<Author> Authors => Set<Author>();
 
         public DbSet<Customer> Customers => Set<Customer>();
@@ -41,8 +41,8 @@ namespace BookStoreManagementSystem.App.Infrastructure
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite($"Data Source={DbPath}");
-            //optionsBuilder.UseSqlServer("Data Source=VANNGUYEN;Initial Catalog=BookStore;Integrated Security=True;TrustServerCertificate=True");
+            //optionsBuilder.UseSqlite($"Data Source={DbPath}");
+            optionsBuilder.UseSqlServer("Data Source=VANNGUYEN;Initial Catalog=BookStore;Integrated Security=True;TrustServerCertificate=True");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
