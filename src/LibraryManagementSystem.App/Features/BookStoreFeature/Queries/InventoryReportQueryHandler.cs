@@ -16,8 +16,9 @@ namespace BookStoreManagementSystem.App.Features.BookStoreFeature.Queries
 
         public Task<IPagedList<InventoryReportDto>> Handle(InventoryReportQuery request, CancellationToken cancellationToken)
         {
-            var inventory = _context.BookStoresStorage
-                .Where(x => x.imp)
+            //var inventory = _context.BookStoresStorage
+            //    .Where(x => x.imp)
+            return null;
         }
     }
 }

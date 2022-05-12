@@ -3,6 +3,7 @@ using System;
 using BookStoreManagementSystem.App.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookStoreManagementSystem.App.Migrations
 {
     [DbContext(typeof(BookStoreContext))]
-    partial class BookStoreContextModelSnapshot : ModelSnapshot
+    [Migration("20220512030225_UpdateStaffAndBookStoreRelation")]
+    partial class UpdateStaffAndBookStoreRelation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.3");
@@ -545,6 +547,9 @@ namespace BookStoreManagementSystem.App.Migrations
                     b.Property<Guid>("BookStoreId")
                         .HasColumnType("TEXT");
 
+                    b.Property<Guid?>("BookStoreId1")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("CreatedBy")
                         .HasColumnType("TEXT");
 
@@ -570,6 +575,8 @@ namespace BookStoreManagementSystem.App.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("BookStoreId");
+
+                    b.HasIndex("BookStoreId1");
 
                     b.ToTable("Staffs", (string)null);
                 });
@@ -669,10 +676,14 @@ namespace BookStoreManagementSystem.App.Migrations
             modelBuilder.Entity("BookStoreManagementSystem.App.Domain.Staff", b =>
                 {
                     b.HasOne("BookStoreManagementSystem.App.Domain.BookStore", "BookStore")
-                        .WithMany("Staffs")
+                        .WithMany()
                         .HasForeignKey("BookStoreId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("BookStoreManagementSystem.App.Domain.BookStore", null)
+                        .WithMany("Staffs")
+                        .HasForeignKey("BookStoreId1");
 
                     b.Navigation("BookStore");
                 });

@@ -28,6 +28,11 @@ namespace BookStoreManagementSystem.App.Features.ReceiptFeature.Commands
                 request.Request.Debt);
 
             _context.Add(newReceipt);
+
+            foreach (var book in request.Request.Books)
+            {
+                var bookSold = new BookSellHistory(DateTime.Today, staff.Id, book.Id, staff.BookStoreId, book.SoldNumber);
+            }
             await _context.SaveChangesAsync(cancellationToken);
             return CreateReceiptStatus.Success;
         }

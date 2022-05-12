@@ -18,15 +18,15 @@ namespace BookStoreManagementSystem.App.Configuration.Database
             {
                 var line = reader.ReadLine();
                 var values = line?.Split(',');
-                var staff = CreateNewStaff(values[0], values[1]);
+                var staff = CreateNewStaff(values[0], values[1], values[2]);
                 staffs.Add(staff);
             }
             return staffs;
         }
 
-        private static Staff CreateNewStaff(string name, string position)
+        private static Staff CreateNewStaff(string id, string bookStoreId, string position)
         {
-            return new Staff(new Guid(name), position);
+            return new Staff(new Guid(id), new Guid(bookStoreId), position);
         }
     }
 }

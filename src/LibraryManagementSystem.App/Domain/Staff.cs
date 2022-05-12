@@ -4,8 +4,10 @@ namespace BookStoreManagementSystem.App.Domain
 {
     public class Staff : Entity
     {
-        public Guid UserId { get; set; }
-        public string Position { get; set; }
+        public Guid UserId { get; private set; }
+        public string Position { get; private set; }
+        public BookStore? BookStore { get; private set; }
+        public Guid BookStoreId { get; private set; }
 
         protected Staff()
         {
@@ -13,9 +15,11 @@ namespace BookStoreManagementSystem.App.Domain
         }
 
         public Staff(Guid userId,
+            Guid bookStoreId,
             string position)
         {
             UserId = userId;
+            BookStoreId = bookStoreId;
             Position = position;
         }
     }

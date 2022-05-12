@@ -18,6 +18,14 @@ namespace BookStoreManagementSystem.App.Features.ReceiptFeature.Commands
         public decimal ReceivedMoney { get; set; }
         public decimal Debt { get; set; }
         public decimal TotalPrice { get; set; }
+        public ICollection<BookInfo> Books { get; set; } = new List<BookInfo>();
+    }
+
+    public class BookInfo
+    {
+        public Guid Id { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public int SoldNumber { get; set; }
     }
 
     public enum CreateReceiptStatus

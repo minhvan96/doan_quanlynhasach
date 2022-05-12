@@ -1,6 +1,4 @@
-﻿using BookStoreManagementSystem.App.Domain;
-using BookStoreManagementSystem.App.Domain.Configuration;
-using BookStoreManagementSystem.App.Features.AuthorFeature.Queries;
+﻿using BookStoreManagementSystem.App.Features.AuthorFeature.Queries;
 using BookStoreManagementSystem.App.Features.BookFeature.Commands;
 using BookStoreManagementSystem.App.Features.BookFeature.Dtos;
 using BookStoreManagementSystem.App.Features.BookFeature.Queries;
@@ -15,7 +13,6 @@ using BookStoreManagementSystem.App.Features.IdentityFeature.Commands;
 using BookStoreManagementSystem.App.Features.ReceiptFeature.Commands;
 using BookStoreManagementSystem.App.Features.StaffFeature.Queries;
 using BookStoreManagementSystem.App.Infrastructure.Authorization;
-using BookStoreManagementSystem.App.Shared.Helpers;
 using MediatR;
 using System.Data;
 
@@ -733,6 +730,25 @@ namespace BookStoreManagementSystem
                 MessageBox.Show("Vui lòng nhập số tiền đã nhận", "Lỗi nhập liệu");
                 return;
             }
+            var books = new List<BookInfo>();
+            try
+            {
+                foreach (DataGridViewRow row in SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView.Rows)
+                {
+                    if (row.Cells[0].Value != null)
+                    {
+                        var book = new BookInfo
+                        {
+                            Id = new Guid(row.Cells[0].Value.ToString()),
+                            Name = row.Cells[1].Value.ToString(),
+                        };
+                        books.Add(book);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+            }
             var createReceiptCommand = new CreateReceiptCommand
             {
                 Request = new CreateReceiptRequest
@@ -745,7 +761,8 @@ namespace BookStoreManagementSystem
                     CustomerAddress = SaleBookTab_Pages_AddBooksPage_SelectedCustomerAddressTextbox.Text,
                     TotalPrice = decimal.Parse(SaleBookTab_Pages_AddBooksPage_SelectedCustomerTotalPriceTextbox.Text),
                     ReceivedMoney = decimal.Parse(SaleBookTab_Pages_AddBooksPage_SelectedCustomerReceivedMoneyTextbox.Text),
-                    Debt = decimal.Parse(SaleBookTab_Pages_AddBooksPage_SelectedCustomerTotalDebtTextbox.Text)
+                    Debt = decimal.Parse(SaleBookTab_Pages_AddBooksPage_SelectedCustomerTotalDebtTextbox.Text),
+                    Books = books
                 }
             };
             try
