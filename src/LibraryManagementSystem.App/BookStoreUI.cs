@@ -831,5 +831,9 @@ namespace BookStoreManagementSystem
                 reportIndex++;
             }
         }
+
+        private void ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_SearchButton_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
