@@ -645,21 +645,27 @@ namespace BookStoreManagementSystem
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
                 e.RowIndex >= 0)
             {
-                var selectedRowIndex = SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.SelectedCells[0].RowIndex;
-                var bookId = SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.Rows[selectedRowIndex].Cells[0].Value.ToString() ?? string.Empty;
-                var bookName = SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.Rows[selectedRowIndex].Cells[1].Value.ToString() ?? string.Empty;
-                var bookPrice = SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.Rows[selectedRowIndex].Cells[2].Value.ToString() ?? string.Empty;
+                try
+                {
+                    var selectedRowIndex = SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.SelectedCells[0].RowIndex;
+                    var bookId = SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.Rows[selectedRowIndex].Cells[0].Value.ToString() ?? string.Empty;
+                    var bookName = SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.Rows[selectedRowIndex].Cells[1].Value.ToString() ?? string.Empty;
+                    var bookPrice = SaleBookTab_Pages_AddBooksPage_SelectBookDataGridView.Rows[selectedRowIndex].Cells[2].Value.ToString() ?? string.Empty;
 
-                var bookInfo = new DataGridViewRow();
+                    var bookInfo = new DataGridViewRow();
 
-                bookInfo.CreateCells(SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView);
-                bookInfo.Cells[0].Value = bookId;
-                bookInfo.Cells[1].Value = bookName;
-                bookInfo.Cells[2].Value = bookPrice;
-                SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView.Rows.Add(bookInfo);
+                    bookInfo.CreateCells(SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView);
+                    bookInfo.Cells[0].Value = bookId;
+                    bookInfo.Cells[1].Value = bookName;
+                    bookInfo.Cells[2].Value = bookPrice;
+                    SaleBookTab_Pages_AddBooksPage_SelectedBookDataGridView.Rows.Add(bookInfo);
 
-                var currentTotalPrice = decimal.Parse(SaleBookTab_Pages_AddBooksPage_SelectedCustomerTotalPriceTextbox.Text) + decimal.Parse(bookPrice);
-                SaleBookTab_Pages_AddBooksPage_SelectedCustomerTotalPriceTextbox.Text = currentTotalPrice.ToString();
+                    var currentTotalPrice = decimal.Parse(SaleBookTab_Pages_AddBooksPage_SelectedCustomerTotalPriceTextbox.Text) + decimal.Parse(bookPrice);
+                    SaleBookTab_Pages_AddBooksPage_SelectedCustomerTotalPriceTextbox.Text = currentTotalPrice.ToString();
+                }
+                catch (Exception ex)
+                {
+                }
             }
         }
 
@@ -770,9 +776,15 @@ namespace BookStoreManagementSystem
             try
             {
                 var result = await _mediator.Send(createReceiptCommand);
+                if (result == CreateReceiptStatus.DebtExceeded)
+                {
+                    MessageBox.Show("Khách hàng nợ quá số tiền nợ quy định", "Errors");
+                    return;
+                }
                 if (result == CreateReceiptStatus.Success)
                 {
                     ResetSaleBookTab();
+                    MessageBox.Show("Tạo hoá đơn thành công", "Success");
                 }
             }
             catch (Exception ex)

@@ -29,6 +29,7 @@ namespace BookStoreManagementSystem.App.Features.ReceiptFeature.Commands
 
     public enum CreateReceiptStatus
     {
+        DebtExceeded,
         Success
     }
 }

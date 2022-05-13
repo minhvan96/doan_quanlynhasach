@@ -15,6 +15,11 @@ namespace BookStoreManagementSystem.App.Features.ReceiptFeature.Commands
 
         public async Task<CreateReceiptStatus> Handle(CreateReceiptCommand request, CancellationToken cancellationToken)
         {
+            var customerConfiguration = await _context.CustomerConfigurations.FirstOrDefaultAsync(x => x.IsDefault, cancellationToken);
+            if (request.Request.TotalPrice - request.Request.ReceivedMoney > customerConfiguration?.MaximumDebt)
+            {
+                return CreateReceiptStatus.DebtExceeded;
+            }
             var staff = await _context.Staffs.FirstOrDefaultAsync(x => x.UserId == request.Request.StaffId, cancellationToken);
             var newReceipt = new Receipt(staff.Id,
                 request.Request.CustomerId,
@@ -28,7 +33,11 @@ namespace BookStoreManagementSystem.App.Features.ReceiptFeature.Commands
                 request.Request.Debt);
 
             _context.Add(newReceipt);
-
+            if (request.Request.TotalPrice - request.Request.ReceivedMoney > 0)
+            {
+                var newCustomerDebt = new CustomerDebt(request.Request.CustomerId, request.Request.TotalPrice - request.Request.ReceivedMoney);
+                _context.Add(newCustomerDebt);
+            }
             var bookSolds = new List<InventoryHistory>();
             foreach (var book in request.Request.Books)
             {

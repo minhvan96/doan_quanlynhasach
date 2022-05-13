@@ -202,6 +202,8 @@
             this.ReportPages_MainPages_InventoryReportPage = new System.Windows.Forms.TabPage();
             this.ReportPages_MainPages_InventoryReportPage_MainContainer = new System.Windows.Forms.SplitContainer();
             this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label55 = new System.Windows.Forms.Label();
             this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_SearchButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -230,6 +232,11 @@
             this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
             this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup = new System.Windows.Forms.GroupBox();
             this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView = new System.Windows.Forms.DataGridView();
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_IndexColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_OpeningDebtColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_GrowDebtColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_EndingDebtColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.ConfigurationTab = new System.Windows.Forms.TabPage();
@@ -290,13 +297,6 @@
             this.label54 = new System.Windows.Forms.Label();
             this.WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup = new System.Windows.Forms.GroupBox();
             this.WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup_ResultDataGridView = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label55 = new System.Windows.Forms.Label();
-            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_IndexColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_OpeningDebtColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_GrowDebtColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_EndingDebtColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MainNav.SuspendLayout();
             this.HomeTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomeTab_MainContainer)).BeginInit();
@@ -2188,9 +2188,26 @@
             this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup.TabStop = false;
             this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup.Text = "Truy vấn";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(6, 46);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(174, 23);
+            this.comboBox1.TabIndex = 5;
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(6, 28);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(56, 15);
+            this.label55.TabIndex = 4;
+            this.label55.Text = "Nhà sách";
+            // 
             // ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_SearchButton
             // 
-            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_SearchButton.Location = new System.Drawing.Point(618, 46);
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_SearchButton.Location = new System.Drawing.Point(598, 46);
             this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_SearchButton.Name = "ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_SearchButton";
             this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_SearchButton.Size = new System.Drawing.Size(117, 23);
             this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_SearchButton.TabIndex = 2;
@@ -2201,7 +2218,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(412, 28);
+            this.label1.Location = new System.Drawing.Point(392, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 15);
             this.label1.TabIndex = 1;
@@ -2210,7 +2227,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(206, 28);
+            this.label3.Location = new System.Drawing.Point(186, 28);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 15);
             this.label3.TabIndex = 1;
@@ -2218,7 +2235,7 @@
             // 
             // ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_EndDateDateTimePicker
             // 
-            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_EndDateDateTimePicker.Location = new System.Drawing.Point(412, 46);
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_EndDateDateTimePicker.Location = new System.Drawing.Point(392, 46);
             this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_EndDateDateTimePicker.Name = "ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_EndDateDateTim" +
     "ePicker";
             this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_EndDateDateTimePicker.Size = new System.Drawing.Size(200, 23);
@@ -2226,7 +2243,7 @@
             // 
             // ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_StartDateDateTimePicker
             // 
-            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_StartDateDateTimePicker.Location = new System.Drawing.Point(206, 46);
+            this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_StartDateDateTimePicker.Location = new System.Drawing.Point(186, 46);
             this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_StartDateDateTimePicker.Name = "ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_StartDateDateT" +
     "imePicker";
             this.ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_StartDateDateTimePicker.Size = new System.Drawing.Size(200, 23);
@@ -2470,6 +2487,41 @@
     "";
             this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView.Size = new System.Drawing.Size(950, 392);
             this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView.TabIndex = 0;
+            // 
+            // ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_IndexColumn
+            // 
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_IndexColumn.HeaderText = "STT";
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_IndexColumn.Name = "ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView" +
+    "_IndexColumn";
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_IndexColumn.Width = 50;
+            // 
+            // ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_CustomerName
+            // 
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_CustomerName.HeaderText = "Tên khách hàng";
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_CustomerName.Name = "ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView" +
+    "_CustomerName";
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_CustomerName.Width = 250;
+            // 
+            // ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_OpeningDebtColumn
+            // 
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_OpeningDebtColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_OpeningDebtColumn.HeaderText = "Nợ đầu";
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_OpeningDebtColumn.Name = "ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView" +
+    "_OpeningDebtColumn";
+            // 
+            // ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_GrowDebtColumn
+            // 
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_GrowDebtColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_GrowDebtColumn.HeaderText = "Phát sinh";
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_GrowDebtColumn.Name = "ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView" +
+    "_GrowDebtColumn";
+            // 
+            // ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_EndingDebtColumn
+            // 
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_EndingDebtColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_EndingDebtColumn.HeaderText = "Nợ cuối";
+            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_EndingDebtColumn.Name = "ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView" +
+    "_EndingDebtColumn";
             // 
             // groupBox5
             // 
@@ -3115,58 +3167,6 @@
             this.WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup_ResultDataGridView.RowTemplate.Height = 25;
             this.WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup_ResultDataGridView.Size = new System.Drawing.Size(950, 392);
             this.WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup_ResultDataGridView.TabIndex = 0;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(6, 46);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(174, 23);
-            this.comboBox1.TabIndex = 5;
-            // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(6, 28);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(56, 15);
-            this.label55.TabIndex = 4;
-            this.label55.Text = "Nhà sách";
-            // 
-            // ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_IndexColumn
-            // 
-            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_IndexColumn.HeaderText = "STT";
-            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_IndexColumn.Name = "ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView" +
-    "_IndexColumn";
-            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_IndexColumn.Width = 50;
-            // 
-            // ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_CustomerName
-            // 
-            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_CustomerName.HeaderText = "Tên khách hàng";
-            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_CustomerName.Name = "ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView" +
-    "_CustomerName";
-            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_CustomerName.Width = 250;
-            // 
-            // ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_OpeningDebtColumn
-            // 
-            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_OpeningDebtColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_OpeningDebtColumn.HeaderText = "Nợ đầu";
-            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_OpeningDebtColumn.Name = "ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView" +
-    "_OpeningDebtColumn";
-            // 
-            // ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_GrowDebtColumn
-            // 
-            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_GrowDebtColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_GrowDebtColumn.HeaderText = "Phát sinh";
-            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_GrowDebtColumn.Name = "ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView" +
-    "_GrowDebtColumn";
-            // 
-            // ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_EndingDebtColumn
-            // 
-            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_EndingDebtColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_EndingDebtColumn.HeaderText = "Nợ cuối";
-            this.ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_EndingDebtColumn.Name = "ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView" +
-    "_EndingDebtColumn";
             // 
             // BookStoreUI
             // 
