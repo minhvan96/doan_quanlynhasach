@@ -844,8 +844,34 @@ namespace BookStoreManagementSystem
             }
         }
 
-        private void ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_SearchButton_Click(object sender, EventArgs e)
+        private async void ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_SearchButton_Click(object sender, EventArgs e)
         {
+            var debtReportQuery = new CustomerDebtReportQuery
+            {
+                StartDate = ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_StartDateDateTimePicker.Value,
+                EndDate = ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_EndDateDateTimePicker.Value
+            };
+            try
+            {
+                var result = await _mediator.Send(debtReportQuery);
+                ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView.Rows.Clear();
+                int reportIndex = 1;
+                foreach (var report in result.Items.OrEmptyIfNull())
+                {
+                    var reportInfo = new DataGridViewRow();
+                    reportInfo.CreateCells(ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView);
+                    reportInfo.Cells[0].Value = reportIndex;
+                    reportInfo.Cells[1].Value = report.CustomerName;
+                    reportInfo.Cells[2].Value = report.OpeningDebt;
+                    reportInfo.Cells[3].Value = report.EndingDebt - report.OpeningDebt;
+                    reportInfo.Cells[4].Value = report.EndingDebt;
+                    ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView.Rows.Add(reportInfo);
+                    reportIndex++;
+                }
+            }
+            catch (Exception ex)
+            {
+            }
         }
     }
 }

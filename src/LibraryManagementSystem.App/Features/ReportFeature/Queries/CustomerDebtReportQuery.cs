@@ -5,7 +5,7 @@ namespace BookStoreManagementSystem.App.Features.ReportFeature.Queries
 {
     public class CustomerDebtReportQuery : ListQuery<DebtReportDto>
     {
-        public Guid BookStoreId { get; set; }
+        public Guid CustomerId { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
     }

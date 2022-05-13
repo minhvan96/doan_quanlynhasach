@@ -24,7 +24,7 @@ namespace BookStoreManagementSystem.App.Features.ReportFeature.Queries
                 .ToListAsync(cancellationToken);
             var inventory = await _context.InventoryHistory
                 .AsNoTracking()
-                .Where(x => x.Date >= request.StartDate && x.Date <= request.EndDate)
+                .Where(x => x.Date.Date >= request.StartDate.Date && x.Date.Date <= request.EndDate.Date)
                 .OrderBy(x => x.Date)
                 .ToListAsync(cancellationToken);
 
@@ -34,11 +34,11 @@ namespace BookStoreManagementSystem.App.Features.ReportFeature.Queries
                 var minDifferentStartDate = inventory.Where(x => x.BookId == bss.BookId)?.Min(x => x.Date - request.StartDate);
                 var minDifferentEndDate = inventory.Where(x => x.BookId == bss.BookId)?.Min(x => request.EndDate - x.Date);
 
-                var startDate = inventory.FirstOrDefault(x => x.BookId == bss.BookId && x.Date - request.StartDate == minDifferentStartDate).Date;
+                var startDate = inventory.FirstOrDefault(x => x.BookId == bss.BookId && x.Date - request.StartDate == minDifferentStartDate)?.Date;
                 var startDateInventory = inventory.Where(x => x.BookId == bss.BookId && x.Date >= startDate);
                 var startDateNumber = startDateInventory.Sum(x => x.ChangeNumber);
 
-                var endDate = inventory.FirstOrDefault(x => x.BookId == bss.BookId && request.EndDate - x.Date == minDifferentEndDate).Date;
+                var endDate = inventory.FirstOrDefault(x => x.BookId == bss.BookId && request.EndDate - x.Date == minDifferentEndDate)?.Date;
                 var endDateInventory = inventory.FirstOrDefault(x => x.BookId == bss.BookId && request.EndDate - x.Date == minDifferentEndDate);
                 var endDateNumber = inventory.Where(x => x.BookId == bss.BookId && x.Date >= endDateInventory.Date).Sum(x => x.ChangeNumber);
 
