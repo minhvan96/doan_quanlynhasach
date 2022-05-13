@@ -821,10 +821,17 @@ namespace BookStoreManagementSystem
 
         private async void ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_SearchButton_Click(object sender, EventArgs e)
         {
+            var startDate = ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_StartDateDateTimePicker.Value;
+            var endDate = ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_EndDateDateTimePicker.Value;
+            if (startDate > endDate)
+            {
+                MessageBox.Show("Ngày bắt đầu phải sớm hơn ngày kết thúc", "Errors");
+                return;
+            }
             var inventoryReportQuery = new InventoryReportQuery
             {
-                StartDate = ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_StartDateDateTimePicker.Value,
-                EndDate = ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_EndDateDateTimePicker.Value
+                StartDate = startDate,
+                EndDate = endDate
             };
 
             var result = await _mediator.Send(inventoryReportQuery);
@@ -846,6 +853,13 @@ namespace BookStoreManagementSystem
 
         private async void ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_SearchButton_Click(object sender, EventArgs e)
         {
+            var startDate = ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_StartDateDateTimePicker.Value;
+            var endDate = ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_EndDateDateTimePicker.Value;
+            if (startDate > endDate)
+            {
+                MessageBox.Show("Ngày bắt đầu phải sớm hơn ngày kết thúc", "Errors");
+                return;
+            }
             var debtReportQuery = new CustomerDebtReportQuery
             {
                 StartDate = ReportPages_MainPages_DebtReportPage_MainContainer_QueryGroup_StartDateDateTimePicker.Value,
