@@ -25,6 +25,9 @@ namespace BookStoreManagementSystem
         private readonly IMediator _mediator;
         private readonly IPermission _userPermission;
         private readonly List<TabPage> _managerLevelTab;
+        private readonly List<TabPage> _salerLevelTab;
+        private readonly List<TabPage> _warehouseStaffLevelTab;
+        private readonly Dictionary<TabPage, string[]> _authorizeSettings;
 
         public BookStoreUI(IMediator mediator, IPermission userPermission)
         {
@@ -32,52 +35,109 @@ namespace BookStoreManagementSystem
             _mediator = mediator;
             _userPermission = userPermission;
             _managerLevelTab = new List<TabPage>();
+            _salerLevelTab = new List<TabPage>();
+            _warehouseStaffLevelTab = new List<TabPage>();
+            _authorizeSettings = new Dictionary<TabPage, string[]>();
             InitAuthorizedTab();
             DisableUnauthorizedTabs();
         }
 
         private void InitAuthorizedTab()
         {
-            switch (MainNav.TabIndex)
-            {
-                case 0:
-                    break;
+            string manager = "manager";
+            string saler = "saler";
+            string warehouseStaff = "warehouse-staff";
+            // Nhập sách
+            string[] importBookRole = { warehouseStaff };
+            string[] queryBookRole = { manager, saler, warehouseStaff };
+            string[] saleBookRole = { saler };
+            string[] customerQueryRole = { manager, saler };
+            string[] staffQueryRole = { manager };
+            string[] reportQueryRole = { manager };
+            string[] configurationRole = { manager };
 
-                case 1:
-                    _managerLevelTab.Add(MainNav.TabPages[1]);
-                    break;
+            _authorizeSettings.Add(MainNav.TabPages[1], importBookRole);
+            _authorizeSettings.Add(MainNav.TabPages[2], queryBookRole);
+            _authorizeSettings.Add(MainNav.TabPages[3], saleBookRole);
+            _authorizeSettings.Add(MainNav.TabPages[4], customerQueryRole);
+            _authorizeSettings.Add(MainNav.TabPages[5], staffQueryRole);
+            _authorizeSettings.Add(MainNav.TabPages[6], reportQueryRole);
+            _authorizeSettings.Add(MainNav.TabPages[7], configurationRole);
 
-                case 2:
-                    _managerLevelTab.Add(MainNav.TabPages[2]);
-                    break;
+            _warehouseStaffLevelTab.Add(MainNav.TabPages[1]);
 
-                case 3:
-                    _managerLevelTab.Add(MainNav.TabPages[3]);
-                    break;
+            _managerLevelTab.Add(MainNav.TabPages[2]);
+            _salerLevelTab.Add(MainNav.TabPages[2]);
+            _warehouseStaffLevelTab.Add(MainNav.TabPages[2]);
 
-                case 4:
-                    _managerLevelTab.Add(MainNav.TabPages[4]);
-                    break;
+            // Bán sách
 
-                case 5:
-                    _managerLevelTab.Add(MainNav.TabPages[5]);
-                    break;
-            }
+            _salerLevelTab.Add(MainNav.TabPages[3]);
+
+            // Khách hàng
+
+            _managerLevelTab.Add(MainNav.TabPages[4]);
+            _salerLevelTab.Add(MainNav.TabPages[4]);
+
+            // Nhân viên
+
+            _managerLevelTab.Add(MainNav.TabPages[5]);
+
+            // Báo cáo
+            _managerLevelTab.Add(MainNav.TabPages[6]);
+
+            // Cấu hình
+            _managerLevelTab.Add(MainNav.TabPages[7]);
         }
 
         private void DisableUnauthorizedTabs()
         {
-            foreach (TabPage tab in _managerLevelTab)
+            foreach (var setting in _authorizeSettings)
             {
-                if (!_userPermission.UserRoles.Contains("manager"))
+                var page = setting.Key;
+                var roles = setting.Value;
+                if (roles.Any(x => _userPermission.UserRoles.Contains(x)))
                 {
-                    tab.Enabled = false;
+                    page.Enabled = true;
                 }
                 else
                 {
-                    tab.Enabled = true;
+                    page.Enabled = false;
                 }
             }
+            //foreach (TabPage tab in _managerLevelTab)
+            //{
+            //    if (!_userPermission.UserRoles.Contains("manager"))
+            //    {
+            //        tab.Enabled = false;
+            //    }
+            //    else
+            //    {
+            //        tab.Enabled = true;
+            //    }
+            //}
+            //foreach (TabPage tab in _salerLevelTab)
+            //{
+            //    if (!_userPermission.UserRoles.Contains("saler"))
+            //    {
+            //        tab.Enabled = false;
+            //    }
+            //    else
+            //    {
+            //        tab.Enabled = true;
+            //    }
+            //}
+            //foreach (TabPage tab in _warehouseStaffLevelTab)
+            //{
+            //    if (!_userPermission.UserRoles.Contains("warehouse-staff"))
+            //    {
+            //        tab.Enabled = false;
+            //    }
+            //    else
+            //    {
+            //        tab.Enabled = true;
+            //    }
+            //}
         }
 
         private async void BookStoreUILoad(object sender, EventArgs e)
