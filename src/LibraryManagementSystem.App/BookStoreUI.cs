@@ -24,9 +24,7 @@ namespace BookStoreManagementSystem
     {
         private readonly IMediator _mediator;
         private readonly IPermission _userPermission;
-        private readonly List<TabPage> _managerLevelTab;
-        private readonly List<TabPage> _salerLevelTab;
-        private readonly List<TabPage> _warehouseStaffLevelTab;
+
         private readonly Dictionary<TabPage, string[]> _authorizeSettings;
 
         public BookStoreUI(IMediator mediator, IPermission userPermission)
@@ -34,9 +32,6 @@ namespace BookStoreManagementSystem
             InitializeComponent();
             _mediator = mediator;
             _userPermission = userPermission;
-            _managerLevelTab = new List<TabPage>();
-            _salerLevelTab = new List<TabPage>();
-            _warehouseStaffLevelTab = new List<TabPage>();
             _authorizeSettings = new Dictionary<TabPage, string[]>();
             InitAuthorizedTab();
             DisableUnauthorizedTabs();
@@ -63,31 +58,6 @@ namespace BookStoreManagementSystem
             _authorizeSettings.Add(MainNav.TabPages[5], staffQueryRole);
             _authorizeSettings.Add(MainNav.TabPages[6], reportQueryRole);
             _authorizeSettings.Add(MainNav.TabPages[7], configurationRole);
-
-            _warehouseStaffLevelTab.Add(MainNav.TabPages[1]);
-
-            _managerLevelTab.Add(MainNav.TabPages[2]);
-            _salerLevelTab.Add(MainNav.TabPages[2]);
-            _warehouseStaffLevelTab.Add(MainNav.TabPages[2]);
-
-            // Bán sách
-
-            _salerLevelTab.Add(MainNav.TabPages[3]);
-
-            // Khách hàng
-
-            _managerLevelTab.Add(MainNav.TabPages[4]);
-            _salerLevelTab.Add(MainNav.TabPages[4]);
-
-            // Nhân viên
-
-            _managerLevelTab.Add(MainNav.TabPages[5]);
-
-            // Báo cáo
-            _managerLevelTab.Add(MainNav.TabPages[6]);
-
-            // Cấu hình
-            _managerLevelTab.Add(MainNav.TabPages[7]);
         }
 
         private void DisableUnauthorizedTabs()
@@ -105,39 +75,6 @@ namespace BookStoreManagementSystem
                     page.Enabled = false;
                 }
             }
-            //foreach (TabPage tab in _managerLevelTab)
-            //{
-            //    if (!_userPermission.UserRoles.Contains("manager"))
-            //    {
-            //        tab.Enabled = false;
-            //    }
-            //    else
-            //    {
-            //        tab.Enabled = true;
-            //    }
-            //}
-            //foreach (TabPage tab in _salerLevelTab)
-            //{
-            //    if (!_userPermission.UserRoles.Contains("saler"))
-            //    {
-            //        tab.Enabled = false;
-            //    }
-            //    else
-            //    {
-            //        tab.Enabled = true;
-            //    }
-            //}
-            //foreach (TabPage tab in _warehouseStaffLevelTab)
-            //{
-            //    if (!_userPermission.UserRoles.Contains("warehouse-staff"))
-            //    {
-            //        tab.Enabled = false;
-            //    }
-            //    else
-            //    {
-            //        tab.Enabled = true;
-            //    }
-            //}
         }
 
         private async void BookStoreUILoad(object sender, EventArgs e)
