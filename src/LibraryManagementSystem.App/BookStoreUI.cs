@@ -595,7 +595,11 @@ namespace BookStoreManagementSystem
             MessageBox.Show("Không tìm thấy thông tin cấu hình, vui lòng kiểm tra lại", "Lỗi cập nhật cấu hình");
         }
 
-        private async void SaleBookTab_Enter(object sender, EventArgs e)
+        private void SaleBookTab_Enter(object sender, EventArgs e)
+        {
+        }
+
+        private async void SaleBookTab_Pages_AddCustomerPage_SearchCustomerButton_Click(object sender, EventArgs e)
         {
             await LoadSaleBookTab_Pages_AddCustomerPage_CustomersDataGridView();
         }
@@ -836,33 +840,41 @@ namespace BookStoreManagementSystem
 
         private async void ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_SearchButton_Click(object sender, EventArgs e)
         {
-            var startDate = ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_StartDateDateTimePicker.Value;
-            var endDate = ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_EndDateDateTimePicker.Value;
-            if (startDate > endDate)
+            try
             {
-                MessageBox.Show("Ngày bắt đầu phải sớm hơn ngày kết thúc", "Errors");
-                return;
-            }
-            var inventoryReportQuery = new InventoryReportQuery
-            {
-                StartDate = startDate,
-                EndDate = endDate
-            };
+                var startDate = ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_StartDateDateTimePicker.Value;
+                var endDate = ReportPages_MainPages_InventoryReportPage_MainContainer_QueryGroup_EndDateDateTimePicker.Value;
+                if (startDate > endDate)
+                {
+                    MessageBox.Show("Ngày bắt đầu phải sớm hơn ngày kết thúc", "Errors");
+                    return;
+                }
+                var inventoryReportQuery = new InventoryReportQuery
+                {
+                    StartDate = startDate,
+                    EndDate = endDate
+                };
 
-            var result = await _mediator.Send(inventoryReportQuery);
-            ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView.Rows.Clear();
-            int reportIndex = 1;
-            foreach (var report in result.Items.OrEmptyIfNull())
+                var result = await _mediator.Send(inventoryReportQuery);
+
+                ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView.Rows.Clear();
+                int reportIndex = 1;
+                foreach (var report in result.Items.OrEmptyIfNull())
+                {
+                    var reportInfo = new DataGridViewRow();
+                    reportInfo.CreateCells(ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView);
+                    reportInfo.Cells[0].Value = reportIndex;
+                    reportInfo.Cells[1].Value = report.BookName;
+                    reportInfo.Cells[2].Value = report.OpeningStocks;
+                    reportInfo.Cells[3].Value = report.EndingStocks - report.OpeningStocks;
+                    reportInfo.Cells[4].Value = report.EndingStocks;
+                    ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView.Rows.Add(reportInfo);
+                    reportIndex++;
+                }
+            }
+            catch (Exception ex)
             {
-                var reportInfo = new DataGridViewRow();
-                reportInfo.CreateCells(ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView);
-                reportInfo.Cells[0].Value = reportIndex;
-                reportInfo.Cells[1].Value = report.BookName;
-                reportInfo.Cells[2].Value = report.OpeningStocks;
-                reportInfo.Cells[3].Value = report.EndingStocks - report.OpeningStocks;
-                reportInfo.Cells[4].Value = report.EndingStocks;
-                ReportPages_MainPages_InventoryReportPage_MainContainer_ResultGroup_ResultDataGridView.Rows.Add(reportInfo);
-                reportIndex++;
+                MessageBox.Show(ex.Message, "Errors");
             }
         }
 

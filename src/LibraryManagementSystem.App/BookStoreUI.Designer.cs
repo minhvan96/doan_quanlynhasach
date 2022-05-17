@@ -1263,6 +1263,7 @@
             this.SaleBookTab_Pages_AddCustomerPage_SearchCustomerButton.TabIndex = 4;
             this.SaleBookTab_Pages_AddCustomerPage_SearchCustomerButton.Text = "Tìm kiếm";
             this.SaleBookTab_Pages_AddCustomerPage_SearchCustomerButton.UseVisualStyleBackColor = true;
+            this.SaleBookTab_Pages_AddCustomerPage_SearchCustomerButton.Click += new System.EventHandler(this.SaleBookTab_Pages_AddCustomerPage_SearchCustomerButton_Click);
             // 
             // SaleBookTab_Pages_AddCustomerPage_CustomerIdSearchTextbox
             // 

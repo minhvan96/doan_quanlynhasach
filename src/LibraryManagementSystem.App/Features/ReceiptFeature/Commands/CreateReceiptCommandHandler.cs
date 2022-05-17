@@ -41,9 +41,11 @@ namespace BookStoreManagementSystem.App.Features.ReceiptFeature.Commands
             var bookSolds = new List<InventoryHistory>();
             foreach (var book in request.Request.Books)
             {
+                var bookStoreStorage = await _context.BookStoresStorage.FirstOrDefaultAsync(x => x.BookStoreId == staff.BookStoreId && x.BookId == book.Id, cancellationToken: cancellationToken);
                 if (!bookSolds.Any(x => x.BookId == book.Id))
                 {
                     var soldNumber = request.Request.Books.Where(x => x.Id == book.Id).Count();
+                    bookStoreStorage.Export(soldNumber);
                     var bookSold = new InventoryHistory(DateTime.Today, staff.Id, book.Id, staff.BookStoreId, -soldNumber);
                     bookSolds.Add(bookSold);
                 }
