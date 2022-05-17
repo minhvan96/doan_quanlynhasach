@@ -458,6 +458,24 @@ namespace BookStoreManagementSystem
             _userPermission.UserId = user.Id;
             _userPermission.UserRoles.AddRange(user.Roles);
             DisableUnauthorizedTabs();
+            UpdateLoginPageUI(user.FullName);
+        }
+
+        private void UpdateLoginPageUI(string userName)
+        {
+            HomeTab_LoginContainer_UserNameTextBox.Text = "";
+            HomeTab_LoginContainer_PasswordTextBook.Text = "";
+            HomeTab_LoginContainer_StaffNameLabel.Text = userName;
+            HomeTab_MainContainer_LogoutGroupBox.Visible = true;
+            HomeTab_MainContainer_LoginGroupBox.Visible = false;
+        }
+
+        private void HomeTab_LoginContainer_LogoutButton_Click(object sender, EventArgs e)
+        {
+            _userPermission.Reset();
+            DisableUnauthorizedTabs();
+            HomeTab_MainContainer_LogoutGroupBox.Visible = false;
+            HomeTab_MainContainer_LoginGroupBox.Visible = true;
         }
 
         private void ConfigurationTab_BookStoreConfigurationTab_StoreConfigurationDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)

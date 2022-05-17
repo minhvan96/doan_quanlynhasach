@@ -23,6 +23,7 @@ namespace BookStoreManagementSystem.App.Features.IdentityFeature.Commands
                 {
                     Id = x.Id,
                     Name = x.Name,
+                    FullName = x.FullName,
                     Roles = x.UserRoles.Select(x => x.Role.Name).ToList()
                 })
                 .FirstOrDefaultAsync(cancellationToken);

@@ -30,12 +30,18 @@
         {
             this.MainNav = new System.Windows.Forms.TabControl();
             this.HomeTab = new System.Windows.Forms.TabPage();
+            this.HomeTab_MainContainer_LogoutGroupBox = new System.Windows.Forms.GroupBox();
+            this.HomeTab_LoginContainer_WellcomeLabel = new System.Windows.Forms.Label();
+            this.HomeTab_LoginContainer_StaffNameLabel = new System.Windows.Forms.Label();
+            this.HomeTab_LoginContainer_LogoutButton = new System.Windows.Forms.Button();
             this.HomeTab_MainContainer = new System.Windows.Forms.SplitContainer();
+            this.HomeTab_MainContainer_LoginGroupBox = new System.Windows.Forms.GroupBox();
             this.HomeTab_LoginContainer_LoginButton = new System.Windows.Forms.Button();
-            this.label22 = new System.Windows.Forms.Label();
             this.HomeTab_LoginContainer_PasswordTextBook = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.HomeTab_LoginContainer_UserNameTextBox = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.HomeTab_MainContainer_StaffInfoGroupBox = new System.Windows.Forms.GroupBox();
             this.ImportBookTab = new System.Windows.Forms.TabPage();
             this.ImportBookMenu_MainContainer = new System.Windows.Forms.SplitContainer();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
@@ -299,9 +305,12 @@
             this.WorkingSessionTab_MainTab_DebtTab_MainContainer_ResultGroup_ResultDataGridView = new System.Windows.Forms.DataGridView();
             this.MainNav.SuspendLayout();
             this.HomeTab.SuspendLayout();
+            this.HomeTab_MainContainer_LogoutGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomeTab_MainContainer)).BeginInit();
             this.HomeTab_MainContainer.Panel1.SuspendLayout();
+            this.HomeTab_MainContainer.Panel2.SuspendLayout();
             this.HomeTab_MainContainer.SuspendLayout();
+            this.HomeTab_MainContainer_LoginGroupBox.SuspendLayout();
             this.ImportBookTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImportBookMenu_MainContainer)).BeginInit();
             this.ImportBookMenu_MainContainer.Panel1.SuspendLayout();
@@ -461,6 +470,7 @@
             // 
             // HomeTab
             // 
+            this.HomeTab.Controls.Add(this.HomeTab_MainContainer_LogoutGroupBox);
             this.HomeTab.Controls.Add(this.HomeTab_MainContainer);
             this.HomeTab.Location = new System.Drawing.Point(4, 24);
             this.HomeTab.Name = "HomeTab";
@@ -470,26 +480,83 @@
             this.HomeTab.Text = "HOME";
             this.HomeTab.UseVisualStyleBackColor = true;
             // 
+            // HomeTab_MainContainer_LogoutGroupBox
+            // 
+            this.HomeTab_MainContainer_LogoutGroupBox.Controls.Add(this.HomeTab_LoginContainer_WellcomeLabel);
+            this.HomeTab_MainContainer_LogoutGroupBox.Controls.Add(this.HomeTab_LoginContainer_StaffNameLabel);
+            this.HomeTab_MainContainer_LogoutGroupBox.Controls.Add(this.HomeTab_LoginContainer_LogoutButton);
+            this.HomeTab_MainContainer_LogoutGroupBox.Location = new System.Drawing.Point(0, 1);
+            this.HomeTab_MainContainer_LogoutGroupBox.Name = "HomeTab_MainContainer_LogoutGroupBox";
+            this.HomeTab_MainContainer_LogoutGroupBox.Size = new System.Drawing.Size(976, 75);
+            this.HomeTab_MainContainer_LogoutGroupBox.TabIndex = 11;
+            this.HomeTab_MainContainer_LogoutGroupBox.TabStop = false;
+            this.HomeTab_MainContainer_LogoutGroupBox.Visible = false;
+            // 
+            // HomeTab_LoginContainer_WellcomeLabel
+            // 
+            this.HomeTab_LoginContainer_WellcomeLabel.AutoSize = true;
+            this.HomeTab_LoginContainer_WellcomeLabel.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.HomeTab_LoginContainer_WellcomeLabel.Location = new System.Drawing.Point(274, 15);
+            this.HomeTab_LoginContainer_WellcomeLabel.Name = "HomeTab_LoginContainer_WellcomeLabel";
+            this.HomeTab_LoginContainer_WellcomeLabel.Size = new System.Drawing.Size(438, 47);
+            this.HomeTab_LoginContainer_WellcomeLabel.TabIndex = 10;
+            this.HomeTab_LoginContainer_WellcomeLabel.Text = "Hệ thống quản lý nhà sách";
+            // 
+            // HomeTab_LoginContainer_StaffNameLabel
+            // 
+            this.HomeTab_LoginContainer_StaffNameLabel.AutoSize = true;
+            this.HomeTab_LoginContainer_StaffNameLabel.Location = new System.Drawing.Point(798, 19);
+            this.HomeTab_LoginContainer_StaffNameLabel.Name = "HomeTab_LoginContainer_StaffNameLabel";
+            this.HomeTab_LoginContainer_StaffNameLabel.Size = new System.Drawing.Size(80, 15);
+            this.HomeTab_LoginContainer_StaffNameLabel.TabIndex = 9;
+            this.HomeTab_LoginContainer_StaffNameLabel.Text = "Tên nhân viên";
+            // 
+            // HomeTab_LoginContainer_LogoutButton
+            // 
+            this.HomeTab_LoginContainer_LogoutButton.Location = new System.Drawing.Point(898, 15);
+            this.HomeTab_LoginContainer_LogoutButton.Name = "HomeTab_LoginContainer_LogoutButton";
+            this.HomeTab_LoginContainer_LogoutButton.Size = new System.Drawing.Size(75, 23);
+            this.HomeTab_LoginContainer_LogoutButton.TabIndex = 8;
+            this.HomeTab_LoginContainer_LogoutButton.Text = "Đăng xuất";
+            this.HomeTab_LoginContainer_LogoutButton.UseVisualStyleBackColor = true;
+            this.HomeTab_LoginContainer_LogoutButton.Click += new System.EventHandler(this.HomeTab_LoginContainer_LogoutButton_Click);
+            // 
             // HomeTab_MainContainer
             // 
             this.HomeTab_MainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.HomeTab_MainContainer.Location = new System.Drawing.Point(3, 3);
             this.HomeTab_MainContainer.Name = "HomeTab_MainContainer";
+            this.HomeTab_MainContainer.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
             // HomeTab_MainContainer.Panel1
             // 
-            this.HomeTab_MainContainer.Panel1.Controls.Add(this.HomeTab_LoginContainer_LoginButton);
-            this.HomeTab_MainContainer.Panel1.Controls.Add(this.label22);
-            this.HomeTab_MainContainer.Panel1.Controls.Add(this.HomeTab_LoginContainer_PasswordTextBook);
-            this.HomeTab_MainContainer.Panel1.Controls.Add(this.label21);
-            this.HomeTab_MainContainer.Panel1.Controls.Add(this.HomeTab_LoginContainer_UserNameTextBox);
+            this.HomeTab_MainContainer.Panel1.Controls.Add(this.HomeTab_MainContainer_LoginGroupBox);
+            // 
+            // HomeTab_MainContainer.Panel2
+            // 
+            this.HomeTab_MainContainer.Panel2.Controls.Add(this.HomeTab_MainContainer_StaffInfoGroupBox);
             this.HomeTab_MainContainer.Size = new System.Drawing.Size(970, 527);
-            this.HomeTab_MainContainer.SplitterDistance = 323;
+            this.HomeTab_MainContainer.SplitterDistance = 75;
             this.HomeTab_MainContainer.TabIndex = 0;
+            // 
+            // HomeTab_MainContainer_LoginGroupBox
+            // 
+            this.HomeTab_MainContainer_LoginGroupBox.Controls.Add(this.HomeTab_LoginContainer_LoginButton);
+            this.HomeTab_MainContainer_LoginGroupBox.Controls.Add(this.HomeTab_LoginContainer_PasswordTextBook);
+            this.HomeTab_MainContainer_LoginGroupBox.Controls.Add(this.label22);
+            this.HomeTab_MainContainer_LoginGroupBox.Controls.Add(this.HomeTab_LoginContainer_UserNameTextBox);
+            this.HomeTab_MainContainer_LoginGroupBox.Controls.Add(this.label21);
+            this.HomeTab_MainContainer_LoginGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.HomeTab_MainContainer_LoginGroupBox.Location = new System.Drawing.Point(0, 0);
+            this.HomeTab_MainContainer_LoginGroupBox.Name = "HomeTab_MainContainer_LoginGroupBox";
+            this.HomeTab_MainContainer_LoginGroupBox.Size = new System.Drawing.Size(970, 75);
+            this.HomeTab_MainContainer_LoginGroupBox.TabIndex = 8;
+            this.HomeTab_MainContainer_LoginGroupBox.TabStop = false;
+            this.HomeTab_MainContainer_LoginGroupBox.Text = "Đăng nhập";
             // 
             // HomeTab_LoginContainer_LoginButton
             // 
-            this.HomeTab_LoginContainer_LoginButton.Location = new System.Drawing.Point(22, 170);
+            this.HomeTab_LoginContainer_LoginButton.Location = new System.Drawing.Point(421, 41);
             this.HomeTab_LoginContainer_LoginButton.Name = "HomeTab_LoginContainer_LoginButton";
             this.HomeTab_LoginContainer_LoginButton.Size = new System.Drawing.Size(75, 23);
             this.HomeTab_LoginContainer_LoginButton.TabIndex = 7;
@@ -497,37 +564,47 @@
             this.HomeTab_LoginContainer_LoginButton.UseVisualStyleBackColor = true;
             this.HomeTab_LoginContainer_LoginButton.Click += new System.EventHandler(this.HomeTab_LoginContainer_LoginButton_Click);
             // 
+            // HomeTab_LoginContainer_PasswordTextBook
+            // 
+            this.HomeTab_LoginContainer_PasswordTextBook.Location = new System.Drawing.Point(208, 41);
+            this.HomeTab_LoginContainer_PasswordTextBook.Name = "HomeTab_LoginContainer_PasswordTextBook";
+            this.HomeTab_LoginContainer_PasswordTextBook.Size = new System.Drawing.Size(195, 23);
+            this.HomeTab_LoginContainer_PasswordTextBook.TabIndex = 5;
+            // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(22, 102);
+            this.label22.Location = new System.Drawing.Point(208, 23);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(57, 15);
             this.label22.TabIndex = 6;
             this.label22.Text = "Mật khẩu";
             // 
-            // HomeTab_LoginContainer_PasswordTextBook
+            // HomeTab_LoginContainer_UserNameTextBox
             // 
-            this.HomeTab_LoginContainer_PasswordTextBook.Location = new System.Drawing.Point(22, 120);
-            this.HomeTab_LoginContainer_PasswordTextBook.Name = "HomeTab_LoginContainer_PasswordTextBook";
-            this.HomeTab_LoginContainer_PasswordTextBook.Size = new System.Drawing.Size(195, 23);
-            this.HomeTab_LoginContainer_PasswordTextBook.TabIndex = 5;
+            this.HomeTab_LoginContainer_UserNameTextBox.Location = new System.Drawing.Point(7, 41);
+            this.HomeTab_LoginContainer_UserNameTextBox.Name = "HomeTab_LoginContainer_UserNameTextBox";
+            this.HomeTab_LoginContainer_UserNameTextBox.Size = new System.Drawing.Size(195, 23);
+            this.HomeTab_LoginContainer_UserNameTextBox.TabIndex = 3;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(22, 43);
+            this.label21.Location = new System.Drawing.Point(7, 23);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(85, 15);
             this.label21.TabIndex = 4;
             this.label21.Text = "Tên đăng nhập";
             // 
-            // HomeTab_LoginContainer_UserNameTextBox
+            // HomeTab_MainContainer_StaffInfoGroupBox
             // 
-            this.HomeTab_LoginContainer_UserNameTextBox.Location = new System.Drawing.Point(22, 61);
-            this.HomeTab_LoginContainer_UserNameTextBox.Name = "HomeTab_LoginContainer_UserNameTextBox";
-            this.HomeTab_LoginContainer_UserNameTextBox.Size = new System.Drawing.Size(195, 23);
-            this.HomeTab_LoginContainer_UserNameTextBox.TabIndex = 3;
+            this.HomeTab_MainContainer_StaffInfoGroupBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.HomeTab_MainContainer_StaffInfoGroupBox.Location = new System.Drawing.Point(0, 0);
+            this.HomeTab_MainContainer_StaffInfoGroupBox.Name = "HomeTab_MainContainer_StaffInfoGroupBox";
+            this.HomeTab_MainContainer_StaffInfoGroupBox.Size = new System.Drawing.Size(970, 448);
+            this.HomeTab_MainContainer_StaffInfoGroupBox.TabIndex = 0;
+            this.HomeTab_MainContainer_StaffInfoGroupBox.TabStop = false;
+            this.HomeTab_MainContainer_StaffInfoGroupBox.Text = "Thông tin nhân viên";
             // 
             // ImportBookTab
             // 
@@ -3179,10 +3256,14 @@
             this.Load += new System.EventHandler(this.BookStoreUILoad);
             this.MainNav.ResumeLayout(false);
             this.HomeTab.ResumeLayout(false);
+            this.HomeTab_MainContainer_LogoutGroupBox.ResumeLayout(false);
+            this.HomeTab_MainContainer_LogoutGroupBox.PerformLayout();
             this.HomeTab_MainContainer.Panel1.ResumeLayout(false);
-            this.HomeTab_MainContainer.Panel1.PerformLayout();
+            this.HomeTab_MainContainer.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.HomeTab_MainContainer)).EndInit();
             this.HomeTab_MainContainer.ResumeLayout(false);
+            this.HomeTab_MainContainer_LoginGroupBox.ResumeLayout(false);
+            this.HomeTab_MainContainer_LoginGroupBox.PerformLayout();
             this.ImportBookTab.ResumeLayout(false);
             this.ImportBookMenu_MainContainer.Panel1.ResumeLayout(false);
             this.ImportBookMenu_MainContainer.Panel2.ResumeLayout(false);
@@ -3611,5 +3692,11 @@
         private DataGridViewTextBoxColumn ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_OpeningDebtColumn;
         private DataGridViewTextBoxColumn ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_GrowDebtColumn;
         private DataGridViewTextBoxColumn ReportPages_MainPages_DebtReportPage_MainContainer_ResultGroup_ResultDataGridView_EndingDebtColumn;
+        private GroupBox HomeTab_MainContainer_LoginGroupBox;
+        private GroupBox HomeTab_MainContainer_StaffInfoGroupBox;
+        private GroupBox HomeTab_MainContainer_LogoutGroupBox;
+        private Label HomeTab_LoginContainer_WellcomeLabel;
+        private Label HomeTab_LoginContainer_StaffNameLabel;
+        private Button HomeTab_LoginContainer_LogoutButton;
     }
 }

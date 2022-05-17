@@ -4,5 +4,7 @@
     {
         Guid UserId { get; set; }
         List<string> UserRoles { get; }
+
+        void Reset();
     }
 }
