@@ -568,6 +568,7 @@
             // 
             this.HomeTab_LoginContainer_PasswordTextBook.Location = new System.Drawing.Point(208, 41);
             this.HomeTab_LoginContainer_PasswordTextBook.Name = "HomeTab_LoginContainer_PasswordTextBook";
+            this.HomeTab_LoginContainer_PasswordTextBook.PasswordChar = '*';
             this.HomeTab_LoginContainer_PasswordTextBook.Size = new System.Drawing.Size(195, 23);
             this.HomeTab_LoginContainer_PasswordTextBook.TabIndex = 5;
             // 
